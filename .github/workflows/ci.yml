@@ -1,0 +1,95 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test_soms:
+    runs-on: ubuntu-24.04
+    # continue-on-error: true
+    strategy:
+      fail-fast: false # we want all jobs to run, because they may fail independently
+      matrix:
+        compiler: [clang, gcc]
+        gc: [GENERATIONAL, MARK_SWEEP, COPYING]
+        integers:
+          - "-DUSE_TAGGING=true"
+          - "-DUSE_TAGGING=false -DCACHE_INTEGER=true"
+          - "-DUSE_TAGGING=false -DCACHE_INTEGER=false"
+
+    steps:
+      - name: Checkout SOM Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Install Apt Packages
+        run: |
+          sudo apt-get install libcppunit-dev
+
+      - name: Install Clang 20
+        run: |
+          wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+          sudo add-apt-repository "deb http://apt.llvm.org/noble/ llvm-toolchain-noble-20 main"
+          sudo apt-get update
+          for i in 1 2 3; do
+            sudo apt-get install -y clang-20 clang-tidy-20 && break
+            sleep 17
+          done
+        if: matrix.compiler == 'clang'
+
+      - name: Install Clang Format
+        run: sudo apt-get install -y clang-format-20
+        if: matrix.compiler == 'clang' && matrix.gc == 'GENERATIONAL'
+
+      - name: Build SOM VM
+        run: |
+          if [ "${{ matrix.compiler }}" = "clang" ]
+          then
+            export CC=clang-20
+            export CXX=clang++-20
+          else
+            export CC=gcc
+            export CXX=g++
+          fi
+          echo $CC $CXX
+          echo cmake . -DGC_TYPE=${{ matrix.gc}} ${{ matrix.integers }}
+          mkdir cmake-build
+          cd cmake-build
+          cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.integers }} -DCMAKE_BUILD_TYPE=Debug
+          make -j5
+
+      - name: Run Unit Tests
+        run: |
+          cd cmake-build
+          ./unittests -cp ../Smalltalk:../TestSuite/BasicInterpreterTests ../Examples/Hello.som
+
+      - name: Run Tests on SOM VM
+        run: |
+          cd cmake-build
+          ./SOM++ -cp ../Smalltalk ../TestSuite/TestHarness.som
+
+      - name: Integration Tests
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          export VM=./cmake-build/SOM++
+          export CLASSPATH=Smalltalk
+          export AWFY=core-lib/Examples/AreWeFastYet/Core
+          export TEST_EXPECTATIONS=./integration-tests.yml
+          pytest core-lib/IntegrationTests
+
+      - name: Clang Tidy
+        if: matrix.compiler == 'clang'
+        run: |
+          clang-tidy-20 --config-file=.clang-tidy src/**/*.cpp -- -fdiagnostics-absolute-paths -DGC_TYPE=${{ matrix.gc}} ${{ matrix.integers }} -DUNITTESTS
+
+      - name: Clang Format
+        if: matrix.compiler == 'clang' && matrix.gc == 'GENERATIONAL'
+        run: |
+          clang-format-20 --dry-run --style=file --Werror src/*.cpp  src/**/*.cpp src/**/*.h
+
+      # Disabled because it's too slow with the sanitizers
+      # - name: Test SomSom
+      #   run: |
+      #     export ASAN_OPTIONS=detect_leaks=0
+      #     cmake-build/SOM++ -cp Smalltalk:TestSuite:core-lib/SomSom/src/compiler:core-lib/SomSom/src/interpreter:core-lib/SomSom/src/primitives:core-lib/SomSom/src/vm:core-lib/SomSom/src/vmobjects core-lib/SomSom/tests/SomSomTests.som

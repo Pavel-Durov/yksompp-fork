@@ -1,0 +1,29 @@
+#include "debug.h"
+
+#include <string>
+
+#include "../compiler/Disassembler.h"
+#include "../compiler/MethodGenerationContext.h"
+#include "../vmobjects/ObjectFormats.h"
+#include "../vmobjects/VMClass.h"
+#include "../vmobjects/VMSymbol.h"
+
+std::string DebugGetClassName(vm_oop_t obj) {
+    return CLASS_OF(obj)->GetName()->GetStdString();
+}
+
+std::string DebugGetClassName(gc_oop_t obj) {
+    return CLASS_OF(obj)->GetName()->GetStdString();
+}
+
+void DebugDumpMethodWithObjects(VMInvokable* method) {
+    Disassembler::DumpMethod((VMMethod*)method, "", true);
+}
+
+void DebugDumpMethod(VMInvokable* method) {
+    Disassembler::DumpMethod((VMMethod*)method, "", false);
+}
+
+void DebugDumpMethod(MethodGenerationContext* mgenc) {
+    Disassembler::DumpMethod(mgenc, "");
+}
