@@ -1,4 +1,4 @@
-yk_config := "/home/pd/yk-csom/bin/yk-config"
+yk_config := "/path/to/yk-config"
 
 build: build-release
 
