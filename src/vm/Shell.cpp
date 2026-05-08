@@ -128,11 +128,10 @@ void Shell::Start() {
 
         // Start the Interpreter
 
-        if (dumpBytecodes > 1) {
-            Interpreter::Start<true>();
-        } else {
-            Interpreter::Start<false>();
-        }
+        // Runtime bool instead of template<bool>: a templated Start would
+        // produce two instantiations each containing yk_mt_control_point,
+        // violating yk's single-call-site requirement.
+        Interpreter::Start(dumpBytecodes > 1);
 
         // Save the result of the run method
         it = currentFrame->Pop();

@@ -1,0 +1,84 @@
+yk_config := "/home/pd/yk-csom/bin/yk-config"
+
+build: build-release
+
+build-release:
+    mkdir -p cmake-build
+    cmake -DCMAKE_BUILD_TYPE=Release \
+        "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
+        "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
+        -S . -B cmake-build
+    cmake --build cmake-build --parallel
+
+build-debug:
+    mkdir -p cmake-debug
+    cmake -DCMAKE_BUILD_TYPE=Debug \
+        "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
+        "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
+        -S . -B cmake-debug
+    cmake --build cmake-debug --parallel
+
+build-yk-debug:
+    mkdir -p cmake-yk
+    PATH="$(dirname {{yk_config}}):$PATH" cmake \
+        -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cc)++ \
+        -DCMAKE_BUILD_TYPE=Debug \
+        -DYK_BUILD_TYPE=debug \
+        "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
+        "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
+        -S . -B cmake-yk
+    cmake --build cmake-yk --parallel
+
+build-yk-release:
+    mkdir -p cmake-yk
+    PATH="$(dirname {{yk_config}}):$PATH" cmake \
+        -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cc)++ \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DYK_BUILD_TYPE=release \
+        -S . -B cmake-yk
+    cmake --build cmake-yk --parallel
+
+build-yk: build-yk-debug
+
+test: test-unit test-som
+
+test-som: build-release
+    cmake-build/SOM++ -cp Smalltalk TestSuite/TestHarness.som
+
+test-unit: build-debug
+    cmake-debug/unittests -cp Smalltalk:TestSuite/BasicInterpreterTests Examples/Hello.som
+
+test-yk: build-yk
+    cmake-yk/SOM++ -cp Smalltalk TestSuite/TestHarness.som
+
+hello: build-release
+    cmake-build/SOM++ -cp Smalltalk Examples/Hello.som
+
+
+hello-yk: build-yk-debug
+    cmake-yk/SOM++ -cp Smalltalk Examples/Hello.som
+
+lint:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    # Find a v20 binary; try the versioned name first, then the plain one.
+    find_v20() {
+        local tool=$1
+        for bin in "$tool-20" "$tool"; do
+            command -v "$bin" &>/dev/null && "$bin" --version 2>/dev/null | grep -q "version 20" && echo "$bin" && return
+        done
+        echo "$tool 20 not found. Install with: pip install '$tool==20.*'" >&2
+        exit 1
+    }
+    CLANG_TIDY=$(find_v20 clang-tidy)
+    CLANG_FORMAT=$(find_v20 clang-format)
+    # Sompp GithubActions run across all GC × integer-mode combinations; mirror that here.
+    for gc in GENERATIONAL MARK_SWEEP COPYING; do
+        for integers in "-DUSE_TAGGING=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=false"; do
+            $CLANG_TIDY --config-file=.clang-tidy src/**/*.cpp -- -fdiagnostics-absolute-paths -DGC_TYPE="$gc" $integers -DUNITTESTS
+        done
+    done
+    $CLANG_FORMAT --dry-run --style=file --Werror src/*.cpp src/**/*.cpp src/**/*.h
+
+clean:
+    rm -rf cmake-build cmake-debug cmake-yk

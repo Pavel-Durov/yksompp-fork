@@ -73,7 +73,6 @@ static gc_oop_t prebuildInts[INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE + 1];
 #define INT_HIST_SIZE 1
 
 // Here we go:
-
 uint8_t dumpBytecodes;
 uint8_t gcVerbosity;
 
@@ -111,6 +110,10 @@ void Universe::Shutdown() {
          it++) {
         hist_csv << it->first << ", " << it->second << endl;
     }
+#endif
+
+#ifdef USE_YK
+    YkUniverseShutdown();
 #endif
 
 #ifdef LOG_RECEIVER_TYPES
@@ -353,14 +356,18 @@ vm_oop_t Universe::interpretMethod(VMObject* receiver, VMInvokable* initialize,
         dumpBytecodes = 2 - trace;
     }
 
-    if (dumpBytecodes > 1) {
-        return Interpreter::Start<true>();
-    }
-    return Interpreter::Start<false>();
+    // Runtime bool instead of template<bool>: a templated Start would produce
+    // two instantiations each containing yk_mt_control_point, violating yk's
+    // single-call-site requirement.
+    return Interpreter::Start(dumpBytecodes > 1);
 }
 
 void Universe::initialize(int32_t _argc, char** _argv) {
     InitializeAllocationLog();
+
+#ifdef USE_YK
+    YkUniverseInit();
+#endif
 
     heapSize = 1ULL * 1024 * 1024;
 

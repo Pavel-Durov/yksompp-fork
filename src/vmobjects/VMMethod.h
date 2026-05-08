@@ -29,6 +29,10 @@
 #include <iostream>
 #include <queue>
 
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
+
 #include "../compiler/LexicalScope.h"
 #include "../vm/Globals.h"
 #include "../vm/Print.h"
@@ -96,7 +100,12 @@ public:
              size_t numLocals, size_t maxStackDepth, LexicalScope* lexicalScope,
              BackJump* inlinedLoops);
 
-    ~VMMethod() override { delete lexicalScope; }
+    ~VMMethod() override {
+        delete lexicalScope;
+#ifdef USE_YK
+        YkMethodDestroy(yklocs, bcLength);
+#endif
+    }
 
     [[nodiscard]] inline size_t GetNumberOfLocals() const {
         return numberOfLocals;
@@ -138,6 +147,10 @@ public:
     }
 
     inline void SetBytecode(size_t indx, uint8_t val) { bytecodes[indx] = val; }
+
+#ifdef USE_YK
+    void InitYkLocs();
+#endif
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     void SetCachedFrame(VMFrame* frame);
@@ -220,4 +233,7 @@ private:
 #endif
     gc_oop_t* indexableFields;
     uint8_t* bytecodes;
+#ifdef USE_YK
+    YkLocation* yklocs{nullptr};  // one per bytecode; malloc'd (not GC-managed)
+#endif
 };

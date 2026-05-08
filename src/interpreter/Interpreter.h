@@ -33,23 +33,31 @@
 #include "../vmobjects/VMFrame.h"
 #include "../vmobjects/VMMethod.h"
 
-#define DISPATCH_NOGC()                                           \
-    {                                                             \
-        goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]]; \
-    }
-
-#define DISPATCH_GC()                                             \
-    {                                                             \
-        if (GetHeap<HEAP_CLS>()->isCollectionTriggered()) {       \
-            startGC();                                            \
-        }                                                         \
-        goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]]; \
-    }
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#else
+  // NOLINTBEGIN(cppcoreguidelines-macro-usage)
+  #define DISPATCH_NOGC()                                           \
+      {                                                             \
+          goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]]; \
+      }
+  #define DISPATCH_GC()                                             \
+      {                                                             \
+          if (GetHeap<HEAP_CLS>()->isCollectionTriggered()) {       \
+              startGC();                                            \
+          }                                                         \
+          goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]]; \
+      }
+  #define YK_DISPATCH_TRAMPOLINE() (void)0
+// NOLINTEND(cppcoreguidelines-macro-usage)
+#endif
 
 class Interpreter {
 public:
-    template <bool PrintBytecodes>
-    static vm_oop_t Start();
+    // Not a template: a templated Start<bool> would produce two instantiations,
+    // each containing yk_mt_control_point — violating yk's requirement that
+    // exactly one call site exists in the final binary.
+    static vm_oop_t Start(bool printBytecodes = false);
 
     static VMFrame* PushNewFrame(VMMethod* method);
     static void SetFrame(VMFrame* frm);
@@ -81,9 +89,10 @@ private:
     static size_t bytecodeIndexGlobal;
     static uint8_t* currentBytecodes;
 
-    static const std::string unknownGlobal;
-    static const std::string doesNotUnderstand;
-    static const std::string escapedBlock;
+    static constexpr const char* unknownGlobal = "unknownGlobal:";
+    static constexpr const char* doesNotUnderstand =
+        "doesNotUnderstand:arguments:";
+    static constexpr const char* escapedBlock = "escapedBlock:";
 
     static void startGC();
     static void disassembleMethod();

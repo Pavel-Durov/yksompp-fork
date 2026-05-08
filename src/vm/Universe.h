@@ -37,6 +37,10 @@
 #include "../vmobjects/ObjectFormats.h"
 #include "Print.h"
 
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
+
 class SourcecodeCompiler;
 
 // for runtime debug
@@ -114,6 +118,10 @@ public:
 
     Universe() = default;
     ~Universe();
+
+#ifdef USE_YK
+    static YkMT* yk_mt;
+#endif
 #ifdef LOG_RECEIVER_TYPES
     struct stat_data {
         long noCalls;

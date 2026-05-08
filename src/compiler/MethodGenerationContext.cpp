@@ -86,6 +86,10 @@ VMInvokable* MethodGenerationContext::Assemble() {
         meth->SetBytecode(i, bytecode[i]);
     }
 
+#ifdef USE_YK
+    meth->InitYkLocs();
+#endif
+
     // return the method - the holder field is to be set later on!
     return meth;
 }
