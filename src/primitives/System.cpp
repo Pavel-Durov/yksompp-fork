@@ -43,6 +43,7 @@
 #include "../vmobjects/VMFrame.h"
 #include "../vmobjects/VMString.h"
 #include "../vmobjects/VMSymbol.h"
+#include "../yk/yk_linkage.h"
 
 #if defined(__GNUC__)
 
@@ -54,7 +55,7 @@
 
 #endif
 
-static _System* System_;
+YK_STATIC _System* System_;
 
 static vm_oop_t sysGlobal_(vm_oop_t /*unused*/, vm_oop_t rightObj) {
     auto* arg = static_cast<VMSymbol*>(rightObj);
@@ -118,7 +119,7 @@ static vm_oop_t sysErrorPrintNewline_(vm_oop_t leftObj, vm_oop_t rightObj) {
     return leftObj;
 }
 
-static struct timeval start_time;
+YK_STATIC struct timeval start_time;
 
 static vm_oop_t sysTime(vm_oop_t /*unused*/) {
     struct timeval now{};

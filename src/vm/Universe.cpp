@@ -59,6 +59,7 @@
 #include "../vmobjects/VMObject.h"
 #include "../vmobjects/VMObjectBase.h"
 #include "../vmobjects/VMString.h"
+#include "../yk/yk_linkage.h"
 #include "Globals.h"
 #include "IsValidObject.h"
 #include "LogAllocation.h"
@@ -67,7 +68,7 @@
 #include "Symbols.h"
 
 #if CACHE_INTEGER
-static gc_oop_t prebuildInts[INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE + 1];
+YK_STATIC gc_oop_t prebuildInts[INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE + 1];
 #endif
 
 #define INT_HIST_SIZE 1
@@ -76,9 +77,8 @@ static gc_oop_t prebuildInts[INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE + 1];
 uint8_t dumpBytecodes;
 uint8_t gcVerbosity;
 
-static std::string bm_name;
-
-static map<int64_t, int64_t> integerHist;
+YK_STATIC std::string bm_name;
+YK_STATIC map<int64_t, int64_t> integerHist;
 
 map<GCSymbol*, gc_oop_t> Universe::globals;
 map<uint8_t, GCClass*> Universe::blockClassesByNoOfArgs;

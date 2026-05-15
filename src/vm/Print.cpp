@@ -7,12 +7,13 @@
 #include <string>
 
 #include "../misc/defs.h"
+#include "../yk/yk_linkage.h"
 #include "LogAllocation.h"
 #include "Universe.h"
 
 using namespace std;
 
-static mutex output_mutex;
+YK_STATIC mutex output_mutex;
 
 void Print(const std::string& str) {
     lock_guard<mutex> const lock(output_mutex);
