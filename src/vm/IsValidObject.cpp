@@ -22,28 +22,29 @@
 #include "../vmobjects/VMString.h"
 #include "../vmobjects/VMSymbol.h"
 #include "../vmobjects/VMTrivialMethod.h"
+#include "../yk/yk_linkage.h"
 #include "Globals.h"
 
-static void* vt_array;
-static void* vt_block;
-static void* vt_class;
-static void* vt_double;
-static void* vt_eval_primitive;
-static void* vt_frame;
-static void* vt_integer;
-static void* vt_big_integer;
-static void* vt_method;
-static void* vt_object;
-static void* vt_primitive;
-static void* vt_safe_un_primitive;
-static void* vt_safe_bin_primitive;
-static void* vt_safe_ter_primitive;
-static void* vt_literal_return;
-static void* vt_global_return;
-static void* vt_getter;
-static void* vt_setter;
-static void* vt_string;
-static void* vt_symbol;
+YK_STATIC void* vt_array;
+YK_STATIC void* vt_block;
+YK_STATIC void* vt_class;
+YK_STATIC void* vt_double;
+YK_STATIC void* vt_eval_primitive;
+YK_STATIC void* vt_frame;
+YK_STATIC void* vt_integer;
+YK_STATIC void* vt_big_integer;
+YK_STATIC void* vt_method;
+YK_STATIC void* vt_object;
+YK_STATIC void* vt_primitive;
+YK_STATIC void* vt_safe_un_primitive;
+YK_STATIC void* vt_safe_bin_primitive;
+YK_STATIC void* vt_safe_ter_primitive;
+YK_STATIC void* vt_literal_return;
+YK_STATIC void* vt_global_return;
+YK_STATIC void* vt_getter;
+YK_STATIC void* vt_setter;
+YK_STATIC void* vt_string;
+YK_STATIC void* vt_symbol;
 
 bool IsValidObject(vm_oop_t obj) {
     if (!DEBUG) {
