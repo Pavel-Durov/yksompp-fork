@@ -2,6 +2,7 @@ yk_config := "/path/to/yk-config"
 
 build: build-release
 
+# Standard release build: compiled at -O3 with LTO for best interpreter throughput.
 build-release:
     mkdir -p cmake-build
     cmake -DCMAKE_BUILD_TYPE=Release \
@@ -10,6 +11,7 @@ build-release:
         -S . -B cmake-build
     cmake --build cmake-build --parallel
 
+# Debug build: no optimisation, assertions enabled, includes unit-test target.
 build-debug:
     mkdir -p cmake-debug
     cmake -DCMAKE_BUILD_TYPE=Debug \
@@ -19,26 +21,26 @@ build-debug:
     cmake --build cmake-debug --parallel
 
 build-yk-debug:
-    mkdir -p cmake-yk
+    mkdir -p cmake-yk-debug
     PATH="$(dirname {{yk_config}}):$PATH" cmake \
         -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cc)++ \
         -DCMAKE_BUILD_TYPE=Debug \
         -DYK_BUILD_TYPE=debug \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
-        -S . -B cmake-yk
-    cmake --build cmake-yk --parallel
+        -S . -B cmake-yk-debug
+    cmake --build cmake-yk-debug --parallel
 
 build-yk-release:
-    mkdir -p cmake-yk
+    mkdir -p cmake-yk-release
     PATH="$(dirname {{yk_config}}):$PATH" cmake \
-        -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cc)++ \
+        -DCMAKE_CXX_COMPILER=$({{yk_config}} release --cc)++ \
         -DCMAKE_BUILD_TYPE=Release \
         -DYK_BUILD_TYPE=release \
-        -S . -B cmake-yk
-    cmake --build cmake-yk --parallel
+        -S . -B cmake-yk-release
+    cmake --build cmake-yk-release --parallel
 
-build-yk: build-yk-debug
+build-yk: build-yk-release
 
 test: test-unit test-som
 
@@ -49,7 +51,7 @@ test-unit: build-debug
     cmake-debug/unittests -cp Smalltalk:TestSuite/BasicInterpreterTests Examples/Hello.som
 
 test-yk: build-yk
-    cmake-yk/SOM++ -cp Smalltalk TestSuite/TestHarness.som
+    cmake-yk-release/SOM++ -cp Smalltalk TestSuite/TestHarness.som
 
 hello: build-release
     cmake-build/SOM++ -cp Smalltalk Examples/Hello.som
@@ -81,4 +83,4 @@ lint:
     $CLANG_FORMAT --dry-run --style=file --Werror src/*.cpp src/**/*.cpp src/**/*.h
 
 clean:
-    rm -rf cmake-build cmake-debug cmake-yk
+    rm -rf cmake-build cmake-debug cmake-yk-debug cmake-yk-release
