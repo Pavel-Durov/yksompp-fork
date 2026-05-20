@@ -59,7 +59,13 @@ MethodGenerationContext::MethodGenerationContext(ClassGenerationContext& holder,
     : holderGenc(holder), outerGenc(outer),
       maxContextLevel(outer == nullptr ? 0 : outer->GetMaxContextLevel() + 1),
       blockMethod(outer != nullptr),
-      last4Bytecodes({BC_INVALID, BC_INVALID, BC_INVALID, BC_INVALID}) {}
+      last4Bytecodes({BC_INVALID, BC_INVALID, BC_INVALID, BC_INVALID}) {
+#ifdef YK_DEBUG_STRS
+    if (outer != nullptr) {
+        sourceFile = outer->sourceFile;
+    }
+#endif
+}
 
 VMInvokable* MethodGenerationContext::Assemble() {
     VMTrivialMethod* trivialMethod = assembleTrivialMethod();
@@ -87,7 +93,17 @@ VMInvokable* MethodGenerationContext::Assemble() {
     }
 
 #ifdef USE_YK
+  #ifdef YK_DEBUG_STRS
+    {
+        std::vector<size_t> lineNums(bc_size);
+        for (size_t i = 0; i < bc_size; i++) {
+            lineNums[i] = i < bcCoords.size() ? bcCoords[i].GetLine() : 0;
+        }
+        meth->InitYkLocs(lineNums.data(), sourceFile.c_str());
+    }
+  #else
     meth->InitYkLocs();
+  #endif
 #endif
 
     // return the method - the holder field is to be set later on!
@@ -440,6 +456,9 @@ void MethodGenerationContext::AddBytecode(uint8_t bc, int64_t stackEffect) {
     maxStackDepth = max(maxStackDepth, currentStackDepth);
 
     bytecode.push_back(bc);
+#ifdef YK_DEBUG_STRS
+    bcCoords.push_back(currentSourceCoordinate);
+#endif
 
     last4Bytecodes[0] = last4Bytecodes[1];
     last4Bytecodes[1] = last4Bytecodes[2];
@@ -449,6 +468,9 @@ void MethodGenerationContext::AddBytecode(uint8_t bc, int64_t stackEffect) {
 
 void MethodGenerationContext::AddBytecodeArgument(uint8_t arg) {
     bytecode.push_back(arg);
+#ifdef YK_DEBUG_STRS
+    bcCoords.push_back(currentSourceCoordinate);
+#endif
 }
 
 size_t MethodGenerationContext::AddBytecodeArgumentAndGetIndex(size_t bc) {
@@ -487,6 +509,9 @@ void MethodGenerationContext::removeLastBytecodes(size_t numBytecodes) {
 
     assert(bytesToRemove > 0);
     bytecode.erase(bytecode.end() - bytesToRemove, bytecode.end());
+#ifdef YK_DEBUG_STRS
+    bcCoords.erase(bcCoords.end() - bytesToRemove, bcCoords.end());
+#endif
 }
 
 bool MethodGenerationContext::hasOneLiteralBlockArgument() {
@@ -884,11 +909,18 @@ void MethodGenerationContext::removeLastBytecodeAt(size_t indexFromEnd) {
 
     bytecode.erase(bytecode.begin() + bcOffset,
                    bytecode.begin() + bcOffset + bcLength);
+#ifdef YK_DEBUG_STRS
+    bcCoords.erase(bcCoords.begin() + bcOffset,
+                   bcCoords.begin() + bcOffset + bcLength);
+#endif
 }
 
 void MethodGenerationContext::RemoveLastPopForBlockLocalReturn() {
     if (LastBytecodeIs(0, BC_POP)) {
         bytecode.pop_back();
+#ifdef YK_DEBUG_STRS
+        bcCoords.pop_back();
+#endif
         return;
     }
 
@@ -902,6 +934,11 @@ void MethodGenerationContext::RemoveLastPopForBlockLocalReturn() {
             (ptrdiff_t)Bytecode::GetBytecodeLength(lastBytecodeAt(0));
         assert(IsPopSmthBytecode(bytecode.at(index)));
         bytecode.insert(bytecode.begin() + index, BC_DUP);
+#ifdef YK_DEBUG_STRS
+        bcCoords.insert(
+            bcCoords.begin() + index,
+            index > 0 ? bcCoords.at(index - 1) : SourceCoordinate{});
+#endif
 
         last4Bytecodes[0] = last4Bytecodes[1];
         last4Bytecodes[1] = last4Bytecodes[2];

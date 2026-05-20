@@ -23,6 +23,10 @@ void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
+#ifdef YK_DEBUG_STRS
+void YkDestroyDebugStrs(char** strs, size_t bcLen);
+#endif
+
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)
 // where the single control point call lives. The trampoline is defined in
@@ -33,6 +37,15 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 // with multiple successors and is fully traceable.
 
 // NOLINTBEGIN(cppcoreguidelines-macro-usage)
+#ifdef YK_DEBUG_STRS
+  #define YK_DEBUG_STR_CALL()                                       \
+      if (method->instdebugstrs != nullptr) {                       \
+          yk_debug_str(method->instdebugstrs[bytecodeIndexGlobal]); \
+      }
+#else
+  #define YK_DEBUG_STR_CALL() (void)0
+#endif
+
 #define DISPATCH_NOGC() goto YK_DISPATCH_START
 #define DISPATCH_GC()                                       \
     {                                                       \
@@ -45,6 +58,7 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
     YK_DISPATCH_START:                                         \
     yk_mt_control_point(Universe::yk_mt,                       \
                         &method->yklocs[bytecodeIndexGlobal]); \
+    YK_DEBUG_STR_CALL();                                       \
     switch (currentBytecodes[bytecodeIndexGlobal]) {           \
         case BC_HALT:                                          \
             goto LABEL_BC_HALT;                                \

@@ -1,4 +1,5 @@
 yk_config := "/path/to/yk-config"
+yk_debug_strs := "true"
 
 build: build-release
 
@@ -26,6 +27,7 @@ build-yk-debug:
         -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cc)++ \
         -DCMAKE_BUILD_TYPE=Debug \
         -DYK_BUILD_TYPE=debug \
+        -DYK_DEBUG_STRS={{yk_debug_strs}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-yk-debug
@@ -37,6 +39,7 @@ build-yk-release:
         -DCMAKE_CXX_COMPILER=$({{yk_config}} release --cc)++ \
         -DCMAKE_BUILD_TYPE=Release \
         -DYK_BUILD_TYPE=release \
+        -DYK_DEBUG_STRS={{yk_debug_strs}} \
         -S . -B cmake-yk-release
     cmake --build cmake-yk-release --parallel
 
@@ -60,7 +63,8 @@ hello: build-release
 hello-yk: build-yk-debug
     cmake-yk/SOM++ -cp Smalltalk Examples/Hello.som
 
-lint:
+# Lint only files changed relative to HEAD (staged, unstaged, and untracked).
+lint-changed:
     #!/usr/bin/env bash
     set -euo pipefail
     # Find a v20 binary; try the versioned name first, then the plain one.
@@ -74,13 +78,21 @@ lint:
     }
     CLANG_TIDY=$(find_v20 clang-tidy)
     CLANG_FORMAT=$(find_v20 clang-format)
-    # Sompp GithubActions run across all GC × integer-mode combinations; mirror that here.
-    for gc in GENERATIONAL MARK_SWEEP COPYING; do
-        for integers in "-DUSE_TAGGING=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=false"; do
-            $CLANG_TIDY --config-file=.clang-tidy src/**/*.cpp -- -fdiagnostics-absolute-paths -DGC_TYPE="$gc" $integers -DUNITTESTS
+    mapfile -t changed < <(
+        { git diff HEAD --name-only --diff-filter=d; git ls-files --others --exclude-standard; } \
+        | grep '^src/.*\.\(cpp\|h\)$' | sort -u
+    )
+    if [[ ${#changed[@]} -eq 0 ]]; then echo "No changed source files."; exit 0; fi
+    echo "Linting ${#changed[@]} file(s): ${changed[*]}"
+    mapfile -t cpp_files < <(printf '%s\n' "${changed[@]}" | grep '\.cpp$' || true)
+    if [[ ${#cpp_files[@]} -gt 0 ]]; then
+        for gc in GENERATIONAL MARK_SWEEP COPYING; do
+            for integers in "-DUSE_TAGGING=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=false"; do
+                $CLANG_TIDY --config-file=.clang-tidy "${cpp_files[@]}" -- -fdiagnostics-absolute-paths -DGC_TYPE="$gc" $integers -DUNITTESTS
+            done
         done
-    done
-    $CLANG_FORMAT --dry-run --style=file --Werror src/*.cpp src/**/*.cpp src/**/*.h
+    fi
+    $CLANG_FORMAT --dry-run --style=file --Werror "${changed[@]}"
 
 clean:
     rm -rf cmake-build cmake-debug cmake-yk-debug cmake-yk-release

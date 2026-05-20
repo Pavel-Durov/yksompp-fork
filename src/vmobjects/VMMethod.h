@@ -26,6 +26,7 @@
  THE SOFTWARE.
  */
 
+#include <cstdlib>
 #include <iostream>
 #include <queue>
 
@@ -104,6 +105,9 @@ public:
         delete lexicalScope;
 #ifdef USE_YK
         YkMethodDestroy(yklocs, bcLength);
+  #ifdef YK_DEBUG_STRS
+        YkDestroyDebugStrs(instdebugstrs, bcLength);
+  #endif
 #endif
     }
 
@@ -149,7 +153,8 @@ public:
     inline void SetBytecode(size_t indx, uint8_t val) { bytecodes[indx] = val; }
 
 #ifdef USE_YK
-    void InitYkLocs();
+    void InitYkLocs(const size_t* lineNums = nullptr,
+                    const char* sourceFile = nullptr);
 #endif
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
@@ -235,5 +240,9 @@ private:
     uint8_t* bytecodes;
 #ifdef USE_YK
     YkLocation* yklocs{nullptr};  // one per bytecode; malloc'd (not GC-managed)
+  #ifdef YK_DEBUG_STRS
+    char** instdebugstrs{
+        nullptr};  // one per bytecode opcode position; malloc'd
+  #endif
 #endif
 };

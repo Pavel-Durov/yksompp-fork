@@ -99,6 +99,13 @@ public:
     void AddBytecodeArgument(uint8_t arg);
     size_t AddBytecodeArgumentAndGetIndex(size_t bc);
 
+#ifdef YK_DEBUG_STRS
+    void SetSourceCoordinate(const SourceCoordinate& c) {
+        currentSourceCoordinate = c;
+    }
+    void SetSourceFile(std::string f) { sourceFile = std::move(f); }
+#endif
+
     bool HasBytecodes();
 
     std::vector<uint8_t> GetBytecodes() { return bytecode; }
@@ -175,6 +182,12 @@ private:
     std::vector<vm_oop_t> literals;
     bool finished{false};
     std::vector<uint8_t> bytecode;
+#ifdef YK_DEBUG_STRS
+    SourceCoordinate currentSourceCoordinate{};
+    std::vector<SourceCoordinate>
+        bcCoords;  // parallel to bytecode, one per byte
+    std::string sourceFile;
+#endif
     LexicalScope* lexicalScope{nullptr};
 
     size_t currentStackDepth{0};

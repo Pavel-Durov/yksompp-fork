@@ -70,6 +70,9 @@ void EmitDUP(MethodGenerationContext& mgenc) {
 
 void EmitPUSHLOCAL(MethodGenerationContext& mgenc, const Parser& parser,
                    size_t index, size_t context) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (index > std::numeric_limits<uint8_t>::max()) {
         parser.ParseError(
             "The method has too many local variables. You may be able to split "
@@ -104,6 +107,9 @@ void EmitPUSHLOCAL(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitPUSHARGUMENT(MethodGenerationContext& mgenc, const Parser& parser,
                       size_t index, size_t context) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (index > std::numeric_limits<uint8_t>::max()) {
         parser.ParseError(
             "The method has too many arguments. You may be able to split up "
@@ -140,6 +146,9 @@ void EmitPUSHARGUMENT(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitPUSHFIELD(MethodGenerationContext& mgenc, const Parser& parser,
                    VMSymbol* field) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     const int64_t idx = mgenc.GetFieldIndex(field);
     if (idx < 0 || idx > std::numeric_limits<uint8_t>::max()) {
         parser.ParseError(
@@ -153,12 +162,18 @@ void EmitPUSHFIELD(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitPUSHBLOCK(MethodGenerationContext& mgenc, const Parser& parser,
                    VMInvokable* block) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     const uint8_t idx = mgenc.AddLiteralIfAbsent(block, parser);
     Emit2(mgenc, BC_PUSH_BLOCK, idx, 1);
 }
 
 void EmitPUSHCONSTANT(MethodGenerationContext& mgenc, const Parser& parser,
                       vm_oop_t cst) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     // this isn't very robust with respect to initialization order
     // so, we check here, and hope it's working, but alternatively
     // we also make sure that we don't miss anything in the else
@@ -208,6 +223,9 @@ void EmitPUSHCONSTANTString(MethodGenerationContext& mgenc, VMString* str) {
 
 void EmitPUSHGLOBAL(MethodGenerationContext& mgenc, const Parser& parser,
                     VMSymbol* global) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (global == SymbolFor("nil")) {
         EmitPUSHCONSTANT(mgenc, parser, load_ptr(nilObject));
     } else if (global == SymbolFor("true")) {
@@ -228,6 +246,9 @@ void EmitPOP(MethodGenerationContext& mgenc) {
 
 void EmitPOPLOCAL(MethodGenerationContext& mgenc, const Parser& parser,
                   size_t index, size_t context) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (index > std::numeric_limits<uint8_t>::max()) {
         parser.ParseError(
             "The method has too many local variables. You may be able to split "
@@ -265,6 +286,9 @@ void EmitPOPLOCAL(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitPOPARGUMENT(MethodGenerationContext& mgenc, const Parser& parser,
                      size_t idx, size_t ctx) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (idx > std::numeric_limits<uint8_t>::max()) {
         parser.ParseError(
             "The method has too many arguments. You may be able to split up "
@@ -282,6 +306,9 @@ void EmitPOPARGUMENT(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitPOPFIELD(MethodGenerationContext& mgenc, const Parser& parser,
                   VMSymbol* field) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     const int64_t idx = mgenc.GetFieldIndex(field);
     if (idx < 0 || idx > std::numeric_limits<uint8_t>::max()) {
         parser.ParseError(
@@ -299,6 +326,9 @@ void EmitPOPFIELD(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitSEND(MethodGenerationContext& mgenc, const Parser& parser,
               VMSymbol* msg) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     const uint8_t idx = mgenc.AddLiteralIfAbsent(msg, parser);
 
     const uint8_t numArgs = Signature::GetNumberOfArguments(msg);
@@ -309,6 +339,9 @@ void EmitSEND(MethodGenerationContext& mgenc, const Parser& parser,
 
 void EmitSUPERSEND(MethodGenerationContext& mgenc, const Parser& parser,
                    VMSymbol* msg) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     const uint8_t idx = mgenc.AddLiteralIfAbsent(msg, parser);
     const uint8_t numArgs = Signature::GetNumberOfArguments(msg);
     const int64_t stackEffect = -numArgs + 1;  // +1 for the result
@@ -322,6 +355,9 @@ void EmitRETURNSELF(MethodGenerationContext& mgenc) {
 }
 
 void EmitRETURNLOCAL(MethodGenerationContext& mgenc, const Parser& parser) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (!mgenc.OptimizeReturnField(parser)) {
         Emit1(mgenc, BC_RETURN_LOCAL, 0);
     }
@@ -333,6 +369,9 @@ void EmitRETURNNONLOCAL(MethodGenerationContext& mgenc) {
 
 void EmitRETURNFIELD(MethodGenerationContext& mgenc, const Parser& parser,
                      size_t index) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetSourceCoordinate(parser.GetCurrentSource());
+#endif
     if (index > 2) {
         parser.ParseError(
             "Internal Error: EmitRETURNFIELD has unsupported argument");

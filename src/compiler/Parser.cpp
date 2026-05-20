@@ -210,6 +210,9 @@ void Parser::Classdef(ClassGenerationContext& cgenc) {
         MethodGenerationContext mgenc(cgenc);
         std::string self = strSelf;
         mgenc.AddArgument(self, lexer.GetCurrentSource());
+#ifdef YK_DEBUG_STRS
+        mgenc.SetSourceFile(fname);
+#endif
 
         method(mgenc);
 
@@ -228,6 +231,9 @@ void Parser::Classdef(ClassGenerationContext& cgenc) {
             MethodGenerationContext mgenc(cgenc);
             std::string self = strSelf;
             mgenc.AddArgument(self, lexer.GetCurrentSource());
+#ifdef YK_DEBUG_STRS
+            mgenc.SetSourceFile(fname);
+#endif
 
             method(mgenc);
 
