@@ -148,10 +148,10 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
   separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
 
   target_compile_definitions(SOM++ PRIVATE USE_YK)
-  option(YK_DEBUG_STRS "Enable yk debug strings (method:bc_idx:opcode per bytecode)" ON)
-  if(YK_DEBUG_STRS)
+  if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(SOM++ PRIVATE YK_DEBUG_STRS)
-    message(STATUS "  Yk debug strings enabled")
+    # Export vtables so yk can resolve them using dlsym.
+    target_link_options(SOM++ PRIVATE -Wl,--export-dynamic-symbol=_ZTV*)
   endif()
   target_compile_options(SOM++ PRIVATE ${YK_CPPFLAGS_LIST} ${YK_CFLAGS_LIST} -fno-exceptions -fno-jump-tables)
   target_link_options(SOM++ PRIVATE ${YK_LDFLAGS_LIST})
