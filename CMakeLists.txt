@@ -153,7 +153,7 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
     # Export vtables so yk can resolve them using dlsym.
     target_link_options(SOM++ PRIVATE -Wl,--export-dynamic-symbol=_ZTV*)
   endif()
-  target_compile_options(SOM++ PRIVATE ${YK_CPPFLAGS_LIST} ${YK_CFLAGS_LIST} -fno-exceptions -fno-jump-tables)
+  target_compile_options(SOM++ PRIVATE ${YK_CPPFLAGS_LIST} ${YK_CFLAGS_LIST} -fno-exceptions)
   target_link_options(SOM++ PRIVATE ${YK_LDFLAGS_LIST})
   target_link_libraries(SOM++ ${YK_LIBS_LIST})
 
