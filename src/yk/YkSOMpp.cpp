@@ -99,13 +99,8 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
   #endif
 
     if (sourceFile != nullptr && strstr(sourceFile, "Smalltalk/") != nullptr) {
-        (void)sourceFile;
         return;
     }
-    // Method entry: gives the JIT a trace hook for hot recursive methods
-    // (e.g. Towers' move:disksFrom:to:) that have no backward jumps.
-    yklocs[0] = yk_location_new();
-
     // Backward-jump targets: hot loop headers.
     for (size_t i = 0; i < bcLength;
          i += Bytecode::GetBytecodeLength(bytecodes[i])) {
