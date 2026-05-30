@@ -98,6 +98,7 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
     (void)lineNums;
   #endif
 
+    // Skip the SOM standard library.
     if (sourceFile != nullptr && strstr(sourceFile, "Smalltalk/") != nullptr) {
         return;
     }
