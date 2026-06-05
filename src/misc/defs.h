@@ -127,6 +127,13 @@ typedef DebugCopyingHeap HEAP_CLS;
 #endif
 
 //
+// Vector Settings
+//
+#ifndef USE_VECTOR_PRIMITIVES
+  #define USE_VECTOR_PRIMITIVES true
+#endif
+
+//
 // Debugging
 //
 #ifdef DEBUG
@@ -175,7 +182,7 @@ typedef DebugCopyingHeap HEAP_CLS;
 #define likely(x) __builtin_expect((x), 1)
 #define unlikely(x) __builtin_expect((x), 0)
 
-#if defined(_MSC_VER)
+#ifdef _MSC_VER
 typedef unsigned long long uint64_t;
 typedef long long int64_t;
 typedef unsigned long uint32_t;

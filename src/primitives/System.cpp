@@ -55,8 +55,6 @@
 
 #endif
 
-YK_STATIC _System* System_;
-
 static vm_oop_t sysGlobal_(vm_oop_t /*unused*/, vm_oop_t rightObj) {
     auto* arg = static_cast<VMSymbol*>(rightObj);
     vm_oop_t result = Universe::GetGlobal(arg);
