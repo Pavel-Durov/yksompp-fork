@@ -193,7 +193,7 @@ YK_STATIC Symbol binaryOpSyms[] = {Or,   Comma, Minus, Equal, Not,  And,
                                    Or,   Star,  Div,   Mod,   Plus, Equal,
                                    More, Less,  Comma, At,    Per,  NONE};
 
-YK_STATIC Symbol keywordSelectorSyms[] = {Keyword, KeywordSequence};
+YK_STATIC Symbol keywordSelectorSyms[] = {Keyword, KeywordSequence, NONE};
 
 void Parser::Classdef(ClassGenerationContext& cgenc) {
     cgenc.SetName(SymbolFor(text));
@@ -209,7 +209,7 @@ void Parser::Classdef(ClassGenerationContext& cgenc) {
            symIn(binaryOpSyms)) {
         MethodGenerationContext mgenc(cgenc);
         std::string self = strSelf;
-        mgenc.AddArgument(self, lexer.GetCurrentSource());
+        mgenc.AddArgument(self, lexer.GetCurrentSource(), this);
 #ifdef YK_DEBUG_STRS
         mgenc.SetSourceFile(fname);
 #endif
@@ -230,7 +230,7 @@ void Parser::Classdef(ClassGenerationContext& cgenc) {
                symIn(binaryOpSyms)) {
             MethodGenerationContext mgenc(cgenc);
             std::string self = strSelf;
-            mgenc.AddArgument(self, lexer.GetCurrentSource());
+            mgenc.AddArgument(self, lexer.GetCurrentSource(), this);
 #ifdef YK_DEBUG_STRS
             mgenc.SetSourceFile(fname);
 #endif
@@ -338,7 +338,7 @@ void Parser::binaryPattern(MethodGenerationContext& mgenc) {
 
     auto source = lexer.GetCurrentSource();
     auto a = argument();
-    mgenc.AddArgumentIfAbsent(a, source);
+    mgenc.AddArgument(a, source, this);
 }
 
 void Parser::keywordPattern(MethodGenerationContext& mgenc) {
@@ -348,7 +348,7 @@ void Parser::keywordPattern(MethodGenerationContext& mgenc) {
 
         auto source = lexer.GetCurrentSource();
         auto a = argument();
-        mgenc.AddArgumentIfAbsent(a, source);
+        mgenc.AddArgument(a, source, this);
     } while (sym == Keyword);
 
     mgenc.SetSignature(SymbolFor(kw));
@@ -883,7 +883,7 @@ std::string Parser::_string() {
 
 void Parser::nestedBlock(MethodGenerationContext& mgenc) {
     std::string blockSelf = strBlockSelf;
-    mgenc.AddArgumentIfAbsent(blockSelf, lexer.GetCurrentSource());
+    mgenc.AddArgument(blockSelf, lexer.GetCurrentSource(), this);
 
     expect(NewBlock);
     if (sym == Colon) {
@@ -927,7 +927,7 @@ void Parser::blockArguments(MethodGenerationContext& mgenc) {
 
         auto source = lexer.GetCurrentSource();
         auto a = argument();
-        mgenc.AddArgumentIfAbsent(a, source);
+        mgenc.AddArgument(a, source, this);
 
     } while (sym == Colon);
 }
@@ -966,7 +966,7 @@ __attribute__((noreturn)) void Parser::parseError(const char* msg,
 
 __attribute__((noreturn)) void Parser::ParseError(const char* msg) const {
     std::string msgWithMeta =
-        "%(file)s:%(line)d:%(column)d: error: " + std::string(msg);
+        "%(file)s:%(line)d:%(column)d: error: " + std::string(msg) + "\n";
 
     ReplacePattern(msgWithMeta, "%(file)s", fname);
 
@@ -998,4 +998,14 @@ __attribute__((noreturn)) void Parser::parseError(const char* msg,
     }
 
     parseError(msg, expectedStr);
+}
+
+__attribute__((noreturn)) void ParseError(const Parser* parser,
+                                          const char* msg) {
+    if (parser == nullptr) {
+        ErrorPrint(msg);
+        Quit(ERR_FAIL);
+    }
+
+    parser->ParseError(msg);
 }

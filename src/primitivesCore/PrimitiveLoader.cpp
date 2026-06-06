@@ -40,6 +40,7 @@
 #include "../primitives/String.h"
 #include "../primitives/Symbol.h"
 #include "../primitives/System.h"
+#include "../primitives/Vector.h"
 #include "../vmobjects/ObjectFormats.h"
 #include "PrimitiveContainer.h"
 
@@ -51,8 +52,13 @@ PrimitiveLoader& PrimitiveLoader::GetLoader() {
     return instance;
 }
 
+PrimitiveLoader* PrimitiveLoader::GetInstance() {
+    return &GetLoader();
+}
+
 PrimitiveLoader::PrimitiveLoader() {
     AddPrimitiveObject("Array", new _Array());
+    AddPrimitiveObject("Vector", new _Vector());
     AddPrimitiveObject("Block", new _Block());
     AddPrimitiveObject("Class", new _Class());
     AddPrimitiveObject("Double", new _Double());
@@ -71,6 +77,14 @@ PrimitiveLoader::~PrimitiveLoader() {
     }
 }
 
+PrimitiveContainer* PrimitiveLoader::GetObject(const std::string& name) {
+    auto it = primitiveObjects.find(name);
+    if (it != primitiveObjects.end()) {
+        return it->second;
+    }
+    return nullptr;
+}
+
 void PrimitiveLoader::AddPrimitiveObject(const std::string& name,
                                          PrimitiveContainer* prim) {
     primitiveObjects[name] = prim;
@@ -86,16 +100,18 @@ bool PrimitiveLoader::SupportsClass(const std::string& name) {
 
 void PrimitiveLoader::InstallPrimitives(const std::string& cname,
                                         VMClass* clazz,
-                                        bool classSide) {
-    GetLoader().installPrimitives(cname, clazz, classSide);
+                                        bool classSide,
+                                        bool showWarning) {
+    GetLoader().installPrimitives(cname, clazz, classSide, showWarning);
 }
 
 void PrimitiveLoader::installPrimitives(const std::string& cname,
                                         VMClass* clazz,
-                                        bool classSide) {
+                                        bool classSide,
+                                        bool showWarning) {
     if (primitiveObjects.find(cname) == primitiveObjects.end()) {
         return;
     }
 
-    primitiveObjects[cname]->InstallPrimitives(clazz, classSide);
+    primitiveObjects[cname]->InstallPrimitives(clazz, classSide, showWarning);
 }
