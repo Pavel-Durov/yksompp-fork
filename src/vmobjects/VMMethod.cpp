@@ -41,6 +41,7 @@
 #include "../interpreter/Interpreter.h"
 #include "../interpreter/bytecodes.h"
 #include "../memory/Heap.h"
+#include "../misc/Murmur3Hash.h"
 #include "../misc/defs.h"
 #include "../vm/Globals.h"
 #include "../vm/Print.h"
@@ -106,7 +107,8 @@ VMMethod* VMMethod::CloneForMovingGC() const {
         static_cast<void*>(clone->indexableFields + numIndexableFields));
 #else
     clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
-    clone->bytecodes = (uint8_t*)(clone->indexableFields + numIndexableFields);
+    clone->bytecodes =
+        (uint8_t*)(&(clone->indexableFields) + 2 + numIndexableFields);
 #endif
     // Use of GetNumberOfIndexableFields() is problematic here, because it may
     // be invalid object while cloning/moving within GC
@@ -751,4 +753,8 @@ bool operator<(const BackJumpPatch& a, const BackJumpPatch& b) {
 void VMMethod::MergeScopeInto(MethodGenerationContext& mgenc) {
     assert(lexicalScope != nullptr);
     mgenc.MergeIntoScope(*lexicalScope);
+}
+
+size_t VMMethod::GetBytecodeHash() const {
+    return murmur3_32(bytecodes, bcLength, 0x00000000);
 }

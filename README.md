@@ -63,3 +63,7 @@ $ just awfy-compare
    `traces_compiled_ok > 0` and `trace_executions > 0` confirm the JIT is working.
 
  - See `doc/Yk/` for a full account of the integration.
+
+## Upstream SOM++
+
+This fork tracks upstream [SOM++](https://github.com/SOM-st/SOMpp); see the upstream README and the `doc/` folder for details on the base interpreter, SOM standard library, GC options (`-DUSE_TAGGING`, `-DCACHE_INTEGER`, `-DGC_TYPE`), and the test suite.

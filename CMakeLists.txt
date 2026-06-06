@@ -23,6 +23,22 @@ project(SOMpp LANGUAGES CXX)
 set(CMAKE_PROJECT_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_CXX_STANDARD 17)
 
+# Make sure we have the SOM core-lib
+find_package(Git QUIET)
+if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
+  if(NOT EXISTS "${PROJECT_SOURCE_DIR}/core-lib/README.md")
+    message(STATUS "Initializing git submodule core-lib.")
+    execute_process(
+      COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
+      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+      RESULT_VARIABLE GIT_SUBMOD_RESULT
+    )
+    if(NOT GIT_SUBMOD_RESULT EQUAL "0")
+      message(FATAL_ERROR "git submodule update --init --recursive failed with ${GIT_SUBMOD_RESULT}, please checkout submodules manually.")
+    endif()
+  endif()
+endif()
+
 set(ROOT_DIR         "${CMAKE_CURRENT_SOURCE_DIR}")
 set(SRC_DIR          "${ROOT_DIR}/src")
 set(COMPILER_DIR     "${SRC_DIR}/compiler")
@@ -59,6 +75,8 @@ set(INT_CACHE_MIN_VALUE -5  CACHE STRING "Lower bound of cached integers")
 set(INT_CACHE_MAX_VALUE 100 CACHE STRING "Upper bound of cached integers")
 option(GENERATE_INTEGER_HISTOGRAM "Generate histogram of allocated integers" FALSE)
 
+option(USE_VECTOR_PRIMITIVES "Use Vector primitives" TRUE)
+
 option(GENERATE_ALLOCATION_STATISTICS "Generate allocation statistics" FALSE)
 
 option(LOG_RECEIVER_TYPES        "Log types of receivers" FALSE)
@@ -83,6 +101,11 @@ endif ()
 
 if (GENERATE_INTEGER_HISTOGRAM)
   add_definitions(-DGENERATE_INTEGER_HISTOGRAM)
+endif ()
+if(USE_VECTOR_PRIMITIVES)
+  add_definitions(-DUSE_VECTOR_PRIMITIVES=true)
+else ()
+  add_definitions(-DUSE_VECTOR_PRIMITIVES=false)
 endif ()
 if (GENERATE_ALLOCATION_STATISTICS)
   add_definitions(-DGENERATE_ALLOCATION_STATISTICS)
@@ -121,6 +144,8 @@ target_compile_options(SOM++ PRIVATE
   $<$<BOOL:${FOR_PROFILING}>:-g -pg>)
 
 target_include_directories(SOM++ PRIVATE ${SRC_DIR})
+
+target_link_libraries(SOM++)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
   target_compile_options(SOM++ PRIVATE -O3 -flto)
@@ -182,9 +207,13 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 
   target_compile_options(unittests PRIVATE -O0 -g)
 
-  target_include_directories(unittests PRIVATE ${SRC_DIR})
+  target_include_directories(unittests PRIVATE
+    ${SRC_DIR}
+    /opt/local/include)
 
-  find_library(LIB_CPPUNIT NAMES cppunit)
+  find_library(LIB_CPPUNIT
+    NAMES cppunit
+    HINTS /opt/local/lib)
 
   target_link_libraries(unittests ${LIB_CPPUNIT})
 endif()
