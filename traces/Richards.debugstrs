@@ -1,0 +1,4875 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Scheduler.som:283:PUSH_GLOBAL     
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND            
+; Scheduler.som:283:JUMP_ON_TRUE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; TaskState.som:41:PUSH_FIELD      
+; TaskState.som:41:JUMP_ON_TRUE_POP
+; TaskState.som:41:PUSH_FIELD_0    
+; TaskState.som:41:SEND_1          
+; TaskState.som:41:JUMP_ON_FALSE_POP
+; TaskState.som:41:PUSH_FIELD_1    
+; TaskState.som:41:JUMP            
+; TaskState.som:41:JUMP            
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:JUMP            
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; peel
+; Scheduler.som:283:PUSH_GLOBAL     
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND            
+; Scheduler.som:283:JUMP_ON_TRUE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; TaskState.som:41:PUSH_FIELD      
+; TaskState.som:41:JUMP_ON_TRUE_POP
+; TaskState.som:41:PUSH_FIELD_0    
+; TaskState.som:41:SEND_1          
+; TaskState.som:41:JUMP_ON_FALSE_POP
+; TaskState.som:41:PUSH_FIELD_1    
+; TaskState.som:41:JUMP            
+; TaskState.som:41:JUMP            
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:JUMP            
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskState.som:41:PUSH_FIELD      
+; TaskState.som:41:JUMP_ON_TRUE_POP
+; TaskState.som:41:PUSH_FIELD_0    
+; TaskState.som:41:SEND_1          
+; TaskState.som:41:JUMP_ON_FALSE_POP
+; TaskState.som:41:PUSH_FIELD_1    
+; TaskState.som:41:JUMP            
+; TaskState.som:41:JUMP            
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:JUMP            
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:40:PUSH_SELF       
+; TaskControlBlock.som:41:SEND_1          
+; TaskState.som:43:PUSH_FIELD_0    
+; TaskState.som:43:JUMP_ON_FALSE_POP
+; TaskState.som:43:PUSH_FIELD_1    
+; TaskState.som:43:JUMP_ON_FALSE_POP
+; TaskState.som:43:PUSH_CONSTANT_1 
+; TaskState.som:43:JUMP            
+; TaskState.som:43:RETURN_LOCAL    
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_GLOBAL     
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:DUP             
+; TaskControlBlock.som:47:POP_LOCAL_0     
+; TaskControlBlock.som:47:POP             
+; TaskControlBlock.som:48:PUSH_FIELD      
+; TaskControlBlock.som:48:PUSH_LOCAL_0    
+; TaskControlBlock.som:49:PUSH_FIELD      
+; TaskControlBlock.som:49:SEND            
+; Scheduler.som:36:PUSH_ARG_2      
+; Scheduler.som:36:POP_LOCAL_0     
+; Scheduler.som:37:PUSH_ARG_1      
+; Scheduler.som:37:POP_LOCAL_1     
+; Scheduler.som:38:PUSH_GLOBAL     
+; Scheduler.som:38:SEND_1          
+; Scheduler.som:38:PUSH_LOCAL_1    
+; Scheduler.som:38:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:DUP             
+; Scheduler.som:48:POP_LOCAL_1     
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:270:PUSH_FIELD_1    
+; Scheduler.som:270:PUSH_CONSTANT_0 
+; Scheduler.som:270:SEND            
+; Scheduler.som:270:POP             
+; Scheduler.som:272:RETURN_FIELD_1  
+; Scheduler.som:48:JUMP            
+; Scheduler.som:48:JUMP            
+; Scheduler.som:48:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "415"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "415"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; TaskState.som:41:PUSH_CONSTANT_1 
+; TaskState.som:41:JUMP            
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:POP_FIELD       
+; Scheduler.som:283:PUSH_SELF       
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:283:POP             
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "389"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "389"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:POP_FIELD       
+; Scheduler.som:283:PUSH_SELF       
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:283:POP             
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "102"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "102"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; TaskState.som:41:PUSH_CONSTANT_1 
+; TaskState.som:41:JUMP            
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:POP_FIELD       
+; Scheduler.som:283:PUSH_SELF       
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:283:POP             
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskState.som:29:PUSH_CONSTANT_0 
+; TaskState.som:29:DUP             
+; TaskState.som:29:DUP             
+; TaskState.som:29:DUP             
+; TaskState.som:29:POP_FIELD_0     
+; TaskState.som:29:POP_FIELD_1     
+; TaskState.som:29:POP_FIELD       
+; TaskState.som:29:RETURN_SELF     
+; TaskControlBlock.som:47:JUMP            
+; TaskControlBlock.som:47:JUMP            
+; TaskControlBlock.som:47:POP             
+; TaskControlBlock.som:48:PUSH_FIELD      
+; TaskControlBlock.som:48:PUSH_LOCAL_0    
+; TaskControlBlock.som:49:PUSH_FIELD      
+; TaskControlBlock.som:49:SEND            
+; Scheduler.som:61:PUSH_ARG_2      
+; Scheduler.som:61:POP_LOCAL_0     
+; Scheduler.som:62:PUSH_GLOBAL     
+; Scheduler.som:62:SEND_1          
+; Scheduler.som:62:PUSH_ARG_1      
+; Scheduler.som:62:SEND            
+; Scheduler.som:65:JUMP_ON_TRUE_TOP_NIL
+; Scheduler.som:65:PUSH_GLOBAL     
+; Scheduler.som:65:SEND_1          
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND_1          
+; Scheduler.som:65:SEND            
+; Scheduler.som:65:JUMP_ON_FALSE_POP
+; Scheduler.som:65:PUSH_LOCAL_0    
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND            
+; HandlerTaskDataRecord.som:24:PUSH_SELF       
+; HandlerTaskDataRecord.som:24:PUSH_ARG_1      
+; HandlerTaskDataRecord.som:25:PUSH_FIELD_0    
+; HandlerTaskDataRecord.som:25:SEND            
+; RBObject.som:12:PUSH_ARG_1      
+; RBObject.som:12:PUSH_GLOBAL     
+; RBObject.som:12:SEND_1          
+; RBObject.som:12:SEND            
+; RBObject.som:12:POP             
+; RBObject.som:13:PUSH_GLOBAL     
+; RBObject.som:13:SEND_1          
+; RBObject.som:13:PUSH_ARG_2      
+; RBObject.som:13:SEND            
+; RBObject.som:13:JUMP_ON_FALSE_TOP_NIL
+; RBObject.som:13:PUSH_ARG_1      
+; RBObject.som:13:RETURN_LOCAL    
+; HandlerTaskDataRecord.som:25:POP_FIELD_0     
+; HandlerTaskDataRecord.som:25:RETURN_SELF     
+; Scheduler.som:65:JUMP            
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:INC             
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND            
+; Scheduler.som:243:PUSH_SELF       
+; Scheduler.som:243:PUSH_ARG_1      
+; Scheduler.som:243:SEND_1          
+; Scheduler.som:243:SEND            
+; Scheduler.som:230:PUSH_FIELD      
+; Scheduler.som:230:PUSH_ARG_1      
+; Scheduler.som:230:SEND            
+; Scheduler.som:230:POP_LOCAL_0     
+; Scheduler.som:231:PUSH_GLOBAL     
+; Scheduler.som:231:SEND_1          
+; Scheduler.som:231:PUSH_LOCAL_0    
+; Scheduler.som:231:SEND            
+; Scheduler.som:231:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:231:POP             
+; Scheduler.som:233:PUSH_LOCAL_0    
+; Scheduler.som:233:RETURN_LOCAL    
+; Scheduler.som:243:POP_LOCAL_0     
+; Scheduler.som:244:PUSH_GLOBAL     
+; Scheduler.som:244:SEND_1          
+; Scheduler.som:244:PUSH_LOCAL_0    
+; Scheduler.som:244:SEND            
+; Scheduler.som:244:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:244:POP             
+; Scheduler.som:245:PUSH_FIELD      
+; Scheduler.som:245:INC             
+; Scheduler.som:245:DUP             
+; Scheduler.som:245:POP_FIELD       
+; Scheduler.som:245:POP             
+; Scheduler.som:246:PUSH_ARG_1      
+; Scheduler.som:246:PUSH_GLOBAL     
+; Scheduler.som:246:SEND_1          
+; Scheduler.som:246:SEND            
+; Scheduler.som:246:POP             
+; Scheduler.som:247:PUSH_ARG_1      
+; Scheduler.som:247:PUSH_FIELD      
+; Scheduler.som:247:SEND            
+; Scheduler.som:247:POP             
+; Scheduler.som:248:PUSH_LOCAL_0    
+; Scheduler.som:248:PUSH_ARG_1      
+; Scheduler.som:249:PUSH_FIELD_1    
+; Scheduler.som:249:SEND            
+; TaskControlBlock.som:28:PUSH_GLOBAL     
+; TaskControlBlock.som:28:SEND_1          
+; TaskControlBlock.som:29:PUSH_FIELD      
+; TaskControlBlock.som:29:SEND            
+; TaskControlBlock.som:34:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:34:PUSH_ARG_1      
+; TaskControlBlock.som:34:POP_FIELD       
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:PUSH_CONSTANT   
+; TaskControlBlock.som:34:SEND            
+; TaskControlBlock.som:34:POP             
+; TaskControlBlock.som:34:PUSH_FIELD      
+; TaskControlBlock.som:34:PUSH_ARG_2      
+; TaskControlBlock.som:34:SEND_1          
+; TaskControlBlock.som:34:SEND            
+; TaskControlBlock.som:34:JUMP_ON_FALSE_TOP_NIL
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:RETURN_LOCAL    
+; Scheduler.som:249:RETURN_LOCAL    
+; Scheduler.som:84:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "441"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "441"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; TaskState.som:43:PUSH_FIELD      
+; TaskState.som:43:SEND_1          
+; TaskState.som:43:JUMP            
+; TaskState.som:43:JUMP            
+; TaskState.som:43:RETURN_LOCAL    
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_FIELD      
+; TaskControlBlock.som:47:POP_LOCAL_0     
+; TaskControlBlock.som:47:PUSH_LOCAL_0    
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:POP_FIELD       
+; TaskControlBlock.som:47:PUSH_GLOBAL     
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:PUSH_FIELD      
+; TaskControlBlock.som:47:SEND            
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_SELF       
+; TaskControlBlock.som:47:SEND_1          
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:POP_FIELD       
+; Scheduler.som:283:PUSH_SELF       
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:283:POP             
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:61:PUSH_ARG_2      
+; Scheduler.som:61:POP_LOCAL_0     
+; Scheduler.som:62:PUSH_GLOBAL     
+; Scheduler.som:62:SEND_1          
+; Scheduler.som:62:PUSH_ARG_1      
+; Scheduler.som:62:SEND            
+; Scheduler.som:65:JUMP_ON_TRUE_TOP_NIL
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:270:PUSH_FIELD_1    
+; Scheduler.som:270:PUSH_CONSTANT_0 
+; Scheduler.som:270:SEND            
+; Scheduler.som:270:POP             
+; Scheduler.som:272:RETURN_FIELD_1  
+; Scheduler.som:84:JUMP            
+; Scheduler.som:84:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "463"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "463"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; TaskState.som:43:PUSH_CONSTANT_1 
+; TaskState.som:43:RETURN_LOCAL    
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_GLOBAL     
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:DUP             
+; TaskControlBlock.som:47:POP_LOCAL_0     
+; TaskControlBlock.som:47:POP             
+; TaskControlBlock.som:48:PUSH_FIELD      
+; TaskControlBlock.som:48:PUSH_LOCAL_0    
+; TaskControlBlock.som:49:PUSH_FIELD      
+; TaskControlBlock.som:49:SEND            
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:243:PUSH_SELF       
+; Scheduler.som:243:PUSH_ARG_1      
+; Scheduler.som:243:SEND_1          
+; Scheduler.som:243:SEND            
+; Scheduler.som:230:PUSH_FIELD      
+; Scheduler.som:230:PUSH_ARG_1      
+; Scheduler.som:230:SEND            
+; Scheduler.som:230:POP_LOCAL_0     
+; Scheduler.som:231:PUSH_GLOBAL     
+; Scheduler.som:231:SEND_1          
+; Scheduler.som:231:PUSH_LOCAL_0    
+; Scheduler.som:231:SEND            
+; Scheduler.som:231:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:231:POP             
+; Scheduler.som:233:PUSH_LOCAL_0    
+; Scheduler.som:233:RETURN_LOCAL    
+; Scheduler.som:243:POP_LOCAL_0     
+; Scheduler.som:244:PUSH_GLOBAL     
+; Scheduler.som:244:SEND_1          
+; Scheduler.som:244:PUSH_LOCAL_0    
+; Scheduler.som:244:SEND            
+; Scheduler.som:244:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:244:POP             
+; Scheduler.som:245:PUSH_FIELD      
+; Scheduler.som:245:INC             
+; Scheduler.som:245:DUP             
+; Scheduler.som:245:POP_FIELD       
+; Scheduler.som:245:POP             
+; Scheduler.som:246:PUSH_ARG_1      
+; Scheduler.som:246:PUSH_GLOBAL     
+; Scheduler.som:246:SEND_1          
+; Scheduler.som:246:SEND            
+; Scheduler.som:246:POP             
+; Scheduler.som:247:PUSH_ARG_1      
+; Scheduler.som:247:PUSH_FIELD      
+; Scheduler.som:247:SEND            
+; Scheduler.som:247:POP             
+; Scheduler.som:248:PUSH_LOCAL_0    
+; Scheduler.som:248:PUSH_ARG_1      
+; Scheduler.som:249:PUSH_FIELD_1    
+; Scheduler.som:249:SEND            
+; TaskControlBlock.som:28:PUSH_GLOBAL     
+; TaskControlBlock.som:28:SEND_1          
+; TaskControlBlock.som:29:PUSH_FIELD      
+; TaskControlBlock.som:29:SEND            
+; TaskControlBlock.som:34:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:34:PUSH_ARG_1      
+; TaskControlBlock.som:34:POP_FIELD       
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:PUSH_CONSTANT   
+; TaskControlBlock.som:34:SEND            
+; TaskControlBlock.som:34:POP             
+; TaskControlBlock.som:34:PUSH_FIELD      
+; TaskControlBlock.som:34:PUSH_ARG_2      
+; TaskControlBlock.som:34:SEND_1          
+; TaskControlBlock.som:34:SEND            
+; TaskControlBlock.som:34:JUMP_ON_FALSE_TOP_NIL
+; TaskControlBlock.som:34:JUMP            
+; TaskControlBlock.som:34:POP             
+; TaskControlBlock.som:36:PUSH_ARG_2      
+; TaskControlBlock.som:36:RETURN_LOCAL    
+; Scheduler.som:249:RETURN_LOCAL    
+; Scheduler.som:48:JUMP            
+; Scheduler.som:48:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "145"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "145"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:253:PUSH_SELF       
+; Scheduler.som:253:PUSH_ARG_1      
+; Scheduler.som:253:SEND            
+; Scheduler.som:230:PUSH_FIELD      
+; Scheduler.som:230:PUSH_ARG_1      
+; Scheduler.som:230:SEND            
+; Scheduler.som:230:POP_LOCAL_0     
+; Scheduler.som:231:PUSH_GLOBAL     
+; Scheduler.som:231:SEND_1          
+; Scheduler.som:231:PUSH_LOCAL_0    
+; Scheduler.som:231:SEND            
+; Scheduler.som:231:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:231:POP             
+; Scheduler.som:233:PUSH_LOCAL_0    
+; Scheduler.som:233:RETURN_LOCAL    
+; Scheduler.som:253:POP_LOCAL_0     
+; Scheduler.som:254:PUSH_GLOBAL     
+; Scheduler.som:254:SEND_1          
+; Scheduler.som:254:PUSH_LOCAL_0    
+; Scheduler.som:254:SEND            
+; Scheduler.som:254:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:254:POP             
+; Scheduler.som:255:PUSH_LOCAL_0    
+; Scheduler.som:255:PUSH_CONSTANT   
+; Scheduler.som:255:SEND            
+; Scheduler.som:255:POP             
+; Scheduler.som:256:PUSH_LOCAL_0    
+; Scheduler.som:256:SEND_1          
+; Scheduler.som:256:PUSH_FIELD_1    
+; Scheduler.som:257:SEND_1          
+; Scheduler.som:257:SEND            
+; Scheduler.som:259:JUMP_ON_FALSE_POP
+; Scheduler.som:259:PUSH_LOCAL_0    
+; Scheduler.som:259:RETURN_LOCAL    
+; Scheduler.som:108:JUMP            
+; Scheduler.som:108:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "500"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "500"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Scheduler.som:98:PUSH_LOCAL_0    
+; Scheduler.som:98:SEND_1          
+; Scheduler.som:98:DEC             
+; Scheduler.som:98:SEND            
+; Scheduler.som:98:POP             
+; Scheduler.som:99:PUSH_0          
+; Scheduler.som:99:PUSH_LOCAL_0    
+; Scheduler.som:100:SEND_1          
+; Scheduler.som:100:SEND            
+; Scheduler.som:108:JUMP_ON_FALSE_POP
+; Scheduler.som:108:PUSH_0          
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_1          
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:JUMP_ON_FALSE_POP
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:POP             
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:PUSH_GLOBAL     
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:SEND            
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; RBObject.som:16:PUSH_GLOBAL     
+; RBObject.som:16:SEND_1          
+; RBObject.som:16:PUSH_LOCAL_0    
+; RBObject.som:16:SEND_1          
+; RBObject.som:16:DUP             
+; RBObject.som:16:POP_LOCAL_1     
+; RBObject.som:16:SEND            
+; RBObject.som:16:JUMP_ON_TRUE_POP
+; RBObject.som:16:PUSH_NIL        
+; RBObject.som:16:POP             
+; RBObject.som:17:PUSH_LOCAL_0    
+; RBObject.som:17:PUSH_ARG_1      
+; RBObject.som:17:SEND            
+; RBObject.som:17:POP             
+; RBObject.som:19:PUSH_ARG_2      
+; RBObject.som:19:RETURN_LOCAL    
+; HandlerTaskDataRecord.som:17:POP_FIELD_1     
+; HandlerTaskDataRecord.som:17:RETURN_SELF     
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:270:PUSH_FIELD_1    
+; Scheduler.som:270:PUSH_CONSTANT_0 
+; Scheduler.som:270:SEND            
+; Scheduler.som:270:POP             
+; Scheduler.som:272:RETURN_FIELD_1  
+; Scheduler.som:84:JUMP            
+; Scheduler.som:84:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; HandlerTaskDataRecord.som:16:PUSH_SELF       
+; HandlerTaskDataRecord.som:16:PUSH_ARG_1      
+; HandlerTaskDataRecord.som:17:PUSH_FIELD_1    
+; HandlerTaskDataRecord.som:17:SEND            
+; RBObject.som:12:PUSH_ARG_1      
+; RBObject.som:12:PUSH_GLOBAL     
+; RBObject.som:12:SEND_1          
+; RBObject.som:12:SEND            
+; RBObject.som:12:POP             
+; RBObject.som:13:PUSH_GLOBAL     
+; RBObject.som:13:SEND_1          
+; RBObject.som:13:PUSH_ARG_2      
+; RBObject.som:13:SEND            
+; RBObject.som:13:JUMP_ON_FALSE_TOP_NIL
+; RBObject.som:13:PUSH_ARG_1      
+; RBObject.som:13:RETURN_LOCAL    
+; HandlerTaskDataRecord.som:17:POP_FIELD_1     
+; HandlerTaskDataRecord.som:17:RETURN_SELF     
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:INC             
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskState.som:22:PUSH_CONSTANT_0 
+; TaskState.som:22:POP_FIELD_0     
+; TaskState.som:23:PUSH_CONSTANT_1 
+; TaskState.som:23:POP_FIELD_1     
+; TaskState.som:25:PUSH_CONSTANT_1 
+; TaskState.som:25:POP_FIELD       
+; TaskState.som:25:RETURN_SELF     
+; TaskControlBlock.som:47:JUMP            
+; TaskControlBlock.som:47:POP             
+; TaskControlBlock.som:48:PUSH_FIELD      
+; TaskControlBlock.som:48:PUSH_LOCAL_0    
+; TaskControlBlock.som:49:PUSH_FIELD      
+; TaskControlBlock.som:49:SEND            
+; Scheduler.som:36:PUSH_ARG_2      
+; Scheduler.som:36:POP_LOCAL_0     
+; Scheduler.som:37:PUSH_ARG_1      
+; Scheduler.som:37:POP_LOCAL_1     
+; Scheduler.som:38:PUSH_GLOBAL     
+; Scheduler.som:38:SEND_1          
+; Scheduler.som:38:PUSH_LOCAL_1    
+; Scheduler.som:38:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:236:INC_FIELD       
+; Scheduler.som:237:PUSH_FIELD_1    
+; Scheduler.som:237:PUSH_CONSTANT_0 
+; Scheduler.som:237:SEND            
+; Scheduler.som:237:POP             
+; Scheduler.som:238:PUSH_FIELD_1    
+; Scheduler.som:239:SEND_1          
+; Scheduler.som:239:RETURN_LOCAL    
+; Scheduler.som:48:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; TaskControlBlock.som:47:PUSH_SELF       
+; TaskControlBlock.som:47:SEND_1          
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "272"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "272"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:34:POP_FIELD       
+; TaskControlBlock.som:34:POP             
+; TaskControlBlock.som:36:PUSH_ARG_2      
+; TaskControlBlock.som:36:RETURN_LOCAL    
+; Scheduler.som:249:RETURN_LOCAL    
+; Scheduler.som:84:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; RBObject.som:12:PUSH_ARG_1      
+; RBObject.som:12:PUSH_GLOBAL     
+; RBObject.som:12:SEND_1          
+; RBObject.som:12:SEND            
+; RBObject.som:12:POP             
+; RBObject.som:13:PUSH_GLOBAL     
+; RBObject.som:13:SEND_1          
+; RBObject.som:13:PUSH_ARG_2      
+; RBObject.som:13:SEND            
+; RBObject.som:13:JUMP_ON_FALSE_TOP_NIL
+; RBObject.som:13:POP             
+; RBObject.som:14:PUSH_ARG_2      
+; RBObject.som:14:DUP             
+; RBObject.som:14:POP_LOCAL_0     
+; RBObject.som:14:POP             
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "188"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "188"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:PUSH_ARG_1      
+; TaskControlBlock.som:34:PUSH_FIELD      
+; TaskControlBlock.som:34:SEND            
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "157"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "157"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:POP             
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:PUSH_GLOBAL     
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:SEND            
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "467"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "467"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskState.som:41:PUSH_CONSTANT_2 
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:JUMP            
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "31"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "31"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "102"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "102"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; TaskState.som:41:PUSH_CONSTANT_1 
+; TaskState.som:41:JUMP            
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:POP_FIELD       
+; Scheduler.som:283:PUSH_SELF       
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:283:POP             
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:236:INC_FIELD       
+; Scheduler.som:237:PUSH_FIELD_1    
+; Scheduler.som:237:PUSH_CONSTANT_0 
+; Scheduler.som:237:SEND            
+; Scheduler.som:237:POP             
+; Scheduler.som:238:PUSH_FIELD_1    
+; Scheduler.som:239:SEND_1          
+; Scheduler.som:239:RETURN_LOCAL    
+; Scheduler.som:48:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1733"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1733"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; Scheduler.som:37:POP_LOCAL_1     
+; Scheduler.som:38:PUSH_GLOBAL     
+; Scheduler.som:38:SEND_1          
+; Scheduler.som:38:PUSH_LOCAL_1    
+; Scheduler.som:38:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "44"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "44"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:RETURN_LOCAL    
+; Scheduler.som:249:RETURN_LOCAL    
+; Scheduler.som:84:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:270:PUSH_FIELD_1    
+; Scheduler.som:270:PUSH_CONSTANT_0 
+; Scheduler.som:270:SEND            
+; Scheduler.som:270:POP             
+; Scheduler.som:272:RETURN_FIELD_1  
+; Scheduler.som:154:JUMP            
+; Scheduler.som:154:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "435"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "435"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:154:PUSH_ARGUMENT   
+; Scheduler.som:154:SEND_1          
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "250"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "250"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "35",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "35",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Scheduler.som:154:JUMP_IF_GREATER 
+; Scheduler.som:154:DUP             
+; Scheduler.som:154:POP_LOCAL_1     
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:INC             
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_1    
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:DEC             
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:INC             
+; Scheduler.som:154:JUMP_BACKWARD   
+; peel
+; Scheduler.som:154:JUMP_IF_GREATER 
+; Scheduler.som:154:DUP             
+; Scheduler.som:154:POP_LOCAL_1     
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:INC             
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_1    
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:DEC             
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:INC             
+; Scheduler.som:154:JUMP_BACKWARD   
+; {
+;   "trid": "34",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1667"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "34",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1667"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:JUMP            
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:DUP_SECOND      
+; {
+;   "trid": "36",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "372"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "36",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "372"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:37:POP_LOCAL_1     
+; Scheduler.som:38:PUSH_GLOBAL     
+; Scheduler.som:38:SEND_1          
+; Scheduler.som:38:PUSH_LOCAL_1    
+; Scheduler.som:38:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:DUP             
+; Scheduler.som:48:POP_LOCAL_1     
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; {
+;   "trid": "37",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "145"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "37",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "145"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:INC             
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "325"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "325"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "299"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "299"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARGUMENT   
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:SEND            
+; {
+;   "trid": "40",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1338"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "40",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1338"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; RBObject.som:13:POP             
+; RBObject.som:14:PUSH_ARG_2      
+; RBObject.som:14:DUP             
+; RBObject.som:14:POP_LOCAL_0     
+; RBObject.som:14:POP             
+; {
+;   "trid": "41",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "580"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "41",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "580"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; RBObject.som:13:POP             
+; RBObject.som:14:PUSH_ARG_2      
+; RBObject.som:14:DUP             
+; RBObject.som:14:POP_LOCAL_0     
+; RBObject.som:14:POP             
+; {
+;   "trid": "42",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "34",
+;     "gidx": "173"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "42",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "34",
+;     "gidx": "173"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:DUP_SECOND      
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1021"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1021"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "21",
+;     "gidx": "51"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "21",
+;     "gidx": "51"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; HandlerTaskDataRecord.som:25:RETURN_SELF     
+; Scheduler.som:65:JUMP            
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "45",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "444"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "45",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "444"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "327"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "327"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; RBObject.som:16:PUSH_LOCAL_1    
+; RBObject.som:16:DUP             
+; RBObject.som:16:POP_LOCAL_0     
+; RBObject.som:16:POP             
+; RBObject.som:16:JUMP_BACKWARD   
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "154"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "154"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskState.som:41:PUSH_CONSTANT_2 
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:JUMP            
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "36",
+;     "gidx": "103"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "36",
+;     "gidx": "103"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "32",
+;     "gidx": "29"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "32",
+;     "gidx": "29"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:48:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "455"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "455"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_1    
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:DEC             
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:INC             
+; Scheduler.som:154:JUMP_BACKWARD   
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "150"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "150"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_1    
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:DEC             
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:INC             
+; Scheduler.som:154:JUMP_BACKWARD   
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "184"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "184"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:PUSH_ARG_1      
+; TaskControlBlock.som:34:PUSH_FIELD      
+; TaskControlBlock.som:34:SEND            
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; TaskState.som:43:PUSH_FIELD_0    
+; TaskState.som:43:JUMP_ON_FALSE_POP
+; TaskState.som:43:PUSH_CONSTANT_1 
+; TaskState.som:43:RETURN_LOCAL    
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_GLOBAL     
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:DUP             
+; TaskControlBlock.som:47:POP_LOCAL_0     
+; TaskControlBlock.som:47:POP             
+; TaskControlBlock.som:48:PUSH_FIELD      
+; TaskControlBlock.som:48:PUSH_LOCAL_0    
+; TaskControlBlock.som:49:PUSH_FIELD      
+; TaskControlBlock.som:49:SEND            
+; Scheduler.som:97:PUSH_ARG_2      
+; Scheduler.som:97:POP_LOCAL_0     
+; Scheduler.som:98:PUSH_LOCAL_0    
+; Scheduler.som:98:PUSH_LOCAL_0    
+; Scheduler.som:98:SEND_1          
+; Scheduler.som:98:DEC             
+; Scheduler.som:98:SEND            
+; Scheduler.som:98:POP             
+; Scheduler.som:99:PUSH_0          
+; Scheduler.som:99:PUSH_LOCAL_0    
+; Scheduler.som:100:SEND_1          
+; Scheduler.som:100:SEND            
+; Scheduler.som:108:JUMP_ON_FALSE_POP
+; Scheduler.som:108:PUSH_0          
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_1          
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:JUMP_ON_FALSE_POP
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:POP             
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:PUSH_GLOBAL     
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:SEND            
+; {
+;   "trid": "57",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "57",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:POP_FIELD       
+; Scheduler.som:283:PUSH_SELF       
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:283:POP             
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; {
+;   "trid": "60",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "60",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:140:PUSH_ARG_2      
+; Scheduler.som:140:POP_LOCAL_0     
+; Scheduler.som:141:PUSH_GLOBAL     
+; Scheduler.som:141:SEND_1          
+; Scheduler.som:142:PUSH_ARG_1      
+; Scheduler.som:142:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_ARGUMENT   
+; Scheduler.som:154:SEND_1          
+; {
+;   "trid": "63",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "367"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "63",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "367"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:141:SEND_1          
+; Scheduler.som:142:PUSH_ARG_1      
+; Scheduler.som:142:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:JUMP            
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:DUP_SECOND      
+; {
+;   "trid": "69",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "16"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "69",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "16"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; RBObject.som:13:PUSH_ARG_1      
+; RBObject.som:13:RETURN_LOCAL    
+; HandlerTaskDataRecord.som:25:POP_FIELD_0     
+; HandlerTaskDataRecord.som:25:RETURN_SELF     
+; Scheduler.som:65:JUMP            
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:INC             
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "72",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "458"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "72",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "458"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:141:SEND_1          
+; Scheduler.som:142:PUSH_ARG_1      
+; Scheduler.som:142:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_ARGUMENT   
+; Scheduler.som:154:SEND_1          
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "576"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "576"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; TaskState.som:43:PUSH_FIELD_1    
+; TaskState.som:43:JUMP_ON_FALSE_POP
+; TaskState.som:43:PUSH_FIELD      
+; TaskState.som:43:SEND_1          
+; TaskState.som:43:JUMP            
+; TaskState.som:43:JUMP            
+; TaskState.som:43:RETURN_LOCAL    
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_FIELD      
+; TaskControlBlock.som:47:POP_LOCAL_0     
+; TaskControlBlock.som:47:PUSH_LOCAL_0    
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:POP_FIELD       
+; TaskControlBlock.som:47:PUSH_GLOBAL     
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:PUSH_FIELD      
+; TaskControlBlock.som:47:SEND            
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_SELF       
+; TaskControlBlock.som:47:SEND_1          
+; {
+;   "trid": "79",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; {
+;   "trid": "79",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; TaskControlBlock.som:28:PUSH_GLOBAL     
+; TaskControlBlock.som:28:SEND_1          
+; TaskControlBlock.som:29:PUSH_FIELD      
+; TaskControlBlock.som:29:SEND            
+; TaskControlBlock.som:34:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:PUSH_ARG_1      
+; TaskControlBlock.som:34:PUSH_FIELD      
+; TaskControlBlock.som:34:SEND            
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "79"
+;   }
+; }
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "79"
+;   }
+; }
+; Scheduler.som:230:PUSH_FIELD      
+; Scheduler.som:230:PUSH_ARG_1      
+; Scheduler.som:230:SEND            
+; Scheduler.som:230:POP_LOCAL_0     
+; Scheduler.som:231:PUSH_GLOBAL     
+; Scheduler.som:231:SEND_1          
+; Scheduler.som:231:PUSH_LOCAL_0    
+; Scheduler.som:231:SEND            
+; Scheduler.som:231:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:231:POP             
+; Scheduler.som:233:PUSH_LOCAL_0    
+; Scheduler.som:233:RETURN_LOCAL    
+; Scheduler.som:243:POP_LOCAL_0     
+; Scheduler.som:244:PUSH_GLOBAL     
+; Scheduler.som:244:SEND_1          
+; Scheduler.som:244:PUSH_LOCAL_0    
+; Scheduler.som:244:SEND            
+; Scheduler.som:244:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:244:POP             
+; Scheduler.som:245:PUSH_FIELD      
+; Scheduler.som:245:INC             
+; Scheduler.som:245:DUP             
+; Scheduler.som:245:POP_FIELD       
+; Scheduler.som:245:POP             
+; Scheduler.som:246:PUSH_ARG_1      
+; Scheduler.som:246:PUSH_GLOBAL     
+; Scheduler.som:246:SEND_1          
+; Scheduler.som:246:SEND            
+; Scheduler.som:246:POP             
+; Scheduler.som:247:PUSH_ARG_1      
+; Scheduler.som:247:PUSH_FIELD      
+; Scheduler.som:247:SEND            
+; Scheduler.som:247:POP             
+; Scheduler.som:248:PUSH_LOCAL_0    
+; Scheduler.som:248:PUSH_ARG_1      
+; Scheduler.som:249:PUSH_FIELD_1    
+; Scheduler.som:249:SEND            
+; {
+;   "trid": "88",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "434"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "88",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "434"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; Scheduler.som:65:PUSH_GLOBAL     
+; Scheduler.som:65:SEND_1          
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND_1          
+; Scheduler.som:65:SEND            
+; Scheduler.som:65:JUMP_ON_FALSE_POP
+; Scheduler.som:65:PUSH_LOCAL_0    
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND            
+; {
+;   "trid": "92",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "92",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:36:PUSH_ARG_2      
+; Scheduler.som:36:POP_LOCAL_0     
+; Scheduler.som:37:PUSH_ARG_1      
+; Scheduler.som:37:POP_LOCAL_1     
+; Scheduler.som:38:PUSH_GLOBAL     
+; Scheduler.som:38:SEND_1          
+; Scheduler.som:38:PUSH_LOCAL_1    
+; Scheduler.som:38:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:DUP             
+; Scheduler.som:48:POP_LOCAL_1     
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; {
+;   "trid": "98",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "205"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "98",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "205"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:POP             
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:PUSH_GLOBAL     
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:SEND            
+; {
+;   "trid": "102",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "79",
+;     "gidx": "58"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "102",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "79",
+;     "gidx": "58"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:34:PUSH_ARG_1      
+; TaskControlBlock.som:34:POP_FIELD       
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:PUSH_CONSTANT   
+; TaskControlBlock.som:34:SEND            
+; TaskControlBlock.som:34:POP             
+; TaskControlBlock.som:34:PUSH_FIELD      
+; TaskControlBlock.som:34:PUSH_ARG_2      
+; TaskControlBlock.som:34:SEND_1          
+; TaskControlBlock.som:34:SEND            
+; TaskControlBlock.som:34:JUMP_ON_FALSE_TOP_NIL
+; TaskControlBlock.som:34:JUMP            
+; TaskControlBlock.som:34:POP             
+; TaskControlBlock.som:36:PUSH_ARG_2      
+; TaskControlBlock.som:36:RETURN_LOCAL    
+; Scheduler.som:249:RETURN_LOCAL    
+; Scheduler.som:48:JUMP            
+; Scheduler.som:48:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "109",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "63",
+;     "gidx": "258"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "109",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "63",
+;     "gidx": "258"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; Scheduler.som:65:PUSH_GLOBAL     
+; Scheduler.som:65:SEND_1          
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND_1          
+; Scheduler.som:65:SEND            
+; Scheduler.som:65:JUMP_ON_FALSE_POP
+; Scheduler.som:65:PUSH_LOCAL_0    
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND            
+; {
+;   "trid": "111",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "69",
+;     "gidx": "496"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "111",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "69",
+;     "gidx": "496"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; HandlerTaskDataRecord.som:17:RETURN_SELF     
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:INC             
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "113",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "75",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "113",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "75",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; TaskControlBlock.som:47:PUSH_SELF       
+; TaskControlBlock.som:47:SEND_1          
+; {
+;   "trid": "119",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "83",
+;     "gidx": "226"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "119",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "83",
+;     "gidx": "226"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:255:PUSH_CONSTANT   
+; Scheduler.som:255:SEND            
+; Scheduler.som:255:POP             
+; Scheduler.som:256:PUSH_LOCAL_0    
+; Scheduler.som:256:SEND_1          
+; Scheduler.som:256:PUSH_FIELD_1    
+; Scheduler.som:257:SEND_1          
+; Scheduler.som:257:SEND            
+; Scheduler.som:259:JUMP_ON_FALSE_POP
+; Scheduler.som:259:PUSH_LOCAL_0    
+; Scheduler.som:259:RETURN_LOCAL    
+; Scheduler.som:108:JUMP            
+; Scheduler.som:108:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "123",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "75",
+;     "gidx": "183"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "92"
+;   }
+; }
+; {
+;   "trid": "123",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "75",
+;     "gidx": "183"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "92"
+;   }
+; }
+; TaskState.som:43:PUSH_CONSTANT_1 
+; TaskState.som:43:JUMP            
+; TaskState.som:43:RETURN_LOCAL    
+; TaskControlBlock.som:47:JUMP_ON_FALSE_POP
+; TaskControlBlock.som:47:PUSH_GLOBAL     
+; TaskControlBlock.som:47:SEND_1          
+; TaskControlBlock.som:47:DUP             
+; TaskControlBlock.som:47:POP_LOCAL_0     
+; TaskControlBlock.som:47:POP             
+; TaskControlBlock.som:48:PUSH_FIELD      
+; TaskControlBlock.som:48:PUSH_LOCAL_0    
+; TaskControlBlock.som:49:PUSH_FIELD      
+; TaskControlBlock.som:49:SEND            
+; {
+;   "trid": "128",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "92",
+;     "gidx": "217"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "128",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "92",
+;     "gidx": "217"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:JUMP_ON_FALSE_TOP_NIL
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; {
+;   "trid": "130",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "72",
+;     "gidx": "38"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "130",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "72",
+;     "gidx": "38"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:65:POP             
+; Scheduler.som:67:PUSH_GLOBAL     
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:PUSH_LOCAL_0    
+; Scheduler.som:67:SEND_1          
+; Scheduler.som:67:DUP             
+; Scheduler.som:67:POP_LOCAL_1     
+; Scheduler.som:68:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:POP_LOCAL_2     
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:PUSH_CONSTANT   
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "138",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "138",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Scheduler.som:97:PUSH_ARG_2      
+; Scheduler.som:97:POP_LOCAL_0     
+; Scheduler.som:98:PUSH_LOCAL_0    
+; Scheduler.som:98:PUSH_LOCAL_0    
+; Scheduler.som:98:SEND_1          
+; Scheduler.som:98:DEC             
+; Scheduler.som:98:SEND            
+; Scheduler.som:98:POP             
+; Scheduler.som:99:PUSH_0          
+; Scheduler.som:99:PUSH_LOCAL_0    
+; Scheduler.som:100:SEND_1          
+; Scheduler.som:100:SEND            
+; Scheduler.som:108:JUMP_ON_FALSE_POP
+; Scheduler.som:108:PUSH_0          
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_1          
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:JUMP_ON_FALSE_POP
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:POP             
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:PUSH_GLOBAL     
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:SEND            
+; {
+;   "trid": "143",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "60",
+;     "gidx": "38"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "143",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "60",
+;     "gidx": "38"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:JUMP            
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:DUP_SECOND      
+; {
+;   "trid": "145",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "248"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "145",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "248"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:SEND_1          
+; {
+;   "trid": "147",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "147",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; Richards.som:15:PUSH_ARG_1      
+; Richards.som:15:RETURN_LOCAL    
+; Benchmark.som:27:JUMP_ON_TRUE_TOP_NIL
+; Benchmark.som:27:POP             
+; Benchmark.som:27:INC             
+; Benchmark.som:27:JUMP_BACKWARD   
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; Richards.som:10:PUSH_GLOBAL     
+; Richards.som:10:SEND_1          
+; Scheduler.som:287:PUSH_SELF       
+; Scheduler.som:287:SUPER_SEND      
+; Scheduler.som:287:SEND_1          
+; Scheduler.som:12:PUSH_GLOBAL     
+; Scheduler.som:12:SEND_1          
+; Scheduler.som:12:POP_FIELD_0     
+; Scheduler.som:13:PUSH_GLOBAL     
+; Scheduler.som:13:SEND_1          
+; Scheduler.som:13:POP_FIELD_1     
+; Scheduler.som:14:PUSH_0          
+; Scheduler.som:14:POP_FIELD       
+; Scheduler.som:15:PUSH_GLOBAL     
+; Scheduler.som:15:PUSH_CONSTANT   
+; Scheduler.som:15:PUSH_GLOBAL     
+; Scheduler.som:15:SEND_1          
+; Scheduler.som:15:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Scheduler.som:15:POP_FIELD       
+; Scheduler.som:16:PUSH_0          
+; Scheduler.som:16:POP_FIELD       
+; Scheduler.som:17:PUSH_0          
+; Scheduler.som:17:POP_FIELD       
+; Scheduler.som:18:PUSH_0          
+; Scheduler.som:18:POP_FIELD       
+; Scheduler.som:18:RETURN_SELF     
+; Scheduler.som:287:RETURN_LOCAL    
+; Richards.som:10:SEND_1          
+; Scheduler.som:161:PUSH_SELF       
+; Scheduler.som:161:PUSH_GLOBAL     
+; Scheduler.som:162:SEND_1          
+; Scheduler.som:163:PUSH_0          
+; Scheduler.som:163:PUSH_GLOBAL     
+; Scheduler.som:164:SEND_1          
+; Scheduler.som:164:PUSH_GLOBAL     
+; Scheduler.som:164:SEND_1          
+; TaskState.som:46:PUSH_SELF       
+; TaskState.som:46:SUPER_SEND      
+; TaskState.som:46:SEND_1          
+; {
+;   "trid": "146",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "541"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "147"
+;   }
+; }
+; {
+;   "trid": "146",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "541"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "147"
+;   }
+; }
+; Scheduler.som:283:PUSH_NIL        
+; Scheduler.som:283:RETURN_SELF     
+; Scheduler.som:223:POP             
+; Scheduler.som:225:PUSH_FIELD      
+; Scheduler.som:225:PUSH_CONSTANT   
+; Scheduler.som:225:SEND            
+; Scheduler.som:225:PUSH_FIELD      
+; Scheduler.som:226:PUSH_CONSTANT   
+; Scheduler.som:226:SEND            
+; Scheduler.som:226:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Scheduler.som:226:RETURN_LOCAL    
+; Richards.som:10:RETURN_LOCAL    
+; Benchmark.som:27:SEND            
+; {
+;   "trid": "148",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "324"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "148",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "324"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:141:SEND_1          
+; Scheduler.som:142:PUSH_ARG_1      
+; Scheduler.som:142:SEND            
+; Scheduler.som:154:JUMP_ON_FALSE_POP
+; Scheduler.som:154:PUSH_ARGUMENT   
+; Scheduler.som:154:SEND_1          
+; {
+;   "trid": "151",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "92",
+;     "gidx": "110"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "151",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "92",
+;     "gidx": "110"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:SEND_1          
+; {
+;   "trid": "161",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "29"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "161",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "29"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:108:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "164",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "164",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Scheduler.som:113:PUSH_GLOBAL     
+; Scheduler.som:114:PUSH_ARG_1      
+; Scheduler.som:115:PUSH_ARG_2      
+; Scheduler.som:116:PUSH_ARGUMENT   
+; Scheduler.som:116:SEND            
+; Packet.som:44:PUSH_SELF       
+; Packet.som:45:SUPER_SEND      
+; Packet.som:46:PUSH_ARG_1      
+; Packet.som:47:PUSH_ARG_2      
+; Packet.som:48:PUSH_ARGUMENT   
+; Packet.som:48:SEND            
+; Packet.som:24:PUSH_ARG_1      
+; Packet.som:24:POP_FIELD_0     
+; Packet.som:25:PUSH_ARGUMENT   
+; Packet.som:25:POP_FIELD       
+; Packet.som:26:PUSH_ARG_2      
+; Packet.som:26:POP_FIELD_1     
+; Packet.som:27:PUSH_1          
+; Packet.som:27:POP_FIELD       
+; Packet.som:28:PUSH_GLOBAL     
+; Packet.som:28:PUSH_CONSTANT_1 
+; Packet.som:29:PUSH_0          
+; Packet.som:29:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Packet.som:29:POP_FIELD       
+; Packet.som:29:RETURN_SELF     
+; Packet.som:48:RETURN_LOCAL    
+; Scheduler.som:116:RETURN_LOCAL    
+; Scheduler.som:172:POP_LOCAL_0     
+; Scheduler.som:174:PUSH_SELF       
+; Scheduler.som:174:PUSH_GLOBAL     
+; Scheduler.som:175:SEND_1          
+; Scheduler.som:176:PUSH_CONSTANT   
+; Scheduler.som:177:PUSH_LOCAL_0    
+; Scheduler.som:177:PUSH_GLOBAL     
+; Scheduler.som:177:SEND_1          
+; TaskState.som:50:PUSH_SELF       
+; TaskState.som:50:SUPER_SEND      
+; TaskState.som:50:SEND_1          
+; TaskState.som:37:PUSH_CONSTANT_0 
+; TaskState.som:37:POP_FIELD       
+; TaskState.som:39:PUSH_CONSTANT_1 
+; TaskState.som:39:DUP             
+; TaskState.som:39:DUP             
+; TaskState.som:39:POP_FIELD_1     
+; TaskState.som:39:POP_FIELD_0     
+; TaskState.som:39:RETURN_SELF     
+; TaskState.som:50:RETURN_LOCAL    
+; Scheduler.som:177:SEND            
+; Scheduler.som:133:PUSH_GLOBAL     
+; Scheduler.som:133:SEND_1          
+; WorkerTaskDataRecord.som:23:PUSH_SELF       
+; WorkerTaskDataRecord.som:23:SUPER_SEND      
+; WorkerTaskDataRecord.som:23:SEND_1          
+; WorkerTaskDataRecord.som:19:PUSH_GLOBAL     
+; WorkerTaskDataRecord.som:19:SEND_1          
+; WorkerTaskDataRecord.som:19:POP_FIELD_0     
+; WorkerTaskDataRecord.som:21:PUSH_0          
+; WorkerTaskDataRecord.som:21:POP_FIELD_1     
+; WorkerTaskDataRecord.som:21:RETURN_SELF     
+; WorkerTaskDataRecord.som:23:RETURN_LOCAL    
+; Scheduler.som:133:POP_LOCAL_0     
+; Scheduler.som:134:PUSH_SELF       
+; Scheduler.som:135:PUSH_ARG_1      
+; Scheduler.som:136:PUSH_ARG_2      
+; Scheduler.som:137:PUSH_ARGUMENT   
+; Scheduler.som:138:PUSH_ARGUMENT   
+; Scheduler.som:155:PUSH_BLOCK      
+; Scheduler.som:156:PUSH_LOCAL_0    
+; Scheduler.som:156:SEND            
+; Scheduler.som:120:PUSH_GLOBAL     
+; Scheduler.som:121:PUSH_FIELD_0    
+; Scheduler.som:122:PUSH_ARG_1      
+; Scheduler.som:123:PUSH_ARG_2      
+; Scheduler.som:124:PUSH_ARGUMENT   
+; Scheduler.som:125:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:SEND            
+; TaskControlBlock.som:54:PUSH_SELF       
+; TaskControlBlock.som:55:SUPER_SEND      
+; TaskControlBlock.som:56:PUSH_ARG_1      
+; TaskControlBlock.som:57:PUSH_ARG_2      
+; TaskControlBlock.som:58:PUSH_ARGUMENT   
+; TaskControlBlock.som:59:PUSH_ARGUMENT   
+; TaskControlBlock.som:60:PUSH_ARGUMENT   
+; TaskControlBlock.som:61:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:SEND            
+; TaskControlBlock.som:16:PUSH_ARG_1      
+; TaskControlBlock.som:16:POP_FIELD       
+; TaskControlBlock.som:17:PUSH_ARG_2      
+; TaskControlBlock.som:17:POP_FIELD       
+; TaskControlBlock.som:18:PUSH_ARGUMENT   
+; TaskControlBlock.som:18:POP_FIELD       
+; TaskControlBlock.som:19:PUSH_ARGUMENT   
+; TaskControlBlock.som:19:POP_FIELD       
+; TaskControlBlock.som:20:PUSH_ARGUMENT   
+; TaskControlBlock.som:20:POP_FIELD       
+; TaskControlBlock.som:21:PUSH_ARGUMENT   
+; TaskControlBlock.som:21:POP_FIELD       
+; TaskControlBlock.som:22:PUSH_SELF       
+; TaskControlBlock.som:22:PUSH_ARGUMENT   
+; TaskControlBlock.som:22:SEND_1          
+; TaskControlBlock.som:22:SEND            
+; TaskControlBlock.som:22:POP             
+; TaskControlBlock.som:23:PUSH_SELF       
+; TaskControlBlock.som:23:PUSH_ARGUMENT   
+; TaskControlBlock.som:23:SEND_1          
+; TaskControlBlock.som:23:SEND            
+; TaskControlBlock.som:23:POP             
+; TaskControlBlock.som:24:PUSH_SELF       
+; TaskControlBlock.som:24:PUSH_ARGUMENT   
+; TaskControlBlock.som:24:SEND_1          
+; TaskControlBlock.som:24:SEND            
+; TaskControlBlock.som:24:POP             
+; TaskControlBlock.som:24:RETURN_SELF     
+; TaskControlBlock.som:62:RETURN_LOCAL    
+; Scheduler.som:126:POP_LOCAL_0     
+; Scheduler.som:127:PUSH_LOCAL_0    
+; Scheduler.som:127:POP_FIELD_0     
+; Scheduler.som:128:PUSH_FIELD      
+; Scheduler.som:128:PUSH_ARG_1      
+; Scheduler.som:129:PUSH_LOCAL_0    
+; Scheduler.som:129:SEND            
+; Scheduler.som:129:RETURN_SELF     
+; Scheduler.som:156:RETURN_SELF     
+; Scheduler.som:177:POP             
+; Scheduler.som:179:PUSH_SELF       
+; Scheduler.som:179:PUSH_GLOBAL     
+; Scheduler.som:180:SEND_1          
+; Scheduler.som:180:PUSH_GLOBAL     
+; Scheduler.som:181:SEND_1          
+; Scheduler.som:181:PUSH_GLOBAL     
+; Scheduler.som:181:SEND_1          
+; Scheduler.som:181:SEND            
+; peel
+; Scheduler.som:113:PUSH_GLOBAL     
+; Scheduler.som:114:PUSH_ARG_1      
+; Scheduler.som:115:PUSH_ARG_2      
+; Scheduler.som:116:PUSH_ARGUMENT   
+; Scheduler.som:116:SEND            
+; Packet.som:44:PUSH_SELF       
+; Packet.som:45:SUPER_SEND      
+; Packet.som:46:PUSH_ARG_1      
+; Packet.som:47:PUSH_ARG_2      
+; Packet.som:48:PUSH_ARGUMENT   
+; Packet.som:48:SEND            
+; Packet.som:24:PUSH_ARG_1      
+; Packet.som:24:POP_FIELD_0     
+; Packet.som:25:PUSH_ARGUMENT   
+; Packet.som:25:POP_FIELD       
+; Packet.som:26:PUSH_ARG_2      
+; Packet.som:26:POP_FIELD_1     
+; Packet.som:27:PUSH_1          
+; Packet.som:27:POP_FIELD       
+; Packet.som:28:PUSH_GLOBAL     
+; Packet.som:28:PUSH_CONSTANT_1 
+; Packet.som:29:PUSH_0          
+; Packet.som:29:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Packet.som:29:POP_FIELD       
+; Packet.som:29:RETURN_SELF     
+; Packet.som:48:RETURN_LOCAL    
+; Scheduler.som:116:RETURN_LOCAL    
+; Scheduler.som:172:POP_LOCAL_0     
+; Scheduler.som:174:PUSH_SELF       
+; Scheduler.som:174:PUSH_GLOBAL     
+; Scheduler.som:175:SEND_1          
+; Scheduler.som:176:PUSH_CONSTANT   
+; Scheduler.som:177:PUSH_LOCAL_0    
+; Scheduler.som:177:PUSH_GLOBAL     
+; Scheduler.som:177:SEND_1          
+; TaskState.som:50:PUSH_SELF       
+; TaskState.som:50:SUPER_SEND      
+; TaskState.som:50:SEND_1          
+; TaskState.som:37:PUSH_CONSTANT_0 
+; TaskState.som:37:POP_FIELD       
+; TaskState.som:39:PUSH_CONSTANT_1 
+; TaskState.som:39:DUP             
+; TaskState.som:39:DUP             
+; TaskState.som:39:POP_FIELD_1     
+; TaskState.som:39:POP_FIELD_0     
+; TaskState.som:39:RETURN_SELF     
+; TaskState.som:50:RETURN_LOCAL    
+; Scheduler.som:177:SEND            
+; Scheduler.som:133:PUSH_GLOBAL     
+; Scheduler.som:133:SEND_1          
+; WorkerTaskDataRecord.som:23:PUSH_SELF       
+; WorkerTaskDataRecord.som:23:SUPER_SEND      
+; WorkerTaskDataRecord.som:23:SEND_1          
+; WorkerTaskDataRecord.som:19:PUSH_GLOBAL     
+; WorkerTaskDataRecord.som:19:SEND_1          
+; WorkerTaskDataRecord.som:19:POP_FIELD_0     
+; WorkerTaskDataRecord.som:21:PUSH_0          
+; WorkerTaskDataRecord.som:21:POP_FIELD_1     
+; WorkerTaskDataRecord.som:21:RETURN_SELF     
+; WorkerTaskDataRecord.som:23:RETURN_LOCAL    
+; Scheduler.som:133:POP_LOCAL_0     
+; Scheduler.som:134:PUSH_SELF       
+; Scheduler.som:135:PUSH_ARG_1      
+; Scheduler.som:136:PUSH_ARG_2      
+; Scheduler.som:137:PUSH_ARGUMENT   
+; Scheduler.som:138:PUSH_ARGUMENT   
+; Scheduler.som:155:PUSH_BLOCK      
+; Scheduler.som:156:PUSH_LOCAL_0    
+; Scheduler.som:156:SEND            
+; Scheduler.som:120:PUSH_GLOBAL     
+; Scheduler.som:121:PUSH_FIELD_0    
+; Scheduler.som:122:PUSH_ARG_1      
+; Scheduler.som:123:PUSH_ARG_2      
+; Scheduler.som:124:PUSH_ARGUMENT   
+; Scheduler.som:125:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:SEND            
+; TaskControlBlock.som:54:PUSH_SELF       
+; TaskControlBlock.som:55:SUPER_SEND      
+; TaskControlBlock.som:56:PUSH_ARG_1      
+; TaskControlBlock.som:57:PUSH_ARG_2      
+; TaskControlBlock.som:58:PUSH_ARGUMENT   
+; TaskControlBlock.som:59:PUSH_ARGUMENT   
+; TaskControlBlock.som:60:PUSH_ARGUMENT   
+; TaskControlBlock.som:61:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:SEND            
+; TaskControlBlock.som:16:PUSH_ARG_1      
+; TaskControlBlock.som:16:POP_FIELD       
+; TaskControlBlock.som:17:PUSH_ARG_2      
+; TaskControlBlock.som:17:POP_FIELD       
+; TaskControlBlock.som:18:PUSH_ARGUMENT   
+; TaskControlBlock.som:18:POP_FIELD       
+; TaskControlBlock.som:19:PUSH_ARGUMENT   
+; TaskControlBlock.som:19:POP_FIELD       
+; TaskControlBlock.som:20:PUSH_ARGUMENT   
+; TaskControlBlock.som:20:POP_FIELD       
+; TaskControlBlock.som:21:PUSH_ARGUMENT   
+; TaskControlBlock.som:21:POP_FIELD       
+; TaskControlBlock.som:22:PUSH_SELF       
+; TaskControlBlock.som:22:PUSH_ARGUMENT   
+; TaskControlBlock.som:22:SEND_1          
+; TaskControlBlock.som:22:SEND            
+; TaskControlBlock.som:22:POP             
+; TaskControlBlock.som:23:PUSH_SELF       
+; TaskControlBlock.som:23:PUSH_ARGUMENT   
+; TaskControlBlock.som:23:SEND_1          
+; TaskControlBlock.som:23:SEND            
+; TaskControlBlock.som:23:POP             
+; TaskControlBlock.som:24:PUSH_SELF       
+; TaskControlBlock.som:24:PUSH_ARGUMENT   
+; TaskControlBlock.som:24:SEND_1          
+; TaskControlBlock.som:24:SEND            
+; TaskControlBlock.som:24:POP             
+; TaskControlBlock.som:24:RETURN_SELF     
+; TaskControlBlock.som:62:RETURN_LOCAL    
+; Scheduler.som:126:POP_LOCAL_0     
+; Scheduler.som:127:PUSH_LOCAL_0    
+; Scheduler.som:127:POP_FIELD_0     
+; Scheduler.som:128:PUSH_FIELD      
+; Scheduler.som:128:PUSH_ARG_1      
+; Scheduler.som:129:PUSH_LOCAL_0    
+; Scheduler.som:129:SEND            
+; Scheduler.som:129:RETURN_SELF     
+; Scheduler.som:156:RETURN_SELF     
+; Scheduler.som:177:POP             
+; Scheduler.som:179:PUSH_SELF       
+; Scheduler.som:179:PUSH_GLOBAL     
+; Scheduler.som:180:SEND_1          
+; Scheduler.som:180:PUSH_GLOBAL     
+; Scheduler.som:181:SEND_1          
+; Scheduler.som:181:PUSH_GLOBAL     
+; Scheduler.som:181:SEND_1          
+; Scheduler.som:181:SEND            
+; {
+;   "trid": "169",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "119",
+;     "gidx": "27"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "169",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "119",
+;     "gidx": "27"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "174",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "102",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "174",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "102",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskControlBlock.som:34:PUSH_SELF       
+; TaskControlBlock.som:34:RETURN_LOCAL    
+; Scheduler.som:249:RETURN_LOCAL    
+; Scheduler.som:154:RETURN_LOCAL    
+; TaskControlBlock.som:49:RETURN_LOCAL    
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "176",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; {
+;   "trid": "176",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; Scheduler.som:90:PUSH_GLOBAL     
+; Scheduler.som:90:SEND_1          
+; IdleTaskDataRecord.som:30:PUSH_SELF       
+; IdleTaskDataRecord.som:30:SUPER_SEND      
+; IdleTaskDataRecord.som:30:SEND_1          
+; IdleTaskDataRecord.som:24:PUSH_1          
+; IdleTaskDataRecord.som:24:POP_FIELD_0     
+; IdleTaskDataRecord.som:26:PUSH_CONSTANT_0 
+; IdleTaskDataRecord.som:26:POP_FIELD_1     
+; IdleTaskDataRecord.som:26:RETURN_SELF     
+; IdleTaskDataRecord.som:30:RETURN_LOCAL    
+; Scheduler.som:90:POP_LOCAL_0     
+; Scheduler.som:91:PUSH_SELF       
+; Scheduler.som:92:PUSH_ARG_1      
+; Scheduler.som:93:PUSH_ARG_2      
+; Scheduler.som:94:PUSH_ARGUMENT   
+; Scheduler.som:95:PUSH_ARGUMENT   
+; Scheduler.som:109:PUSH_BLOCK      
+; Scheduler.som:110:PUSH_LOCAL_0    
+; Scheduler.som:110:SEND            
+; Scheduler.som:120:PUSH_GLOBAL     
+; Scheduler.som:121:PUSH_FIELD_0    
+; Scheduler.som:122:PUSH_ARG_1      
+; Scheduler.som:123:PUSH_ARG_2      
+; Scheduler.som:124:PUSH_ARGUMENT   
+; Scheduler.som:125:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:SEND            
+; TaskControlBlock.som:54:PUSH_SELF       
+; TaskControlBlock.som:55:SUPER_SEND      
+; TaskControlBlock.som:56:PUSH_ARG_1      
+; TaskControlBlock.som:57:PUSH_ARG_2      
+; TaskControlBlock.som:58:PUSH_ARGUMENT   
+; TaskControlBlock.som:59:PUSH_ARGUMENT   
+; TaskControlBlock.som:60:PUSH_ARGUMENT   
+; TaskControlBlock.som:61:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:SEND            
+; TaskControlBlock.som:16:PUSH_ARG_1      
+; TaskControlBlock.som:16:POP_FIELD       
+; TaskControlBlock.som:17:PUSH_ARG_2      
+; TaskControlBlock.som:17:POP_FIELD       
+; TaskControlBlock.som:18:PUSH_ARGUMENT   
+; TaskControlBlock.som:18:POP_FIELD       
+; TaskControlBlock.som:19:PUSH_ARGUMENT   
+; TaskControlBlock.som:19:POP_FIELD       
+; TaskControlBlock.som:20:PUSH_ARGUMENT   
+; TaskControlBlock.som:20:POP_FIELD       
+; TaskControlBlock.som:21:PUSH_ARGUMENT   
+; TaskControlBlock.som:21:POP_FIELD       
+; TaskControlBlock.som:22:PUSH_SELF       
+; TaskControlBlock.som:22:PUSH_ARGUMENT   
+; TaskControlBlock.som:22:SEND_1          
+; TaskControlBlock.som:22:SEND            
+; TaskControlBlock.som:22:POP             
+; TaskControlBlock.som:23:PUSH_SELF       
+; TaskControlBlock.som:23:PUSH_ARGUMENT   
+; TaskControlBlock.som:23:SEND_1          
+; TaskControlBlock.som:23:SEND            
+; TaskControlBlock.som:23:POP             
+; TaskControlBlock.som:24:PUSH_SELF       
+; TaskControlBlock.som:24:PUSH_ARGUMENT   
+; TaskControlBlock.som:24:SEND_1          
+; TaskControlBlock.som:24:SEND            
+; TaskControlBlock.som:24:POP             
+; TaskControlBlock.som:24:RETURN_SELF     
+; TaskControlBlock.som:62:RETURN_LOCAL    
+; Scheduler.som:126:POP_LOCAL_0     
+; Scheduler.som:127:PUSH_LOCAL_0    
+; Scheduler.som:127:POP_FIELD_0     
+; Scheduler.som:128:PUSH_FIELD      
+; Scheduler.som:128:PUSH_ARG_1      
+; Scheduler.som:129:PUSH_LOCAL_0    
+; Scheduler.som:129:SEND            
+; Scheduler.som:129:RETURN_SELF     
+; Scheduler.som:110:RETURN_SELF     
+; Scheduler.som:164:POP             
+; Scheduler.som:166:PUSH_SELF       
+; Scheduler.som:166:PUSH_GLOBAL     
+; Scheduler.som:167:SEND_1          
+; Scheduler.som:167:PUSH_GLOBAL     
+; Scheduler.som:168:SEND_1          
+; Scheduler.som:168:PUSH_GLOBAL     
+; Scheduler.som:168:SEND_1          
+; Scheduler.som:168:SEND            
+; {
+;   "trid": "177",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "164",
+;     "gidx": "3183"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; {
+;   "trid": "177",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "164",
+;     "gidx": "3183"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; Scheduler.som:201:PUSH_GLOBAL     
+; Scheduler.som:202:SEND_1          
+; Scheduler.som:202:PUSH_GLOBAL     
+; Scheduler.som:202:SEND_1          
+; Scheduler.som:202:SEND            
+; {
+;   "trid": "186",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; {
+;   "trid": "186",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; Scheduler.som:120:PUSH_GLOBAL     
+; Scheduler.som:121:PUSH_FIELD_0    
+; Scheduler.som:122:PUSH_ARG_1      
+; Scheduler.som:123:PUSH_ARG_2      
+; Scheduler.som:124:PUSH_ARGUMENT   
+; Scheduler.som:125:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:PUSH_ARGUMENT   
+; Scheduler.som:126:SEND            
+; TaskControlBlock.som:54:PUSH_SELF       
+; TaskControlBlock.som:55:SUPER_SEND      
+; TaskControlBlock.som:56:PUSH_ARG_1      
+; TaskControlBlock.som:57:PUSH_ARG_2      
+; TaskControlBlock.som:58:PUSH_ARGUMENT   
+; TaskControlBlock.som:59:PUSH_ARGUMENT   
+; TaskControlBlock.som:60:PUSH_ARGUMENT   
+; TaskControlBlock.som:61:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:PUSH_ARGUMENT   
+; TaskControlBlock.som:62:SEND            
+; TaskControlBlock.som:16:PUSH_ARG_1      
+; TaskControlBlock.som:16:POP_FIELD       
+; TaskControlBlock.som:17:PUSH_ARG_2      
+; TaskControlBlock.som:17:POP_FIELD       
+; TaskControlBlock.som:18:PUSH_ARGUMENT   
+; TaskControlBlock.som:18:POP_FIELD       
+; TaskControlBlock.som:19:PUSH_ARGUMENT   
+; TaskControlBlock.som:19:POP_FIELD       
+; TaskControlBlock.som:20:PUSH_ARGUMENT   
+; TaskControlBlock.som:20:POP_FIELD       
+; TaskControlBlock.som:21:PUSH_ARGUMENT   
+; TaskControlBlock.som:21:POP_FIELD       
+; TaskControlBlock.som:22:PUSH_SELF       
+; TaskControlBlock.som:22:PUSH_ARGUMENT   
+; TaskControlBlock.som:22:SEND_1          
+; TaskControlBlock.som:22:SEND            
+; TaskControlBlock.som:22:POP             
+; TaskControlBlock.som:23:PUSH_SELF       
+; TaskControlBlock.som:23:PUSH_ARGUMENT   
+; TaskControlBlock.som:23:SEND_1          
+; TaskControlBlock.som:23:SEND            
+; TaskControlBlock.som:23:POP             
+; TaskControlBlock.som:24:PUSH_SELF       
+; TaskControlBlock.som:24:PUSH_ARGUMENT   
+; TaskControlBlock.som:24:SEND_1          
+; TaskControlBlock.som:24:SEND            
+; TaskControlBlock.som:24:POP             
+; TaskControlBlock.som:24:RETURN_SELF     
+; TaskControlBlock.som:62:RETURN_LOCAL    
+; Scheduler.som:126:POP_LOCAL_0     
+; Scheduler.som:127:PUSH_LOCAL_0    
+; Scheduler.som:127:POP_FIELD_0     
+; Scheduler.som:128:PUSH_FIELD      
+; Scheduler.som:128:PUSH_ARG_1      
+; Scheduler.som:129:PUSH_LOCAL_0    
+; Scheduler.som:129:SEND            
+; Scheduler.som:129:RETURN_SELF     
+; Scheduler.som:86:RETURN_SELF     
+; Scheduler.som:194:POP             
+; Scheduler.som:196:PUSH_SELF       
+; Scheduler.som:196:PUSH_GLOBAL     
+; Scheduler.som:197:SEND_1          
+; Scheduler.som:197:PUSH_GLOBAL     
+; Scheduler.som:198:SEND_1          
+; Scheduler.som:198:PUSH_GLOBAL     
+; Scheduler.som:198:SEND_1          
+; Scheduler.som:198:SEND            
+; {
+;   "trid": "185",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "164",
+;     "gidx": "2867"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "186"
+;   }
+; }
+; {
+;   "trid": "185",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "164",
+;     "gidx": "2867"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "186"
+;   }
+; }
+; HandlerTaskDataRecord.som:29:DUP             
+; HandlerTaskDataRecord.som:29:POP_FIELD_0     
+; HandlerTaskDataRecord.som:29:POP_FIELD_1     
+; HandlerTaskDataRecord.som:29:RETURN_SELF     
+; HandlerTaskDataRecord.som:34:RETURN_LOCAL    
+; Scheduler.som:54:POP_LOCAL_0     
+; Scheduler.som:55:PUSH_SELF       
+; Scheduler.som:56:PUSH_ARG_1      
+; Scheduler.som:57:PUSH_ARG_2      
+; Scheduler.som:58:PUSH_ARGUMENT   
+; Scheduler.som:59:PUSH_ARGUMENT   
+; Scheduler.som:85:PUSH_BLOCK      
+; Scheduler.som:86:PUSH_LOCAL_0    
+; Scheduler.som:86:SEND            
+; {
+;   "trid": "193",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "154"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "193",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "154"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; TaskState.som:41:PUSH_CONSTANT_2 
+; TaskState.som:41:RETURN_LOCAL    
+; Scheduler.som:283:JUMP_ON_FALSE_POP
+; Scheduler.som:283:PUSH_FIELD_1    
+; Scheduler.som:283:SEND_1          
+; Scheduler.som:283:DUP             
+; Scheduler.som:283:POP_FIELD_1     
+; Scheduler.som:283:JUMP            
+; Scheduler.som:283:POP             
+; Scheduler.som:283:JUMP_BACKWARD   
+; {
+;   "trid": "199",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "130",
+;     "gidx": "103"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "199",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "130",
+;     "gidx": "103"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_GLOBAL     
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:DUP             
+; Scheduler.som:84:POP_LOCAL       
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:JUMP_ON_FALSE_POP
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "210",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "186"
+;   }
+; }
+; {
+;   "trid": "210",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "186"
+;   }
+; }
+; TaskState.som:48:PUSH_SELF       
+; TaskState.som:48:SUPER_SEND      
+; TaskState.som:48:SEND_1          
+; TaskState.som:32:PUSH_CONSTANT_0 
+; TaskState.som:32:DUP             
+; TaskState.som:32:DUP             
+; TaskState.som:32:POP_FIELD_0     
+; TaskState.som:32:POP_FIELD       
+; TaskState.som:32:POP             
+; TaskState.som:34:PUSH_CONSTANT_1 
+; TaskState.som:34:POP_FIELD_1     
+; TaskState.som:34:RETURN_SELF     
+; TaskState.som:48:RETURN_LOCAL    
+; Scheduler.som:216:SEND            
+; Scheduler.som:27:PUSH_GLOBAL     
+; Scheduler.som:27:SEND_1          
+; DeviceTaskDataRecord.som:17:PUSH_SELF       
+; DeviceTaskDataRecord.som:17:SUPER_SEND      
+; DeviceTaskDataRecord.som:18:SEND_1          
+; DeviceTaskDataRecord.som:14:PUSH_GLOBAL     
+; DeviceTaskDataRecord.som:14:SEND_1          
+; DeviceTaskDataRecord.som:14:POP_FIELD_0     
+; DeviceTaskDataRecord.som:14:RETURN_SELF     
+; DeviceTaskDataRecord.som:18:RETURN_LOCAL    
+; Scheduler.som:27:POP_LOCAL_0     
+; Scheduler.som:29:PUSH_SELF       
+; Scheduler.som:30:PUSH_ARG_1      
+; Scheduler.som:31:PUSH_ARG_2      
+; Scheduler.som:32:PUSH_ARGUMENT   
+; Scheduler.som:33:PUSH_ARGUMENT   
+; Scheduler.som:49:PUSH_BLOCK      
+; Scheduler.som:50:PUSH_LOCAL_0    
+; Scheduler.som:50:SEND            
+; {
+;   "trid": "209",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "186",
+;     "gidx": "94"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "210"
+;   }
+; }
+; {
+;   "trid": "209",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "186",
+;     "gidx": "94"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "210"
+;   }
+; }
+; Scheduler.som:215:PUSH_GLOBAL     
+; Scheduler.som:216:SEND_1          
+; Scheduler.som:216:PUSH_GLOBAL     
+; Scheduler.som:216:SEND_1          
+; {
+;   "trid": "216",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "164",
+;     "gidx": "1142"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; {
+;   "trid": "216",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "164",
+;     "gidx": "1142"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "164"
+;   }
+; }
+; Scheduler.som:184:PUSH_GLOBAL     
+; Scheduler.som:185:SEND_1          
+; Scheduler.som:185:PUSH_GLOBAL     
+; Scheduler.som:185:SEND_1          
+; Scheduler.som:185:SEND            
+; {
+;   "trid": "219",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "604"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "219",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "604"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARGUMENT   
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:SEND            
+; {
+;   "trid": "220",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; {
+;   "trid": "220",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "23"
+;   }
+; }
+; HandlerTaskDataRecord.som:24:PUSH_SELF       
+; HandlerTaskDataRecord.som:24:PUSH_ARG_1      
+; HandlerTaskDataRecord.som:25:PUSH_FIELD_0    
+; HandlerTaskDataRecord.som:25:SEND            
+; {
+;   "trid": "223",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "223",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Scheduler.som:275:PUSH_FIELD_0    
+; Scheduler.som:275:POP_FIELD_1     
+; {
+;   "trid": "222",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "186",
+;     "gidx": "127"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "223"
+;   }
+; }
+; {
+;   "trid": "222",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "186",
+;     "gidx": "127"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "223"
+;   }
+; }
+; {
+;   "trid": "226",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "88",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "220"
+;   }
+; }
+; {
+;   "trid": "226",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "88",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "220"
+;   }
+; }
+; Scheduler.som:65:PUSH_LOCAL_0    
+; Scheduler.som:65:PUSH_ARG_1      
+; Scheduler.som:65:SEND            
+; {
+;   "trid": "230",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "138",
+;     "gidx": "205"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "230",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "138",
+;     "gidx": "205"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:PUSH_LOCAL_0    
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:PUSH_CONSTANT   
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:SEND            
+; Scheduler.som:108:POP             
+; Scheduler.som:108:PUSH_ARGUMENT   
+; Scheduler.som:108:PUSH_GLOBAL     
+; Scheduler.som:108:SEND_1          
+; Scheduler.som:108:SEND            
+; {
+;   "trid": "240",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "69",
+;     "gidx": "233"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "240",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "69",
+;     "gidx": "233"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "241",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "143",
+;     "gidx": "173"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "241",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "143",
+;     "gidx": "173"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_GLOBAL     
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_LOCAL_0    
+; Scheduler.som:154:SEND_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_ARG_1      
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:SEND            
+; Scheduler.som:154:POP             
+; Scheduler.som:154:PUSH_1          
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:DUP_SECOND      
+; {
+;   "trid": "247",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "130",
+;     "gidx": "167"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "247",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "130",
+;     "gidx": "167"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "297",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "72",
+;     "gidx": "99"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "297",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "72",
+;     "gidx": "99"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:37:POP_LOCAL_1     
+; Scheduler.som:38:PUSH_GLOBAL     
+; Scheduler.som:38:SEND_1          
+; Scheduler.som:38:PUSH_LOCAL_1    
+; Scheduler.som:38:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:DUP             
+; Scheduler.som:48:POP_LOCAL_1     
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:JUMP_ON_FALSE_POP
+; Scheduler.som:48:PUSH_LOCAL_0    
+; Scheduler.som:48:PUSH_GLOBAL     
+; Scheduler.som:48:SEND_1          
+; Scheduler.som:48:SEND            
+; Scheduler.som:48:POP             
+; Scheduler.som:48:PUSH_ARGUMENT   
+; Scheduler.som:48:PUSH_LOCAL_1    
+; Scheduler.som:48:SEND            
+; {
+;   "trid": "323",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "111",
+;     "gidx": "233"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "323",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "111",
+;     "gidx": "233"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:SEND_1          
+; {
+;   "trid": "328",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "199",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "328",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "199",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Scheduler.som:84:PUSH_LOCAL_0    
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:SEND_1          
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_LOCAL_1    
+; Scheduler.som:84:PUSH_LOCAL_2    
+; Scheduler.som:84:INC             
+; Scheduler.som:84:SEND            
+; Scheduler.som:84:POP             
+; Scheduler.som:84:PUSH_ARGUMENT   
+; Scheduler.som:84:PUSH_LOCAL      
+; Scheduler.som:84:SEND            
+; {
+;   "trid": "333",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "34",
+;     "gidx": "10"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; {
+;   "trid": "333",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "34",
+;     "gidx": "10"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "35"
+;   }
+; }
+; Scheduler.som:154:PUSH_CONSTANT   
+; Scheduler.som:154:DUP_SECOND      

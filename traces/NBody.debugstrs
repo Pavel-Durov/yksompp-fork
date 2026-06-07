@@ -1,0 +1,596 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; NBodySystem.som:67:JUMP2_IF_GREATER
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:JUMP2_BACKWARD  
+; NBodySystem.som:67:JUMP2_IF_GREATER
+; NBodySystem.som:67:DUP             
+; NBodySystem.som:67:POP_LOCAL_0     
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:PUSH_LOCAL_0    
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL_1     
+; NBodySystem.som:67:PUSH_LOCAL_0    
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:DUP_SECOND      
+; peel
+; NBodySystem.som:67:JUMP2_IF_GREATER
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:JUMP2_BACKWARD  
+; NBodySystem.som:67:JUMP2_IF_GREATER
+; NBodySystem.som:67:DUP             
+; NBodySystem.som:67:POP_LOCAL_0     
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:PUSH_LOCAL_0    
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL_1     
+; NBodySystem.som:67:PUSH_LOCAL_0    
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:DUP_SECOND      
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "227"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "227"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; NBodySystem.som:67:DUP             
+; NBodySystem.som:67:POP_LOCAL_2     
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:PUSH_LOCAL_2    
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_ARG_1      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:JUMP_BACKWARD   
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "111"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "111"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; NBodySystem.som:67:DUP             
+; NBodySystem.som:67:POP_LOCAL_2     
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:PUSH_LOCAL_2    
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_ARG_1      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL       
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:PUSH_LOCAL_1    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:PUSH_LOCAL      
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP             
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:JUMP_BACKWARD   
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; NBodySystem.som:70:PUSH_ARG_1      
+; NBodySystem.som:70:PUSH_ARG_1      
+; NBodySystem.som:70:SEND_1          
+; NBodySystem.som:70:PUSH_ARGUMENT   
+; NBodySystem.som:70:PUSH_ARG_1      
+; NBodySystem.som:70:SEND_1          
+; NBodySystem.som:70:SEND            
+; NBodySystem.som:70:SEND            
+; NBodySystem.som:70:SEND            
+; NBodySystem.som:70:POP             
+; NBodySystem.som:71:PUSH_ARG_1      
+; NBodySystem.som:71:PUSH_ARG_1      
+; NBodySystem.som:71:SEND_1          
+; NBodySystem.som:71:PUSH_ARGUMENT   
+; NBodySystem.som:71:PUSH_ARG_1      
+; NBodySystem.som:71:SEND_1          
+; NBodySystem.som:71:SEND            
+; NBodySystem.som:71:SEND            
+; NBodySystem.som:71:SEND            
+; NBodySystem.som:71:POP             
+; NBodySystem.som:72:PUSH_ARG_1      
+; NBodySystem.som:72:PUSH_ARG_1      
+; NBodySystem.som:72:SEND_1          
+; NBodySystem.som:72:PUSH_ARGUMENT   
+; NBodySystem.som:72:PUSH_ARG_1      
+; NBodySystem.som:72:SEND_1          
+; NBodySystem.som:72:SEND            
+; NBodySystem.som:72:SEND            
+; NBodySystem.som:72:SEND            
+; NBodySystem.som:73:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; peel
+; NBodySystem.som:70:PUSH_ARG_1      
+; NBodySystem.som:70:PUSH_ARG_1      
+; NBodySystem.som:70:SEND_1          
+; NBodySystem.som:70:PUSH_ARGUMENT   
+; NBodySystem.som:70:PUSH_ARG_1      
+; NBodySystem.som:70:SEND_1          
+; NBodySystem.som:70:SEND            
+; NBodySystem.som:70:SEND            
+; NBodySystem.som:70:SEND            
+; NBodySystem.som:70:POP             
+; NBodySystem.som:71:PUSH_ARG_1      
+; NBodySystem.som:71:PUSH_ARG_1      
+; NBodySystem.som:71:SEND_1          
+; NBodySystem.som:71:PUSH_ARGUMENT   
+; NBodySystem.som:71:PUSH_ARG_1      
+; NBodySystem.som:71:SEND_1          
+; NBodySystem.som:71:SEND            
+; NBodySystem.som:71:SEND            
+; NBodySystem.som:71:SEND            
+; NBodySystem.som:71:POP             
+; NBodySystem.som:72:PUSH_ARG_1      
+; NBodySystem.som:72:PUSH_ARG_1      
+; NBodySystem.som:72:SEND_1          
+; NBodySystem.som:72:PUSH_ARGUMENT   
+; NBodySystem.som:72:PUSH_ARG_1      
+; NBodySystem.som:72:SEND_1          
+; NBodySystem.som:72:SEND            
+; NBodySystem.som:72:SEND            
+; NBodySystem.som:72:SEND            
+; NBodySystem.som:73:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "93"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "93"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; NBodySystem.som:67:POP             
+; NBodySystem.som:69:PUSH_FIELD_0    
+; NBodySystem.som:73:PUSH_BLOCK      
+; NBodySystem.som:73:SEND            
+; Array.som:39:PUSH_SELF       
+; Array.som:40:PUSH_BLOCK      
+; Array.som:40:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; NBody.som:17:JUMP_IF_GREATER 
+; NBody.som:17:DUP             
+; NBody.som:17:POP_LOCAL_1     
+; NBody.som:17:PUSH_LOCAL_0    
+; NBody.som:17:PUSH_CONSTANT_2 
+; NBody.som:17:SEND            
+; NBodySystem.som:44:PUSH_1          
+; NBodySystem.som:44:PUSH_FIELD_0    
+; NBodySystem.som:44:SEND_1          
+; NBodySystem.som:67:DUP_SECOND      
+; NBodySystem.som:67:JUMP2_IF_GREATER
+; NBodySystem.som:67:DUP             
+; NBodySystem.som:67:POP_LOCAL_0     
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:PUSH_LOCAL_0    
+; NBodySystem.som:67:SEND            
+; NBodySystem.som:67:POP_LOCAL_1     
+; NBodySystem.som:67:PUSH_LOCAL_0    
+; NBodySystem.som:67:INC             
+; NBodySystem.som:67:PUSH_FIELD_0    
+; NBodySystem.som:67:SEND_1          
+; NBodySystem.som:67:DUP_SECOND      
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "95"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "95"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; NBodySystem.som:73:POP             
+; NBodySystem.som:73:RETURN_SELF     
+; NBody.som:17:POP             
+; NBody.som:17:INC             
+; NBody.som:17:JUMP_BACKWARD   
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "694"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "694"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; NBodySystem.som:73:POP             
+; NBodySystem.som:73:RETURN_SELF     
+; NBody.som:17:POP             
+; NBody.som:17:INC             
+; NBody.som:17:JUMP_BACKWARD   

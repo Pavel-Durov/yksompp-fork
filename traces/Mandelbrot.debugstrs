@@ -1,0 +1,670 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP            
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_TOP_NIL
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; peel
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP            
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_TOP_NIL
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_1          
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP2_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL       
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "793"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "793"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_NIL        
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:PUSH_1          
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:DEC             
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_TOP_NIL
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "67"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "67"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL_0    
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_0     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:JUMP            
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "24"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "24"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_LOCAL_0    
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_0     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP2_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_CONSTANT_1 
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL       
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "144"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "144"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_NIL        
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP2_BACKWARD  
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "351"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "351"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_NIL        
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:PUSH_1          
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:DEC             
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_TOP_NIL
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "67"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "67"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL_0    
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_0     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:JUMP            
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "429"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "429"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_1          
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "752"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "752"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_NIL        
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:PUSH_1          
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_POP
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:PUSH_ARG_1      
+; Mandelbrot.som:124:DEC             
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:JUMP_ON_FALSE_TOP_NIL
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "24"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "24"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:PUSH_LOCAL_2    
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_LOCAL_0    
+; Mandelbrot.som:124:PUSH_LOCAL_1    
+; Mandelbrot.som:124:SEND            
+; Mandelbrot.som:124:POP_LOCAL_0     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL_1     
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL_2     
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:PUSH_LOCAL      
+; Mandelbrot.som:124:INC             
+; Mandelbrot.som:124:DUP             
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:POP             
+; Mandelbrot.som:124:JUMP_BACKWARD   
+; {
+;   "trid": "81",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "22"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "81",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "22"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_CONSTANT   
+; Mandelbrot.som:124:POP_LOCAL       
+; Mandelbrot.som:124:PUSH_0          
+; Mandelbrot.som:124:POP_LOCAL       
+; {
+;   "trid": "82",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "5"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "82",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "5"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Mandelbrot.som:124:POP_LOCAL       

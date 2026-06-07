@@ -1,0 +1,522 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Storage.som:43:INC_FIELD       
+; Storage.som:44:PUSH_ARG_1      
+; Storage.som:44:PUSH_1          
+; Storage.som:44:SEND            
+; Storage.som:48:JUMP_ON_FALSE_POP
+; Storage.som:48:PUSH_GLOBAL     
+; Storage.som:48:PUSH_CONSTANT   
+; Storage.som:48:PUSH_BLOCK      
+; Storage.som:48:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:DEC             
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:SEND            
+; peel
+; Storage.som:43:INC_FIELD       
+; Storage.som:44:PUSH_ARG_1      
+; Storage.som:44:PUSH_1          
+; Storage.som:44:SEND            
+; Storage.som:48:JUMP_ON_FALSE_POP
+; Storage.som:48:PUSH_GLOBAL     
+; Storage.som:48:PUSH_CONSTANT   
+; Storage.som:48:PUSH_BLOCK      
+; Storage.som:48:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:DEC             
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:SEND            
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:DEC             
+; Storage.som:47:PUSH_ARGUMENT   
+; Storage.som:47:SEND            
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; SomRandom.som:28:PUSH_FIELD_0    
+; SomRandom.som:28:PUSH_CONSTANT_0 
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:PUSH_CONSTANT_2 
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:PUSH_CONSTANT   
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:POP_FIELD_0     
+; SomRandom.som:30:RETURN_FIELD_0  
+; Storage.som:48:PUSH_CONSTANT   
+; Storage.som:48:SEND            
+; Storage.som:48:INC             
+; Storage.som:48:SEND            
+; Storage.som:48:JUMP            
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:47:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "719"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "719"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Storage.som:48:PUSH_GLOBAL     
+; Storage.som:48:PUSH_ARG_2      
+; Storage.som:48:SEND_1          
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "322"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "322"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Storage.som:48:PUSH_GLOBAL     
+; Storage.som:48:PUSH_ARG_2      
+; Storage.som:48:SEND_1          
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:47:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:47:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:47:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "112"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "112"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:47:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "1"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:47:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Storage.som:39:PUSH_CONSTANT_0 
+; Storage.som:40:PUSH_ARG_1      
+; Storage.som:40:SEND            
+; Storage.som:40:RETURN_LOCAL    
+; Benchmark.som:27:JUMP_ON_TRUE_TOP_NIL
+; Benchmark.som:27:POP             
+; Benchmark.som:27:INC             
+; Benchmark.som:27:JUMP_BACKWARD   
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; Storage.som:32:PUSH_GLOBAL     
+; Storage.som:32:SEND_1          
+; SomRandom.som:34:PUSH_SELF       
+; SomRandom.som:34:SUPER_SEND      
+; SomRandom.som:34:SEND_1          
+; SomRandom.som:25:PUSH_CONSTANT_0 
+; SomRandom.som:25:POP_FIELD_0     
+; SomRandom.som:25:RETURN_SELF     
+; SomRandom.som:34:RETURN_LOCAL    
+; Storage.som:32:POP_LOCAL_0     
+; Storage.som:33:PUSH_0          
+; Storage.som:33:POP_FIELD_0     
+; Storage.som:34:PUSH_SELF       
+; Storage.som:34:PUSH_CONSTANT_2 
+; Storage.som:34:PUSH_LOCAL_0    
+; Storage.som:34:SEND            
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Storage.som:48:RETURN_LOCAL    
+; Storage.som:34:POP             
+; Storage.som:36:RETURN_FIELD_0  
+; Benchmark.som:27:SEND            

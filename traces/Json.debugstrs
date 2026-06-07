@@ -1,0 +1,3682 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:197:POP             
+; JsonParser.som:197:JUMP_BACKWARD   
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT_2 
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_TRUE_POP
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT   
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_FALSE_POP
+; JsonParser.som:197:PUSH_SELF       
+; JsonParser.som:197:SEND_1          
+; peel
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:197:POP             
+; JsonParser.som:197:JUMP_BACKWARD   
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT_2 
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_TRUE_POP
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT   
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_FALSE_POP
+; JsonParser.som:197:PUSH_SELF       
+; JsonParser.som:197:SEND_1          
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:276:PUSH_SELF       
+; JsonParser.som:276:SEND_1          
+; JsonParser.som:331:PUSH_FIELD      
+; JsonParser.som:331:PUSH_CONSTANT_0 
+; JsonParser.som:331:SEND            
+; JsonParser.som:331:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:331:POP             
+; JsonParser.som:332:PUSH_FIELD      
+; JsonParser.som:332:PUSH_CONSTANT   
+; JsonParser.som:332:SEND            
+; JsonParser.som:332:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:332:POP             
+; JsonParser.som:333:PUSH_FIELD      
+; JsonParser.som:333:PUSH_CONSTANT   
+; JsonParser.som:333:SEND            
+; JsonParser.som:333:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:333:POP             
+; JsonParser.som:334:PUSH_FIELD      
+; JsonParser.som:334:PUSH_CONSTANT   
+; JsonParser.som:334:SEND            
+; JsonParser.som:334:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:334:POP             
+; JsonParser.som:336:PUSH_CONSTANT   
+; JsonParser.som:336:RETURN_LOCAL    
+; JsonParser.som:276:JUMP_ON_FALSE_POP
+; JsonParser.som:276:PUSH_NIL        
+; JsonParser.som:276:POP             
+; JsonParser.som:276:RETURN_SELF     
+; JsonParser.som:77:POP             
+; JsonParser.som:78:PUSH_ARG_1      
+; JsonParser.som:78:PUSH_SELF       
+; JsonParser.som:78:SEND_1          
+; JsonParser.som:51:PUSH_FIELD      
+; JsonParser.som:51:PUSH_CONSTANT_0 
+; JsonParser.som:51:SEND            
+; JsonParser.som:51:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:51:POP             
+; JsonParser.som:52:PUSH_FIELD      
+; JsonParser.som:52:PUSH_CONSTANT   
+; JsonParser.som:52:SEND            
+; JsonParser.som:52:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:52:POP             
+; JsonParser.som:53:PUSH_FIELD      
+; JsonParser.som:53:PUSH_CONSTANT   
+; JsonParser.som:53:SEND            
+; JsonParser.som:53:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:53:POP             
+; JsonParser.som:54:PUSH_FIELD      
+; JsonParser.som:54:PUSH_CONSTANT   
+; JsonParser.som:54:SEND            
+; JsonParser.som:54:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:54:PUSH_SELF       
+; JsonParser.som:54:SEND_1          
+; JsonParser.som:178:PUSH_GLOBAL     
+; JsonParser.som:178:PUSH_SELF       
+; JsonParser.som:179:SEND_1          
+; JsonParser.som:183:PUSH_SELF       
+; JsonParser.som:183:SEND_1          
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "430"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "430"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:110:PUSH_CONSTANT_2 
+; JsonParser.som:110:SEND            
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:306:PUSH_CONSTANT_0 
+; JsonParser.som:307:PUSH_FIELD      
+; JsonParser.som:307:SEND            
+; JsonParser.som:311:JUMP_ON_FALSE_POP
+; JsonParser.som:311:PUSH_FIELD_0    
+; JsonParser.som:311:PUSH_FIELD      
+; JsonParser.som:311:PUSH_FIELD_1    
+; JsonParser.som:311:DEC             
+; JsonParser.som:311:SEND            
+; String.som:60:PUSH_ARG_2      
+; String.som:60:PUSH_SELF       
+; String.som:60:SEND_1          
+; String.som:60:SEND            
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_0          
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_ARG_2      
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:64:JUMP_ON_FALSE_POP
+; String.som:64:PUSH_SELF       
+; String.som:64:PUSH_ARG_1      
+; String.som:64:PUSH_ARG_2      
+; String.som:64:SEND            
+; String.som:64:RETURN_LOCAL    
+; JsonParser.som:311:DUP             
+; JsonParser.som:311:POP_LOCAL_0     
+; JsonParser.som:311:JUMP            
+; JsonParser.som:311:POP             
+; JsonParser.som:312:PUSH_CONSTANT   
+; JsonParser.som:312:POP_FIELD       
+; JsonParser.som:315:PUSH_LOCAL_0    
+; JsonParser.som:315:RETURN_LOCAL    
+; JsonParser.som:198:POP_LOCAL_0     
+; JsonParser.som:199:PUSH_SELF       
+; JsonParser.som:199:SEND_1          
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "104"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "104"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; JsonParser.som:197:PUSH_NIL        
+; JsonParser.som:197:POP             
+; JsonParser.som:198:PUSH_SELF       
+; JsonParser.som:198:SEND_1          
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; JsonArray.som:54:PUSH_SELF       
+; JsonArray.som:54:SUPER_SEND      
+; JsonArray.som:54:SEND_1          
+; JsonArray.som:29:PUSH_GLOBAL     
+; JsonArray.som:29:SEND_1          
+; Vector.som:189:PUSH_SELF       
+; Vector.som:189:PUSH_CONSTANT_0 
+; Vector.som:189:SEND            
+; Vector.som:190:PUSH_SELF       
+; Vector.som:190:SUPER_SEND      
+; Vector.som:190:PUSH_ARG_1      
+; Vector.som:190:SEND            
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Vector.som:189:RETURN_LOCAL    
+; JsonArray.som:29:POP_FIELD_0     
+; JsonArray.som:29:RETURN_SELF     
+; JsonArray.som:54:RETURN_LOCAL    
+; JsonParser.som:85:POP_LOCAL_0     
+; JsonParser.som:88:PUSH_SELF       
+; JsonParser.som:88:SEND_1          
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:96:PUSH_SELF       
+; JsonParser.som:96:PUSH_CONSTANT   
+; JsonParser.som:96:SEND            
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; JsonParser.som:96:POP             
+; JsonParser.som:96:JUMP_BACKWARD   
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; JsonParser.som:77:PUSH_SELF       
+; JsonParser.som:77:SEND_1          
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:91:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:91:POP             
+; JsonParser.som:93:PUSH_SELF       
+; JsonParser.som:93:PUSH_LOCAL_0    
+; JsonParser.som:93:SEND            
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:121:PUSH_SELF       
+; JsonParser.som:121:SEND_1          
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "112"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "112"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; JsonParser.som:54:POP             
+; JsonParser.som:55:PUSH_FIELD      
+; JsonParser.som:55:PUSH_CONSTANT   
+; JsonParser.som:55:SEND            
+; JsonParser.som:55:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:55:POP             
+; JsonParser.som:56:PUSH_FIELD      
+; JsonParser.som:56:PUSH_CONSTANT   
+; JsonParser.som:56:SEND            
+; JsonParser.som:56:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:56:PUSH_SELF       
+; JsonParser.som:56:SEND_1          
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:125:SEND            
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:96:PUSH_CONSTANT   
+; JsonParser.som:96:SEND            
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:51:PUSH_FIELD      
+; JsonParser.som:51:PUSH_CONSTANT_0 
+; JsonParser.som:51:SEND            
+; JsonParser.som:51:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:51:POP             
+; JsonParser.som:52:PUSH_FIELD      
+; JsonParser.som:52:PUSH_CONSTANT   
+; JsonParser.som:52:SEND            
+; JsonParser.som:52:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:52:POP             
+; JsonParser.som:53:PUSH_FIELD      
+; JsonParser.som:53:PUSH_CONSTANT   
+; JsonParser.som:53:SEND            
+; JsonParser.som:53:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:53:POP             
+; JsonParser.som:54:PUSH_FIELD      
+; JsonParser.som:54:PUSH_CONSTANT   
+; JsonParser.som:54:SEND            
+; JsonParser.som:54:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:54:POP             
+; JsonParser.som:55:PUSH_FIELD      
+; JsonParser.som:55:PUSH_CONSTANT   
+; JsonParser.som:55:SEND            
+; JsonParser.som:55:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:55:PUSH_SELF       
+; JsonParser.som:55:SEND_1          
+; JsonParser.som:84:PUSH_SELF       
+; JsonParser.som:84:SEND_1          
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "426"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "426"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; JsonParser.som:114:PUSH_SELF       
+; JsonParser.som:114:SEND_1          
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:249:PUSH_SELF       
+; JsonParser.som:249:PUSH_CONSTANT_0 
+; JsonParser.som:249:SEND            
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "39"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "39"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; JsonParser.som:239:PUSH_CONSTANT_2 
+; JsonParser.som:239:RETURN_LOCAL    
+; JsonParser.som:233:POP             
+; JsonParser.som:234:PUSH_SELF       
+; JsonParser.som:234:SEND_1          
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:PUSH_CONSTANT_2 
+; JsonParser.som:340:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "19",
+;     "gidx": "41"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "22"
+;   }
+; }
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "19",
+;     "gidx": "41"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "22"
+;   }
+; }
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "45"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "45"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:PUSH_CONSTANT_2 
+; JsonParser.som:345:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "21",
+;     "gidx": "62"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "21",
+;     "gidx": "62"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:96:PUSH_NIL        
+; JsonParser.som:96:POP             
+; JsonParser.som:98:PUSH_SELF       
+; JsonParser.som:98:PUSH_CONSTANT   
+; JsonParser.som:98:SEND            
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:142:PUSH_FIELD      
+; JsonParser.som:142:PUSH_CONSTANT_0 
+; JsonParser.som:142:SEND            
+; JsonParser.som:142:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:142:POP             
+; JsonParser.som:143:PUSH_SELF       
+; JsonParser.som:144:SEND_1          
+; JsonParser.som:183:PUSH_SELF       
+; JsonParser.som:183:SEND_1          
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "26"
+;   }
+; }
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "26"
+;   }
+; }
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:56:POP             
+; JsonParser.som:60:PUSH_FIELD      
+; JsonParser.som:60:PUSH_CONSTANT   
+; JsonParser.som:60:SEND            
+; JsonParser.som:60:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:60:POP             
+; JsonParser.som:61:PUSH_FIELD      
+; JsonParser.som:61:PUSH_CONSTANT   
+; JsonParser.som:61:SEND            
+; JsonParser.som:61:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:61:PUSH_SELF       
+; JsonParser.som:61:SEND_1          
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; JsonNumber.som:37:PUSH_ARG_1      
+; JsonNumber.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonNumber.som:37:POP             
+; JsonNumber.som:38:PUSH_SELF       
+; JsonNumber.som:38:SEND_1          
+; JsonNumber.som:39:PUSH_ARG_1      
+; JsonNumber.som:39:SEND            
+; JsonNumber.som:39:RETURN_LOCAL    
+; JsonParser.som:236:RETURN_LOCAL    
+; JsonParser.som:61:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "43"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "43"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:250:JUMP_ON_FALSE_POP
+; JsonParser.som:250:PUSH_SELF       
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:SEND            
+; {
+;   "trid": "34",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "116"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "34",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "116"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:339:PUSH_CONSTANT_2 
+; JsonParser.som:339:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "35",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "35",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:POP             
+; JsonParser.som:347:PUSH_FIELD      
+; JsonParser.som:347:PUSH_CONSTANT   
+; JsonParser.som:347:SEND            
+; JsonParser.som:347:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:347:PUSH_CONSTANT_2 
+; JsonParser.som:347:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "36",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "36",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "37",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "30",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "37",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "30",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:61:POP             
+; JsonParser.som:62:PUSH_FIELD      
+; JsonParser.som:62:PUSH_CONSTANT   
+; JsonParser.som:62:SEND            
+; JsonParser.som:62:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:62:PUSH_SELF       
+; JsonParser.som:62:SEND_1          
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "33",
+;     "gidx": "38"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "33",
+;     "gidx": "38"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; JsonParser.som:250:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:RETURN_LOCAL    
+; JsonParser.som:234:POP             
+; JsonParser.som:235:PUSH_GLOBAL     
+; JsonParser.som:235:PUSH_SELF       
+; JsonParser.som:236:SEND_1          
+; {
+;   "trid": "40",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "40",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:239:PUSH_SELF       
+; JsonParser.som:239:PUSH_CONSTANT_0 
+; JsonParser.som:239:SEND            
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "40"
+;   }
+; }
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "40"
+;   }
+; }
+; JsonParser.som:347:POP             
+; JsonParser.som:348:PUSH_FIELD      
+; JsonParser.som:348:PUSH_CONSTANT   
+; JsonParser.som:348:SEND            
+; JsonParser.som:348:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:348:POP             
+; JsonParser.som:350:PUSH_CONSTANT   
+; JsonParser.som:350:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:PUSH_CONSTANT_1 
+; JsonParser.som:268:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:233:PUSH_SELF       
+; JsonParser.som:233:SEND_1          
+; {
+;   "trid": "41",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "39"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "41",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "39"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; {
+;   "trid": "42",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "42",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT_2 
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_TRUE_POP
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT   
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_FALSE_POP
+; JsonParser.som:197:PUSH_SELF       
+; JsonParser.som:197:SEND_1          
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "109"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "109"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:344:PUSH_CONSTANT_2 
+; JsonParser.som:344:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "45",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "45",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:178:PUSH_GLOBAL     
+; JsonParser.som:178:PUSH_SELF       
+; JsonParser.som:179:SEND_1          
+; JsonParser.som:183:PUSH_SELF       
+; JsonParser.som:183:SEND_1          
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "140"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "45"
+;   }
+; }
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "140"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "45"
+;   }
+; }
+; JsonParser.som:54:PUSH_SELF       
+; JsonParser.som:54:SEND_1          
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "37",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "37",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:62:POP             
+; JsonParser.som:63:PUSH_FIELD      
+; JsonParser.som:63:PUSH_CONSTANT   
+; JsonParser.som:63:SEND            
+; JsonParser.som:63:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:63:POP             
+; JsonParser.som:64:PUSH_FIELD      
+; JsonParser.som:64:PUSH_CONSTANT   
+; JsonParser.som:64:SEND            
+; JsonParser.som:64:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:64:POP             
+; JsonParser.som:65:PUSH_FIELD      
+; JsonParser.som:65:PUSH_CONSTANT   
+; JsonParser.som:65:SEND            
+; JsonParser.som:65:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:65:POP             
+; JsonParser.som:66:PUSH_FIELD      
+; JsonParser.som:66:PUSH_CONSTANT   
+; JsonParser.som:66:SEND            
+; JsonParser.som:66:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:66:POP             
+; JsonParser.som:67:PUSH_FIELD      
+; JsonParser.som:67:PUSH_CONSTANT   
+; JsonParser.som:67:SEND            
+; JsonParser.som:67:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:67:POP             
+; JsonParser.som:68:PUSH_FIELD      
+; JsonParser.som:68:PUSH_CONSTANT   
+; JsonParser.som:68:SEND            
+; JsonParser.som:68:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:68:POP             
+; JsonParser.som:69:PUSH_FIELD      
+; JsonParser.som:69:PUSH_CONSTANT   
+; JsonParser.som:69:SEND            
+; JsonParser.som:69:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:69:POP             
+; JsonParser.som:70:PUSH_FIELD      
+; JsonParser.som:70:PUSH_CONSTANT   
+; JsonParser.som:70:SEND            
+; JsonParser.som:70:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:70:PUSH_SELF       
+; JsonParser.som:70:SEND_1          
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:84:PUSH_SELF       
+; JsonParser.som:84:SEND_1          
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "48"
+;   }
+; }
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "48"
+;   }
+; }
+; JsonParser.som:55:PUSH_SELF       
+; JsonParser.som:55:SEND_1          
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "68"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "68"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:55:POP             
+; JsonParser.som:56:PUSH_FIELD      
+; JsonParser.som:56:PUSH_CONSTANT   
+; JsonParser.som:56:SEND            
+; JsonParser.som:56:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:56:POP             
+; JsonParser.som:60:PUSH_FIELD      
+; JsonParser.som:60:PUSH_CONSTANT   
+; JsonParser.som:60:SEND            
+; JsonParser.som:60:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:60:POP             
+; JsonParser.som:61:PUSH_FIELD      
+; JsonParser.som:61:PUSH_CONSTANT   
+; JsonParser.som:61:SEND            
+; JsonParser.som:61:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:61:PUSH_SELF       
+; JsonParser.som:61:SEND_1          
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "32",
+;     "gidx": "52"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "51"
+;   }
+; }
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "32",
+;     "gidx": "52"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "51"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "42"
+;   }
+; }
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "42"
+;   }
+; }
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:184:POP             
+; {
+;   "trid": "54",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "54",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:155:PUSH_SELF       
+; JsonParser.som:155:SEND_1          
+; {
+;   "trid": "53",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "282"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "54"
+;   }
+; }
+; {
+;   "trid": "53",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "282"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "54"
+;   }
+; }
+; JsonParser.som:52:PUSH_SELF       
+; JsonParser.som:52:SEND_1          
+; {
+;   "trid": "55",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "46",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "55",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "46",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:64:PUSH_SELF       
+; JsonParser.som:64:SEND_1          
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "22"
+;   }
+; }
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "22"
+;   }
+; }
+; JsonParser.som:231:PUSH_SELF       
+; JsonParser.som:231:SEND_1          
+; {
+;   "trid": "57",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "57",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:61:POP             
+; JsonParser.som:62:PUSH_FIELD      
+; JsonParser.som:62:PUSH_CONSTANT   
+; JsonParser.som:62:SEND            
+; JsonParser.som:62:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:62:POP             
+; JsonParser.som:63:PUSH_FIELD      
+; JsonParser.som:63:PUSH_CONSTANT   
+; JsonParser.som:63:SEND            
+; JsonParser.som:63:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:63:POP             
+; JsonParser.som:64:PUSH_FIELD      
+; JsonParser.som:64:PUSH_CONSTANT   
+; JsonParser.som:64:SEND            
+; JsonParser.som:64:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:64:POP             
+; JsonParser.som:65:PUSH_FIELD      
+; JsonParser.som:65:PUSH_CONSTANT   
+; JsonParser.som:65:SEND            
+; JsonParser.som:65:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:65:POP             
+; JsonParser.som:66:PUSH_FIELD      
+; JsonParser.som:66:PUSH_CONSTANT   
+; JsonParser.som:66:SEND            
+; JsonParser.som:66:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:66:POP             
+; JsonParser.som:67:PUSH_FIELD      
+; JsonParser.som:67:PUSH_CONSTANT   
+; JsonParser.som:67:SEND            
+; JsonParser.som:67:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:67:PUSH_SELF       
+; JsonParser.som:67:SEND_1          
+; {
+;   "trid": "58",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; {
+;   "trid": "58",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "29"
+;   }
+; }
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; {
+;   "trid": "59",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "57",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "59",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "57",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:66:PUSH_SELF       
+; JsonParser.som:66:SEND_1          
+; {
+;   "trid": "60",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "58"
+;   }
+; }
+; {
+;   "trid": "60",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "58"
+;   }
+; }
+; JsonString.som:37:PUSH_SELF       
+; JsonString.som:37:SEND_1          
+; JsonString.som:37:PUSH_ARG_1      
+; JsonString.som:37:SEND            
+; JsonString.som:37:RETURN_LOCAL    
+; JsonParser.som:179:RETURN_LOCAL    
+; JsonParser.som:54:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; {
+;   "trid": "61",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "109"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "61",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "109"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:346:PUSH_CONSTANT_2 
+; JsonParser.som:346:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "63",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "63",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:147:PUSH_SELF       
+; JsonParser.som:147:SEND_1          
+; {
+;   "trid": "62",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "326"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "63"
+;   }
+; }
+; {
+;   "trid": "62",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "326"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "63"
+;   }
+; }
+; JsonParser.som:51:PUSH_SELF       
+; JsonParser.som:51:SEND_1          
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "685"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "685"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; JsonParser.som:197:PUSH_NIL        
+; JsonParser.som:197:POP             
+; JsonParser.som:198:PUSH_SELF       
+; JsonParser.som:198:SEND_1          
+; {
+;   "trid": "65",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "52"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "51"
+;   }
+; }
+; {
+;   "trid": "65",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "52"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "51"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; {
+;   "trid": "66",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "66",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; {
+;   "trid": "67",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "39",
+;     "gidx": "53"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "67",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "39",
+;     "gidx": "53"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:348:PUSH_CONSTANT_2 
+; JsonParser.som:348:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "68",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "68",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; JsonParser.som:106:PUSH_SELF       
+; JsonParser.som:106:SEND_1          
+; {
+;   "trid": "69",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "51"
+;   }
+; }
+; {
+;   "trid": "69",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "51"
+;   }
+; }
+; JsonObject.som:36:PUSH_ARG_1      
+; JsonObject.som:36:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:36:POP             
+; JsonObject.som:37:PUSH_ARG_2      
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; {
+;   "trid": "70",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "70",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Vector.som:189:PUSH_SELF       
+; Vector.som:189:PUSH_CONSTANT_0 
+; Vector.som:189:SEND            
+; Vector.som:190:PUSH_SELF       
+; Vector.som:190:SUPER_SEND      
+; Vector.som:190:PUSH_ARG_1      
+; Vector.som:190:SEND            
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Vector.som:189:RETURN_LOCAL    
+; JsonObject.som:30:POP_FIELD_0     
+; JsonObject.som:31:PUSH_GLOBAL     
+; JsonObject.som:31:SEND_1          
+; peel
+; Vector.som:189:PUSH_SELF       
+; Vector.som:189:PUSH_CONSTANT_0 
+; Vector.som:189:SEND            
+; Vector.som:190:PUSH_SELF       
+; Vector.som:190:SUPER_SEND      
+; Vector.som:190:PUSH_ARG_1      
+; Vector.som:190:SEND            
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Vector.som:189:RETURN_LOCAL    
+; JsonObject.som:30:POP_FIELD_0     
+; JsonObject.som:31:PUSH_GLOBAL     
+; JsonObject.som:31:SEND_1          
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Vector.som:58:PUSH_LOCAL      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:PUSH_FIELD      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:SEND            
+; Vector.som:58:SEND            
+; Vector.som:58:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; peel
+; Vector.som:58:PUSH_LOCAL      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:PUSH_FIELD      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:SEND            
+; Vector.som:58:SEND            
+; Vector.som:58:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; {
+;   "trid": "76",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "57",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "76",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "57",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:67:POP             
+; JsonParser.som:68:PUSH_FIELD      
+; JsonParser.som:68:PUSH_CONSTANT   
+; JsonParser.som:68:SEND            
+; JsonParser.som:68:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:68:PUSH_SELF       
+; JsonParser.som:68:SEND_1          
+; {
+;   "trid": "77",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "76",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "77",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "76",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:68:POP             
+; JsonParser.som:69:PUSH_FIELD      
+; JsonParser.som:69:PUSH_CONSTANT   
+; JsonParser.som:69:SEND            
+; JsonParser.som:69:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:69:PUSH_SELF       
+; JsonParser.som:69:SEND_1          
+; {
+;   "trid": "78",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "42",
+;     "gidx": "170"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "78",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "42",
+;     "gidx": "170"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; {
+;   "trid": "79",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "77",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; {
+;   "trid": "79",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "77",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "31"
+;   }
+; }
+; JsonParser.som:69:POP             
+; JsonParser.som:70:PUSH_FIELD      
+; JsonParser.som:70:PUSH_CONSTANT   
+; JsonParser.som:70:SEND            
+; JsonParser.som:70:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:70:PUSH_SELF       
+; JsonParser.som:70:SEND_1          
+; {
+;   "trid": "80",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "70"
+;   }
+; }
+; {
+;   "trid": "80",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "70"
+;   }
+; }
+; JsonObject.som:73:PUSH_SELF       
+; JsonObject.som:73:SUPER_SEND      
+; JsonObject.som:73:SEND_1          
+; JsonObject.som:30:PUSH_GLOBAL     
+; JsonObject.som:30:SEND_1          
+; {
+;   "trid": "81",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "70"
+;   }
+; }
+; {
+;   "trid": "81",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "70"
+;   }
+; }
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Vector.som:189:RETURN_LOCAL    
+; JsonObject.som:30:POP_FIELD_0     
+; JsonObject.som:31:PUSH_GLOBAL     
+; JsonObject.som:31:SEND_1          
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; JsonParser.som:56:PUSH_SELF       
+; JsonParser.som:56:SEND_1          
+; {
+;   "trid": "84",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "1160"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; {
+;   "trid": "84",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "1160"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "5"
+;   }
+; }
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; {
+;   "trid": "85",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "145"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "75"
+;   }
+; }
+; {
+;   "trid": "85",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "29",
+;     "gidx": "145"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "75"
+;   }
+; }
+; Vector.som:59:PUSH_GLOBAL     
+; Vector.som:59:PUSH_CONSTANT   
+; Vector.som:59:PUSH_FIELD      
+; Vector.som:59:SEND_1          
+; Vector.som:59:SEND            
+; Vector.som:59:SEND            
+; Vector.som:59:POP_LOCAL_0     
+; Vector.som:59:PUSH_FIELD      
+; Vector.som:59:PUSH_BLOCK      
+; Vector.som:59:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; {
+;   "trid": "87",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "75",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "87",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "75",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Vector.som:59:POP             
+; Vector.som:59:PUSH_LOCAL_0    
+; Vector.som:59:DUP             
+; Vector.som:59:POP_FIELD       
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "91",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "91",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:163:PUSH_SELF       
+; JsonParser.som:163:SEND_1          
+; {
+;   "trid": "90",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "184"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "91"
+;   }
+; }
+; {
+;   "trid": "90",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "184"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "91"
+;   }
+; }
+; JsonParser.som:53:PUSH_SELF       
+; JsonParser.som:53:SEND_1          
+; {
+;   "trid": "93",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "211"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "91"
+;   }
+; }
+; {
+;   "trid": "93",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "211"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "91"
+;   }
+; }
+; JsonParser.som:53:PUSH_SELF       
+; JsonParser.som:53:SEND_1          
+; {
+;   "trid": "94",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "70"
+;   }
+; }
+; {
+;   "trid": "94",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "70"
+;   }
+; }
+; JsonObject.som:30:PUSH_GLOBAL     
+; JsonObject.som:30:SEND_1          
+; {
+;   "trid": "95",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "863"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "95",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "863"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; JsonParser.som:292:PUSH_NIL        
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:136:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:136:POP             
+; JsonParser.som:139:PUSH_LOCAL_0    
+; JsonParser.som:139:RETURN_LOCAL    
+; JsonParser.som:56:RETURN_LOCAL    
+; JsonParser.som:44:POP_LOCAL_0     
+; JsonParser.som:45:PUSH_SELF       
+; JsonParser.som:45:SEND_1          
+; {
+;   "trid": "97",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "97",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Vector.som:34:PUSH_ARG_1      
+; Vector.som:34:PUSH_FIELD      
+; Vector.som:34:SEND_1          
+; Vector.som:34:SEND            
+; Vector.som:34:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:34:POP             
+; Vector.som:35:PUSH_FIELD      
+; Vector.som:36:PUSH_ARG_1      
+; Vector.som:36:SEND            
+; Vector.som:36:RETURN_LOCAL    
+; JsonObject.som:51:RETURN_LOCAL    
+; Json.som:34:SEND_1          
+; Json.som:34:JUMP_ON_TRUE_TOP_NIL
+; Json.som:34:POP             
+; Json.som:35:PUSH_ARG_1      
+; Json.som:35:SEND_1          
+; JsonObject.som:<unknown>:RETURN_SELF     
+; Json.som:35:PUSH_CONSTANT   
+; Json.som:35:SEND            
+; JsonObject.som:46:PUSH_ARG_1      
+; JsonObject.som:46:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:46:POP             
+; JsonObject.som:47:PUSH_SELF       
+; JsonObject.som:47:PUSH_ARG_1      
+; JsonObject.som:47:SEND            
+; JsonObject.som:66:PUSH_FIELD      
+; JsonObject.som:66:PUSH_ARG_1      
+; JsonObject.som:66:SEND            
+; HashIndexTable.som:44:PUSH_SELF       
+; HashIndexTable.som:44:PUSH_ARG_1      
+; HashIndexTable.som:44:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:44:POP_LOCAL_0     
+; HashIndexTable.som:47:PUSH_FIELD_0    
+; HashIndexTable.som:47:PUSH_LOCAL_0    
+; HashIndexTable.som:47:SEND            
+; HashIndexTable.som:47:PUSH_CONSTANT_2 
+; HashIndexTable.som:47:SEND            
+; HashIndexTable.som:47:DEC             
+; HashIndexTable.som:48:RETURN_LOCAL    
+; JsonObject.som:66:POP_LOCAL_0     
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:PUSH_0          
+; JsonObject.som:67:SEND            
+; JsonObject.som:67:PUSH_ARG_1      
+; JsonObject.som:67:PUSH_FIELD_0    
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:SEND            
+; peel
+; Vector.som:34:PUSH_ARG_1      
+; Vector.som:34:PUSH_FIELD      
+; Vector.som:34:SEND_1          
+; Vector.som:34:SEND            
+; Vector.som:34:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:34:POP             
+; Vector.som:35:PUSH_FIELD      
+; Vector.som:36:PUSH_ARG_1      
+; Vector.som:36:SEND            
+; Vector.som:36:RETURN_LOCAL    
+; JsonObject.som:51:RETURN_LOCAL    
+; Json.som:34:SEND_1          
+; Json.som:34:JUMP_ON_TRUE_TOP_NIL
+; Json.som:34:POP             
+; Json.som:35:PUSH_ARG_1      
+; Json.som:35:SEND_1          
+; JsonObject.som:<unknown>:RETURN_SELF     
+; Json.som:35:PUSH_CONSTANT   
+; Json.som:35:SEND            
+; JsonObject.som:46:PUSH_ARG_1      
+; JsonObject.som:46:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:46:POP             
+; JsonObject.som:47:PUSH_SELF       
+; JsonObject.som:47:PUSH_ARG_1      
+; JsonObject.som:47:SEND            
+; JsonObject.som:66:PUSH_FIELD      
+; JsonObject.som:66:PUSH_ARG_1      
+; JsonObject.som:66:SEND            
+; HashIndexTable.som:44:PUSH_SELF       
+; HashIndexTable.som:44:PUSH_ARG_1      
+; HashIndexTable.som:44:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:44:POP_LOCAL_0     
+; HashIndexTable.som:47:PUSH_FIELD_0    
+; HashIndexTable.som:47:PUSH_LOCAL_0    
+; HashIndexTable.som:47:SEND            
+; HashIndexTable.som:47:PUSH_CONSTANT_2 
+; HashIndexTable.som:47:SEND            
+; HashIndexTable.som:47:DEC             
+; HashIndexTable.som:48:RETURN_LOCAL    
+; JsonObject.som:66:POP_LOCAL_0     
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:PUSH_0          
+; JsonObject.som:67:SEND            
+; JsonObject.som:67:PUSH_ARG_1      
+; JsonObject.som:67:PUSH_FIELD_0    
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:SEND            
+; {
+;   "trid": "98",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "1143"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "98",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "1143"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; Object.som:35:PUSH_SELF       
+; Object.som:35:PUSH_ARG_1      
+; Object.som:35:SEND            
+; Object.som:35:RETURN_LOCAL    
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:42:POP             
+; JsonParser.som:43:PUSH_SELF       
+; JsonParser.som:43:SEND_1          
+; {
+;   "trid": "99",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "99",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; JsonParser.som:331:PUSH_FIELD      
+; JsonParser.som:331:PUSH_CONSTANT_0 
+; JsonParser.som:331:SEND            
+; JsonParser.som:331:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:331:POP             
+; JsonParser.som:332:PUSH_FIELD      
+; JsonParser.som:332:PUSH_CONSTANT   
+; JsonParser.som:332:SEND            
+; JsonParser.som:332:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:332:POP             
+; JsonParser.som:333:PUSH_FIELD      
+; JsonParser.som:333:PUSH_CONSTANT   
+; JsonParser.som:333:SEND            
+; JsonParser.som:333:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:333:POP             
+; JsonParser.som:334:PUSH_FIELD      
+; JsonParser.som:334:PUSH_CONSTANT   
+; JsonParser.som:334:SEND            
+; JsonParser.som:334:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:334:POP             
+; JsonParser.som:336:PUSH_CONSTANT   
+; JsonParser.som:336:RETURN_LOCAL    
+; JsonParser.som:276:JUMP_ON_FALSE_POP
+; JsonParser.som:276:PUSH_NIL        
+; JsonParser.som:276:POP             
+; JsonParser.som:276:RETURN_SELF     
+; JsonParser.som:43:POP             
+; JsonParser.som:44:PUSH_SELF       
+; JsonParser.som:44:SEND_1          
+; {
+;   "trid": "101",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; {
+;   "trid": "101",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; JsonParser.som:353:PUSH_FIELD      
+; JsonParser.som:354:SEND_1          
+; JsonParser.som:354:RETURN_LOCAL    
+; JsonParser.som:46:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:46:POP             
+; JsonParser.som:48:PUSH_LOCAL_0    
+; JsonParser.som:48:RETURN_LOCAL    
+; Json.som:29:RETURN_LOCAL    
+; Benchmark.som:27:SEND            
+; Json.som:33:PUSH_ARG_1      
+; Json.som:33:SEND_1          
+; Json.som:33:JUMP_ON_TRUE_TOP_NIL
+; Json.som:33:POP             
+; Json.som:34:PUSH_ARG_1      
+; Json.som:34:SEND_1          
+; JsonObject.som:<unknown>:RETURN_SELF     
+; Json.som:34:PUSH_CONSTANT   
+; Json.som:34:SEND            
+; JsonObject.som:46:PUSH_ARG_1      
+; JsonObject.som:46:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:46:POP             
+; JsonObject.som:47:PUSH_SELF       
+; JsonObject.som:47:PUSH_ARG_1      
+; JsonObject.som:47:SEND            
+; JsonObject.som:66:PUSH_FIELD      
+; JsonObject.som:66:PUSH_ARG_1      
+; JsonObject.som:66:SEND            
+; HashIndexTable.som:44:PUSH_SELF       
+; HashIndexTable.som:44:PUSH_ARG_1      
+; HashIndexTable.som:44:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:44:POP_LOCAL_0     
+; HashIndexTable.som:47:PUSH_FIELD_0    
+; HashIndexTable.som:47:PUSH_LOCAL_0    
+; HashIndexTable.som:47:SEND            
+; HashIndexTable.som:47:PUSH_CONSTANT_2 
+; HashIndexTable.som:47:SEND            
+; HashIndexTable.som:47:DEC             
+; HashIndexTable.som:48:RETURN_LOCAL    
+; JsonObject.som:66:POP_LOCAL_0     
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:PUSH_0          
+; JsonObject.som:67:SEND            
+; JsonObject.som:67:PUSH_ARG_1      
+; JsonObject.som:67:PUSH_FIELD_0    
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:SEND            
+; {
+;   "trid": "100",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "715"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "101"
+;   }
+; }
+; {
+;   "trid": "100",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "715"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "101"
+;   }
+; }
+; JsonParser.som:331:PUSH_CONSTANT_0 
+; JsonParser.som:331:SEND            
+; Object.som:35:PUSH_SELF       
+; Object.som:35:PUSH_ARG_1      
+; Object.som:35:SEND            
+; Object.som:35:RETURN_LOCAL    
+; JsonParser.som:331:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:331:POP             
+; JsonParser.som:332:PUSH_FIELD      
+; JsonParser.som:332:PUSH_CONSTANT   
+; JsonParser.som:332:SEND            
+; Object.som:35:PUSH_SELF       
+; Object.som:35:PUSH_ARG_1      
+; Object.som:35:SEND            
+; Object.som:35:RETURN_LOCAL    
+; JsonParser.som:332:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:332:POP             
+; JsonParser.som:333:PUSH_FIELD      
+; JsonParser.som:333:PUSH_CONSTANT   
+; JsonParser.som:333:SEND            
+; Object.som:35:PUSH_SELF       
+; Object.som:35:PUSH_ARG_1      
+; Object.som:35:SEND            
+; Object.som:35:RETURN_LOCAL    
+; JsonParser.som:333:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:333:POP             
+; JsonParser.som:334:PUSH_FIELD      
+; JsonParser.som:334:PUSH_CONSTANT   
+; JsonParser.som:334:SEND            
+; Object.som:35:PUSH_SELF       
+; Object.som:35:PUSH_ARG_1      
+; Object.som:35:SEND            
+; Object.som:35:RETURN_LOCAL    
+; JsonParser.som:334:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:334:POP             
+; JsonParser.som:336:PUSH_CONSTANT   
+; JsonParser.som:336:RETURN_LOCAL    
+; JsonParser.som:276:JUMP_ON_FALSE_POP
+; JsonParser.som:276:PUSH_NIL        
+; JsonParser.som:276:POP             
+; JsonParser.som:276:RETURN_SELF     
+; JsonParser.som:45:POP             
+; JsonParser.som:46:PUSH_SELF       
+; JsonParser.som:46:SEND_1          
+; {
+;   "trid": "102",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "26",
+;     "gidx": "72"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "102",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "26",
+;     "gidx": "72"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; JsonParser.som:51:POP             
+; JsonParser.som:52:PUSH_FIELD      
+; JsonParser.som:52:PUSH_CONSTANT   
+; JsonParser.som:52:SEND            
+; JsonParser.som:52:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:52:POP             
+; JsonParser.som:53:PUSH_FIELD      
+; JsonParser.som:53:PUSH_CONSTANT   
+; JsonParser.som:53:SEND            
+; JsonParser.som:53:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:53:POP             
+; JsonParser.som:54:PUSH_FIELD      
+; JsonParser.som:54:PUSH_CONSTANT   
+; JsonParser.som:54:SEND            
+; JsonParser.som:54:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:54:POP             
+; JsonParser.som:55:PUSH_FIELD      
+; JsonParser.som:55:PUSH_CONSTANT   
+; JsonParser.som:55:SEND            
+; JsonParser.som:55:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:55:POP             
+; JsonParser.som:56:PUSH_FIELD      
+; JsonParser.som:56:PUSH_CONSTANT   
+; JsonParser.som:56:SEND            
+; JsonParser.som:56:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:56:PUSH_SELF       
+; JsonParser.som:56:SEND_1          
+; {
+;   "trid": "103",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "97",
+;     "gidx": "618"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; {
+;   "trid": "103",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "97",
+;     "gidx": "618"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; JsonObject.som:67:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; JsonObject.som:67:JUMP_ON_FALSE_TOP_NIL
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:RETURN_LOCAL    
+; JsonObject.som:47:DUP             
+; JsonObject.som:47:POP_LOCAL_0     
+; JsonObject.som:47:POP             
+; JsonObject.som:48:PUSH_LOCAL_0    
+; JsonObject.som:49:PUSH_0          
+; JsonObject.som:49:SEND            
+; JsonObject.som:51:JUMP_ON_FALSE_POP
+; JsonObject.som:51:PUSH_FIELD_1    
+; JsonObject.som:51:PUSH_LOCAL_0    
+; JsonObject.som:51:SEND            
+; {
+;   "trid": "107",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "107",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:POP             
+; JsonParser.som:347:PUSH_FIELD      
+; JsonParser.som:347:PUSH_CONSTANT   
+; JsonParser.som:347:SEND            
+; JsonParser.som:347:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:347:PUSH_CONSTANT_2 
+; JsonParser.som:347:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "115",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "115",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonArray.som:37:PUSH_FIELD_0    
+; JsonArray.som:38:SEND_1          
+; JsonArray.som:38:RETURN_LOCAL    
+; Json.som:37:PUSH_CONSTANT   
+; Json.som:37:SEND            
+; Json.som:37:RETURN_LOCAL    
+; Benchmark.som:27:JUMP_ON_TRUE_TOP_NIL
+; Benchmark.som:27:POP             
+; Benchmark.som:27:INC             
+; Benchmark.som:27:JUMP_BACKWARD   
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; Json.som:29:PUSH_GLOBAL     
+; Json.som:29:PUSH_GLOBAL     
+; Json.som:29:SEND_1          
+; Json.som:29:SEND            
+; JsonParser.som:359:PUSH_SELF       
+; JsonParser.som:359:SEND_1          
+; JsonParser.som:360:PUSH_ARG_1      
+; JsonParser.som:360:SEND            
+; JsonParser.som:30:PUSH_ARG_1      
+; JsonParser.som:30:POP_FIELD_0     
+; JsonParser.som:31:PUSH_0          
+; JsonParser.som:31:POP_FIELD_1     
+; JsonParser.som:32:PUSH_1          
+; JsonParser.som:32:POP_FIELD       
+; JsonParser.som:33:PUSH_0          
+; JsonParser.som:33:POP_FIELD       
+; JsonParser.som:34:PUSH_NIL        
+; JsonParser.som:34:POP_FIELD       
+; JsonParser.som:35:PUSH_CONSTANT_0 
+; JsonParser.som:35:POP_FIELD       
+; JsonParser.som:36:PUSH_CONSTANT_1 
+; JsonParser.som:36:POP_FIELD       
+; JsonParser.som:36:RETURN_SELF     
+; JsonParser.som:360:RETURN_LOCAL    
+; Json.som:29:SEND_1          
+; JsonParser.som:41:PUSH_BLOCK      
+; JsonParser.som:41:POP_FIELD       
+; JsonParser.som:42:PUSH_SELF       
+; JsonParser.som:42:SEND_1          
+; {
+;   "trid": "114",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "97",
+;     "gidx": "1313"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "115"
+;   }
+; }
+; {
+;   "trid": "114",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "97",
+;     "gidx": "1313"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "115"
+;   }
+; }
+; Json.som:36:SEND_1          
+; {
+;   "trid": "116",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "99",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; {
+;   "trid": "116",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "99",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; JsonParser.som:96:POP             
+; JsonParser.som:96:JUMP_BACKWARD   
+; {
+;   "trid": "119",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "97",
+;     "gidx": "1346"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; {
+;   "trid": "119",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "97",
+;     "gidx": "1346"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; JsonObject.som:67:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; JsonObject.som:67:JUMP_ON_FALSE_TOP_NIL
+; JsonObject.som:67:PUSH_LOCAL_0    
+; JsonObject.som:67:RETURN_LOCAL    
+; JsonObject.som:47:DUP             
+; JsonObject.som:47:POP_LOCAL_0     
+; JsonObject.som:47:POP             
+; JsonObject.som:48:PUSH_LOCAL_0    
+; JsonObject.som:49:PUSH_0          
+; JsonObject.som:49:SEND            
+; JsonObject.som:51:JUMP_ON_FALSE_POP
+; JsonObject.som:51:PUSH_FIELD_1    
+; JsonObject.som:51:PUSH_LOCAL_0    
+; JsonObject.som:51:SEND            
+; {
+;   "trid": "136",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "116",
+;     "gidx": "6"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "136",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "116",
+;     "gidx": "6"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; JsonParser.som:114:PUSH_LOCAL_0    
+; JsonParser.som:114:PUSH_SELF       
+; JsonParser.som:114:SEND_1          
+; {
+;   "trid": "153",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "42",
+;     "gidx": "104"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "153",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "42",
+;     "gidx": "104"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; JsonParser.som:197:PUSH_NIL        
+; JsonParser.som:197:POP             
+; JsonParser.som:198:PUSH_SELF       
+; JsonParser.som:198:SEND_1          
+; {
+;   "trid": "169",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "169",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:183:PUSH_SELF       
+; JsonParser.som:183:SEND_1          
+; {
+;   "trid": "168",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "354"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "169"
+;   }
+; }
+; {
+;   "trid": "168",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "354"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "169"
+;   }
+; }
+; JsonParser.som:142:POP             
+; JsonParser.som:143:PUSH_SELF       
+; JsonParser.som:144:SEND_1          
+; {
+;   "trid": "176",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "136",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "176",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "136",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; JsonParser.som:78:SEND_1          
+; {
+;   "trid": "178",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "107",
+;     "gidx": "471"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "178",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "107",
+;     "gidx": "471"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:341:PUSH_CONSTANT_2 
+; JsonParser.som:341:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; {
+;   "trid": "181",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "107",
+;     "gidx": "542"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "181",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "107",
+;     "gidx": "542"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:340:PUSH_CONSTANT_2 
+; JsonParser.som:340:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          

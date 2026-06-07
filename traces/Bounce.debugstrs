@@ -1,0 +1,2072 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; SomRandom.som:28:PUSH_FIELD_0    
+; SomRandom.som:28:PUSH_CONSTANT_0 
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:PUSH_CONSTANT_2 
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:PUSH_CONSTANT   
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:POP_FIELD_0     
+; SomRandom.som:30:RETURN_FIELD_0  
+; Ball.som:48:PUSH_CONSTANT   
+; Ball.som:48:SEND            
+; Ball.som:48:PUSH_CONSTANT   
+; Ball.som:48:SEND            
+; Ball.som:48:POP_FIELD       
+; Ball.som:48:RETURN_SELF     
+; Ball.som:53:RETURN_LOCAL    
+; Bounce.som:31:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Bounce.som:31:PUSH_GLOBAL     
+; Bounce.som:31:PUSH_LOCAL      
+; Bounce.som:31:SEND            
+; Ball.som:53:PUSH_SELF       
+; Ball.som:53:SEND_1          
+; Ball.som:53:PUSH_ARG_1      
+; Ball.som:53:SEND            
+; Ball.som:45:PUSH_ARG_1      
+; Ball.som:45:SEND_1          
+; peel
+; SomRandom.som:28:PUSH_FIELD_0    
+; SomRandom.som:28:PUSH_CONSTANT_0 
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:PUSH_CONSTANT_2 
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:PUSH_CONSTANT   
+; SomRandom.som:28:SEND            
+; SomRandom.som:28:POP_FIELD_0     
+; SomRandom.som:30:RETURN_FIELD_0  
+; Ball.som:48:PUSH_CONSTANT   
+; Ball.som:48:SEND            
+; Ball.som:48:PUSH_CONSTANT   
+; Ball.som:48:SEND            
+; Ball.som:48:POP_FIELD       
+; Ball.som:48:RETURN_SELF     
+; Ball.som:53:RETURN_LOCAL    
+; Bounce.som:31:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Bounce.som:31:PUSH_GLOBAL     
+; Bounce.som:31:PUSH_LOCAL      
+; Bounce.som:31:SEND            
+; Ball.som:53:PUSH_SELF       
+; Ball.som:53:SEND_1          
+; Ball.som:53:PUSH_ARG_1      
+; Ball.som:53:SEND            
+; Ball.som:45:PUSH_ARG_1      
+; Ball.som:45:SEND_1          
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "792"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "792"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Ball.som:47:PUSH_ARG_1      
+; Ball.som:47:SEND_1          
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "340"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "340"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Ball.som:45:SEND            
+; Ball.som:45:POP_FIELD_0     
+; Ball.som:46:PUSH_ARG_1      
+; Ball.som:46:SEND_1          
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "746"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "746"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Ball.som:48:SEND_1          
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Bounce.som:35:PUSH_ARG_1      
+; Bounce.som:35:SEND_1          
+; Ball.som:28:PUSH_CONSTANT_0 
+; Ball.som:28:DUP             
+; Ball.som:28:DUP             
+; Ball.som:28:POP_LOCAL_0     
+; Ball.som:28:POP_LOCAL_1     
+; Ball.som:28:POP             
+; Ball.som:29:PUSH_CONSTANT_1 
+; Ball.som:29:POP_LOCAL_2     
+; Ball.som:31:PUSH_FIELD_0    
+; Ball.som:31:PUSH_FIELD      
+; Ball.som:31:SEND            
+; Ball.som:31:POP_FIELD_0     
+; Ball.som:32:PUSH_FIELD_1    
+; Ball.som:32:PUSH_FIELD      
+; Ball.som:32:SEND            
+; Ball.som:32:POP_FIELD_1     
+; Ball.som:33:PUSH_FIELD_0    
+; Ball.som:33:PUSH_LOCAL_0    
+; Ball.som:33:SEND            
+; Ball.som:34:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:34:POP             
+; Ball.som:35:PUSH_FIELD_0    
+; Ball.som:35:PUSH_0          
+; Ball.som:35:SEND            
+; Ball.som:36:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; peel
+; Bounce.som:35:PUSH_ARG_1      
+; Bounce.som:35:SEND_1          
+; Ball.som:28:PUSH_CONSTANT_0 
+; Ball.som:28:DUP             
+; Ball.som:28:DUP             
+; Ball.som:28:POP_LOCAL_0     
+; Ball.som:28:POP_LOCAL_1     
+; Ball.som:28:POP             
+; Ball.som:29:PUSH_CONSTANT_1 
+; Ball.som:29:POP_LOCAL_2     
+; Ball.som:31:PUSH_FIELD_0    
+; Ball.som:31:PUSH_FIELD      
+; Ball.som:31:SEND            
+; Ball.som:31:POP_FIELD_0     
+; Ball.som:32:PUSH_FIELD_1    
+; Ball.som:32:PUSH_FIELD      
+; Ball.som:32:SEND            
+; Ball.som:32:POP_FIELD_1     
+; Ball.som:33:PUSH_FIELD_0    
+; Ball.som:33:PUSH_LOCAL_0    
+; Ball.som:33:SEND            
+; Ball.som:34:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:34:POP             
+; Ball.som:35:PUSH_FIELD_0    
+; Ball.som:35:PUSH_0          
+; Ball.som:35:SEND            
+; Ball.som:36:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:28:PUSH_CONSTANT_0 
+; Ball.som:28:DUP             
+; Ball.som:28:DUP             
+; Ball.som:28:POP_LOCAL_0     
+; Ball.som:28:POP_LOCAL_1     
+; Ball.som:28:POP             
+; Ball.som:29:PUSH_CONSTANT_1 
+; Ball.som:29:POP_LOCAL_2     
+; Ball.som:31:PUSH_FIELD_0    
+; Ball.som:31:PUSH_FIELD      
+; Ball.som:31:SEND            
+; Ball.som:31:POP_FIELD_0     
+; Ball.som:32:PUSH_FIELD_1    
+; Ball.som:32:PUSH_FIELD      
+; Ball.som:32:SEND            
+; Ball.som:32:POP_FIELD_1     
+; Ball.som:33:PUSH_FIELD_0    
+; Ball.som:33:PUSH_LOCAL_0    
+; Ball.som:33:SEND            
+; Ball.som:34:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:34:POP             
+; Ball.som:35:PUSH_FIELD_0    
+; Ball.som:35:PUSH_0          
+; Ball.som:35:SEND            
+; Ball.som:36:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "292"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "292"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:34:PUSH_LOCAL_0    
+; Ball.som:34:POP_FIELD_0     
+; Ball.som:34:PUSH_0          
+; Ball.som:34:PUSH_FIELD      
+; Ball.som:34:SEND_1          
+; Ball.som:34:SEND            
+; Ball.som:34:POP_FIELD       
+; Ball.som:34:PUSH_CONSTANT   
+; Ball.som:34:DUP             
+; Ball.som:34:POP_LOCAL_2     
+; Ball.som:34:POP             
+; Ball.som:35:PUSH_FIELD_0    
+; Ball.som:35:PUSH_0          
+; Ball.som:35:SEND            
+; Ball.som:36:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "237"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "237"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:36:PUSH_0          
+; Ball.som:36:POP_FIELD_0     
+; Ball.som:36:PUSH_FIELD      
+; Ball.som:36:SEND_1          
+; Ball.som:36:POP_FIELD       
+; Ball.som:36:PUSH_CONSTANT   
+; Ball.som:36:DUP             
+; Ball.som:36:POP_LOCAL_2     
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "845"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "845"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:34:PUSH_LOCAL_0    
+; Ball.som:34:POP_FIELD_0     
+; Ball.som:34:PUSH_0          
+; Ball.som:34:PUSH_FIELD      
+; Ball.som:34:SEND_1          
+; Ball.som:34:SEND            
+; Ball.som:34:POP_FIELD       
+; Ball.som:34:PUSH_CONSTANT   
+; Ball.som:34:DUP             
+; Ball.som:34:POP_LOCAL_2     
+; Ball.som:34:POP             
+; Ball.som:35:PUSH_FIELD_0    
+; Ball.som:35:PUSH_0          
+; Ball.som:35:SEND            
+; Ball.som:36:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "185"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "185"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:PUSH_LOCAL_1    
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "130"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "130"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "683"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "683"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "790"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "790"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:36:PUSH_0          
+; Ball.som:36:POP_FIELD_0     
+; Ball.som:36:PUSH_FIELD      
+; Ball.som:36:SEND_1          
+; Ball.som:36:POP_FIELD       
+; Ball.som:36:PUSH_CONSTANT   
+; Ball.som:36:DUP             
+; Ball.som:36:POP_LOCAL_2     
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "738"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "738"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:PUSH_LOCAL_1    
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "129"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "129"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "122"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "122"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Bounce.som:35:JUMP_IF_GREATER 
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:PUSH_LOCAL_1    
+; Bounce.som:35:PUSH_BLOCK      
+; Bounce.som:35:SEND            
+; Array.som:39:PUSH_SELF       
+; Array.som:40:PUSH_BLOCK      
+; Array.som:40:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "95"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "95"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; Bounce.som:35:POP             
+; Bounce.som:35:INC             
+; Bounce.som:35:JUMP_BACKWARD   
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "129"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "129"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "647"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "647"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; Bounce.som:35:POP             
+; Bounce.som:35:INC             
+; Bounce.som:35:JUMP_BACKWARD   
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "262"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "262"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:PUSH_LOCAL_1    
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "214"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "214"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "214"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "214"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "129"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "129"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:PUSH_LOCAL_1    
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; Bounce.som:35:POP             
+; Bounce.som:35:INC             
+; Bounce.som:35:JUMP_BACKWARD   
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; Bounce.som:35:POP             
+; Bounce.som:35:INC             
+; Bounce.som:35:JUMP_BACKWARD   
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "289"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "289"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "824"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "824"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Ball.som:45:SEND            
+; Ball.som:45:POP_FIELD_0     
+; Ball.som:46:PUSH_ARG_1      
+; Ball.som:46:SEND_1          
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "696"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "696"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Bounce.som:31:POP_LOCAL_1     
+; Bounce.som:33:PUSH_1          
+; Bounce.som:33:PUSH_CONSTANT   
+; Bounce.som:35:DUP_SECOND      
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "10",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "17"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Array.som:40:RETURN_SELF     
+; Bounce.som:35:POP             
+; Bounce.som:35:INC             
+; Bounce.som:35:JUMP_BACKWARD   
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Bounce.som:41:PUSH_CONSTANT_0 
+; Bounce.som:42:PUSH_ARG_1      
+; Bounce.som:42:SEND            
+; Bounce.som:42:RETURN_LOCAL    
+; Benchmark.som:27:JUMP_ON_TRUE_TOP_NIL
+; Benchmark.som:27:POP             
+; Benchmark.som:27:INC             
+; Benchmark.som:27:JUMP_BACKWARD   
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; Bounce.som:27:PUSH_GLOBAL     
+; Bounce.som:27:SEND_1          
+; SomRandom.som:34:PUSH_SELF       
+; SomRandom.som:34:SUPER_SEND      
+; SomRandom.som:34:SEND_1          
+; SomRandom.som:25:PUSH_CONSTANT_0 
+; SomRandom.som:25:POP_FIELD_0     
+; SomRandom.som:25:RETURN_SELF     
+; SomRandom.som:34:RETURN_LOCAL    
+; Bounce.som:27:POP_LOCAL       
+; Bounce.som:29:PUSH_CONSTANT_2 
+; Bounce.som:29:POP_LOCAL_0     
+; Bounce.som:30:PUSH_0          
+; Bounce.som:30:POP_LOCAL_2     
+; Bounce.som:31:PUSH_GLOBAL     
+; Bounce.som:31:PUSH_LOCAL_0    
+; Bounce.som:31:PUSH_BLOCK      
+; Bounce.som:31:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Bounce.som:31:PUSH_GLOBAL     
+; Bounce.som:31:PUSH_LOCAL      
+; Bounce.som:31:SEND            
+; Ball.som:53:PUSH_SELF       
+; Ball.som:53:SEND_1          
+; Ball.som:53:PUSH_ARG_1      
+; Ball.som:53:SEND            
+; Ball.som:45:PUSH_ARG_1      
+; Ball.som:45:SEND_1          
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "223"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "223"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; Bounce.som:35:POP             
+; Bounce.som:38:PUSH_LOCAL_2    
+; Bounce.som:38:RETURN_LOCAL    
+; Benchmark.som:27:SEND            
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "190"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "190"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:38:PUSH_LOCAL_1    
+; Ball.som:38:POP_FIELD_1     
+; Ball.som:38:PUSH_0          
+; Ball.som:38:PUSH_FIELD      
+; Ball.som:38:SEND_1          
+; Ball.som:38:SEND            
+; Ball.som:38:POP_FIELD       
+; Ball.som:38:PUSH_CONSTANT   
+; Ball.som:38:DUP             
+; Ball.som:38:POP_LOCAL_2     
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "242"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "242"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:36:PUSH_0          
+; Ball.som:36:POP_FIELD_0     
+; Ball.som:36:PUSH_FIELD      
+; Ball.som:36:SEND_1          
+; Ball.som:36:POP_FIELD       
+; Ball.som:36:PUSH_CONSTANT   
+; Ball.som:36:DUP             
+; Ball.som:36:POP_LOCAL_2     
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "135"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "135"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:PUSH_0          
+; Ball.som:40:POP_FIELD_1     
+; Ball.som:40:PUSH_FIELD      
+; Ball.som:40:SEND_1          
+; Ball.som:40:POP_FIELD       
+; Ball.som:40:PUSH_CONSTANT   
+; Ball.som:40:DUP             
+; Ball.som:40:POP_LOCAL_2     
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "297"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "297"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:34:PUSH_LOCAL_0    
+; Ball.som:34:POP_FIELD_0     
+; Ball.som:34:PUSH_0          
+; Ball.som:34:PUSH_FIELD      
+; Ball.som:34:SEND_1          
+; Ball.som:34:SEND            
+; Ball.som:34:POP_FIELD       
+; Ball.som:34:PUSH_CONSTANT   
+; Ball.som:34:DUP             
+; Ball.som:34:POP_LOCAL_2     
+; Ball.som:34:POP             
+; Ball.som:35:PUSH_FIELD_0    
+; Ball.som:35:PUSH_0          
+; Ball.som:35:SEND            
+; Ball.som:36:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:36:POP             
+; Ball.som:37:PUSH_FIELD_1    
+; Ball.som:37:PUSH_LOCAL_1    
+; Ball.som:37:SEND            
+; Ball.som:38:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:38:POP             
+; Ball.som:39:PUSH_FIELD_1    
+; Ball.som:39:PUSH_0          
+; Ball.som:39:SEND            
+; Ball.som:40:JUMP_ON_FALSE_TOP_NIL
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "43",
+;     "gidx": "122"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "43",
+;     "gidx": "122"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; Ball.som:40:POP             
+; Ball.som:42:PUSH_LOCAL_2    
+; Ball.som:42:RETURN_LOCAL    
+; Bounce.som:35:JUMP_ON_FALSE_TOP_NIL
+; Bounce.som:35:PUSH_LOCAL      
+; Bounce.som:35:INC             
+; Bounce.som:35:DUP             
+; Bounce.som:35:POP_LOCAL       
+; Bounce.som:35:RETURN_LOCAL    
+; Array.som:40:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARGUMENT   
+; Array.som:40:PUSH_ARG_1      
+; Array.som:40:SEND            
+; Array.som:40:SEND            
+; {
+;   "trid": "87",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "87",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Ball.som:45:PUSH_ARG_1      
+; Ball.som:45:SEND_1          

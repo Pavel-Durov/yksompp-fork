@@ -1,0 +1,76 @@
+yk-tracing: start-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: stop-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: stop-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: stop-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: stop-tracing
+yk-tracing: start-tracing
+yk-tracing: stop-tracing
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: NBody.som:17:JUMP_IF_GREATER 
+yk-tracing: start-tracing: NBody.som:17:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: NBody.som:17:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-tracing: start-side-tracing: NBodySystem.som:67:JUMP2_IF_GREATER
+yk-warning: stop-tracing-aborted: Trace too long: NBodySystem.som:67:JUMP2_IF_GREATER

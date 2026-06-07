@@ -1,0 +1,546 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Permute.som:50:PUSH_FIELD_1    
+; Permute.som:50:PUSH_ARG_1      
+; Permute.som:50:SEND            
+; Permute.som:50:POP_LOCAL_0     
+; Permute.som:51:PUSH_FIELD_1    
+; Permute.som:51:PUSH_ARG_1      
+; Permute.som:51:PUSH_FIELD_1    
+; Permute.som:51:PUSH_ARG_2      
+; Permute.som:51:SEND            
+; Permute.som:51:SEND            
+; Permute.som:51:POP             
+; Permute.som:52:PUSH_FIELD_1    
+; Permute.som:52:PUSH_ARG_2      
+; Permute.som:53:PUSH_LOCAL_0    
+; Permute.som:53:SEND            
+; Permute.som:53:RETURN_SELF     
+; Permute.som:45:RETURN_LOCAL    
+; Integer.som:97:POP             
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_2      
+; Integer.som:97:SEND            
+; Integer.som:97:DUP             
+; Integer.som:97:POP_LOCAL_0     
+; Integer.som:97:POP             
+; Integer.som:97:JUMP_BACKWARD   
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_1      
+; Integer.som:97:SEND            
+; Integer.som:97:JUMP_ON_FALSE_POP
+; Integer.som:97:PUSH_NIL        
+; Integer.som:97:RETURN_SELF     
+; Integer.som:91:RETURN_SELF     
+; Permute.som:46:RETURN_SELF     
+; Permute.som:46:POP             
+; Permute.som:46:PUSH_ARG_1      
+; Permute.som:46:PUSH_1          
+; Permute.som:46:PUSH_BLOCK      
+; Permute.som:46:SEND            
+; Integer.som:90:PUSH_SELF       
+; Integer.som:90:PUSH_ARG_1      
+; Integer.som:90:PUSH_1          
+; Integer.som:91:PUSH_ARG_2      
+; Integer.som:91:SEND            
+; Integer.som:95:PUSH_SELF       
+; Integer.som:95:POP_LOCAL_0     
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_1      
+; Integer.som:97:SEND            
+; Integer.som:97:JUMP_ON_FALSE_POP
+; Integer.som:97:PUSH_ARGUMENT   
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:SEND            
+; Permute.som:43:PUSH_ARGUMENT   
+; Permute.som:43:PUSH_ARGUMENT   
+; Permute.som:43:PUSH_ARG_1      
+; Permute.som:43:SEND            
+; peel
+; Permute.som:50:PUSH_FIELD_1    
+; Permute.som:50:PUSH_ARG_1      
+; Permute.som:50:SEND            
+; Permute.som:50:POP_LOCAL_0     
+; Permute.som:51:PUSH_FIELD_1    
+; Permute.som:51:PUSH_ARG_1      
+; Permute.som:51:PUSH_FIELD_1    
+; Permute.som:51:PUSH_ARG_2      
+; Permute.som:51:SEND            
+; Permute.som:51:SEND            
+; Permute.som:51:POP             
+; Permute.som:52:PUSH_FIELD_1    
+; Permute.som:52:PUSH_ARG_2      
+; Permute.som:53:PUSH_LOCAL_0    
+; Permute.som:53:SEND            
+; Permute.som:53:RETURN_SELF     
+; Permute.som:45:RETURN_LOCAL    
+; Integer.som:97:POP             
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_2      
+; Integer.som:97:SEND            
+; Integer.som:97:DUP             
+; Integer.som:97:POP_LOCAL_0     
+; Integer.som:97:POP             
+; Integer.som:97:JUMP_BACKWARD   
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_1      
+; Integer.som:97:SEND            
+; Integer.som:97:JUMP_ON_FALSE_POP
+; Integer.som:97:PUSH_NIL        
+; Integer.som:97:RETURN_SELF     
+; Integer.som:91:RETURN_SELF     
+; Permute.som:46:RETURN_SELF     
+; Permute.som:46:POP             
+; Permute.som:46:PUSH_ARG_1      
+; Permute.som:46:PUSH_1          
+; Permute.som:46:PUSH_BLOCK      
+; Permute.som:46:SEND            
+; Integer.som:90:PUSH_SELF       
+; Integer.som:90:PUSH_ARG_1      
+; Integer.som:90:PUSH_1          
+; Integer.som:91:PUSH_ARG_2      
+; Integer.som:91:SEND            
+; Integer.som:95:PUSH_SELF       
+; Integer.som:95:POP_LOCAL_0     
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_1      
+; Integer.som:97:SEND            
+; Integer.som:97:JUMP_ON_FALSE_POP
+; Integer.som:97:PUSH_ARGUMENT   
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:SEND            
+; Permute.som:43:PUSH_ARGUMENT   
+; Permute.som:43:PUSH_ARGUMENT   
+; Permute.som:43:PUSH_ARG_1      
+; Permute.som:43:SEND            
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Permute.som:38:INC_FIELD       
+; Permute.som:39:PUSH_ARG_1      
+; Permute.som:39:PUSH_0          
+; Permute.som:39:SEND            
+; Permute.som:46:JUMP_ON_FALSE_TOP_NIL
+; Permute.som:46:RETURN_SELF     
+; Permute.som:44:POP             
+; Permute.som:45:PUSH_ARGUMENT   
+; Permute.som:45:PUSH_ARGUMENT   
+; Permute.som:45:PUSH_ARG_1      
+; Permute.som:45:SEND            
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "781"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "781"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Permute.som:44:PUSH_ARGUMENT   
+; Permute.som:44:PUSH_ARGUMENT   
+; Permute.som:44:DEC             
+; Permute.som:44:SEND            
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "692"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "692"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Permute.som:45:PUSH_ARGUMENT   
+; Permute.som:45:PUSH_ARG_1      
+; Permute.som:45:SEND            
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "55"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "55"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Permute.som:46:PUSH_SELF       
+; Permute.som:46:PUSH_ARG_1      
+; Permute.som:46:DEC             
+; Permute.som:46:SEND            
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Permute.som:43:PUSH_ARGUMENT   
+; Permute.som:43:PUSH_ARGUMENT   
+; Permute.som:43:PUSH_ARG_1      
+; Permute.som:43:SEND            
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "48"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "48"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; Permute.som:46:PUSH_1          
+; Permute.som:46:PUSH_BLOCK      
+; Permute.som:46:SEND            
+; Integer.som:90:PUSH_SELF       
+; Integer.som:90:PUSH_ARG_1      
+; Integer.som:90:PUSH_1          
+; Integer.som:91:PUSH_ARG_2      
+; Integer.som:91:SEND            
+; Integer.som:95:PUSH_SELF       
+; Integer.som:95:POP_LOCAL_0     
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:PUSH_ARG_1      
+; Integer.som:97:SEND            
+; Integer.som:97:JUMP_ON_FALSE_POP
+; Integer.som:97:PUSH_ARGUMENT   
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:SEND            
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "701"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "701"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; Integer.som:97:PUSH_ARGUMENT   
+; Integer.som:97:PUSH_LOCAL_0    
+; Integer.som:97:SEND            
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "319"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "319"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Permute.som:44:PUSH_ARGUMENT   
+; Permute.som:44:PUSH_ARGUMENT   
+; Permute.som:44:DEC             
+; Permute.som:44:SEND            
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Permute.som:34:PUSH_CONSTANT_0 
+; Permute.som:35:PUSH_ARG_1      
+; Permute.som:35:SEND            
+; Permute.som:35:RETURN_LOCAL    
+; Benchmark.som:27:JUMP_ON_TRUE_TOP_NIL
+; Benchmark.som:27:POP             
+; Benchmark.som:27:INC             
+; Benchmark.som:27:JUMP_BACKWARD   
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; Permute.som:27:PUSH_0          
+; Permute.som:27:POP_FIELD_0     
+; Permute.som:28:PUSH_GLOBAL     
+; Permute.som:28:PUSH_CONSTANT_1 
+; Permute.som:28:PUSH_0          
+; Permute.som:28:SEND            
+; Array.som:165:PUSH_SELF       
+; Array.som:165:PUSH_ARG_1      
+; Array.som:165:SEND            
+; Array.som:165:PUSH_ARG_2      
+; Array.som:165:SEND            
+; Array.som:32:PUSH_SELF       
+; Array.som:33:PUSH_BLOCK      
+; Array.som:33:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:RETURN_SELF     
+; Array.som:33:RETURN_SELF     
+; Array.som:165:RETURN_LOCAL    
+; Permute.som:28:POP_FIELD_1     
+; Permute.som:29:PUSH_SELF       
+; Permute.som:29:PUSH_CONSTANT   
+; Permute.som:29:SEND            
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "44"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "44"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Benchmark.som:27:SEND            

@@ -1,0 +1,4721 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Vector.som:190:PUSH_SELF       
+; Vector.som:190:SUPER_SEND      
+; Vector.som:190:PUSH_ARG_1      
+; Vector.som:190:SEND            
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Variable.som:27:POP_FIELD_1     
+; Variable.som:28:PUSH_NIL        
+; Variable.som:28:POP_FIELD       
+; Variable.som:29:PUSH_GLOBAL     
+; Variable.som:29:SEND_1          
+; Variable.som:29:POP_FIELD       
+; Variable.som:30:PUSH_CONSTANT   
+; Variable.som:30:POP_FIELD       
+; Variable.som:31:PUSH_0          
+; Variable.som:31:POP_FIELD       
+; Variable.som:31:RETURN_SELF     
+; Variable.som:111:RETURN_LOCAL    
+; Planner.som:222:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Planner.som:222:PUSH_GLOBAL     
+; Planner.som:222:SEND_1          
+; Variable.som:110:PUSH_SELF       
+; Variable.som:110:SUPER_SEND      
+; Variable.som:111:SEND_1          
+; Variable.som:26:PUSH_0          
+; Variable.som:26:POP_FIELD_0     
+; Variable.som:27:PUSH_GLOBAL     
+; Variable.som:27:PUSH_CONSTANT_1 
+; Variable.som:27:SEND            
+; peel
+; Vector.som:190:PUSH_SELF       
+; Vector.som:190:SUPER_SEND      
+; Vector.som:190:PUSH_ARG_1      
+; Vector.som:190:SEND            
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Variable.som:27:POP_FIELD_1     
+; Variable.som:28:PUSH_NIL        
+; Variable.som:28:POP_FIELD       
+; Variable.som:29:PUSH_GLOBAL     
+; Variable.som:29:SEND_1          
+; Variable.som:29:POP_FIELD       
+; Variable.som:30:PUSH_CONSTANT   
+; Variable.som:30:POP_FIELD       
+; Variable.som:31:PUSH_0          
+; Variable.som:31:POP_FIELD       
+; Variable.som:31:RETURN_SELF     
+; Variable.som:111:RETURN_LOCAL    
+; Planner.som:222:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Planner.som:222:PUSH_GLOBAL     
+; Planner.som:222:SEND_1          
+; Variable.som:110:PUSH_SELF       
+; Variable.som:110:SUPER_SEND      
+; Variable.som:111:SEND_1          
+; Variable.som:26:PUSH_0          
+; Variable.som:26:POP_FIELD_0     
+; Variable.som:27:PUSH_GLOBAL     
+; Variable.som:27:PUSH_CONSTANT_1 
+; Variable.som:27:SEND            
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Variable.som:27:POP_FIELD_1     
+; Variable.som:28:PUSH_NIL        
+; Variable.som:28:POP_FIELD       
+; Variable.som:29:PUSH_GLOBAL     
+; Variable.som:29:SEND_1          
+; Variable.som:29:POP_FIELD       
+; Variable.som:30:PUSH_CONSTANT   
+; Variable.som:30:POP_FIELD       
+; Variable.som:31:PUSH_0          
+; Variable.som:31:POP_FIELD       
+; Variable.som:31:RETURN_SELF     
+; Variable.som:111:RETURN_LOCAL    
+; Planner.som:222:RETURN_LOCAL    
+; Array.som:33:SEND            
+; Array.som:33:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:PUSH_ARG_1      
+; Array.som:33:PUSH_ARGUMENT   
+; Array.som:33:SEND_1          
+; Planner.som:222:PUSH_GLOBAL     
+; Planner.som:222:SEND_1          
+; Variable.som:110:PUSH_SELF       
+; Variable.som:110:SUPER_SEND      
+; Variable.som:111:SEND_1          
+; Variable.som:26:PUSH_0          
+; Variable.som:26:POP_FIELD_0     
+; Variable.som:27:PUSH_GLOBAL     
+; Variable.som:27:PUSH_CONSTANT_1 
+; Variable.som:27:SEND            
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Variable.som:39:PUSH_FIELD_1    
+; Variable.som:39:PUSH_ARG_1      
+; Variable.som:39:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; Variable.som:39:POP             
+; Variable.som:39:RETURN_SELF     
+; BinaryConstraint.som:42:POP             
+; BinaryConstraint.som:44:PUSH_NIL        
+; BinaryConstraint.som:44:POP_FIELD       
+; BinaryConstraint.som:44:RETURN_SELF     
+; AbstractConstraint.som:46:POP             
+; AbstractConstraint.som:47:PUSH_ARG_1      
+; AbstractConstraint.som:47:PUSH_SELF       
+; AbstractConstraint.som:47:SEND            
+; Planner.som:40:PUSH_SELF       
+; Planner.som:40:SEND_1          
+; Planner.som:183:INC_FIELD_PUSH  
+; Planner.som:183:RETURN_LOCAL    
+; Planner.som:40:POP_LOCAL_0     
+; Planner.som:41:PUSH_ARG_1      
+; Planner.som:41:PUSH_LOCAL_0    
+; Planner.som:41:PUSH_SELF       
+; Planner.som:41:SEND            
+; AbstractConstraint.som:123:PUSH_SELF       
+; AbstractConstraint.som:123:PUSH_ARG_1      
+; AbstractConstraint.som:123:SEND            
+; BinaryConstraint.som:59:PUSH_FIELD_1    
+; BinaryConstraint.som:59:SEND_1          
+; BinaryConstraint.som:59:PUSH_ARG_1      
+; BinaryConstraint.som:59:SEND            
+; BinaryConstraint.som:62:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:62:POP             
+; BinaryConstraint.som:64:PUSH_FIELD      
+; BinaryConstraint.som:64:SEND_1          
+; BinaryConstraint.som:64:PUSH_ARG_1      
+; BinaryConstraint.som:64:SEND            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:67:POP             
+; BinaryConstraint.som:70:PUSH_FIELD_1    
+; BinaryConstraint.som:70:SEND_1          
+; BinaryConstraint.som:70:PUSH_FIELD      
+; BinaryConstraint.som:70:SEND_1          
+; BinaryConstraint.som:70:SEND            
+; Strength.som:40:PUSH_FIELD_1    
+; Strength.som:40:PUSH_ARG_1      
+; Strength.som:41:SEND_1          
+; Strength.som:41:SEND            
+; Strength.som:41:RETURN_LOCAL    
+; BinaryConstraint.som:78:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:78:PUSH_FIELD_0    
+; BinaryConstraint.som:78:PUSH_FIELD      
+; BinaryConstraint.som:78:SEND_1          
+; BinaryConstraint.som:78:SEND            
+; Strength.som:35:PUSH_FIELD_1    
+; Strength.som:35:PUSH_ARG_1      
+; Strength.som:36:SEND_1          
+; Strength.som:36:SEND            
+; Strength.som:36:RETURN_LOCAL    
+; BinaryConstraint.som:78:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:78:PUSH_CONSTANT   
+; BinaryConstraint.som:78:DUP             
+; BinaryConstraint.som:78:POP_FIELD       
+; BinaryConstraint.som:78:RETURN_LOCAL    
+; AbstractConstraint.som:123:POP             
+; AbstractConstraint.som:124:PUSH_SELF       
+; AbstractConstraint.som:125:SEND_1          
+; BinaryConstraint.som:35:PUSH_FIELD      
+; BinaryConstraint.som:36:SEND_1          
+; BinaryConstraint.som:36:RETURN_LOCAL    
+; AbstractConstraint.som:140:JUMP_ON_FALSE_POP
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_BLOCK      
+; AbstractConstraint.som:140:SEND            
+; BinaryConstraint.som:88:PUSH_FIELD      
+; BinaryConstraint.som:89:PUSH_CONSTANT_0 
+; BinaryConstraint.som:89:SEND            
+; BinaryConstraint.som:90:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:90:PUSH_ARG_1      
+; BinaryConstraint.som:90:PUSH_FIELD_1    
+; BinaryConstraint.som:90:SEND            
+; AbstractConstraint.som:128:PUSH_ARG_1      
+; AbstractConstraint.som:128:PUSH_ARGUMENT   
+; AbstractConstraint.som:128:SEND            
+; AbstractConstraint.som:128:RETURN_LOCAL    
+; BinaryConstraint.som:90:JUMP            
+; BinaryConstraint.som:90:POP             
+; BinaryConstraint.som:90:RETURN_SELF     
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND_1          
+; BinaryConstraint.som:106:PUSH_FIELD      
+; BinaryConstraint.som:106:PUSH_CONSTANT_0 
+; BinaryConstraint.som:106:SEND            
+; BinaryConstraint.som:109:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:109:PUSH_FIELD      
+; BinaryConstraint.som:109:RETURN_LOCAL    
+; AbstractConstraint.som:140:POP_LOCAL_1     
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:SEND_1          
+; AbstractConstraint.som:140:POP_LOCAL_0     
+; AbstractConstraint.som:140:PUSH_LOCAL_0    
+; AbstractConstraint.som:140:PUSH_NIL        
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:JUMP_ON_TRUE_TOP_NIL
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_ARG_2      
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_ARG_1      
+; AbstractConstraint.som:140:SEND            
+; Planner.som:144:PUSH_GLOBAL     
+; Planner.som:144:PUSH_ARG_1      
+; Planner.som:144:SEND            
+; Vector.som:194:PUSH_SELF       
+; Vector.som:194:PUSH_1          
+; Vector.som:194:SEND            
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; Vector.som:70:JUMP_IF_GREATER 
+; Vector.som:70:RETURN_SELF     
+; Planner.som:127:POP             
+; Planner.som:127:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:JUMP_BACKWARD   
+; Planner.som:151:PUSH_LOCAL_0    
+; Planner.som:151:SEND_1          
+; Vector.som:66:PUSH_FIELD_1    
+; Vector.som:66:PUSH_FIELD_0    
+; Vector.som:66:SEND            
+; Vector.som:66:RETURN_LOCAL    
+; Planner.som:151:JUMP_ON_TRUE_POP
+; Planner.som:151:PUSH_NIL        
+; Planner.som:151:POP             
+; Planner.som:153:PUSH_CONSTANT   
+; Planner.som:153:RETURN_LOCAL    
+; AbstractConstraint.som:140:JUMP_ON_TRUE_TOP_NIL
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:PUSH_ARG_1      
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:JUMP            
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:142:PUSH_LOCAL_0    
+; AbstractConstraint.som:142:RETURN_LOCAL    
+; Planner.som:41:POP_LOCAL_1     
+; Planner.som:44:PUSH_LOCAL_1    
+; Planner.som:44:PUSH_NIL        
+; Planner.som:44:SEND            
+; Planner.som:44:JUMP_ON_TRUE_POP
+; Planner.som:44:PUSH_NIL        
+; Planner.som:44:RETURN_SELF     
+; AbstractConstraint.som:47:POP             
+; AbstractConstraint.som:47:RETURN_SELF     
+; EqualityConstraint.som:13:POP             
+; EqualityConstraint.som:13:RETURN_SELF     
+; EqualityConstraint.som:33:RETURN_LOCAL    
+; Planner.som:229:POP             
+; Planner.som:229:INC             
+; Planner.som:229:JUMP_BACKWARD   
+; Planner.som:229:JUMP_IF_GREATER 
+; Planner.som:229:DUP             
+; Planner.som:229:POP_LOCAL       
+; Planner.som:229:PUSH_LOCAL_0    
+; Planner.som:229:PUSH_LOCAL      
+; Planner.som:229:SEND            
+; Planner.som:229:POP_LOCAL       
+; Planner.som:229:PUSH_LOCAL_0    
+; Planner.som:229:PUSH_LOCAL      
+; Planner.som:229:INC             
+; Planner.som:229:SEND            
+; Planner.som:229:POP_LOCAL       
+; Planner.som:229:PUSH_GLOBAL     
+; Planner.som:229:PUSH_LOCAL      
+; Planner.som:229:PUSH_LOCAL      
+; Planner.som:229:PUSH_GLOBAL     
+; Planner.som:229:SEND_1          
+; Planner.som:229:PUSH_LOCAL      
+; Planner.som:229:SEND            
+; EqualityConstraint.som:32:PUSH_SELF       
+; EqualityConstraint.som:32:SEND_1          
+; EqualityConstraint.som:32:PUSH_ARG_1      
+; EqualityConstraint.som:32:PUSH_ARG_2      
+; EqualityConstraint.som:32:PUSH_ARGUMENT   
+; EqualityConstraint.som:33:PUSH_ARGUMENT   
+; EqualityConstraint.som:33:SEND            
+; EqualityConstraint.som:12:PUSH_SELF       
+; EqualityConstraint.som:12:PUSH_ARG_1      
+; EqualityConstraint.som:12:PUSH_ARG_2      
+; EqualityConstraint.som:12:PUSH_ARGUMENT   
+; EqualityConstraint.som:12:PUSH_ARGUMENT   
+; EqualityConstraint.som:12:SUPER_SEND      
+; BinaryConstraint.som:24:PUSH_SELF       
+; BinaryConstraint.som:24:PUSH_ARGUMENT   
+; BinaryConstraint.som:24:SUPER_SEND      
+; AbstractConstraint.som:19:PUSH_GLOBAL     
+; AbstractConstraint.som:20:PUSH_ARG_1      
+; AbstractConstraint.som:20:SEND            
+; Strength.som:133:PUSH_FIELD      
+; Strength.som:134:PUSH_ARG_1      
+; Strength.som:134:SEND            
+; SomDictionary.som:48:PUSH_SELF       
+; SomDictionary.som:48:PUSH_ARG_1      
+; SomDictionary.som:48:SEND            
+; SomDictionary.som:33:PUSH_ARG_1      
+; SomDictionary.som:33:SEND_1          
+; SomDictionary.som:33:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:33:POP             
+; SomDictionary.som:34:PUSH_ARG_1      
+; SomDictionary.som:34:SEND_1          
+; SomDictionary.som:34:DUP             
+; SomDictionary.som:34:POP_LOCAL_0     
+; SomDictionary.som:34:POP             
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_CONSTANT_2 
+; SomDictionary.som:35:SEND            
+; SomDictionary.som:36:SEND            
+; SomDictionary.som:36:RETURN_LOCAL    
+; SomDictionary.som:48:POP_LOCAL_0     
+; SomDictionary.som:49:PUSH_SELF       
+; SomDictionary.som:49:PUSH_LOCAL_0    
+; SomDictionary.som:49:SEND            
+; SomDictionary.som:43:PUSH_FIELD_0    
+; SomDictionary.som:43:PUSH_SELF       
+; SomDictionary.som:43:PUSH_ARG_1      
+; SomDictionary.som:43:SEND            
+; SomDictionary.som:39:PUSH_1          
+; SomDictionary.som:39:PUSH_FIELD_0    
+; SomDictionary.som:39:SEND_1          
+; SomDictionary.som:39:DEC             
+; SomDictionary.som:39:PUSH_ARG_1      
+; SomDictionary.som:39:SEND            
+; SomDictionary.som:40:SEND            
+; SomDictionary.som:40:RETURN_LOCAL    
+; SomDictionary.som:44:SEND            
+; SomDictionary.som:44:RETURN_LOCAL    
+; SomDictionary.som:49:POP_LOCAL_1     
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:JUMP_ON_FALSE_POP
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:PUSH_LOCAL_0    
+; SomDictionary.som:54:PUSH_ARG_1      
+; SomDictionary.som:54:SEND            
+; DictIdEntry.som:25:PUSH_FIELD_0    
+; DictIdEntry.som:25:PUSH_ARG_1      
+; DictIdEntry.som:25:SEND            
+; DictIdEntry.som:26:JUMP_ON_FALSE_POP
+; DictIdEntry.som:26:PUSH_FIELD_1    
+; DictIdEntry.som:26:PUSH_ARG_2      
+; DictIdEntry.som:26:SEND            
+; DictIdEntry.som:26:JUMP            
+; DictIdEntry.som:26:RETURN_LOCAL    
+; SomDictionary.som:54:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:RETURN_LOCAL    
+; Strength.som:134:RETURN_LOCAL    
+; AbstractConstraint.som:20:POP_FIELD_0     
+; AbstractConstraint.som:20:RETURN_SELF     
+; BinaryConstraint.som:24:POP             
+; BinaryConstraint.som:26:PUSH_ARG_1      
+; BinaryConstraint.som:26:POP_FIELD_1     
+; BinaryConstraint.som:27:PUSH_ARG_2      
+; BinaryConstraint.som:27:POP_FIELD       
+; BinaryConstraint.som:28:PUSH_NIL        
+; BinaryConstraint.som:28:POP_FIELD       
+; BinaryConstraint.som:28:RETURN_SELF     
+; EqualityConstraint.som:12:POP             
+; EqualityConstraint.som:13:PUSH_SELF       
+; EqualityConstraint.som:13:PUSH_ARGUMENT   
+; EqualityConstraint.som:13:SEND            
+; AbstractConstraint.som:46:PUSH_SELF       
+; AbstractConstraint.som:46:SEND_1          
+; BinaryConstraint.som:41:PUSH_FIELD_1    
+; BinaryConstraint.som:41:PUSH_SELF       
+; BinaryConstraint.som:41:SEND            
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; Variable.som:39:POP             
+; Variable.som:39:RETURN_SELF     
+; BinaryConstraint.som:41:POP             
+; BinaryConstraint.som:42:PUSH_FIELD      
+; BinaryConstraint.som:42:PUSH_SELF       
+; BinaryConstraint.som:42:SEND            
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; BinaryConstraint.som:106:PUSH_FIELD      
+; BinaryConstraint.som:106:PUSH_CONSTANT_0 
+; BinaryConstraint.som:106:SEND            
+; BinaryConstraint.som:109:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:109:PUSH_FIELD      
+; BinaryConstraint.som:109:RETURN_LOCAL    
+; AbstractConstraint.som:140:POP_LOCAL_1     
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:SEND_1          
+; AbstractConstraint.som:140:POP_LOCAL_0     
+; AbstractConstraint.som:140:PUSH_LOCAL_0    
+; AbstractConstraint.som:140:PUSH_NIL        
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:JUMP_ON_TRUE_TOP_NIL
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_ARG_2      
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_ARG_1      
+; AbstractConstraint.som:140:SEND            
+; Planner.som:144:PUSH_GLOBAL     
+; Planner.som:144:PUSH_ARG_1      
+; Planner.som:144:SEND            
+; Vector.som:194:PUSH_SELF       
+; Vector.som:194:PUSH_1          
+; Vector.som:194:SEND            
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Vector.som:66:PUSH_FIELD_1    
+; Vector.som:66:PUSH_FIELD_0    
+; Vector.som:66:SEND            
+; Vector.som:66:RETURN_LOCAL    
+; Planner.som:151:JUMP_ON_TRUE_POP
+; Planner.som:151:PUSH_LOCAL_0    
+; Planner.som:151:SEND_1          
+; Vector.som:89:PUSH_SELF       
+; Vector.som:89:SEND_1          
+; peel
+; Vector.som:66:PUSH_FIELD_1    
+; Vector.som:66:PUSH_FIELD_0    
+; Vector.som:66:SEND            
+; Vector.som:66:RETURN_LOCAL    
+; Planner.som:151:JUMP_ON_TRUE_POP
+; Planner.som:151:PUSH_LOCAL_0    
+; Planner.som:151:SEND_1          
+; Vector.som:89:PUSH_SELF       
+; Vector.som:89:SEND_1          
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; BinaryConstraint.som:117:PUSH_FIELD      
+; BinaryConstraint.som:117:PUSH_CONSTANT_0 
+; BinaryConstraint.som:117:SEND            
+; BinaryConstraint.som:119:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:119:PUSH_FIELD_1    
+; BinaryConstraint.som:119:POP_LOCAL_0     
+; BinaryConstraint.som:119:PUSH_FIELD      
+; BinaryConstraint.som:119:DUP             
+; BinaryConstraint.som:119:POP_LOCAL_1     
+; BinaryConstraint.som:119:JUMP            
+; BinaryConstraint.som:119:POP             
+; BinaryConstraint.som:120:PUSH_LOCAL_1    
+; BinaryConstraint.som:120:PUSH_FIELD_0    
+; BinaryConstraint.som:120:PUSH_LOCAL_0    
+; BinaryConstraint.som:120:SEND_1          
+; BinaryConstraint.som:120:SEND            
+; Strength.som:55:PUSH_ARG_1      
+; Strength.som:55:PUSH_SELF       
+; Strength.som:55:SEND            
+; Strength.som:40:PUSH_FIELD_1    
+; Strength.som:40:PUSH_ARG_1      
+; Strength.som:41:SEND_1          
+; Strength.som:41:SEND            
+; Strength.som:41:RETURN_LOCAL    
+; Strength.som:57:JUMP_ON_FALSE_POP
+; Strength.som:57:PUSH_ARG_1      
+; Strength.som:57:RETURN_LOCAL    
+; BinaryConstraint.som:120:SEND            
+; BinaryConstraint.som:120:POP             
+; BinaryConstraint.som:121:PUSH_LOCAL_1    
+; BinaryConstraint.som:121:PUSH_LOCAL_0    
+; BinaryConstraint.som:121:SEND_1          
+; BinaryConstraint.som:121:SEND            
+; BinaryConstraint.som:121:POP             
+; BinaryConstraint.som:122:PUSH_LOCAL_1    
+; BinaryConstraint.som:122:SEND_1          
+; BinaryConstraint.som:122:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:122:PUSH_SELF       
+; BinaryConstraint.som:122:SEND_1          
+; EqualityConstraint.som:19:PUSH_FIELD      
+; EqualityConstraint.som:20:PUSH_CONSTANT_0 
+; EqualityConstraint.som:20:SEND            
+; EqualityConstraint.som:21:JUMP_ON_FALSE_POP
+; EqualityConstraint.som:21:PUSH_FIELD      
+; EqualityConstraint.som:21:PUSH_FIELD_1    
+; EqualityConstraint.som:21:SEND_1          
+; EqualityConstraint.som:21:SEND            
+; EqualityConstraint.som:21:JUMP            
+; EqualityConstraint.som:21:POP             
+; EqualityConstraint.som:21:RETURN_SELF     
+; BinaryConstraint.som:122:POP             
+; BinaryConstraint.som:122:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "235"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "235"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; Planner.som:151:PUSH_ARG_2      
+; Planner.som:151:SEND            
+; Planner.som:151:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Planner.som:151:PUSH_LOCAL_0    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "60"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "60"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "18"
+;   }
+; }
+; Vector.som:197:RETURN_LOCAL    
+; Planner.som:144:POP_LOCAL_0     
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Planner.som:126:PUSH_ARG_1      
+; Planner.som:126:PUSH_LOCAL      
+; Planner.som:126:SEND            
+; Planner.som:126:JUMP_ON_TRUE_POP
+; Planner.som:126:PUSH_CONSTANT   
+; Planner.som:127:JUMP_ON_TRUE_TOP_NIL
+; Planner.som:127:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1483"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1483"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "20"
+;   }
+; }
+; Vector.som:70:DUP             
+; Vector.som:70:POP_LOCAL_0     
+; Vector.som:70:PUSH_ARG_1      
+; Vector.som:70:PUSH_FIELD      
+; Vector.som:70:PUSH_LOCAL_0    
+; Vector.som:70:SEND            
+; Vector.som:70:SEND            
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1509"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1509"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; BinaryConstraint.som:42:PUSH_SELF       
+; BinaryConstraint.som:42:SEND            
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "69"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Vector.som:89:POP             
+; Vector.som:90:PUSH_FIELD_0    
+; Vector.som:90:INC             
+; Vector.som:90:DUP             
+; Vector.som:90:POP_FIELD_0     
+; Vector.som:90:POP             
+; Vector.som:91:PUSH_FIELD      
+; Vector.som:91:PUSH_FIELD_0    
+; Vector.som:91:DEC             
+; Vector.som:92:SEND            
+; Vector.som:92:RETURN_LOCAL    
+; Planner.som:151:POP_LOCAL_1     
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Planner.som:124:PUSH_ARG_1      
+; Planner.som:124:SEND_1          
+; Planner.som:124:POP_LOCAL_0     
+; Planner.som:125:PUSH_ARG_1      
+; Planner.som:125:SEND_1          
+; Planner.som:127:PUSH_BLOCK      
+; Planner.som:127:SEND            
+; Vector.som:69:PUSH_FIELD_0    
+; Vector.som:69:PUSH_FIELD_1    
+; Vector.som:69:DEC             
+; Vector.som:70:DUP_SECOND      
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "92"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "92"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; Planner.som:151:SEND            
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "261"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "261"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; BinaryConstraint.som:109:PUSH_FIELD_1    
+; BinaryConstraint.som:109:RETURN_LOCAL    
+; Planner.som:151:SEND_1          
+; Planner.som:151:PUSH_ARG_2      
+; Planner.som:151:SEND            
+; Planner.som:151:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "25",
+;     "gidx": "92"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; {
+;   "trid": "26",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "25",
+;     "gidx": "92"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; Planner.som:151:SEND            
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; BinaryConstraint.som:35:PUSH_FIELD      
+; BinaryConstraint.som:36:SEND_1          
+; BinaryConstraint.som:36:RETURN_LOCAL    
+; Planner.som:126:SEND_1          
+; Planner.som:126:JUMP            
+; Planner.som:127:JUMP_ON_TRUE_TOP_NIL
+; Planner.som:127:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "24"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "24"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; Planner.som:126:PUSH_ARG_1      
+; Planner.som:126:SEND_1          
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; {
+;   "trid": "30",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; Planner.som:44:PUSH_LOCAL_1    
+; Planner.som:44:PUSH_NIL        
+; Planner.som:44:SEND            
+; Planner.som:44:JUMP_ON_TRUE_POP
+; Planner.som:44:PUSH_LOCAL_1    
+; Planner.som:44:PUSH_LOCAL_0    
+; Planner.som:44:PUSH_SELF       
+; Planner.som:44:SEND            
+; AbstractConstraint.som:123:PUSH_SELF       
+; AbstractConstraint.som:123:PUSH_ARG_1      
+; AbstractConstraint.som:123:SEND            
+; BinaryConstraint.som:59:PUSH_FIELD_1    
+; BinaryConstraint.som:59:SEND_1          
+; BinaryConstraint.som:59:PUSH_ARG_1      
+; BinaryConstraint.som:59:SEND            
+; BinaryConstraint.som:62:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:62:POP             
+; BinaryConstraint.som:64:PUSH_FIELD      
+; BinaryConstraint.som:64:SEND_1          
+; BinaryConstraint.som:64:PUSH_ARG_1      
+; BinaryConstraint.som:64:SEND            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:67:PUSH_FIELD_1    
+; BinaryConstraint.som:67:SEND_1          
+; BinaryConstraint.som:67:PUSH_ARG_1      
+; BinaryConstraint.som:67:SEND            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:67:PUSH_FIELD_0    
+; BinaryConstraint.som:67:PUSH_FIELD_1    
+; BinaryConstraint.som:67:SEND_1          
+; BinaryConstraint.som:67:SEND            
+; Strength.som:35:PUSH_FIELD_1    
+; Strength.som:35:PUSH_ARG_1      
+; Strength.som:36:SEND_1          
+; Strength.som:36:SEND            
+; Strength.som:36:RETURN_LOCAL    
+; BinaryConstraint.som:67:JUMP            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:67:PUSH_CONSTANT   
+; BinaryConstraint.som:67:DUP             
+; BinaryConstraint.som:67:POP_FIELD       
+; BinaryConstraint.som:67:RETURN_LOCAL    
+; AbstractConstraint.som:123:POP             
+; AbstractConstraint.som:124:PUSH_SELF       
+; AbstractConstraint.som:125:SEND_1          
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1311"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "30"
+;   }
+; }
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1311"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "30"
+;   }
+; }
+; Planner.som:44:POP_LOCAL_1     
+; Planner.som:44:POP             
+; Planner.som:44:JUMP_BACKWARD   
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Strength.som:55:PUSH_ARG_1      
+; Strength.som:55:PUSH_SELF       
+; Strength.som:55:SEND            
+; Strength.som:40:PUSH_FIELD_1    
+; Strength.som:40:PUSH_ARG_1      
+; Strength.som:41:SEND_1          
+; Strength.som:41:SEND            
+; Strength.som:41:RETURN_LOCAL    
+; Strength.som:57:JUMP_ON_FALSE_POP
+; Strength.som:57:PUSH_ARG_1      
+; Strength.som:57:RETURN_LOCAL    
+; BinaryConstraint.som:120:SEND            
+; BinaryConstraint.som:120:POP             
+; BinaryConstraint.som:121:PUSH_LOCAL_1    
+; BinaryConstraint.som:121:PUSH_LOCAL_0    
+; BinaryConstraint.som:121:SEND_1          
+; BinaryConstraint.som:121:SEND            
+; BinaryConstraint.som:121:POP             
+; BinaryConstraint.som:122:PUSH_LOCAL_1    
+; BinaryConstraint.som:122:SEND_1          
+; BinaryConstraint.som:122:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:122:PUSH_SELF       
+; BinaryConstraint.som:122:SEND_1          
+; EqualityConstraint.som:19:PUSH_FIELD      
+; EqualityConstraint.som:20:PUSH_CONSTANT_0 
+; EqualityConstraint.som:20:SEND            
+; EqualityConstraint.som:21:JUMP_ON_FALSE_POP
+; EqualityConstraint.som:21:PUSH_FIELD_1    
+; EqualityConstraint.som:21:PUSH_FIELD      
+; EqualityConstraint.som:21:SEND_1          
+; EqualityConstraint.som:21:SEND            
+; EqualityConstraint.som:21:POP             
+; EqualityConstraint.som:21:RETURN_SELF     
+; BinaryConstraint.som:122:POP             
+; BinaryConstraint.som:122:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "657"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "657"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "32"
+;   }
+; }
+; BinaryConstraint.som:119:PUSH_FIELD      
+; BinaryConstraint.som:119:POP_LOCAL_0     
+; BinaryConstraint.som:119:PUSH_FIELD_1    
+; BinaryConstraint.som:119:DUP             
+; BinaryConstraint.som:119:POP_LOCAL_1     
+; BinaryConstraint.som:119:POP             
+; BinaryConstraint.som:120:PUSH_LOCAL_1    
+; BinaryConstraint.som:120:PUSH_FIELD_0    
+; BinaryConstraint.som:120:PUSH_LOCAL_0    
+; BinaryConstraint.som:120:SEND_1          
+; BinaryConstraint.som:120:SEND            
+; {
+;   "trid": "34",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "34",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; BinaryConstraint.som:101:PUSH_NIL        
+; BinaryConstraint.som:101:POP_FIELD       
+; BinaryConstraint.som:101:RETURN_SELF     
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_ARG_2      
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_ARG_1      
+; AbstractConstraint.som:140:SEND            
+; Planner.som:144:PUSH_GLOBAL     
+; Planner.som:144:PUSH_ARG_1      
+; Planner.som:144:SEND            
+; Vector.som:194:PUSH_SELF       
+; Vector.som:194:PUSH_1          
+; Vector.som:194:SEND            
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "26",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "34"
+;   }
+; }
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "26",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "34"
+;   }
+; }
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:SEND_1          
+; AbstractConstraint.som:140:POP_LOCAL_0     
+; AbstractConstraint.som:140:PUSH_LOCAL_0    
+; AbstractConstraint.som:140:PUSH_NIL        
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:JUMP_ON_TRUE_TOP_NIL
+; AbstractConstraint.som:140:PUSH_LOCAL_0    
+; AbstractConstraint.som:140:SEND_1          
+; {
+;   "trid": "36",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "36",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; BinaryConstraint.som:88:PUSH_FIELD      
+; BinaryConstraint.som:89:PUSH_CONSTANT_0 
+; BinaryConstraint.som:89:SEND            
+; BinaryConstraint.som:90:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:90:PUSH_ARG_1      
+; BinaryConstraint.som:90:PUSH_FIELD      
+; BinaryConstraint.som:90:SEND            
+; AbstractConstraint.som:128:PUSH_ARG_1      
+; AbstractConstraint.som:128:PUSH_ARGUMENT   
+; AbstractConstraint.som:128:SEND            
+; AbstractConstraint.som:128:RETURN_LOCAL    
+; BinaryConstraint.som:90:POP             
+; BinaryConstraint.som:90:RETURN_SELF     
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND_1          
+; {
+;   "trid": "35",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "28",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "36"
+;   }
+; }
+; {
+;   "trid": "35",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "28",
+;     "gidx": "85"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "36"
+;   }
+; }
+; BinaryConstraint.som:36:SEND_1          
+; BinaryConstraint.som:36:RETURN_LOCAL    
+; AbstractConstraint.som:140:JUMP_ON_FALSE_POP
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_BLOCK      
+; AbstractConstraint.som:140:SEND            
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; AbstractConstraint.som:128:PUSH_ARG_1      
+; AbstractConstraint.som:128:PUSH_ARGUMENT   
+; AbstractConstraint.som:128:SEND            
+; AbstractConstraint.som:128:RETURN_LOCAL    
+; BinaryConstraint.som:90:JUMP            
+; BinaryConstraint.som:90:POP             
+; BinaryConstraint.som:90:RETURN_SELF     
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND_1          
+; {
+;   "trid": "37",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "36",
+;     "gidx": "134"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "38"
+;   }
+; }
+; {
+;   "trid": "37",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "36",
+;     "gidx": "134"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "38"
+;   }
+; }
+; BinaryConstraint.som:90:PUSH_ARG_1      
+; BinaryConstraint.som:90:PUSH_FIELD_1    
+; BinaryConstraint.som:90:SEND            
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "251"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "251"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; BinaryConstraint.som:122:POP             
+; BinaryConstraint.som:122:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "41",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; {
+;   "trid": "41",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; Strength.som:35:PUSH_FIELD_1    
+; Strength.som:35:PUSH_ARG_1      
+; Strength.som:36:SEND_1          
+; Strength.som:36:SEND            
+; Strength.som:36:RETURN_LOCAL    
+; BinaryConstraint.som:62:JUMP            
+; BinaryConstraint.som:62:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:62:PUSH_CONSTANT   
+; BinaryConstraint.som:62:DUP             
+; BinaryConstraint.som:62:POP_FIELD       
+; BinaryConstraint.som:62:RETURN_LOCAL    
+; AbstractConstraint.som:123:POP             
+; AbstractConstraint.som:124:PUSH_SELF       
+; AbstractConstraint.som:125:SEND_1          
+; {
+;   "trid": "40",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "30",
+;     "gidx": "425"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; {
+;   "trid": "40",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "30",
+;     "gidx": "425"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; BinaryConstraint.som:62:PUSH_FIELD      
+; BinaryConstraint.som:62:SEND_1          
+; BinaryConstraint.som:62:PUSH_ARG_1      
+; BinaryConstraint.som:62:SEND            
+; BinaryConstraint.som:62:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:62:PUSH_FIELD_0    
+; BinaryConstraint.som:62:PUSH_FIELD      
+; BinaryConstraint.som:62:SEND_1          
+; BinaryConstraint.som:62:SEND            
+; {
+;   "trid": "42",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "156"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "34"
+;   }
+; }
+; {
+;   "trid": "42",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "156"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "34"
+;   }
+; }
+; AbstractConstraint.som:140:PUSH_LOCAL_0    
+; AbstractConstraint.som:140:SEND_1          
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "203"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "43",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "203"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Vector.som:89:POP             
+; Vector.som:90:PUSH_FIELD_0    
+; Vector.som:90:INC             
+; Vector.som:90:DUP             
+; Vector.som:90:POP_FIELD_0     
+; Vector.som:90:POP             
+; Vector.som:91:PUSH_FIELD      
+; Vector.som:91:PUSH_FIELD_0    
+; Vector.som:91:DEC             
+; Vector.som:92:SEND            
+; Vector.som:92:RETURN_LOCAL    
+; Planner.som:106:POP_LOCAL       
+; Planner.som:106:PUSH_LOCAL      
+; Planner.som:106:SEND_1          
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "57"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "57"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Vector.som:89:PUSH_SELF       
+; Vector.som:89:SEND_1          
+; {
+;   "trid": "45",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "200"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "46"
+;   }
+; }
+; {
+;   "trid": "45",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "200"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "46"
+;   }
+; }
+; Planner.som:106:SEND_1          
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "7"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "7"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Planner.som:106:SEND_1          
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "47"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "35",
+;     "gidx": "47"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Planner.som:126:JUMP            
+; Planner.som:127:JUMP_ON_TRUE_TOP_NIL
+; Planner.som:127:PUSH_ARGUMENT   
+; Planner.som:127:PUSH_ARG_1      
+; Planner.som:127:SEND            
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "23",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; Planner.som:106:SEND            
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1476"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1476"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Planner.som:106:SEND_1          
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; AbstractConstraint.som:94:PUSH_SELF       
+; AbstractConstraint.som:95:PUSH_BLOCK      
+; AbstractConstraint.som:95:SEND            
+; BinaryConstraint.som:94:PUSH_FIELD      
+; BinaryConstraint.som:95:PUSH_CONSTANT_0 
+; BinaryConstraint.som:95:SEND            
+; BinaryConstraint.som:97:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:97:PUSH_ARG_1      
+; BinaryConstraint.som:97:PUSH_FIELD_1    
+; BinaryConstraint.som:97:SEND            
+; AbstractConstraint.som:95:PUSH_ARG_1      
+; AbstractConstraint.som:95:SEND_1          
+; AbstractConstraint.som:95:PUSH_ARGUMENT   
+; AbstractConstraint.som:95:SEND            
+; AbstractConstraint.som:95:JUMP_ON_TRUE_POP
+; AbstractConstraint.som:95:PUSH_CONSTANT   
+; AbstractConstraint.som:95:SEND_1          
+; AbstractConstraint.som:95:RETURN_LOCAL    
+; BinaryConstraint.som:97:JUMP            
+; BinaryConstraint.som:97:RETURN_LOCAL    
+; AbstractConstraint.som:96:SEND_1          
+; AbstractConstraint.som:96:RETURN_LOCAL    
+; Planner.som:106:JUMP            
+; Planner.som:106:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:106:PUSH_LOCAL_1    
+; Planner.som:106:PUSH_LOCAL      
+; Planner.som:106:SEND            
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "65"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "52"
+;   }
+; }
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "65"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "52"
+;   }
+; }
+; Planner.som:106:SEND            
+; Planner.som:106:JUMP_ON_FALSE_POP
+; Planner.som:106:PUSH_LOCAL      
+; Planner.som:106:PUSH_LOCAL_0    
+; Planner.som:106:SEND            
+; {
+;   "trid": "53",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "159"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "53",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "159"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Planner.som:106:PUSH_SELF       
+; Planner.som:106:PUSH_LOCAL      
+; Planner.som:106:SEND_1          
+; {
+;   "trid": "54",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "54",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Vector.som:58:PUSH_LOCAL      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:PUSH_FIELD      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:SEND            
+; Vector.som:58:SEND            
+; Vector.som:58:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; peel
+; Vector.som:58:PUSH_LOCAL      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:PUSH_FIELD      
+; Vector.som:58:PUSH_ARG_1      
+; Vector.som:58:SEND            
+; Vector.som:58:SEND            
+; Vector.som:58:RETURN_LOCAL    
+; Array.som:42:POP             
+; Array.som:42:INC             
+; Array.som:42:JUMP_BACKWARD   
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; {
+;   "trid": "55",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "163"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "54"
+;   }
+; }
+; {
+;   "trid": "55",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "12",
+;     "gidx": "163"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "54"
+;   }
+; }
+; Vector.som:59:PUSH_GLOBAL     
+; Vector.som:59:PUSH_CONSTANT   
+; Vector.som:59:PUSH_FIELD      
+; Vector.som:59:SEND_1          
+; Vector.som:59:SEND            
+; Vector.som:59:SEND            
+; Vector.som:59:POP_LOCAL_0     
+; Vector.som:59:PUSH_FIELD      
+; Vector.som:59:PUSH_BLOCK      
+; Vector.som:59:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "54",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "54",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Vector.som:59:POP             
+; Vector.som:59:PUSH_LOCAL_0    
+; Vector.som:59:DUP             
+; Vector.som:59:POP_FIELD       
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; Planner.som:106:POP             
+; Planner.som:106:PUSH_LOCAL      
+; Planner.som:106:SEND_1          
+; {
+;   "trid": "58",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "58",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; EqualityConstraint.som:19:PUSH_FIELD      
+; EqualityConstraint.som:20:PUSH_CONSTANT_0 
+; EqualityConstraint.som:20:SEND            
+; EqualityConstraint.som:21:JUMP_ON_FALSE_POP
+; EqualityConstraint.som:21:PUSH_FIELD      
+; EqualityConstraint.som:21:PUSH_FIELD_1    
+; EqualityConstraint.som:21:SEND_1          
+; EqualityConstraint.som:21:SEND            
+; EqualityConstraint.som:21:JUMP            
+; EqualityConstraint.som:21:POP             
+; EqualityConstraint.som:21:RETURN_SELF     
+; Plan.som:17:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "57",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "62"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "58"
+;   }
+; }
+; {
+;   "trid": "57",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "62"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "58"
+;   }
+; }
+; {
+;   "trid": "60",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "60",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Planner.som:238:JUMP_IF_GREATER 
+; Planner.som:238:DUP             
+; Planner.som:238:POP_LOCAL       
+; Planner.som:238:PUSH_LOCAL_0    
+; Planner.som:238:SEND_1          
+; Array.som:34:PUSH_SELF       
+; Array.som:34:PUSH_1          
+; Array.som:34:SEND            
+; Array.som:34:RETURN_LOCAL    
+; Planner.som:238:PUSH_LOCAL      
+; Planner.som:238:SEND            
+; Planner.som:238:POP             
+; Planner.som:238:PUSH_LOCAL_2    
+; Planner.som:238:SEND_1          
+; Plan.som:17:PUSH_SELF       
+; Plan.som:18:PUSH_BLOCK      
+; Plan.som:18:SEND            
+; Vector.som:69:PUSH_FIELD_0    
+; Vector.som:69:PUSH_FIELD_1    
+; Vector.som:69:DEC             
+; Vector.som:70:DUP_SECOND      
+; {
+;   "trid": "59",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1479"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "60"
+;   }
+; }
+; {
+;   "trid": "59",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1479"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "60"
+;   }
+; }
+; Planner.som:238:POP             
+; Planner.som:238:PUSH_LOCAL_0    
+; Planner.som:238:SEND_1          
+; Array.som:35:PUSH_SELF       
+; Array.som:35:PUSH_SELF       
+; Array.som:35:SEND_1          
+; Array.som:35:SEND            
+; Array.som:35:RETURN_LOCAL    
+; Planner.som:238:SEND_1          
+; Planner.som:238:PUSH_LOCAL      
+; Planner.som:238:SEND            
+; Planner.som:238:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:238:POP             
+; Planner.som:238:INC             
+; Planner.som:238:JUMP_BACKWARD   
+; {
+;   "trid": "61",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "193"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "61",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "193"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Plan.som:17:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "66",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "165"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "66",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "165"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; BinaryConstraint.som:36:RETURN_LOCAL    
+; Planner.som:200:JUMP_ON_TRUE_TOP_NIL
+; Planner.som:200:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "68",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "68",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Planner.som:167:PUSH_ARG_1      
+; Planner.som:167:SEND_1          
+; Planner.som:167:POP_LOCAL_0     
+; Planner.som:168:PUSH_ARG_1      
+; Planner.som:168:SEND_1          
+; Planner.som:170:PUSH_BLOCK      
+; Planner.som:170:SEND            
+; Vector.som:69:PUSH_FIELD_0    
+; Vector.som:69:PUSH_FIELD_1    
+; Vector.som:69:DEC             
+; Vector.som:70:DUP_SECOND      
+; {
+;   "trid": "67",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1482"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "68"
+;   }
+; }
+; {
+;   "trid": "67",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1482"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "68"
+;   }
+; }
+; Planner.som:203:PUSH_LOCAL_2    
+; Planner.som:203:PUSH_BLOCK      
+; Planner.som:203:SEND            
+; {
+;   "trid": "69",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "45",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "46"
+;   }
+; }
+; {
+;   "trid": "69",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "45",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "46"
+;   }
+; }
+; Planner.som:203:SEND_1          
+; {
+;   "trid": "71",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "71",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Vector.som:69:PUSH_FIELD_0    
+; Vector.som:69:PUSH_FIELD_1    
+; Vector.som:69:DEC             
+; Vector.som:70:DUP_SECOND      
+; {
+;   "trid": "70",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "43",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; {
+;   "trid": "70",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "43",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; Planner.som:203:PUSH_LOCAL_2    
+; Planner.som:203:SEND_1          
+; Planner.som:203:PUSH_BLOCK      
+; Planner.som:203:SEND            
+; {
+;   "trid": "73",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; {
+;   "trid": "73",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; Planner.som:202:PUSH_ARG_1      
+; Planner.som:202:SEND_1          
+; {
+;   "trid": "72",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "48",
+;     "gidx": "21"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "73"
+;   }
+; }
+; {
+;   "trid": "72",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "48",
+;     "gidx": "21"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "73"
+;   }
+; }
+; {
+;   "trid": "74",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "74",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "50",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "50",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "14"
+;   }
+; }
+; Planner.som:203:SEND_1          
+; {
+;   "trid": "76",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "76",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Planner.som:203:PUSH_ARG_1      
+; Planner.som:203:SEND_1          
+; {
+;   "trid": "77",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "44",
+;     "gidx": "11"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "77",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "44",
+;     "gidx": "11"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "78",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "78",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "37"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Planner.som:170:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "79",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "79",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Variable.som:110:PUSH_SELF       
+; Variable.som:110:SUPER_SEND      
+; Variable.som:111:SEND_1          
+; Variable.som:26:PUSH_0          
+; Variable.som:26:POP_FIELD_0     
+; Variable.som:27:PUSH_GLOBAL     
+; Variable.som:27:PUSH_CONSTANT_1 
+; Variable.som:27:SEND            
+; {
+;   "trid": "80",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "772"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "80",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "772"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Variable.som:116:PUSH_LOCAL_0    
+; Variable.som:116:PUSH_ARG_1      
+; Variable.som:116:SEND            
+; Variable.som:116:POP             
+; Variable.som:118:PUSH_LOCAL_0    
+; Variable.som:118:RETURN_LOCAL    
+; Planner.som:259:POP_LOCAL       
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:SEND            
+; {
+;   "trid": "82",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; {
+;   "trid": "82",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "24"
+;   }
+; }
+; UnaryConstraint.som:85:PUSH_FIELD_1    
+; UnaryConstraint.som:85:PUSH_FIELD_0    
+; UnaryConstraint.som:85:SEND            
+; UnaryConstraint.som:85:POP             
+; UnaryConstraint.som:86:PUSH_FIELD_1    
+; UnaryConstraint.som:86:PUSH_SELF       
+; UnaryConstraint.som:86:SEND_1          
+; UnaryConstraint.som:86:SEND_1          
+; UnaryConstraint.som:86:SEND            
+; UnaryConstraint.som:86:POP             
+; UnaryConstraint.som:87:PUSH_FIELD_1    
+; UnaryConstraint.som:87:SEND_1          
+; UnaryConstraint.som:87:JUMP_ON_FALSE_TOP_NIL
+; UnaryConstraint.som:87:PUSH_SELF       
+; UnaryConstraint.som:87:SEND_1          
+; StayConstraint.som:<unknown>:RETURN_SELF     
+; UnaryConstraint.som:87:POP             
+; UnaryConstraint.som:87:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; Planner.som:151:PUSH_LOCAL_0    
+; Planner.som:151:SEND            
+; {
+;   "trid": "81",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "329"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "82"
+;   }
+; }
+; {
+;   "trid": "81",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "329"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "82"
+;   }
+; }
+; Planner.som:151:PUSH_ARG_2      
+; Planner.som:151:SEND            
+; Planner.som:151:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "84",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; {
+;   "trid": "84",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; Planner.som:40:PUSH_SELF       
+; Planner.som:40:SEND_1          
+; Planner.som:183:INC_FIELD_PUSH  
+; Planner.som:183:RETURN_LOCAL    
+; Planner.som:40:POP_LOCAL_0     
+; Planner.som:41:PUSH_ARG_1      
+; Planner.som:41:PUSH_LOCAL_0    
+; Planner.som:41:PUSH_SELF       
+; Planner.som:41:SEND            
+; AbstractConstraint.som:123:PUSH_SELF       
+; AbstractConstraint.som:123:PUSH_ARG_1      
+; AbstractConstraint.som:123:SEND            
+; UnaryConstraint.som:52:PUSH_FIELD_1    
+; UnaryConstraint.som:52:SEND_1          
+; UnaryConstraint.som:52:PUSH_ARG_1      
+; UnaryConstraint.som:52:SEND            
+; UnaryConstraint.som:53:JUMP_ON_FALSE_POP
+; UnaryConstraint.som:53:PUSH_FIELD_0    
+; UnaryConstraint.som:53:PUSH_FIELD_1    
+; UnaryConstraint.som:53:SEND_1          
+; UnaryConstraint.som:53:SEND            
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "21",
+;     "gidx": "53"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "84"
+;   }
+; }
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "21",
+;     "gidx": "53"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "84"
+;   }
+; }
+; UnaryConstraint.som:38:POP_FIELD       
+; UnaryConstraint.som:38:RETURN_SELF     
+; AbstractConstraint.som:46:POP             
+; AbstractConstraint.som:47:PUSH_ARG_1      
+; AbstractConstraint.som:47:PUSH_SELF       
+; AbstractConstraint.som:47:SEND            
+; {
+;   "trid": "85",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "38",
+;     "gidx": "43"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "38"
+;   }
+; }
+; {
+;   "trid": "85",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "38",
+;     "gidx": "43"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "38"
+;   }
+; }
+; ScaleConstraint.som:64:PUSH_ARG_1      
+; ScaleConstraint.som:64:PUSH_FIELD      
+; ScaleConstraint.som:64:SEND            
+; {
+;   "trid": "87",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "87",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; UnaryConstraint.som:<unknown>:RETURN_SELF     
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND_1          
+; AbstractConstraint.som:140:POP_LOCAL_1     
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:SEND_1          
+; AbstractConstraint.som:140:POP_LOCAL_0     
+; AbstractConstraint.som:140:PUSH_LOCAL_0    
+; AbstractConstraint.som:140:PUSH_NIL        
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:JUMP_ON_TRUE_TOP_NIL
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_LOCAL_1    
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:SEND            
+; AbstractConstraint.som:140:POP             
+; AbstractConstraint.som:140:PUSH_ARG_2      
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_ARG_1      
+; AbstractConstraint.som:140:SEND            
+; Planner.som:144:PUSH_GLOBAL     
+; Planner.som:144:PUSH_ARG_1      
+; Planner.som:144:SEND            
+; Vector.som:194:PUSH_SELF       
+; Vector.som:194:PUSH_1          
+; Vector.som:194:SEND            
+; {
+;   "trid": "86",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "41",
+;     "gidx": "73"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "87"
+;   }
+; }
+; {
+;   "trid": "86",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "41",
+;     "gidx": "73"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "87"
+;   }
+; }
+; UnaryConstraint.som:55:PUSH_NIL        
+; UnaryConstraint.som:55:RETURN_LOCAL    
+; AbstractConstraint.som:123:POP             
+; AbstractConstraint.som:124:PUSH_SELF       
+; AbstractConstraint.som:125:SEND_1          
+; AbstractConstraint.som:140:JUMP_ON_FALSE_POP
+; AbstractConstraint.som:140:PUSH_SELF       
+; AbstractConstraint.som:140:PUSH_BLOCK      
+; AbstractConstraint.som:140:SEND            
+; {
+;   "trid": "88",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "390"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "88",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "390"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Vector.som:195:PUSH_LOCAL_0    
+; Vector.som:195:PUSH_ARG_1      
+; Vector.som:195:SEND            
+; {
+;   "trid": "90",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "90",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; ScaleConstraint.som:88:PUSH_SELF       
+; ScaleConstraint.som:88:SEND_1          
+; ScaleConstraint.som:88:PUSH_ARG_1      
+; ScaleConstraint.som:88:PUSH_ARG_2      
+; ScaleConstraint.som:88:PUSH_ARGUMENT   
+; ScaleConstraint.som:88:PUSH_ARGUMENT   
+; ScaleConstraint.som:88:PUSH_ARGUMENT   
+; ScaleConstraint.som:89:PUSH_ARGUMENT   
+; ScaleConstraint.som:89:SEND            
+; ScaleConstraint.som:22:PUSH_SELF       
+; ScaleConstraint.som:22:PUSH_ARG_1      
+; ScaleConstraint.som:22:PUSH_ARGUMENT   
+; ScaleConstraint.som:22:PUSH_ARGUMENT   
+; ScaleConstraint.som:22:PUSH_ARGUMENT   
+; ScaleConstraint.som:22:SUPER_SEND      
+; BinaryConstraint.som:24:PUSH_SELF       
+; BinaryConstraint.som:24:PUSH_ARGUMENT   
+; BinaryConstraint.som:24:SUPER_SEND      
+; AbstractConstraint.som:19:PUSH_GLOBAL     
+; AbstractConstraint.som:20:PUSH_ARG_1      
+; AbstractConstraint.som:20:SEND            
+; Strength.som:133:PUSH_FIELD      
+; Strength.som:134:PUSH_ARG_1      
+; Strength.som:134:SEND            
+; SomDictionary.som:48:PUSH_SELF       
+; SomDictionary.som:48:PUSH_ARG_1      
+; SomDictionary.som:48:SEND            
+; SomDictionary.som:33:PUSH_ARG_1      
+; SomDictionary.som:33:SEND_1          
+; SomDictionary.som:33:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:33:POP             
+; SomDictionary.som:34:PUSH_ARG_1      
+; SomDictionary.som:34:SEND_1          
+; SomDictionary.som:34:DUP             
+; SomDictionary.som:34:POP_LOCAL_0     
+; SomDictionary.som:34:POP             
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_CONSTANT_2 
+; SomDictionary.som:35:SEND            
+; SomDictionary.som:36:SEND            
+; SomDictionary.som:36:RETURN_LOCAL    
+; SomDictionary.som:48:POP_LOCAL_0     
+; SomDictionary.som:49:PUSH_SELF       
+; SomDictionary.som:49:PUSH_LOCAL_0    
+; SomDictionary.som:49:SEND            
+; SomDictionary.som:43:PUSH_FIELD_0    
+; SomDictionary.som:43:PUSH_SELF       
+; SomDictionary.som:43:PUSH_ARG_1      
+; SomDictionary.som:43:SEND            
+; SomDictionary.som:39:PUSH_1          
+; SomDictionary.som:39:PUSH_FIELD_0    
+; SomDictionary.som:39:SEND_1          
+; SomDictionary.som:39:DEC             
+; SomDictionary.som:39:PUSH_ARG_1      
+; SomDictionary.som:39:SEND            
+; SomDictionary.som:40:SEND            
+; SomDictionary.som:40:RETURN_LOCAL    
+; SomDictionary.som:44:SEND            
+; SomDictionary.som:44:RETURN_LOCAL    
+; SomDictionary.som:49:POP_LOCAL_1     
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:JUMP_ON_FALSE_POP
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:PUSH_LOCAL_0    
+; SomDictionary.som:54:PUSH_ARG_1      
+; SomDictionary.som:54:SEND            
+; DictIdEntry.som:25:PUSH_FIELD_0    
+; DictIdEntry.som:25:PUSH_ARG_1      
+; DictIdEntry.som:25:SEND            
+; DictIdEntry.som:26:JUMP_ON_FALSE_POP
+; DictIdEntry.som:26:PUSH_FIELD_1    
+; DictIdEntry.som:26:PUSH_ARG_2      
+; DictIdEntry.som:26:SEND            
+; DictIdEntry.som:26:JUMP            
+; DictIdEntry.som:26:RETURN_LOCAL    
+; SomDictionary.som:54:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:RETURN_LOCAL    
+; Strength.som:134:RETURN_LOCAL    
+; AbstractConstraint.som:20:POP_FIELD_0     
+; AbstractConstraint.som:20:RETURN_SELF     
+; BinaryConstraint.som:24:POP             
+; BinaryConstraint.som:26:PUSH_ARG_1      
+; BinaryConstraint.som:26:POP_FIELD_1     
+; BinaryConstraint.som:27:PUSH_ARG_2      
+; BinaryConstraint.som:27:POP_FIELD       
+; BinaryConstraint.som:28:PUSH_NIL        
+; BinaryConstraint.som:28:POP_FIELD       
+; BinaryConstraint.som:28:RETURN_SELF     
+; ScaleConstraint.som:22:POP             
+; ScaleConstraint.som:23:PUSH_ARG_2      
+; ScaleConstraint.som:23:POP_FIELD       
+; ScaleConstraint.som:24:PUSH_ARGUMENT   
+; ScaleConstraint.som:24:POP_FIELD       
+; ScaleConstraint.som:26:PUSH_SELF       
+; ScaleConstraint.som:26:PUSH_ARGUMENT   
+; ScaleConstraint.som:26:SEND            
+; AbstractConstraint.som:46:PUSH_SELF       
+; AbstractConstraint.som:46:SEND_1          
+; ScaleConstraint.som:32:PUSH_FIELD_1    
+; ScaleConstraint.som:32:PUSH_SELF       
+; ScaleConstraint.som:32:SEND            
+; {
+;   "trid": "89",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1254"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "90"
+;   }
+; }
+; {
+;   "trid": "89",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1254"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "90"
+;   }
+; }
+; Planner.som:259:PUSH_LOCAL_2    
+; Planner.som:259:PUSH_LOCAL_0    
+; Planner.som:259:PUSH_LOCAL_1    
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:PUSH_GLOBAL     
+; Planner.som:259:SEND_1          
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:SEND            
+; {
+;   "trid": "92",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "92",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; ScaleConstraint.som:51:PUSH_FIELD      
+; ScaleConstraint.som:52:PUSH_CONSTANT_0 
+; ScaleConstraint.som:52:SEND            
+; ScaleConstraint.som:53:JUMP_ON_FALSE_POP
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:PUSH_FIELD_1    
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:JUMP            
+; ScaleConstraint.som:53:POP             
+; ScaleConstraint.som:53:RETURN_SELF     
+; ScaleConstraint.som:78:POP             
+; ScaleConstraint.som:78:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "91",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "319"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "92"
+;   }
+; }
+; {
+;   "trid": "91",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "319"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "92"
+;   }
+; }
+; ScaleConstraint.som:77:PUSH_FIELD      
+; ScaleConstraint.som:77:SEND_1          
+; ScaleConstraint.som:77:JUMP_ON_FALSE_POP
+; ScaleConstraint.som:77:PUSH_FIELD      
+; ScaleConstraint.som:77:SEND_1          
+; ScaleConstraint.som:77:JUMP            
+; ScaleConstraint.som:77:JUMP            
+; ScaleConstraint.som:77:SEND            
+; ScaleConstraint.som:77:POP             
+; ScaleConstraint.som:78:PUSH_LOCAL_1    
+; ScaleConstraint.som:78:SEND_1          
+; ScaleConstraint.som:78:JUMP_ON_FALSE_TOP_NIL
+; ScaleConstraint.som:78:PUSH_SELF       
+; ScaleConstraint.som:78:SEND_1          
+; {
+;   "trid": "94",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "79"
+;   }
+; }
+; {
+;   "trid": "94",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "79"
+;   }
+; }
+; Variable.som:115:PUSH_SELF       
+; Variable.som:115:SEND_1          
+; {
+;   "trid": "93",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1233"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "94"
+;   }
+; }
+; {
+;   "trid": "93",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1233"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "94"
+;   }
+; }
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:SEND            
+; {
+;   "trid": "95",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "95",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Variable.som:26:PUSH_0          
+; Variable.som:26:POP_FIELD_0     
+; Variable.som:27:PUSH_GLOBAL     
+; Variable.som:27:PUSH_CONSTANT_1 
+; Variable.som:27:SEND            
+; {
+;   "trid": "97",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "97",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; StayConstraint.som:26:PUSH_SELF       
+; StayConstraint.som:26:SEND_1          
+; StayConstraint.som:26:PUSH_ARG_1      
+; StayConstraint.som:26:PUSH_ARG_2      
+; StayConstraint.som:27:PUSH_ARGUMENT   
+; StayConstraint.som:27:SEND            
+; UnaryConstraint.som:21:PUSH_SELF       
+; UnaryConstraint.som:21:PUSH_ARG_2      
+; UnaryConstraint.som:21:SUPER_SEND      
+; AbstractConstraint.som:19:PUSH_GLOBAL     
+; AbstractConstraint.som:20:PUSH_ARG_1      
+; AbstractConstraint.som:20:SEND            
+; Strength.som:133:PUSH_FIELD      
+; Strength.som:134:PUSH_ARG_1      
+; Strength.som:134:SEND            
+; SomDictionary.som:48:PUSH_SELF       
+; SomDictionary.som:48:PUSH_ARG_1      
+; SomDictionary.som:48:SEND            
+; SomDictionary.som:33:PUSH_ARG_1      
+; SomDictionary.som:33:SEND_1          
+; SomDictionary.som:33:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:33:POP             
+; SomDictionary.som:34:PUSH_ARG_1      
+; SomDictionary.som:34:SEND_1          
+; SomDictionary.som:34:DUP             
+; SomDictionary.som:34:POP_LOCAL_0     
+; SomDictionary.som:34:POP             
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_CONSTANT_2 
+; SomDictionary.som:35:SEND            
+; SomDictionary.som:36:SEND            
+; SomDictionary.som:36:RETURN_LOCAL    
+; SomDictionary.som:48:POP_LOCAL_0     
+; SomDictionary.som:49:PUSH_SELF       
+; SomDictionary.som:49:PUSH_LOCAL_0    
+; SomDictionary.som:49:SEND            
+; SomDictionary.som:43:PUSH_FIELD_0    
+; SomDictionary.som:43:PUSH_SELF       
+; SomDictionary.som:43:PUSH_ARG_1      
+; SomDictionary.som:43:SEND            
+; SomDictionary.som:39:PUSH_1          
+; SomDictionary.som:39:PUSH_FIELD_0    
+; SomDictionary.som:39:SEND_1          
+; SomDictionary.som:39:DEC             
+; SomDictionary.som:39:PUSH_ARG_1      
+; SomDictionary.som:39:SEND            
+; SomDictionary.som:40:SEND            
+; SomDictionary.som:40:RETURN_LOCAL    
+; SomDictionary.som:44:SEND            
+; SomDictionary.som:44:RETURN_LOCAL    
+; SomDictionary.som:49:POP_LOCAL_1     
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:JUMP_ON_FALSE_POP
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:PUSH_LOCAL_0    
+; SomDictionary.som:54:PUSH_ARG_1      
+; SomDictionary.som:54:SEND            
+; DictIdEntry.som:25:PUSH_FIELD_0    
+; DictIdEntry.som:25:PUSH_ARG_1      
+; DictIdEntry.som:25:SEND            
+; DictIdEntry.som:26:JUMP_ON_FALSE_POP
+; DictIdEntry.som:26:PUSH_FIELD_1    
+; DictIdEntry.som:26:PUSH_ARG_2      
+; DictIdEntry.som:26:SEND            
+; DictIdEntry.som:26:JUMP            
+; DictIdEntry.som:26:RETURN_LOCAL    
+; SomDictionary.som:54:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:RETURN_LOCAL    
+; Strength.som:134:RETURN_LOCAL    
+; AbstractConstraint.som:20:POP_FIELD_0     
+; AbstractConstraint.som:20:RETURN_SELF     
+; UnaryConstraint.som:21:POP             
+; UnaryConstraint.som:22:PUSH_ARG_1      
+; UnaryConstraint.som:22:POP_FIELD_1     
+; UnaryConstraint.som:23:PUSH_CONSTANT_1 
+; UnaryConstraint.som:23:POP_FIELD       
+; UnaryConstraint.som:24:PUSH_SELF       
+; UnaryConstraint.som:24:PUSH_ARGUMENT   
+; UnaryConstraint.som:24:SEND            
+; AbstractConstraint.som:46:PUSH_SELF       
+; AbstractConstraint.som:46:SEND_1          
+; UnaryConstraint.som:37:PUSH_FIELD_1    
+; UnaryConstraint.som:37:PUSH_SELF       
+; UnaryConstraint.som:37:SEND            
+; {
+;   "trid": "96",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "47",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; {
+;   "trid": "96",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "47",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "97"
+;   }
+; }
+; Planner.som:259:PUSH_LOCAL_2    
+; Planner.som:259:PUSH_GLOBAL     
+; Planner.som:259:SEND_1          
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:SEND            
+; {
+;   "trid": "98",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "372"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "38"
+;   }
+; }
+; {
+;   "trid": "98",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "372"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "38"
+;   }
+; }
+; ScaleConstraint.som:64:PUSH_ARG_1      
+; ScaleConstraint.som:64:PUSH_FIELD      
+; ScaleConstraint.som:64:SEND            
+; {
+;   "trid": "99",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "80",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "94"
+;   }
+; }
+; {
+;   "trid": "99",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "80",
+;     "gidx": "42"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "94"
+;   }
+; }
+; Planner.som:259:PUSH_GLOBAL     
+; Planner.som:259:PUSH_LOCAL      
+; Planner.som:259:SEND            
+; {
+;   "trid": "100",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1617"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "54"
+;   }
+; }
+; {
+;   "trid": "100",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "1617"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "54"
+;   }
+; }
+; Vector.som:59:PUSH_GLOBAL     
+; Vector.som:59:PUSH_CONSTANT   
+; Vector.som:59:PUSH_FIELD      
+; Vector.som:59:SEND_1          
+; Vector.som:59:SEND            
+; Vector.som:59:SEND            
+; Vector.som:59:POP_LOCAL_0     
+; Vector.som:59:PUSH_FIELD      
+; Vector.som:59:PUSH_BLOCK      
+; Vector.som:59:SEND            
+; Array.som:41:PUSH_1          
+; Array.som:41:PUSH_SELF       
+; Array.som:41:SEND_1          
+; Array.som:42:DUP_SECOND      
+; Array.som:42:JUMP_IF_GREATER 
+; Array.som:42:DUP             
+; Array.som:42:POP_LOCAL_0     
+; Array.som:42:PUSH_ARG_1      
+; Array.som:42:PUSH_LOCAL_0    
+; Array.som:42:SEND            
+; {
+;   "trid": "101",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "101",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "56",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; ScaleConstraint.som:34:POP             
+; ScaleConstraint.som:35:PUSH_FIELD      
+; ScaleConstraint.som:35:PUSH_SELF       
+; ScaleConstraint.som:35:SEND            
+; {
+;   "trid": "103",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; {
+;   "trid": "103",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; Strength.som:40:PUSH_FIELD_1    
+; Strength.som:40:PUSH_ARG_1      
+; Strength.som:41:SEND_1          
+; Strength.som:41:SEND            
+; Strength.som:41:RETURN_LOCAL    
+; BinaryConstraint.som:78:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:78:PUSH_FIELD_0    
+; BinaryConstraint.som:78:PUSH_FIELD      
+; BinaryConstraint.som:78:SEND_1          
+; BinaryConstraint.som:78:SEND            
+; {
+;   "trid": "102",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "84",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "103"
+;   }
+; }
+; {
+;   "trid": "102",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "84",
+;     "gidx": "101"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "103"
+;   }
+; }
+; BinaryConstraint.som:62:POP             
+; BinaryConstraint.som:64:PUSH_FIELD      
+; BinaryConstraint.som:64:SEND_1          
+; BinaryConstraint.som:64:PUSH_ARG_1      
+; BinaryConstraint.som:64:SEND            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:67:POP             
+; BinaryConstraint.som:70:PUSH_FIELD_1    
+; BinaryConstraint.som:70:SEND_1          
+; BinaryConstraint.som:70:PUSH_FIELD      
+; BinaryConstraint.som:70:SEND_1          
+; BinaryConstraint.som:70:SEND            
+; {
+;   "trid": "104",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "41",
+;     "gidx": "74"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; {
+;   "trid": "104",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "41",
+;     "gidx": "74"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; BinaryConstraint.som:78:PUSH_CONSTANT   
+; BinaryConstraint.som:78:DUP             
+; BinaryConstraint.som:78:POP_FIELD       
+; BinaryConstraint.som:78:RETURN_LOCAL    
+; AbstractConstraint.som:123:POP             
+; AbstractConstraint.som:124:PUSH_SELF       
+; AbstractConstraint.som:125:SEND_1          
+; {
+;   "trid": "105",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "101",
+;     "gidx": "53"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "84"
+;   }
+; }
+; {
+;   "trid": "105",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "101",
+;     "gidx": "53"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "84"
+;   }
+; }
+; ScaleConstraint.som:36:POP_FIELD       
+; ScaleConstraint.som:36:RETURN_SELF     
+; AbstractConstraint.som:46:POP             
+; AbstractConstraint.som:47:PUSH_ARG_1      
+; AbstractConstraint.som:47:PUSH_SELF       
+; AbstractConstraint.som:47:SEND            
+; {
+;   "trid": "107",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "28",
+;     "gidx": "102"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "107",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "28",
+;     "gidx": "102"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Planner.som:126:JUMP            
+; Planner.som:127:JUMP_ON_TRUE_TOP_NIL
+; Planner.som:127:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "108",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "51"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "108",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "51"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:JUMP            
+; ScaleConstraint.som:53:POP             
+; ScaleConstraint.som:53:RETURN_SELF     
+; Plan.som:17:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "110",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; {
+;   "trid": "110",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; Planner.som:160:PUSH_ARGUMENT   
+; Planner.som:160:PUSH_ARGUMENT   
+; Planner.som:160:SEND            
+; Planner.som:160:POP             
+; Planner.som:161:PUSH_LOCAL      
+; Planner.som:161:SEND_1          
+; Plan.som:17:PUSH_SELF       
+; Plan.som:18:PUSH_BLOCK      
+; Plan.som:18:SEND            
+; {
+;   "trid": "109",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "59",
+;     "gidx": "137"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "110"
+;   }
+; }
+; {
+;   "trid": "109",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "59",
+;     "gidx": "137"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "110"
+;   }
+; }
+; Integer.som:102:POP             
+; Integer.som:102:INC             
+; Integer.som:102:JUMP_BACKWARD   
+; Integer.som:102:JUMP_IF_GREATER 
+; Integer.som:102:DUP             
+; Integer.som:102:POP_LOCAL_0     
+; Integer.som:102:PUSH_ARG_1      
+; Integer.som:102:SEND_1          
+; {
+;   "trid": "111",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "57",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "111",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "57",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Vector.som:108:SEND            
+; Vector.som:111:JUMP_ON_FALSE_POP
+; Vector.som:111:PUSH_LOCAL      
+; Vector.som:111:PUSH_LOCAL      
+; Vector.som:111:PUSH_ARG_1      
+; Vector.som:111:SEND            
+; Vector.som:111:POP             
+; Vector.som:111:PUSH_LOCAL      
+; Vector.som:111:INC             
+; Vector.som:111:DUP             
+; Vector.som:111:POP_LOCAL       
+; Vector.som:111:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "113",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; {
+;   "trid": "113",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; Vector.som:126:PUSH_SELF       
+; Vector.som:126:SEND_1          
+; Vector.som:126:PUSH_0          
+; Vector.som:126:SEND            
+; Vector.som:130:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:130:PUSH_SELF       
+; Vector.som:130:PUSH_FIELD_0    
+; Vector.som:130:PUSH_FIELD_1    
+; Vector.som:130:DEC             
+; Vector.som:130:PUSH_ARG_1      
+; Vector.som:130:SEND            
+; Vector.som:136:PUSH_ARGUMENT   
+; Vector.som:136:SEND_1          
+; Vector.som:136:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:136:POP             
+; Vector.som:139:PUSH_ARG_2      
+; Vector.som:139:INC             
+; Vector.som:139:PUSH_ARG_1      
+; Vector.som:139:SEND            
+; Vector.som:139:DUP             
+; Vector.som:139:POP_LOCAL       
+; Vector.som:139:PUSH_1          
+; Vector.som:139:SEND            
+; Vector.som:139:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:139:PUSH_SELF       
+; Vector.som:139:RETURN_LOCAL    
+; Vector.som:130:RETURN_SELF     
+; Planner.som:205:POP             
+; Planner.som:207:PUSH_LOCAL_0    
+; Planner.som:207:RETURN_LOCAL    
+; Planner.som:62:POP_LOCAL_1     
+; Planner.som:63:PUSH_LOCAL_1    
+; Planner.som:64:PUSH_BLOCK      
+; Planner.som:64:SEND            
+; {
+;   "trid": "112",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "202"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "113"
+;   }
+; }
+; {
+;   "trid": "112",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "202"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "113"
+;   }
+; }
+; Planner.som:203:PUSH_NIL        
+; Planner.som:203:POP             
+; Planner.som:205:PUSH_LOCAL_0    
+; Planner.som:205:PUSH_BLOCK      
+; Planner.som:205:SEND            
+; {
+;   "trid": "115",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; {
+;   "trid": "115",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "41"
+;   }
+; }
+; AbstractConstraint.som:123:PUSH_SELF       
+; AbstractConstraint.som:123:PUSH_ARG_1      
+; AbstractConstraint.som:123:SEND            
+; BinaryConstraint.som:59:PUSH_FIELD_1    
+; BinaryConstraint.som:59:SEND_1          
+; BinaryConstraint.som:59:PUSH_ARG_1      
+; BinaryConstraint.som:59:SEND            
+; BinaryConstraint.som:62:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:62:POP             
+; BinaryConstraint.som:64:PUSH_FIELD      
+; BinaryConstraint.som:64:SEND_1          
+; BinaryConstraint.som:64:PUSH_ARG_1      
+; BinaryConstraint.som:64:SEND            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_TOP_NIL
+; BinaryConstraint.som:67:PUSH_FIELD_1    
+; BinaryConstraint.som:67:SEND_1          
+; BinaryConstraint.som:67:PUSH_ARG_1      
+; BinaryConstraint.som:67:SEND            
+; BinaryConstraint.som:67:JUMP_ON_FALSE_POP
+; BinaryConstraint.som:67:PUSH_FIELD_0    
+; BinaryConstraint.som:67:PUSH_FIELD_1    
+; BinaryConstraint.som:67:SEND_1          
+; BinaryConstraint.som:67:SEND            
+; {
+;   "trid": "114",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1270"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "115"
+;   }
+; }
+; {
+;   "trid": "114",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1270"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "115"
+;   }
+; }
+; Planner.som:44:PUSH_LOCAL_1    
+; Planner.som:44:PUSH_LOCAL_0    
+; Planner.som:44:PUSH_SELF       
+; Planner.som:44:SEND            
+; {
+;   "trid": "117",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "117",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Vector.som:194:PUSH_SELF       
+; Vector.som:194:PUSH_1          
+; Vector.som:194:SEND            
+; {
+;   "trid": "116",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "30",
+;     "gidx": "588"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "117"
+;   }
+; }
+; {
+;   "trid": "116",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "30",
+;     "gidx": "588"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "117"
+;   }
+; }
+; Planner.som:44:PUSH_NIL        
+; Planner.som:44:RETURN_SELF     
+; AbstractConstraint.som:47:POP             
+; AbstractConstraint.som:47:RETURN_SELF     
+; UnaryConstraint.som:24:POP             
+; UnaryConstraint.som:24:RETURN_SELF     
+; EditConstraint.som:32:RETURN_LOCAL    
+; Planner.som:157:POP_LOCAL_0     
+; Planner.som:158:PUSH_SELF       
+; Planner.som:158:PUSH_GLOBAL     
+; Planner.som:158:PUSH_LOCAL_0    
+; Planner.som:158:SEND            
+; {
+;   "trid": "119",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "119",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Planner.som:72:PUSH_GLOBAL     
+; Planner.som:72:SEND_1          
+; Vector.som:189:PUSH_SELF       
+; Vector.som:189:PUSH_CONSTANT_0 
+; Vector.som:189:SEND            
+; {
+;   "trid": "118",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "1"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "119"
+;   }
+; }
+; {
+;   "trid": "118",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "17",
+;     "gidx": "1"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "119"
+;   }
+; }
+; {
+;   "trid": "120",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "125"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "120",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "58",
+;     "gidx": "125"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; ScaleConstraint.som:53:PUSH_FIELD_1    
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:PUSH_FIELD      
+; ScaleConstraint.som:53:SEND_1          
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:SEND            
+; ScaleConstraint.som:53:POP             
+; ScaleConstraint.som:53:RETURN_SELF     
+; Plan.som:17:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "121",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "54",
+;     "gidx": "159"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "121",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "54",
+;     "gidx": "159"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Array.som:42:RETURN_SELF     
+; Vector.som:59:POP             
+; Vector.som:59:PUSH_LOCAL_0    
+; Vector.som:59:DUP             
+; Vector.som:59:POP_FIELD       
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; Planner.som:203:RETURN_LOCAL    
+; Planner.som:170:RETURN_LOCAL    
+; Vector.som:70:POP             
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "122",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "61",
+;     "gidx": "16"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "122",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "61",
+;     "gidx": "16"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; Planner.som:200:PUSH_LOCAL      
+; Planner.som:200:PUSH_ARG_1      
+; Planner.som:200:SEND            
+; {
+;   "trid": "124",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; {
+;   "trid": "124",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "7"
+;   }
+; }
+; Planner.som:157:PUSH_GLOBAL     
+; Planner.som:157:PUSH_ARG_1      
+; Planner.som:157:PUSH_GLOBAL     
+; Planner.som:157:SEND_1          
+; Planner.som:157:PUSH_SELF       
+; Planner.som:157:SEND            
+; EditConstraint.som:31:PUSH_SELF       
+; EditConstraint.som:31:SEND_1          
+; EditConstraint.som:31:PUSH_ARG_1      
+; EditConstraint.som:31:PUSH_ARG_2      
+; EditConstraint.som:32:PUSH_ARGUMENT   
+; EditConstraint.som:32:SEND            
+; UnaryConstraint.som:21:PUSH_SELF       
+; UnaryConstraint.som:21:PUSH_ARG_2      
+; UnaryConstraint.som:21:SUPER_SEND      
+; AbstractConstraint.som:19:PUSH_GLOBAL     
+; AbstractConstraint.som:20:PUSH_ARG_1      
+; AbstractConstraint.som:20:SEND            
+; Strength.som:133:PUSH_FIELD      
+; Strength.som:134:PUSH_ARG_1      
+; Strength.som:134:SEND            
+; SomDictionary.som:48:PUSH_SELF       
+; SomDictionary.som:48:PUSH_ARG_1      
+; SomDictionary.som:48:SEND            
+; SomDictionary.som:33:PUSH_ARG_1      
+; SomDictionary.som:33:SEND_1          
+; SomDictionary.som:33:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:33:POP             
+; SomDictionary.som:34:PUSH_ARG_1      
+; SomDictionary.som:34:SEND_1          
+; SomDictionary.som:34:DUP             
+; SomDictionary.som:34:POP_LOCAL_0     
+; SomDictionary.som:34:POP             
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_LOCAL_0    
+; SomDictionary.som:35:PUSH_CONSTANT_2 
+; SomDictionary.som:35:SEND            
+; SomDictionary.som:36:SEND            
+; SomDictionary.som:36:RETURN_LOCAL    
+; SomDictionary.som:48:POP_LOCAL_0     
+; SomDictionary.som:49:PUSH_SELF       
+; SomDictionary.som:49:PUSH_LOCAL_0    
+; SomDictionary.som:49:SEND            
+; SomDictionary.som:43:PUSH_FIELD_0    
+; SomDictionary.som:43:PUSH_SELF       
+; SomDictionary.som:43:PUSH_ARG_1      
+; SomDictionary.som:43:SEND            
+; SomDictionary.som:39:PUSH_1          
+; SomDictionary.som:39:PUSH_FIELD_0    
+; SomDictionary.som:39:SEND_1          
+; SomDictionary.som:39:DEC             
+; SomDictionary.som:39:PUSH_ARG_1      
+; SomDictionary.som:39:SEND            
+; SomDictionary.som:40:SEND            
+; SomDictionary.som:40:RETURN_LOCAL    
+; SomDictionary.som:44:SEND            
+; SomDictionary.som:44:RETURN_LOCAL    
+; SomDictionary.som:49:POP_LOCAL_1     
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:JUMP_ON_FALSE_POP
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:PUSH_LOCAL_0    
+; SomDictionary.som:54:PUSH_ARG_1      
+; SomDictionary.som:54:SEND            
+; DictIdEntry.som:25:PUSH_FIELD_0    
+; DictIdEntry.som:25:PUSH_ARG_1      
+; DictIdEntry.som:25:SEND            
+; DictIdEntry.som:26:JUMP_ON_FALSE_POP
+; DictIdEntry.som:26:PUSH_FIELD_1    
+; DictIdEntry.som:26:PUSH_ARG_2      
+; DictIdEntry.som:26:SEND            
+; DictIdEntry.som:26:JUMP            
+; DictIdEntry.som:26:RETURN_LOCAL    
+; SomDictionary.som:54:JUMP_ON_FALSE_TOP_NIL
+; SomDictionary.som:54:PUSH_LOCAL_1    
+; SomDictionary.som:54:SEND_1          
+; SomDictionary.som:54:RETURN_LOCAL    
+; Strength.som:134:RETURN_LOCAL    
+; AbstractConstraint.som:20:POP_FIELD_0     
+; AbstractConstraint.som:20:RETURN_SELF     
+; UnaryConstraint.som:21:POP             
+; UnaryConstraint.som:22:PUSH_ARG_1      
+; UnaryConstraint.som:22:POP_FIELD_1     
+; UnaryConstraint.som:23:PUSH_CONSTANT_1 
+; UnaryConstraint.som:23:POP_FIELD       
+; UnaryConstraint.som:24:PUSH_SELF       
+; UnaryConstraint.som:24:PUSH_ARGUMENT   
+; UnaryConstraint.som:24:SEND            
+; AbstractConstraint.som:46:PUSH_SELF       
+; AbstractConstraint.som:46:SEND_1          
+; UnaryConstraint.som:37:PUSH_FIELD_1    
+; UnaryConstraint.som:37:PUSH_SELF       
+; UnaryConstraint.som:37:SEND            
+; {
+;   "trid": "123",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "67",
+;     "gidx": "48"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "124"
+;   }
+; }
+; {
+;   "trid": "123",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "67",
+;     "gidx": "48"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "124"
+;   }
+; }
+; Vector.som:113:POP_FIELD       
+; Vector.som:114:PUSH_LOCAL_1    
+; Vector.som:114:POP_FIELD_1     
+; Vector.som:115:PUSH_1          
+; Vector.som:115:POP_FIELD_0     
+; Vector.som:117:PUSH_LOCAL_2    
+; Vector.som:117:RETURN_LOCAL    
+; Variable.som:71:POP             
+; Variable.som:72:PUSH_FIELD      
+; Variable.som:72:PUSH_ARG_1      
+; Variable.som:72:SEND            
+; Variable.som:72:JUMP_ON_FALSE_TOP_NIL
+; Variable.som:72:POP             
+; Variable.som:72:RETURN_SELF     
+; UnaryConstraint.som:43:POP             
+; UnaryConstraint.som:44:PUSH_CONSTANT_2 
+; UnaryConstraint.som:44:DUP             
+; UnaryConstraint.som:44:POP_FIELD       
+; UnaryConstraint.som:44:POP             
+; UnaryConstraint.som:44:RETURN_SELF     
+; AbstractConstraint.som:60:POP             
+; AbstractConstraint.som:60:RETURN_SELF     
+; Planner.som:162:POP             
+; Planner.som:162:RETURN_SELF     
+; Planner.som:264:POP             
+; Planner.som:265:PUSH_LOCAL_2    
+; Planner.som:265:SEND_1          
+; Planner.som:265:PUSH_CONSTANT   
+; Planner.som:265:SEND            
+; Planner.som:265:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:265:POP             
+; Planner.som:267:PUSH_LOCAL      
+; Planner.som:267:PUSH_LOCAL_0    
+; Planner.som:267:PUSH_CONSTANT   
+; Planner.som:267:SEND            
+; {
+;   "trid": "125",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "78",
+;     "gidx": "13"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; {
+;   "trid": "125",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "78",
+;     "gidx": "13"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "11"
+;   }
+; }
+; Vector.som:70:INC             
+; Vector.som:70:JUMP_BACKWARD   
+; {
+;   "trid": "126",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1378"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "46"
+;   }
+; }
+; {
+;   "trid": "126",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "11",
+;     "gidx": "1378"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "46"
+;   }
+; }
+; Planner.som:151:PUSH_LOCAL_0    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "127",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "70",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "127",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "70",
+;     "gidx": "76"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "128",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "91",
+;     "gidx": "146"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "128",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "91",
+;     "gidx": "146"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; ScaleConstraint.som:77:PUSH_CONSTANT   
+; ScaleConstraint.som:77:JUMP            
+; ScaleConstraint.som:77:SEND            
+; ScaleConstraint.som:77:POP             
+; ScaleConstraint.som:78:PUSH_LOCAL_1    
+; ScaleConstraint.som:78:SEND_1          
+; ScaleConstraint.som:78:JUMP_ON_FALSE_TOP_NIL
+; ScaleConstraint.som:78:POP             
+; ScaleConstraint.som:78:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "129",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "52",
+;     "gidx": "116"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; {
+;   "trid": "129",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "52",
+;     "gidx": "116"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "12"
+;   }
+; }
+; AbstractConstraint.som:95:PUSH_ARG_1      
+; AbstractConstraint.som:95:SEND_1          
+; AbstractConstraint.som:95:JUMP_ON_TRUE_POP
+; AbstractConstraint.som:95:PUSH_CONSTANT   
+; AbstractConstraint.som:95:JUMP            
+; AbstractConstraint.som:95:SEND_1          
+; AbstractConstraint.som:95:RETURN_LOCAL    
+; BinaryConstraint.som:97:JUMP            
+; BinaryConstraint.som:97:RETURN_LOCAL    
+; AbstractConstraint.som:96:SEND_1          
+; AbstractConstraint.som:96:RETURN_LOCAL    
+; Planner.som:106:JUMP            
+; Planner.som:106:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:106:PUSH_LOCAL_1    
+; Planner.som:106:PUSH_LOCAL      
+; Planner.som:106:SEND            
+; {
+;   "trid": "130",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "92",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "130",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "92",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Planner.som:203:PUSH_ARG_1      
+; Planner.som:203:SEND_1          
+; {
+;   "trid": "131",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "131",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Planner.som:270:JUMP_IF_GREATER 
+; Planner.som:270:DUP             
+; Planner.som:270:POP_LOCAL       
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:SEND            
+; Vector.som:34:PUSH_ARG_1      
+; Vector.som:34:PUSH_FIELD      
+; Vector.som:34:SEND_1          
+; Vector.som:34:SEND            
+; Vector.som:34:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:34:POP             
+; Vector.som:35:PUSH_FIELD      
+; Vector.som:36:PUSH_ARG_1      
+; Vector.som:36:SEND            
+; Vector.som:36:RETURN_LOCAL    
+; Planner.som:270:SEND_1          
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:PUSH_CONSTANT   
+; Planner.som:270:SEND            
+; Planner.som:270:PUSH_CONSTANT   
+; Planner.som:270:SEND            
+; Planner.som:270:SEND            
+; Planner.som:270:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:270:POP             
+; Planner.som:270:INC             
+; Planner.som:270:JUMP_BACKWARD   
+; peel
+; Planner.som:270:JUMP_IF_GREATER 
+; Planner.som:270:DUP             
+; Planner.som:270:POP_LOCAL       
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:SEND            
+; Vector.som:34:PUSH_ARG_1      
+; Vector.som:34:PUSH_FIELD      
+; Vector.som:34:SEND_1          
+; Vector.som:34:SEND            
+; Vector.som:34:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:34:POP             
+; Vector.som:35:PUSH_FIELD      
+; Vector.som:36:PUSH_ARG_1      
+; Vector.som:36:SEND            
+; Vector.som:36:RETURN_LOCAL    
+; Planner.som:270:SEND_1          
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:PUSH_CONSTANT   
+; Planner.som:270:SEND            
+; Planner.som:270:PUSH_CONSTANT   
+; Planner.som:270:SEND            
+; Planner.som:270:SEND            
+; Planner.som:270:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:270:POP             
+; Planner.som:270:INC             
+; Planner.som:270:JUMP_BACKWARD   
+; {
+;   "trid": "132",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "131"
+;   }
+; }
+; {
+;   "trid": "132",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "131"
+;   }
+; }
+; Vector.som:34:PUSH_ARG_1      
+; Vector.som:34:PUSH_FIELD      
+; Vector.som:34:SEND_1          
+; Vector.som:34:SEND            
+; Vector.som:34:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:34:POP             
+; Vector.som:35:PUSH_FIELD      
+; Vector.som:36:PUSH_ARG_1      
+; Vector.som:36:SEND            
+; Vector.som:36:RETURN_LOCAL    
+; Planner.som:270:SEND_1          
+; Planner.som:270:PUSH_LOCAL      
+; Planner.som:270:PUSH_CONSTANT   
+; Planner.som:270:SEND            
+; Planner.som:270:PUSH_CONSTANT   
+; Planner.som:270:SEND            
+; Planner.som:270:SEND            
+; Planner.som:270:JUMP_ON_FALSE_TOP_NIL
+; Planner.som:270:POP             
+; Planner.som:270:INC             
+; Planner.som:270:JUMP_BACKWARD   
+; {
+;   "trid": "133",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "91",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "133",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "91",
+;     "gidx": "33"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; ScaleConstraint.som:78:POP             
+; ScaleConstraint.som:78:RETURN_SELF     
+; Planner.som:151:POP             
+; Planner.som:151:PUSH_SELF       
+; Planner.som:151:PUSH_LOCAL_1    
+; Planner.som:151:SEND_1          
+; {
+;   "trid": "135",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; {
+;   "trid": "135",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "71"
+;   }
+; }
+; UnaryConstraint.som:43:PUSH_FIELD_1    
+; UnaryConstraint.som:43:PUSH_NIL        
+; UnaryConstraint.som:43:SEND            
+; UnaryConstraint.som:43:JUMP_ON_TRUE_TOP_NIL
+; UnaryConstraint.som:43:PUSH_FIELD_1    
+; UnaryConstraint.som:43:PUSH_SELF       
+; UnaryConstraint.som:43:SEND            
+; Variable.som:71:PUSH_FIELD_1    
+; Variable.som:71:PUSH_ARG_1      
+; Variable.som:71:SEND            
+; Vector.som:102:PUSH_GLOBAL     
+; Vector.som:102:PUSH_SELF       
+; Vector.som:102:SEND_1          
+; Vector.som:102:SEND            
+; Vector.som:102:POP_LOCAL_0     
+; Vector.som:103:PUSH_1          
+; Vector.som:103:POP_LOCAL_1     
+; Vector.som:104:PUSH_CONSTANT   
+; Vector.som:104:POP_LOCAL_2     
+; Vector.som:106:PUSH_SELF       
+; Vector.som:111:PUSH_BLOCK      
+; Vector.som:111:SEND            
+; {
+;   "trid": "134",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "59",
+;     "gidx": "136"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "135"
+;   }
+; }
+; {
+;   "trid": "134",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "59",
+;     "gidx": "136"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "135"
+;   }
+; }
+; AbstractConstraint.som:60:SEND_1          
