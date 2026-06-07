@@ -98,6 +98,13 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
     (void)lineNums;
     (void)sourceFile;
   #endif
+    // Skip the SOM standard library.
+    if (sourceFile != nullptr && strstr(sourceFile, "Smalltalk/") != nullptr) {
+        return;
+    }
+    // Method entry: gives the JIT a trace hook for hot recursive methods
+    // (e.g. Towers' move:disksFrom:to:) that have no backward jumps.
+    yklocs[0] = yk_location_new();
 
     // Walk the variable-length bytecode stream one instruction at a time.
     for (size_t i = 0; i < bcLength;
