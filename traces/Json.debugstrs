@@ -1,0 +1,5669 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT_2 
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_TRUE_POP
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT   
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_FALSE_POP
+; JsonParser.som:197:PUSH_SELF       
+; JsonParser.som:197:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:197:POP             
+; JsonParser.som:197:JUMP_BACKWARD   
+; peel
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT_2 
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_TRUE_POP
+; JsonParser.som:197:PUSH_FIELD      
+; JsonParser.som:197:PUSH_CONSTANT   
+; JsonParser.som:197:SEND            
+; JsonParser.som:197:JUMP_ON_FALSE_POP
+; JsonParser.som:197:PUSH_SELF       
+; JsonParser.som:197:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:197:POP             
+; JsonParser.som:197:JUMP_BACKWARD   
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; JsonParser.som:276:PUSH_SELF       
+; JsonParser.som:276:SEND_1          
+; JsonParser.som:331:PUSH_FIELD      
+; JsonParser.som:331:PUSH_CONSTANT_0 
+; JsonParser.som:331:SEND            
+; JsonParser.som:331:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:331:POP             
+; JsonParser.som:332:PUSH_FIELD      
+; JsonParser.som:332:PUSH_CONSTANT   
+; JsonParser.som:332:SEND            
+; JsonParser.som:332:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:332:POP             
+; JsonParser.som:333:PUSH_FIELD      
+; JsonParser.som:333:PUSH_CONSTANT   
+; JsonParser.som:333:SEND            
+; JsonParser.som:333:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:333:POP             
+; JsonParser.som:334:PUSH_FIELD      
+; JsonParser.som:334:PUSH_CONSTANT   
+; JsonParser.som:334:SEND            
+; JsonParser.som:334:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:334:POP             
+; JsonParser.som:336:PUSH_CONSTANT   
+; JsonParser.som:336:RETURN_LOCAL    
+; JsonParser.som:276:JUMP_ON_FALSE_POP
+; JsonParser.som:276:PUSH_NIL        
+; JsonParser.som:276:POP             
+; JsonParser.som:276:RETURN_SELF     
+; JsonParser.som:79:POP             
+; JsonParser.som:79:RETURN_SELF     
+; JsonParser.som:93:POP             
+; JsonParser.som:96:PUSH_SELF       
+; JsonParser.som:96:PUSH_CONSTANT   
+; JsonParser.som:96:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:96:JUMP_ON_FALSE_POP
+; JsonParser.som:96:PUSH_NIL        
+; JsonParser.som:96:POP             
+; JsonParser.som:98:PUSH_SELF       
+; JsonParser.som:98:PUSH_CONSTANT   
+; JsonParser.som:98:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:100:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:100:POP             
+; JsonParser.som:102:PUSH_LOCAL_0    
+; JsonParser.som:102:RETURN_LOCAL    
+; JsonParser.som:55:RETURN_LOCAL    
+; JsonParser.som:114:SEND            
+; JsonObject.som:36:PUSH_ARG_1      
+; JsonObject.som:36:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:36:POP             
+; JsonObject.som:37:PUSH_ARG_2      
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; peel
+; JsonParser.som:276:PUSH_SELF       
+; JsonParser.som:276:SEND_1          
+; JsonParser.som:331:PUSH_FIELD      
+; JsonParser.som:331:PUSH_CONSTANT_0 
+; JsonParser.som:331:SEND            
+; JsonParser.som:331:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:331:POP             
+; JsonParser.som:332:PUSH_FIELD      
+; JsonParser.som:332:PUSH_CONSTANT   
+; JsonParser.som:332:SEND            
+; JsonParser.som:332:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:332:POP             
+; JsonParser.som:333:PUSH_FIELD      
+; JsonParser.som:333:PUSH_CONSTANT   
+; JsonParser.som:333:SEND            
+; JsonParser.som:333:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:333:POP             
+; JsonParser.som:334:PUSH_FIELD      
+; JsonParser.som:334:PUSH_CONSTANT   
+; JsonParser.som:334:SEND            
+; JsonParser.som:334:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:334:POP             
+; JsonParser.som:336:PUSH_CONSTANT   
+; JsonParser.som:336:RETURN_LOCAL    
+; JsonParser.som:276:JUMP_ON_FALSE_POP
+; JsonParser.som:276:PUSH_NIL        
+; JsonParser.som:276:POP             
+; JsonParser.som:276:RETURN_SELF     
+; JsonParser.som:79:POP             
+; JsonParser.som:79:RETURN_SELF     
+; JsonParser.som:93:POP             
+; JsonParser.som:96:PUSH_SELF       
+; JsonParser.som:96:PUSH_CONSTANT   
+; JsonParser.som:96:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:96:JUMP_ON_FALSE_POP
+; JsonParser.som:96:PUSH_NIL        
+; JsonParser.som:96:POP             
+; JsonParser.som:98:PUSH_SELF       
+; JsonParser.som:98:PUSH_CONSTANT   
+; JsonParser.som:98:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:100:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:100:POP             
+; JsonParser.som:102:PUSH_LOCAL_0    
+; JsonParser.som:102:RETURN_LOCAL    
+; JsonParser.som:55:RETURN_LOCAL    
+; JsonParser.som:114:SEND            
+; JsonObject.som:36:PUSH_ARG_1      
+; JsonObject.som:36:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:36:POP             
+; JsonObject.som:37:PUSH_ARG_2      
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "515"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "515"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:197:PUSH_NIL        
+; JsonParser.som:197:POP             
+; JsonParser.som:198:PUSH_SELF       
+; JsonParser.som:198:SEND_1          
+; JsonParser.som:306:PUSH_CONSTANT_0 
+; JsonParser.som:307:PUSH_FIELD      
+; JsonParser.som:307:SEND            
+; JsonParser.som:311:JUMP_ON_FALSE_POP
+; JsonParser.som:311:PUSH_FIELD_0    
+; JsonParser.som:311:PUSH_FIELD      
+; JsonParser.som:311:PUSH_FIELD_1    
+; JsonParser.som:311:DEC             
+; JsonParser.som:311:SEND            
+; String.som:60:PUSH_ARG_2      
+; String.som:60:PUSH_SELF       
+; String.som:60:SEND_1          
+; String.som:60:SEND            
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_0          
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_ARG_2      
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:64:JUMP_ON_FALSE_POP
+; String.som:64:PUSH_SELF       
+; String.som:64:PUSH_ARG_1      
+; String.som:64:PUSH_ARG_2      
+; String.som:64:SEND            
+; String.som:64:RETURN_LOCAL    
+; JsonParser.som:311:DUP             
+; JsonParser.som:311:POP_LOCAL_0     
+; JsonParser.som:311:JUMP            
+; JsonParser.som:311:POP             
+; JsonParser.som:312:PUSH_CONSTANT   
+; JsonParser.som:312:POP_FIELD       
+; JsonParser.som:315:PUSH_LOCAL_0    
+; JsonParser.som:315:RETURN_LOCAL    
+; JsonParser.som:198:POP_LOCAL_0     
+; JsonParser.som:199:PUSH_SELF       
+; JsonParser.som:199:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:199:POP             
+; JsonParser.som:201:PUSH_LOCAL_0    
+; JsonParser.som:201:RETURN_LOCAL    
+; JsonParser.som:179:SEND            
+; JsonString.som:37:PUSH_SELF       
+; JsonString.som:37:SEND_1          
+; JsonString.som:37:PUSH_ARG_1      
+; JsonString.som:37:SEND            
+; JsonString.som:37:RETURN_LOCAL    
+; JsonParser.som:179:RETURN_LOCAL    
+; JsonParser.som:54:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:51:PUSH_FIELD      
+; JsonParser.som:51:PUSH_CONSTANT_0 
+; JsonParser.som:51:SEND            
+; JsonParser.som:51:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:51:POP             
+; JsonParser.som:52:PUSH_FIELD      
+; JsonParser.som:52:PUSH_CONSTANT   
+; JsonParser.som:52:SEND            
+; JsonParser.som:52:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:52:POP             
+; JsonParser.som:53:PUSH_FIELD      
+; JsonParser.som:53:PUSH_CONSTANT   
+; JsonParser.som:53:SEND            
+; JsonParser.som:53:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:53:POP             
+; JsonParser.som:54:PUSH_FIELD      
+; JsonParser.som:54:PUSH_CONSTANT   
+; JsonParser.som:54:SEND            
+; JsonParser.som:54:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:54:PUSH_SELF       
+; JsonParser.som:54:SEND_1          
+; JsonParser.som:178:PUSH_GLOBAL     
+; JsonParser.som:178:PUSH_SELF       
+; JsonParser.som:179:SEND_1          
+; JsonParser.som:183:PUSH_SELF       
+; JsonParser.som:183:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:183:POP             
+; JsonParser.som:184:PUSH_SELF       
+; JsonParser.som:184:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:184:POP             
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "3723"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "3723"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; JsonParser.som:78:PUSH_SELF       
+; JsonParser.som:78:SEND_1          
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "35"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:110:PUSH_CONSTANT_2 
+; JsonParser.som:110:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:110:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:110:POP             
+; JsonParser.som:112:PUSH_SELF       
+; JsonParser.som:112:SEND_1          
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "595"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "595"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:54:POP             
+; JsonParser.som:55:PUSH_FIELD      
+; JsonParser.som:55:PUSH_CONSTANT   
+; JsonParser.som:55:SEND            
+; JsonParser.som:55:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:55:POP             
+; JsonParser.som:56:PUSH_FIELD      
+; JsonParser.som:56:PUSH_CONSTANT   
+; JsonParser.som:56:SEND            
+; JsonParser.som:56:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:56:POP             
+; JsonParser.som:60:PUSH_FIELD      
+; JsonParser.som:60:PUSH_CONSTANT   
+; JsonParser.som:60:SEND            
+; JsonParser.som:60:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:60:POP             
+; JsonParser.som:61:PUSH_FIELD      
+; JsonParser.som:61:PUSH_CONSTANT   
+; JsonParser.som:61:SEND            
+; JsonParser.som:61:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:61:PUSH_SELF       
+; JsonParser.som:61:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:PUSH_CONSTANT_2 
+; JsonParser.som:339:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:231:POP             
+; JsonParser.som:233:PUSH_SELF       
+; JsonParser.som:233:SEND_1          
+; JsonParser.som:239:PUSH_SELF       
+; JsonParser.som:239:PUSH_CONSTANT_0 
+; JsonParser.som:239:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:239:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:239:PUSH_CONSTANT_2 
+; JsonParser.som:239:RETURN_LOCAL    
+; JsonParser.som:233:POP             
+; JsonParser.som:234:PUSH_SELF       
+; JsonParser.som:234:SEND_1          
+; JsonParser.som:249:PUSH_SELF       
+; JsonParser.som:249:PUSH_CONSTANT_0 
+; JsonParser.som:249:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:249:SEND_1          
+; JsonParser.som:250:JUMP_ON_FALSE_POP
+; JsonParser.som:250:PUSH_SELF       
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:250:SEND_1          
+; JsonParser.som:250:JUMP            
+; JsonParser.som:250:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:RETURN_LOCAL    
+; JsonParser.som:234:POP             
+; JsonParser.som:235:PUSH_GLOBAL     
+; JsonParser.som:235:PUSH_SELF       
+; JsonParser.som:236:SEND_1          
+; JsonParser.som:306:PUSH_CONSTANT_0 
+; JsonParser.som:307:PUSH_FIELD      
+; JsonParser.som:307:SEND            
+; JsonParser.som:311:JUMP_ON_FALSE_POP
+; JsonParser.som:311:PUSH_FIELD_0    
+; JsonParser.som:311:PUSH_FIELD      
+; JsonParser.som:311:PUSH_FIELD_1    
+; JsonParser.som:311:DEC             
+; JsonParser.som:311:SEND            
+; String.som:60:PUSH_ARG_2      
+; String.som:60:PUSH_SELF       
+; String.som:60:SEND_1          
+; String.som:60:SEND            
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_0          
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_ARG_2      
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:64:JUMP_ON_FALSE_POP
+; String.som:64:PUSH_SELF       
+; String.som:64:PUSH_ARG_1      
+; String.som:64:PUSH_ARG_2      
+; String.som:64:SEND            
+; String.som:64:RETURN_LOCAL    
+; JsonParser.som:311:DUP             
+; JsonParser.som:311:POP_LOCAL_0     
+; JsonParser.som:311:JUMP            
+; JsonParser.som:311:POP             
+; JsonParser.som:312:PUSH_CONSTANT   
+; JsonParser.som:312:POP_FIELD       
+; JsonParser.som:315:PUSH_LOCAL_0    
+; JsonParser.som:315:RETURN_LOCAL    
+; JsonParser.som:236:SEND            
+; JsonNumber.som:37:PUSH_ARG_1      
+; JsonNumber.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonNumber.som:37:POP             
+; JsonNumber.som:38:PUSH_SELF       
+; JsonNumber.som:38:SEND_1          
+; JsonNumber.som:39:PUSH_ARG_1      
+; JsonNumber.som:39:SEND            
+; JsonNumber.som:39:RETURN_LOCAL    
+; JsonParser.som:236:RETURN_LOCAL    
+; JsonParser.som:61:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:96:PUSH_SELF       
+; JsonParser.som:96:PUSH_CONSTANT   
+; JsonParser.som:96:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:96:JUMP_ON_FALSE_POP
+; JsonParser.som:96:PUSH_SELF       
+; JsonParser.som:96:PUSH_LOCAL_0    
+; JsonParser.som:96:SEND            
+; JsonParser.som:77:PUSH_SELF       
+; JsonParser.som:77:SEND_1          
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "3716"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "8"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "3716"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "8"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:77:PUSH_SELF       
+; JsonParser.som:77:SEND_1          
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "532"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "532"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; JsonParser.som:89:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:91:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:91:POP             
+; JsonParser.som:93:PUSH_SELF       
+; JsonParser.som:93:PUSH_LOCAL_0    
+; JsonParser.som:93:SEND            
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "356"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "356"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:107:POP_LOCAL_0     
+; JsonParser.som:108:PUSH_SELF       
+; JsonParser.som:108:SEND_1          
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "3",
+;     "gidx": "32"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "4"
+;   }
+; }
+; JsonParser.som:114:PUSH_SELF       
+; JsonParser.som:114:SEND_1          
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "3611"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "3611"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "10"
+;   }
+; }
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:96:JUMP_ON_FALSE_POP
+; JsonParser.som:96:PUSH_SELF       
+; JsonParser.som:96:PUSH_LOCAL_0    
+; JsonParser.som:96:SEND            
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "527"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "527"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:96:JUMP_ON_FALSE_POP
+; JsonParser.som:96:PUSH_NIL        
+; JsonParser.som:96:POP             
+; JsonParser.som:98:PUSH_SELF       
+; JsonParser.som:98:PUSH_CONSTANT   
+; JsonParser.som:98:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:100:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:100:POP             
+; JsonParser.som:102:PUSH_LOCAL_0    
+; JsonParser.som:102:RETURN_LOCAL    
+; JsonParser.som:55:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:84:PUSH_SELF       
+; JsonParser.som:84:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:84:POP             
+; JsonParser.som:85:PUSH_GLOBAL     
+; JsonParser.som:85:SEND_1          
+; JsonArray.som:54:PUSH_SELF       
+; JsonArray.som:54:SUPER_SEND      
+; JsonArray.som:54:SEND_1          
+; JsonArray.som:29:PUSH_GLOBAL     
+; JsonArray.som:29:SEND_1          
+; Vector.som:189:PUSH_SELF       
+; Vector.som:189:PUSH_CONSTANT_0 
+; Vector.som:189:SEND            
+; Vector.som:190:PUSH_SELF       
+; Vector.som:190:SUPER_SEND      
+; Vector.som:190:PUSH_ARG_1      
+; Vector.som:190:SEND            
+; Vector.som:28:PUSH_1          
+; Vector.som:28:POP_FIELD_0     
+; Vector.som:29:PUSH_1          
+; Vector.som:29:POP_FIELD_1     
+; Vector.som:30:PUSH_GLOBAL     
+; Vector.som:30:PUSH_ARG_1      
+; Vector.som:30:SEND            
+; Vector.som:30:POP_FIELD       
+; Vector.som:30:RETURN_SELF     
+; Vector.som:190:RETURN_LOCAL    
+; Vector.som:189:RETURN_LOCAL    
+; JsonArray.som:29:POP_FIELD_0     
+; JsonArray.som:29:RETURN_SELF     
+; JsonArray.som:54:RETURN_LOCAL    
+; JsonParser.som:85:POP_LOCAL_0     
+; JsonParser.som:88:PUSH_SELF       
+; JsonParser.som:88:SEND_1          
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "132"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "132"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "16"
+;   }
+; }
+; JsonParser.som:55:PUSH_SELF       
+; JsonParser.som:55:SEND_1          
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "138"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "17",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "138"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; JsonParser.som:142:PUSH_FIELD      
+; JsonParser.som:142:PUSH_CONSTANT_0 
+; JsonParser.som:142:SEND            
+; JsonParser.som:142:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:142:POP             
+; JsonParser.som:143:PUSH_SELF       
+; JsonParser.som:144:SEND_1          
+; JsonParser.som:183:PUSH_SELF       
+; JsonParser.som:183:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:183:POP             
+; JsonParser.som:184:PUSH_SELF       
+; JsonParser.som:184:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:184:POP             
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; JsonParser.som:231:PUSH_SELF       
+; JsonParser.som:231:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:PUSH_CONSTANT_2 
+; JsonParser.som:339:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:231:JUMP_BACKWARD   
+; peel
+; JsonParser.som:231:PUSH_SELF       
+; JsonParser.som:231:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:PUSH_CONSTANT_2 
+; JsonParser.som:339:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:231:JUMP_BACKWARD   
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "929"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "929"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:61:POP             
+; JsonParser.som:62:PUSH_FIELD      
+; JsonParser.som:62:PUSH_CONSTANT   
+; JsonParser.som:62:SEND            
+; JsonParser.som:62:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:62:PUSH_SELF       
+; JsonParser.som:62:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:PUSH_CONSTANT_2 
+; JsonParser.som:340:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "19",
+;     "gidx": "1079"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "19",
+;     "gidx": "1079"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:POP             
+; JsonParser.som:347:PUSH_FIELD      
+; JsonParser.som:347:PUSH_CONSTANT   
+; JsonParser.som:347:SEND            
+; JsonParser.som:347:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:347:POP             
+; JsonParser.som:348:PUSH_FIELD      
+; JsonParser.som:348:PUSH_CONSTANT   
+; JsonParser.som:348:SEND            
+; JsonParser.som:348:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:348:POP             
+; JsonParser.som:350:PUSH_CONSTANT   
+; JsonParser.som:350:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:PUSH_CONSTANT_1 
+; JsonParser.som:268:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:233:PUSH_SELF       
+; JsonParser.som:233:SEND_1          
+; JsonParser.som:239:PUSH_SELF       
+; JsonParser.som:239:PUSH_CONSTANT_0 
+; JsonParser.som:239:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:239:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:239:PUSH_CONSTANT_2 
+; JsonParser.som:239:RETURN_LOCAL    
+; JsonParser.som:233:POP             
+; JsonParser.som:234:PUSH_SELF       
+; JsonParser.som:234:SEND_1          
+; JsonParser.som:249:PUSH_SELF       
+; JsonParser.som:249:PUSH_CONSTANT_0 
+; JsonParser.som:249:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:249:SEND_1          
+; JsonParser.som:250:JUMP_ON_FALSE_POP
+; JsonParser.som:250:PUSH_SELF       
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:250:SEND_1          
+; JsonParser.som:250:JUMP            
+; JsonParser.som:250:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:RETURN_LOCAL    
+; JsonParser.som:234:POP             
+; JsonParser.som:235:PUSH_GLOBAL     
+; JsonParser.som:235:PUSH_SELF       
+; JsonParser.som:236:SEND_1          
+; JsonParser.som:306:PUSH_CONSTANT_0 
+; JsonParser.som:307:PUSH_FIELD      
+; JsonParser.som:307:SEND            
+; JsonParser.som:311:JUMP_ON_FALSE_POP
+; JsonParser.som:311:PUSH_FIELD_0    
+; JsonParser.som:311:PUSH_FIELD      
+; JsonParser.som:311:PUSH_FIELD_1    
+; JsonParser.som:311:DEC             
+; JsonParser.som:311:SEND            
+; String.som:60:PUSH_ARG_2      
+; String.som:60:PUSH_SELF       
+; String.som:60:SEND_1          
+; String.som:60:SEND            
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_0          
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_ARG_2      
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:64:JUMP_ON_FALSE_POP
+; String.som:64:PUSH_SELF       
+; String.som:64:PUSH_ARG_1      
+; String.som:64:PUSH_ARG_2      
+; String.som:64:SEND            
+; String.som:64:RETURN_LOCAL    
+; JsonParser.som:311:DUP             
+; JsonParser.som:311:POP_LOCAL_0     
+; JsonParser.som:311:JUMP            
+; JsonParser.som:311:POP             
+; JsonParser.som:312:PUSH_CONSTANT   
+; JsonParser.som:312:POP_FIELD       
+; JsonParser.som:315:PUSH_LOCAL_0    
+; JsonParser.som:315:RETURN_LOCAL    
+; JsonParser.som:236:SEND            
+; JsonNumber.som:37:PUSH_ARG_1      
+; JsonNumber.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonNumber.som:37:POP             
+; JsonNumber.som:38:PUSH_SELF       
+; JsonNumber.som:38:SEND_1          
+; JsonNumber.som:39:PUSH_ARG_1      
+; JsonNumber.som:39:SEND            
+; JsonNumber.som:39:RETURN_LOCAL    
+; JsonParser.som:236:RETURN_LOCAL    
+; JsonParser.som:63:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "22",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "18",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:62:POP             
+; JsonParser.som:63:PUSH_FIELD      
+; JsonParser.som:63:PUSH_CONSTANT   
+; JsonParser.som:63:SEND            
+; JsonParser.som:63:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:63:POP             
+; JsonParser.som:64:PUSH_FIELD      
+; JsonParser.som:64:PUSH_CONSTANT   
+; JsonParser.som:64:SEND            
+; JsonParser.som:64:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:64:POP             
+; JsonParser.som:65:PUSH_FIELD      
+; JsonParser.som:65:PUSH_CONSTANT   
+; JsonParser.som:65:SEND            
+; JsonParser.som:65:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:65:POP             
+; JsonParser.som:66:PUSH_FIELD      
+; JsonParser.som:66:PUSH_CONSTANT   
+; JsonParser.som:66:SEND            
+; JsonParser.som:66:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:66:PUSH_SELF       
+; JsonParser.som:66:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:PUSH_CONSTANT_2 
+; JsonParser.som:344:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "23",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "19",
+;     "gidx": "472"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "24",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "19",
+;     "gidx": "472"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:POP             
+; JsonParser.som:347:PUSH_FIELD      
+; JsonParser.som:347:PUSH_CONSTANT   
+; JsonParser.som:347:SEND            
+; JsonParser.som:347:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:347:POP             
+; JsonParser.som:348:PUSH_FIELD      
+; JsonParser.som:348:PUSH_CONSTANT   
+; JsonParser.som:348:SEND            
+; JsonParser.som:348:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:348:POP             
+; JsonParser.som:350:PUSH_CONSTANT   
+; JsonParser.som:350:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:PUSH_CONSTANT_1 
+; JsonParser.som:268:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:233:PUSH_SELF       
+; JsonParser.som:233:SEND_1          
+; JsonParser.som:239:PUSH_SELF       
+; JsonParser.som:239:PUSH_CONSTANT_0 
+; JsonParser.som:239:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:239:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:239:PUSH_CONSTANT_2 
+; JsonParser.som:239:RETURN_LOCAL    
+; JsonParser.som:233:POP             
+; JsonParser.som:234:PUSH_SELF       
+; JsonParser.som:234:SEND_1          
+; JsonParser.som:249:PUSH_SELF       
+; JsonParser.som:249:PUSH_CONSTANT_0 
+; JsonParser.som:249:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:249:SEND_1          
+; JsonParser.som:250:JUMP_ON_FALSE_POP
+; JsonParser.som:250:PUSH_SELF       
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:250:SEND_1          
+; JsonParser.som:250:JUMP            
+; JsonParser.som:250:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:250:PUSH_CONSTANT   
+; JsonParser.som:250:RETURN_LOCAL    
+; JsonParser.som:234:POP             
+; JsonParser.som:235:PUSH_GLOBAL     
+; JsonParser.som:235:PUSH_SELF       
+; JsonParser.som:236:SEND_1          
+; JsonParser.som:306:PUSH_CONSTANT_0 
+; JsonParser.som:307:PUSH_FIELD      
+; JsonParser.som:307:SEND            
+; JsonParser.som:311:JUMP_ON_FALSE_POP
+; JsonParser.som:311:PUSH_FIELD_0    
+; JsonParser.som:311:PUSH_FIELD      
+; JsonParser.som:311:PUSH_FIELD_1    
+; JsonParser.som:311:DEC             
+; JsonParser.som:311:SEND            
+; String.som:60:PUSH_ARG_2      
+; String.som:60:PUSH_SELF       
+; String.som:60:SEND_1          
+; String.som:60:SEND            
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_0          
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_ARG_2      
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:64:JUMP_ON_FALSE_POP
+; String.som:64:PUSH_SELF       
+; String.som:64:PUSH_ARG_1      
+; String.som:64:PUSH_ARG_2      
+; String.som:64:SEND            
+; String.som:64:RETURN_LOCAL    
+; JsonParser.som:311:DUP             
+; JsonParser.som:311:POP_LOCAL_0     
+; JsonParser.som:311:JUMP            
+; JsonParser.som:311:POP             
+; JsonParser.som:312:PUSH_CONSTANT   
+; JsonParser.som:312:POP_FIELD       
+; JsonParser.som:315:PUSH_LOCAL_0    
+; JsonParser.som:315:RETURN_LOCAL    
+; JsonParser.som:236:SEND            
+; JsonNumber.som:37:PUSH_ARG_1      
+; JsonNumber.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonNumber.som:37:POP             
+; JsonNumber.som:38:PUSH_SELF       
+; JsonNumber.som:38:SEND_1          
+; JsonNumber.som:39:PUSH_ARG_1      
+; JsonNumber.som:39:SEND            
+; JsonNumber.som:39:RETURN_LOCAL    
+; JsonParser.som:236:RETURN_LOCAL    
+; JsonParser.som:62:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "132"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "25",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "132"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:347:PUSH_CONSTANT_2 
+; JsonParser.som:347:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:231:JUMP_BACKWARD   
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "28",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:132:PUSH_SELF       
+; JsonParser.som:132:PUSH_CONSTANT   
+; JsonParser.som:132:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:132:JUMP_ON_FALSE_POP
+; JsonParser.som:132:PUSH_NIL        
+; JsonParser.som:132:POP             
+; JsonParser.som:134:PUSH_SELF       
+; JsonParser.som:134:PUSH_CONSTANT   
+; JsonParser.som:134:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:136:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:136:POP             
+; JsonParser.som:139:PUSH_LOCAL_0    
+; JsonParser.som:139:RETURN_LOCAL    
+; JsonParser.som:56:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "1688"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; {
+;   "trid": "27",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "1688"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "28"
+;   }
+; }
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "29",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "20",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "426"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "31",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "426"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:63:PUSH_SELF       
+; JsonParser.som:63:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:PUSH_CONSTANT_2 
+; JsonParser.som:341:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "31",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "32",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "31",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:PUSH_CONSTANT_2 
+; JsonParser.som:342:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "32",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "33",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "32",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:PUSH_CONSTANT_2 
+; JsonParser.som:343:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "2988"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "38",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "2988"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "39",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "809"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "44",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "809"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:51:PUSH_SELF       
+; JsonParser.som:51:SEND_1          
+; JsonParser.som:147:PUSH_SELF       
+; JsonParser.som:147:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:147:POP             
+; JsonParser.som:148:PUSH_SELF       
+; JsonParser.som:148:PUSH_CONSTANT_1 
+; JsonParser.som:148:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:148:POP             
+; JsonParser.som:149:PUSH_SELF       
+; JsonParser.som:149:PUSH_CONSTANT   
+; JsonParser.som:149:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:149:POP             
+; JsonParser.som:150:PUSH_SELF       
+; JsonParser.som:150:PUSH_CONSTANT   
+; JsonParser.som:150:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:150:POP             
+; JsonParser.som:151:PUSH_GLOBAL     
+; JsonParser.som:152:SEND_1          
+; JsonParser.som:152:RETURN_LOCAL    
+; JsonParser.som:51:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "46",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "22",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:66:POP             
+; JsonParser.som:67:PUSH_FIELD      
+; JsonParser.som:67:PUSH_CONSTANT   
+; JsonParser.som:67:SEND            
+; JsonParser.som:67:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:67:POP             
+; JsonParser.som:68:PUSH_FIELD      
+; JsonParser.som:68:PUSH_CONSTANT   
+; JsonParser.som:68:SEND            
+; JsonParser.som:68:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:68:PUSH_SELF       
+; JsonParser.som:68:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:PUSH_CONSTANT_2 
+; JsonParser.som:346:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "132"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "47",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "24",
+;     "gidx": "132"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:346:PUSH_CONSTANT_2 
+; JsonParser.som:346:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_POP
+; JsonParser.som:231:PUSH_NIL        
+; JsonParser.som:231:POP             
+; JsonParser.som:231:JUMP_BACKWARD   
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "46",
+;     "gidx": "426"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "48",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "46",
+;     "gidx": "426"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:67:PUSH_SELF       
+; JsonParser.som:67:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:PUSH_CONSTANT_2 
+; JsonParser.som:345:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "46",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "49",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "46",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:68:POP             
+; JsonParser.som:69:PUSH_FIELD      
+; JsonParser.som:69:PUSH_CONSTANT   
+; JsonParser.som:69:SEND            
+; JsonParser.som:69:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:69:PUSH_SELF       
+; JsonParser.som:69:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:POP             
+; JsonParser.som:347:PUSH_FIELD      
+; JsonParser.som:347:PUSH_CONSTANT   
+; JsonParser.som:347:SEND            
+; JsonParser.som:347:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:347:PUSH_CONSTANT_2 
+; JsonParser.som:347:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "50",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "49",
+;     "gidx": "0"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:69:POP             
+; JsonParser.som:70:PUSH_FIELD      
+; JsonParser.som:70:PUSH_CONSTANT   
+; JsonParser.som:70:SEND            
+; JsonParser.som:70:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:70:PUSH_SELF       
+; JsonParser.som:70:SEND_1          
+; JsonParser.som:226:PUSH_SELF       
+; JsonParser.som:226:SEND_1          
+; JsonParser.som:296:PUSH_FIELD_1    
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:PUSH_CONSTANT_1 
+; JsonParser.som:262:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:POP             
+; JsonParser.som:341:PUSH_FIELD      
+; JsonParser.som:341:PUSH_CONSTANT   
+; JsonParser.som:341:SEND            
+; JsonParser.som:341:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:341:POP             
+; JsonParser.som:342:PUSH_FIELD      
+; JsonParser.som:342:PUSH_CONSTANT   
+; JsonParser.som:342:SEND            
+; JsonParser.som:342:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:342:POP             
+; JsonParser.som:343:PUSH_FIELD      
+; JsonParser.som:343:PUSH_CONSTANT   
+; JsonParser.som:343:SEND            
+; JsonParser.som:343:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:343:POP             
+; JsonParser.som:344:PUSH_FIELD      
+; JsonParser.som:344:PUSH_CONSTANT   
+; JsonParser.som:344:SEND            
+; JsonParser.som:344:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:344:POP             
+; JsonParser.som:345:PUSH_FIELD      
+; JsonParser.som:345:PUSH_CONSTANT   
+; JsonParser.som:345:SEND            
+; JsonParser.som:345:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:345:POP             
+; JsonParser.som:346:PUSH_FIELD      
+; JsonParser.som:346:PUSH_CONSTANT   
+; JsonParser.som:346:SEND            
+; JsonParser.som:346:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:346:POP             
+; JsonParser.som:347:PUSH_FIELD      
+; JsonParser.som:347:PUSH_CONSTANT   
+; JsonParser.som:347:SEND            
+; JsonParser.som:347:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:347:POP             
+; JsonParser.som:348:PUSH_FIELD      
+; JsonParser.som:348:PUSH_CONSTANT   
+; JsonParser.som:348:SEND            
+; JsonParser.som:348:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:348:PUSH_CONSTANT_2 
+; JsonParser.som:348:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "52",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:106:PUSH_SELF       
+; JsonParser.som:106:SEND_1          
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "28",
+;     "gidx": "901"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "52"
+;   }
+; }
+; {
+;   "trid": "51",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "28",
+;     "gidx": "901"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "52"
+;   }
+; }
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:132:JUMP_ON_FALSE_POP
+; JsonParser.som:132:PUSH_SELF       
+; JsonParser.som:132:PUSH_LOCAL_0    
+; JsonParser.som:132:SEND            
+; {
+;   "trid": "53",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "739"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "53",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "739"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; JsonParser.som:296:POP_FIELD       
+; JsonParser.som:296:RETURN_SELF     
+; JsonParser.som:226:POP             
+; JsonParser.som:227:PUSH_SELF       
+; JsonParser.som:227:PUSH_CONSTANT_1 
+; JsonParser.som:227:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:227:POP             
+; JsonParser.som:228:PUSH_FIELD      
+; JsonParser.som:228:POP_LOCAL_0     
+; JsonParser.som:230:PUSH_SELF       
+; JsonParser.som:230:SEND_1          
+; JsonParser.som:268:PUSH_SELF       
+; JsonParser.som:268:SEND_1          
+; JsonParser.som:339:PUSH_FIELD      
+; JsonParser.som:339:PUSH_CONSTANT_0 
+; JsonParser.som:339:SEND            
+; JsonParser.som:339:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:339:POP             
+; JsonParser.som:340:PUSH_FIELD      
+; JsonParser.som:340:PUSH_CONSTANT   
+; JsonParser.som:340:SEND            
+; JsonParser.som:340:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:340:PUSH_CONSTANT_2 
+; JsonParser.som:340:RETURN_LOCAL    
+; JsonParser.som:268:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:268:POP             
+; JsonParser.som:269:PUSH_SELF       
+; JsonParser.som:269:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:269:POP             
+; JsonParser.som:271:PUSH_CONSTANT   
+; JsonParser.som:271:RETURN_LOCAL    
+; JsonParser.som:230:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:230:POP             
+; JsonParser.som:231:PUSH_LOCAL_0    
+; JsonParser.som:231:PUSH_CONSTANT   
+; JsonParser.som:231:SEND            
+; Object.som:36:PUSH_SELF       
+; Object.som:36:PUSH_ARG_1      
+; Object.som:36:SEND            
+; Object.som:36:SEND_1          
+; Object.som:36:RETURN_LOCAL    
+; JsonParser.som:231:JUMP_ON_FALSE_TOP_NIL
+; {
+;   "trid": "55",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "667"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "55",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "4",
+;     "gidx": "667"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:53:PUSH_SELF       
+; JsonParser.som:53:SEND_1          
+; JsonParser.som:163:PUSH_SELF       
+; JsonParser.som:163:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:163:POP             
+; JsonParser.som:164:PUSH_SELF       
+; JsonParser.som:164:PUSH_CONSTANT_1 
+; JsonParser.som:164:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:164:POP             
+; JsonParser.som:165:PUSH_SELF       
+; JsonParser.som:165:PUSH_CONSTANT   
+; JsonParser.som:165:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:165:POP             
+; JsonParser.som:166:PUSH_SELF       
+; JsonParser.som:166:PUSH_CONSTANT   
+; JsonParser.som:166:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:166:POP             
+; JsonParser.som:167:PUSH_SELF       
+; JsonParser.som:167:PUSH_CONSTANT   
+; JsonParser.som:167:SEND            
+; JsonParser.som:172:PUSH_SELF       
+; JsonParser.som:172:PUSH_ARG_1      
+; JsonParser.som:172:SEND            
+; JsonParser.som:262:PUSH_FIELD      
+; JsonParser.som:262:PUSH_ARG_1      
+; JsonParser.som:262:SEND            
+; JsonParser.som:262:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:175:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:175:RETURN_SELF     
+; JsonParser.som:167:POP             
+; JsonParser.som:168:PUSH_GLOBAL     
+; JsonParser.som:169:SEND_1          
+; JsonParser.som:169:RETURN_LOCAL    
+; JsonParser.som:53:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "56",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "61",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "959"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "61",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "959"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "45"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "64",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "45"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:91:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:91:PUSH_LOCAL_0    
+; JsonParser.som:91:RETURN_LOCAL    
+; JsonParser.som:55:RETURN_LOCAL    
+; JsonParser.som:114:SEND            
+; JsonObject.som:36:PUSH_ARG_1      
+; JsonObject.som:36:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:36:POP             
+; JsonObject.som:37:PUSH_ARG_2      
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "67",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "393"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "67",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "14",
+;     "gidx": "393"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:292:PUSH_NIL        
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:136:JUMP_ON_TRUE_TOP_NIL
+; JsonParser.som:136:POP             
+; JsonParser.som:139:PUSH_LOCAL_0    
+; JsonParser.som:139:RETURN_LOCAL    
+; JsonParser.som:56:RETURN_LOCAL    
+; JsonParser.som:44:POP_LOCAL_0     
+; JsonParser.som:45:PUSH_SELF       
+; JsonParser.som:45:SEND_1          
+; {
+;   "trid": "70",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "1583"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "52"
+;   }
+; }
+; {
+;   "trid": "70",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "1583"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "52"
+;   }
+; }
+; JsonParser.som:262:POP             
+; JsonParser.som:263:PUSH_SELF       
+; JsonParser.som:263:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:263:POP             
+; JsonParser.som:265:PUSH_CONSTANT   
+; JsonParser.som:265:RETURN_LOCAL    
+; JsonParser.som:132:JUMP_ON_FALSE_POP
+; JsonParser.som:132:PUSH_SELF       
+; JsonParser.som:132:PUSH_LOCAL_0    
+; JsonParser.som:132:SEND            
+; {
+;   "trid": "73",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "55",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "73",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "55",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "75",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; Json.som:29:PUSH_GLOBAL     
+; Json.som:29:PUSH_GLOBAL     
+; Json.som:29:SEND_1          
+; Json.som:29:SEND            
+; JsonParser.som:359:PUSH_SELF       
+; JsonParser.som:359:SEND_1          
+; JsonParser.som:360:PUSH_ARG_1      
+; JsonParser.som:360:SEND            
+; JsonParser.som:30:PUSH_ARG_1      
+; JsonParser.som:30:POP_FIELD_0     
+; JsonParser.som:31:PUSH_0          
+; JsonParser.som:31:POP_FIELD_1     
+; JsonParser.som:32:PUSH_1          
+; JsonParser.som:32:POP_FIELD       
+; JsonParser.som:33:PUSH_0          
+; JsonParser.som:33:POP_FIELD       
+; JsonParser.som:34:PUSH_NIL        
+; JsonParser.som:34:POP_FIELD       
+; JsonParser.som:35:PUSH_CONSTANT_0 
+; JsonParser.som:35:POP_FIELD       
+; JsonParser.som:36:PUSH_CONSTANT_1 
+; JsonParser.som:36:POP_FIELD       
+; JsonParser.som:36:RETURN_SELF     
+; JsonParser.som:360:RETURN_LOCAL    
+; Json.som:29:SEND_1          
+; JsonParser.som:41:PUSH_BLOCK      
+; JsonParser.som:41:POP_FIELD       
+; JsonParser.som:42:PUSH_SELF       
+; JsonParser.som:42:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; Object.som:35:PUSH_SELF       
+; Object.som:35:PUSH_ARG_1      
+; Object.som:35:SEND            
+; Object.som:35:RETURN_LOCAL    
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:42:POP             
+; JsonParser.som:43:PUSH_SELF       
+; JsonParser.som:43:SEND_1          
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "1098"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "83",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "1098"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonParser.som:197:PUSH_NIL        
+; JsonParser.som:197:POP             
+; JsonParser.som:198:PUSH_SELF       
+; JsonParser.som:198:SEND_1          
+; JsonParser.som:306:PUSH_CONSTANT_0 
+; JsonParser.som:307:PUSH_FIELD      
+; JsonParser.som:307:SEND            
+; JsonParser.som:311:JUMP_ON_FALSE_POP
+; JsonParser.som:311:PUSH_FIELD_0    
+; JsonParser.som:311:PUSH_FIELD      
+; JsonParser.som:311:PUSH_FIELD_1    
+; JsonParser.som:311:DEC             
+; JsonParser.som:311:SEND            
+; String.som:60:PUSH_ARG_2      
+; String.som:60:PUSH_SELF       
+; String.som:60:SEND_1          
+; String.som:60:SEND            
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_0          
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:60:PUSH_ARG_1      
+; String.som:60:PUSH_ARG_2      
+; String.som:60:SEND            
+; String.som:60:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; String.som:64:JUMP_ON_FALSE_POP
+; String.som:64:PUSH_SELF       
+; String.som:64:PUSH_ARG_1      
+; String.som:64:PUSH_ARG_2      
+; String.som:64:SEND            
+; String.som:64:RETURN_LOCAL    
+; JsonParser.som:311:DUP             
+; JsonParser.som:311:POP_LOCAL_0     
+; JsonParser.som:311:JUMP            
+; JsonParser.som:311:POP             
+; JsonParser.som:312:PUSH_CONSTANT   
+; JsonParser.som:312:POP_FIELD       
+; JsonParser.som:315:PUSH_LOCAL_0    
+; JsonParser.som:315:RETURN_LOCAL    
+; JsonParser.som:198:POP_LOCAL_0     
+; JsonParser.som:199:PUSH_SELF       
+; JsonParser.som:199:SEND_1          
+; JsonParser.som:280:PUSH_FIELD      
+; JsonParser.som:280:PUSH_CONSTANT_0 
+; JsonParser.som:280:SEND            
+; JsonParser.som:283:JUMP_ON_FALSE_TOP_NIL
+; JsonParser.som:283:POP             
+; JsonParser.som:285:PUSH_FIELD_1    
+; JsonParser.som:285:INC             
+; JsonParser.som:285:DUP             
+; JsonParser.som:285:POP_FIELD_1     
+; JsonParser.som:285:POP             
+; JsonParser.som:286:PUSH_FIELD      
+; JsonParser.som:286:INC             
+; JsonParser.som:286:DUP             
+; JsonParser.som:286:POP_FIELD       
+; JsonParser.som:286:POP             
+; JsonParser.som:288:PUSH_FIELD_0    
+; JsonParser.som:288:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonParser.som:288:POP             
+; JsonParser.som:289:PUSH_FIELD_1    
+; JsonParser.som:289:PUSH_FIELD_0    
+; JsonParser.som:290:SEND_1          
+; JsonParser.som:290:SEND            
+; JsonParser.som:292:JUMP_ON_FALSE_POP
+; JsonParser.som:292:PUSH_FIELD_0    
+; JsonParser.som:292:PUSH_FIELD_1    
+; JsonParser.som:292:SEND            
+; JsonParser.som:292:DUP             
+; JsonParser.som:292:POP_FIELD       
+; JsonParser.som:292:JUMP            
+; JsonParser.som:292:RETURN_SELF     
+; JsonParser.som:199:POP             
+; JsonParser.som:201:PUSH_LOCAL_0    
+; JsonParser.som:201:RETURN_LOCAL    
+; JsonParser.som:144:RETURN_LOCAL    
+; JsonParser.som:107:POP_LOCAL_0     
+; JsonParser.som:108:PUSH_SELF       
+; JsonParser.som:108:SEND_1          
+; {
+;   "trid": "116",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "83",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "116",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "83",
+;     "gidx": "36"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonString.som:37:PUSH_SELF       
+; JsonString.som:37:SEND_1          
+; JsonString.som:37:PUSH_ARG_1      
+; JsonString.som:37:SEND            
+; JsonString.som:37:RETURN_LOCAL    
+; JsonParser.som:179:RETURN_LOCAL    
+; JsonParser.som:54:RETURN_LOCAL    
+; JsonParser.som:78:SEND            
+; JsonArray.som:32:PUSH_ARG_1      
+; JsonArray.som:32:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonArray.som:32:POP             
+; JsonArray.som:33:PUSH_FIELD_0    
+; JsonArray.som:34:PUSH_ARG_1      
+; JsonArray.som:34:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonArray.som:34:RETURN_SELF     
+; JsonParser.som:78:POP             
+; JsonParser.som:79:PUSH_SELF       
+; JsonParser.som:79:SEND_1          
+; {
+;   "trid": "205",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "116",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "205",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "116",
+;     "gidx": "249"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; JsonObject.som:37:JUMP_ON_NOT_NIL_TOP_TOP
+; JsonObject.som:37:POP             
+; JsonObject.som:39:PUSH_FIELD      
+; JsonObject.som:39:PUSH_ARG_1      
+; JsonObject.som:39:PUSH_FIELD_0    
+; JsonObject.som:39:SEND_1          
+; JsonObject.som:39:INC             
+; JsonObject.som:39:SEND            
+; HashIndexTable.som:35:PUSH_SELF       
+; HashIndexTable.som:35:PUSH_ARG_1      
+; HashIndexTable.som:35:SEND            
+; HashIndexTable.som:57:PUSH_SELF       
+; HashIndexTable.som:57:PUSH_ARG_1      
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:53:PUSH_ARG_1      
+; HashIndexTable.som:53:SEND_1          
+; HashIndexTable.som:54:PUSH_CONSTANT_1 
+; HashIndexTable.som:54:SEND            
+; HashIndexTable.som:54:RETURN_LOCAL    
+; HashIndexTable.som:57:PUSH_FIELD_0    
+; HashIndexTable.som:57:SEND_1          
+; HashIndexTable.som:57:DEC             
+; HashIndexTable.som:57:SEND            
+; HashIndexTable.som:57:INC             
+; HashIndexTable.som:58:RETURN_LOCAL    
+; HashIndexTable.som:35:POP_LOCAL_0     
+; HashIndexTable.som:37:PUSH_ARG_2      
+; HashIndexTable.som:38:PUSH_CONSTANT_1 
+; HashIndexTable.som:38:SEND            
+; HashIndexTable.som:40:JUMP_ON_FALSE_POP
+; HashIndexTable.som:40:PUSH_FIELD_0    
+; HashIndexTable.som:40:PUSH_LOCAL_0    
+; HashIndexTable.som:40:PUSH_ARG_2      
+; HashIndexTable.som:40:INC             
+; HashIndexTable.som:40:SEND            
+; HashIndexTable.som:40:JUMP            
+; HashIndexTable.som:40:RETURN_SELF     
+; JsonObject.som:39:POP             
+; JsonObject.som:40:PUSH_FIELD_0    
+; JsonObject.som:40:PUSH_ARG_1      
+; JsonObject.som:40:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:40:POP             
+; JsonObject.som:41:PUSH_FIELD_1    
+; JsonObject.som:41:PUSH_ARG_2      
+; JsonObject.som:41:SEND            
+; Vector.som:54:PUSH_FIELD_1    
+; Vector.som:54:PUSH_FIELD      
+; Vector.som:54:SEND_1          
+; Vector.som:54:SEND            
+; Vector.som:59:JUMP_ON_FALSE_TOP_NIL
+; Vector.som:59:POP             
+; Vector.som:61:PUSH_FIELD      
+; Vector.som:61:PUSH_FIELD_1    
+; Vector.som:61:PUSH_ARG_1      
+; Vector.som:61:SEND            
+; Vector.som:61:POP             
+; Vector.som:62:PUSH_FIELD_1    
+; Vector.som:62:INC             
+; Vector.som:62:DUP             
+; Vector.som:62:POP_FIELD_1     
+; Vector.som:62:POP             
+; Vector.som:62:RETURN_SELF     
+; JsonObject.som:41:POP             
+; JsonObject.som:41:RETURN_SELF     
+; JsonParser.som:114:POP             
+; JsonParser.som:116:PUSH_SELF       
+; JsonParser.som:116:SEND_1          

@@ -1,0 +1,212 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Sieve.som:47:PUSH_LOCAL_2    
+; Sieve.som:47:PUSH_ARG_2      
+; Sieve.som:47:SEND            
+; Sieve.som:47:JUMP_ON_FALSE_POP
+; Sieve.som:47:PUSH_ARG_1      
+; Sieve.som:47:PUSH_LOCAL_2    
+; Sieve.som:47:DEC             
+; Sieve.som:47:PUSH_CONSTANT   
+; Sieve.som:47:SEND            
+; Sieve.som:47:POP             
+; Sieve.som:47:PUSH_LOCAL_2    
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:SEND            
+; Sieve.som:47:DUP             
+; Sieve.som:47:POP_LOCAL_2     
+; Sieve.som:47:POP             
+; Sieve.som:47:JUMP_BACKWARD   
+; peel
+; Sieve.som:47:PUSH_LOCAL_2    
+; Sieve.som:47:PUSH_ARG_2      
+; Sieve.som:47:SEND            
+; Sieve.som:47:JUMP_ON_FALSE_POP
+; Sieve.som:47:PUSH_ARG_1      
+; Sieve.som:47:PUSH_LOCAL_2    
+; Sieve.som:47:DEC             
+; Sieve.som:47:PUSH_CONSTANT   
+; Sieve.som:47:SEND            
+; Sieve.som:47:POP             
+; Sieve.som:47:PUSH_LOCAL_2    
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:SEND            
+; Sieve.som:47:DUP             
+; Sieve.som:47:POP_LOCAL_2     
+; Sieve.som:47:POP             
+; Sieve.som:47:JUMP_BACKWARD   
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Sieve.som:47:JUMP_IF_GREATER 
+; Sieve.som:47:DUP             
+; Sieve.som:47:POP_LOCAL_1     
+; Sieve.som:47:PUSH_ARG_1      
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:DEC             
+; Sieve.som:47:SEND            
+; Sieve.som:47:JUMP_ON_FALSE_TOP_NIL
+; Sieve.som:47:POP             
+; Sieve.som:47:INC             
+; Sieve.som:47:JUMP_BACKWARD   
+; peel
+; Sieve.som:47:JUMP_IF_GREATER 
+; Sieve.som:47:DUP             
+; Sieve.som:47:POP_LOCAL_1     
+; Sieve.som:47:PUSH_ARG_1      
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:DEC             
+; Sieve.som:47:SEND            
+; Sieve.som:47:JUMP_ON_FALSE_TOP_NIL
+; Sieve.som:47:POP             
+; Sieve.som:47:INC             
+; Sieve.som:47:JUMP_BACKWARD   
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "90"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "90"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Sieve.som:47:PUSH_NIL        
+; Sieve.som:47:POP             
+; Sieve.som:47:INC             
+; Sieve.som:47:JUMP_BACKWARD   
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "14"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "14"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Sieve.som:47:PUSH_LOCAL_0    
+; Sieve.som:47:INC             
+; Sieve.som:47:POP_LOCAL_0     
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:SEND            
+; Sieve.som:47:POP_LOCAL_2     
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "215"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "215"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "2"
+;   }
+; }
+; Sieve.som:47:PUSH_NIL        
+; Sieve.som:47:POP             
+; Sieve.som:47:INC             
+; Sieve.som:47:JUMP_BACKWARD   
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "78"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "78"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Sieve.som:47:PUSH_LOCAL_0    
+; Sieve.som:47:INC             
+; Sieve.som:47:POP_LOCAL_0     
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:PUSH_LOCAL_1    
+; Sieve.som:47:SEND            
+; Sieve.som:47:POP_LOCAL_2     

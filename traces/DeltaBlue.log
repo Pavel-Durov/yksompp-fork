@@ -1,0 +1,92 @@
+yk-tracing: start-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Planner.som:151:PUSH_LOCAL_0    
+yk-warning: stop-tracing-aborted: Trace too long: Planner.som:151:PUSH_LOCAL_0    
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Planner.som:151:PUSH_LOCAL_0    
+yk-tracing: start-tracing: SomDictionary.som:54:PUSH_LOCAL_1    
+yk-warning: stop-tracing-aborted: Trace too long: Planner.som:151:PUSH_LOCAL_0    
+yk-tracing: start-tracing: Planner.som:229:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: SomDictionary.som:54:PUSH_LOCAL_1    
+yk-tracing: start-tracing: Planner.som:44:PUSH_LOCAL_1    
+yk-tracing: stop-tracing: Planner.som:229:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Planner.som:151:PUSH_LOCAL_0    
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Planner.som:106:PUSH_LOCAL_2    
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Planner.som:203:PUSH_LOCAL_1    
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Vector.som:69:PUSH_FIELD_0    
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Planner.som:259:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: SomDictionary.som:54:PUSH_LOCAL_1    
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Planner.som:106:PUSH_LOCAL_2    
+yk-tracing: stop-tracing: Vector.som:69:PUSH_FIELD_0    
+yk-tracing: start-side-tracing: Planner.som:106:PUSH_LOCAL_2    
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:69:PUSH_FIELD_0    
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Planner.som:270:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Planner.som:270:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Planner.som:106:PUSH_LOCAL_2    
+yk-warning: stop-tracing-aborted: Trace too long: Vector.som:69:PUSH_FIELD_0    
+yk-tracing: start-side-tracing: Planner.som:106:PUSH_LOCAL_2    
+yk-tracing: stop-tracing: Vector.som:69:PUSH_FIELD_0    
+yk-tracing: start-side-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Vector.som:70:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Planner.som:203:PUSH_LOCAL_1    
+yk-tracing: stop-tracing: Vector.som:69:PUSH_FIELD_0    
+yk-tracing: start-tracing: Planner.som:276:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Planner.som:276:JUMP_IF_GREATER 

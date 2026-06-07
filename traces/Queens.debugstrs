@@ -1,0 +1,489 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; Queens.som:53:JUMP_IF_GREATER 
+; Queens.som:53:DUP             
+; Queens.som:53:POP_LOCAL_0     
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:SEND            
+; Queens.som:58:PUSH_FIELD_1    
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:PUSH_FIELD_0    
+; Queens.som:58:PUSH_ARG_2      
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:58:PUSH_FIELD      
+; Queens.som:58:PUSH_ARG_2      
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:PUSH_CONSTANT   
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Queens.som:59:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:59:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; peel
+; Queens.som:53:JUMP_IF_GREATER 
+; Queens.som:53:DUP             
+; Queens.som:53:POP_LOCAL_0     
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:SEND            
+; Queens.som:58:PUSH_FIELD_1    
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:PUSH_FIELD_0    
+; Queens.som:58:PUSH_ARG_2      
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; True.som:38:PUSH_ARG_1      
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:58:PUSH_FIELD      
+; Queens.som:58:PUSH_ARG_2      
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:PUSH_CONSTANT   
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Queens.som:59:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:59:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "684"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "684"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Queens.som:58:PUSH_FIELD      
+; Queens.som:58:PUSH_ARG_2      
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:PUSH_CONSTANT   
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Queens.som:59:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:59:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "473"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "473"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:59:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "900"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "900"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Queens.som:53:POP             
+; Queens.som:55:PUSH_CONSTANT   
+; Queens.som:55:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:PUSH_CONSTANT   
+; Queens.som:53:SEND            
+; Queens.som:62:PUSH_FIELD_1    
+; Queens.som:62:PUSH_ARG_1      
+; Queens.som:62:PUSH_ARGUMENT   
+; Queens.som:62:SEND            
+; Queens.som:62:POP             
+; Queens.som:63:PUSH_FIELD_0    
+; Queens.som:63:PUSH_ARG_2      
+; Queens.som:63:PUSH_ARG_1      
+; Queens.som:63:SEND            
+; Queens.som:63:PUSH_ARGUMENT   
+; Queens.som:63:SEND            
+; Queens.som:63:POP             
+; Queens.som:64:PUSH_FIELD      
+; Queens.som:64:PUSH_ARG_2      
+; Queens.som:64:PUSH_ARG_1      
+; Queens.som:64:SEND            
+; Queens.som:64:PUSH_CONSTANT   
+; Queens.som:64:SEND            
+; Queens.som:64:PUSH_ARGUMENT   
+; Queens.som:64:SEND            
+; Queens.som:64:POP             
+; Queens.som:64:RETURN_SELF     
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "231"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "231"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Queens.som:58:PUSH_FIELD      
+; Queens.som:58:PUSH_ARG_2      
+; Queens.som:58:PUSH_ARG_1      
+; Queens.som:58:SEND            
+; Queens.som:58:PUSH_CONSTANT   
+; Queens.som:58:SEND            
+; Queens.som:58:SEND            
+; Queens.som:59:SEND            
+; Boolean.som:36:PUSH_SELF       
+; Boolean.som:36:PUSH_ARG_1      
+; Boolean.som:36:SEND            
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:59:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Queens.som:46:PUSH_1          
+; Queens.som:46:PUSH_CONSTANT_0 
+; Queens.som:53:DUP_SECOND      
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "12"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "12"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; Queens.som:53:PUSH_FIELD      
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:SEND            
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:PUSH_CONSTANT   
+; Queens.som:53:SEND            
+; Queens.som:62:PUSH_FIELD_1    
+; Queens.som:62:PUSH_ARG_1      
+; Queens.som:62:PUSH_ARGUMENT   
+; Queens.som:62:SEND            
+; Queens.som:62:POP             
+; Queens.som:63:PUSH_FIELD_0    
+; Queens.som:63:PUSH_ARG_2      
+; Queens.som:63:PUSH_ARG_1      
+; Queens.som:63:SEND            
+; Queens.som:63:PUSH_ARGUMENT   
+; Queens.som:63:SEND            
+; Queens.som:63:POP             
+; Queens.som:64:PUSH_FIELD      
+; Queens.som:64:PUSH_ARG_2      
+; Queens.som:64:PUSH_ARG_1      
+; Queens.som:64:SEND            
+; Queens.som:64:PUSH_CONSTANT   
+; Queens.som:64:SEND            
+; Queens.som:64:PUSH_ARGUMENT   
+; Queens.som:64:SEND            
+; Queens.som:64:POP             
+; Queens.som:64:RETURN_SELF     
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:PUSH_CONSTANT   
+; Queens.som:53:SEND            
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:INC             
+; Queens.som:53:SEND            
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "20"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "20"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; True.som:38:SEND_1          
+; Object.som:<unknown>:RETURN_SELF     
+; True.som:38:RETURN_LOCAL    
+; Boolean.som:36:RETURN_LOCAL    
+; Queens.som:59:RETURN_LOCAL    
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:INC             
+; Queens.som:53:JUMP_BACKWARD   
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "12"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "7",
+;     "gidx": "12"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "6"
+;   }
+; }
+; Queens.som:53:PUSH_FIELD      
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:SEND            
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_LOCAL_0    
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:PUSH_CONSTANT   
+; Queens.som:53:SEND            
+; Queens.som:62:PUSH_FIELD_1    
+; Queens.som:62:PUSH_ARG_1      
+; Queens.som:62:PUSH_ARGUMENT   
+; Queens.som:62:SEND            
+; Queens.som:62:POP             
+; Queens.som:63:PUSH_FIELD_0    
+; Queens.som:63:PUSH_ARG_2      
+; Queens.som:63:PUSH_ARG_1      
+; Queens.som:63:SEND            
+; Queens.som:63:PUSH_ARGUMENT   
+; Queens.som:63:SEND            
+; Queens.som:63:POP             
+; Queens.som:64:PUSH_FIELD      
+; Queens.som:64:PUSH_ARG_2      
+; Queens.som:64:PUSH_ARG_1      
+; Queens.som:64:SEND            
+; Queens.som:64:PUSH_CONSTANT   
+; Queens.som:64:SEND            
+; Queens.som:64:PUSH_ARGUMENT   
+; Queens.som:64:SEND            
+; Queens.som:64:POP             
+; Queens.som:64:RETURN_SELF     
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:PUSH_CONSTANT   
+; Queens.som:53:SEND            
+; Queens.som:53:JUMP_ON_FALSE_TOP_NIL
+; Queens.som:53:POP             
+; Queens.som:53:PUSH_SELF       
+; Queens.som:53:PUSH_ARG_1      
+; Queens.som:53:INC             
+; Queens.som:53:SEND            
+; {
+;   "trid": "129",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "10"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "129",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "6",
+;     "gidx": "10"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; Queens.som:46:PUSH_CONSTANT_0 
+; Queens.som:53:DUP_SECOND      

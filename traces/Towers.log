@@ -1,0 +1,110 @@
+yk-tracing: start-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Benchmark.som:27:JUMP_IF_GREATER 
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: stop-tracing: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      
+yk-tracing: start-side-tracing: Towers.som:68:PUSH_ARG_1      
+yk-warning: stop-tracing-aborted: Trace too long: Towers.som:68:PUSH_ARG_1      

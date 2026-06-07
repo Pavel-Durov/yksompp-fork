@@ -1,0 +1,356 @@
+yk-tracing: start-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: stop-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-tracing: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-tracing: Integer.som:95:PUSH_SELF       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Integer.som:90:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:95:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-tracing: stop-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:43:PUSH_ARGUMENT   
+yk-warning: stop-tracing-aborted: Trace too long: Permute.som:38:INC_FIELD       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       
+yk-tracing: start-side-tracing: Permute.som:38:INC_FIELD       
+yk-warning: stop-tracing-aborted: Trace too long: Integer.som:90:PUSH_SELF       

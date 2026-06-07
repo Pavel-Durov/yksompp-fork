@@ -1,0 +1,528 @@
+yk-tracing: start-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing
+yk-tracing: start-tracing
+yk-tracing: stop-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:96:PUSH_SELF       
+yk-tracing: start-tracing: JsonParser.som:96:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-tracing: JsonParser.som:77:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing
+yk-tracing: start-tracing
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:132:PUSH_SELF       
+yk-tracing: start-tracing: JsonParser.som:132:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:132:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:106:PUSH_SELF       
+yk-tracing: start-tracing: JsonParser.som:106:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:96:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing
+yk-tracing: start-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing: JsonParser.som:106:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-tracing: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: stop-tracing
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: Benchmark.som:27:JUMP_IF_GREATER 
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: stop-tracing: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:231:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:231:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:96:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long
+yk-tracing: start-side-tracing: JsonParser.som:276:PUSH_SELF       
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:77:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:197:PUSH_FIELD      
+yk-tracing: start-side-tracing: JsonParser.som:197:PUSH_FIELD      
+yk-warning: stop-tracing-aborted: Trace too long: JsonParser.som:276:PUSH_SELF       

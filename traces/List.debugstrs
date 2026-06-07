@@ -1,0 +1,775 @@
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "0",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; List.som:54:PUSH_LOCAL_1    
+; List.som:54:SEND_1          
+; List.som:54:JUMP_ON_TRUE_POP
+; List.som:54:PUSH_NIL        
+; List.som:54:POP             
+; List.som:57:PUSH_CONSTANT   
+; List.som:57:RETURN_LOCAL    
+; List.som:66:JUMP_ON_FALSE_POP
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:RETURN_LOCAL    
+; List.som:66:PUSH_SELF       
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:PUSH_ARG_1      
+; List.som:66:SEND            
+; List.som:60:PUSH_SELF       
+; List.som:60:PUSH_ARG_2      
+; List.som:60:PUSH_ARG_1      
+; List.som:60:SEND            
+; List.som:49:PUSH_ARG_1      
+; List.som:49:POP_LOCAL_0     
+; List.som:49:PUSH_ARG_2      
+; List.som:49:POP_LOCAL_1     
+; peel
+; List.som:54:PUSH_LOCAL_1    
+; List.som:54:SEND_1          
+; List.som:54:JUMP_ON_TRUE_POP
+; List.som:54:PUSH_NIL        
+; List.som:54:POP             
+; List.som:57:PUSH_CONSTANT   
+; List.som:57:RETURN_LOCAL    
+; List.som:66:JUMP_ON_FALSE_POP
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:RETURN_LOCAL    
+; List.som:66:PUSH_SELF       
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:PUSH_ARG_1      
+; List.som:66:SEND            
+; List.som:60:PUSH_SELF       
+; List.som:60:PUSH_ARG_2      
+; List.som:60:PUSH_ARG_1      
+; List.som:60:SEND            
+; List.som:49:PUSH_ARG_1      
+; List.som:49:POP_LOCAL_0     
+; List.som:49:PUSH_ARG_2      
+; List.som:49:POP_LOCAL_1     
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "353"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "1",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "353"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; List.som:54:PUSH_LOCAL_0    
+; List.som:54:SEND_1          
+; List.som:54:JUMP_ON_FALSE_TOP_NIL
+; List.som:54:POP             
+; List.som:54:PUSH_LOCAL_0    
+; List.som:54:SEND_1          
+; List.som:54:DUP             
+; List.som:54:POP_LOCAL_0     
+; List.som:54:POP             
+; List.som:54:PUSH_LOCAL_1    
+; List.som:54:SEND_1          
+; List.som:54:DUP             
+; List.som:54:POP_LOCAL_1     
+; List.som:54:POP             
+; List.som:54:JUMP_BACKWARD   
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "3",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; List.som:60:PUSH_SELF       
+; List.som:60:PUSH_ARG_2      
+; List.som:60:PUSH_ARG_1      
+; List.som:60:SEND            
+; List.som:49:PUSH_ARG_1      
+; List.som:49:POP_LOCAL_0     
+; List.som:49:PUSH_ARG_2      
+; List.som:49:POP_LOCAL_1     
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "327"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "2",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "327"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "323"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "4",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "323"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARG_1      
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND            
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "5",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "2",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; List.som:66:RETURN_LOCAL    
+; List.som:66:PUSH_SELF       
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:PUSH_ARG_1      
+; List.som:66:SEND            
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "77"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "6",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "1",
+;     "gidx": "77"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; List.som:54:PUSH_CONSTANT_1 
+; List.som:54:RETURN_LOCAL    
+; List.som:66:JUMP_ON_FALSE_POP
+; List.som:66:PUSH_SELF       
+; List.som:66:PUSH_SELF       
+; List.som:66:PUSH_ARG_1      
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARG_2      
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:SEND            
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "159"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "7",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "0",
+;     "gidx": "159"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; List.som:54:PUSH_LOCAL_0    
+; List.som:54:SEND_1          
+; List.som:54:JUMP_ON_FALSE_TOP_NIL
+; List.som:54:POP             
+; List.som:54:PUSH_LOCAL_0    
+; List.som:54:SEND_1          
+; List.som:54:DUP             
+; List.som:54:POP_LOCAL_0     
+; List.som:54:POP             
+; List.som:54:PUSH_LOCAL_1    
+; List.som:54:SEND_1          
+; List.som:54:DUP             
+; List.som:54:POP_LOCAL_1     
+; List.som:54:POP             
+; List.som:54:JUMP_BACKWARD   
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "75"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "8",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "75"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "9",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "8",
+;     "gidx": "28"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARGUMENT   
+; List.som:66:PUSH_ARG_1      
+; List.som:66:SEND            
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "70"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "10",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "70"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARG_1      
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND            
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "70"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "11",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "70"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; List.som:66:SEND_1          
+; List.som:66:PUSH_ARG_1      
+; List.som:66:PUSH_ARG_2      
+; List.som:66:SEND            
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "73"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "12",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "5",
+;     "gidx": "73"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "3"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "13",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; List.som:37:PUSH_ARG_1      
+; List.som:37:PUSH_0          
+; List.som:37:SEND            
+; List.som:44:JUMP_ON_FALSE_POP
+; List.som:44:PUSH_GLOBAL     
+; List.som:44:PUSH_ARG_1      
+; List.som:44:SEND            
+; ListElement.som:40:PUSH_SELF       
+; ListElement.som:40:SEND_1          
+; ListElement.som:40:PUSH_ARG_1      
+; ListElement.som:40:SEND            
+; ListElement.som:34:PUSH_ARG_1      
+; ListElement.som:34:POP_FIELD_0     
+; ListElement.som:35:PUSH_NIL        
+; ListElement.som:35:POP_FIELD_1     
+; ListElement.som:35:RETURN_SELF     
+; ListElement.som:40:RETURN_LOCAL    
+; List.som:44:POP_LOCAL_0     
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:PUSH_SELF       
+; List.som:44:PUSH_ARG_1      
+; List.som:44:DEC             
+; List.som:44:SEND            
+; peel
+; List.som:37:PUSH_ARG_1      
+; List.som:37:PUSH_0          
+; List.som:37:SEND            
+; List.som:44:JUMP_ON_FALSE_POP
+; List.som:44:PUSH_GLOBAL     
+; List.som:44:PUSH_ARG_1      
+; List.som:44:SEND            
+; ListElement.som:40:PUSH_SELF       
+; ListElement.som:40:SEND_1          
+; ListElement.som:40:PUSH_ARG_1      
+; ListElement.som:40:SEND            
+; ListElement.som:34:PUSH_ARG_1      
+; ListElement.som:34:POP_FIELD_0     
+; ListElement.som:35:PUSH_NIL        
+; ListElement.som:35:POP_FIELD_1     
+; ListElement.som:35:RETURN_SELF     
+; ListElement.som:40:RETURN_LOCAL    
+; List.som:44:POP_LOCAL_0     
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:PUSH_SELF       
+; List.som:44:PUSH_ARG_1      
+; List.som:44:DEC             
+; List.som:44:SEND            
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; {
+;   "trid": "15",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Loop"
+;   }
+; }
+; ListElement.som:25:PUSH_FIELD_1    
+; ListElement.som:25:SEND_1          
+; ListElement.som:25:JUMP_ON_FALSE_POP
+; ListElement.som:25:PUSH_1          
+; ListElement.som:25:PUSH_FIELD_1    
+; ListElement.som:25:SEND_1          
+; peel
+; ListElement.som:25:PUSH_FIELD_1    
+; ListElement.som:25:SEND_1          
+; ListElement.som:25:JUMP_ON_FALSE_POP
+; ListElement.som:25:PUSH_1          
+; ListElement.som:25:PUSH_FIELD_1    
+; ListElement.som:25:SEND_1          
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "73"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "15"
+;   }
+; }
+; {
+;   "trid": "14",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "9",
+;     "gidx": "73"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "15"
+;   }
+; }
+; List.som:29:PUSH_LOCAL_0    
+; List.som:30:SEND_1          
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "193"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "16",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "13",
+;     "gidx": "193"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; List.som:44:PUSH_NIL        
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:44:SEND            
+; List.som:44:POP             
+; List.som:44:PUSH_LOCAL_0    
+; List.som:44:RETURN_LOCAL    
+; List.som:27:PUSH_SELF       
+; List.som:27:PUSH_CONSTANT_2 
+; List.som:27:SEND            
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "19",
+;   "start": {
+;     "kind": "ControlPoint"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; Benchmark.som:27:JUMP_IF_GREATER 
+; Benchmark.som:27:DUP             
+; Benchmark.som:27:POP_LOCAL_0     
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:PUSH_SELF       
+; Benchmark.som:27:SEND_1          
+; List.som:26:PUSH_SELF       
+; List.som:26:PUSH_SELF       
+; List.som:26:PUSH_CONSTANT_0 
+; List.som:26:SEND            
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "57"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; {
+;   "trid": "18",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "15",
+;     "gidx": "57"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "19"
+;   }
+; }
+; ListElement.som:25:PUSH_1          
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; ListElement.som:25:SEND            
+; ListElement.som:25:RETURN_LOCAL    
+; List.som:30:RETURN_LOCAL    
+; Benchmark.som:27:SEND            
+; List.som:33:PUSH_CONSTANT_0 
+; List.som:34:PUSH_ARG_1      
+; List.som:34:SEND            
+; List.som:34:RETURN_LOCAL    
+; Benchmark.som:27:JUMP_ON_TRUE_TOP_NIL
+; Benchmark.som:27:POP             
+; Benchmark.som:27:INC             
+; Benchmark.som:27:JUMP_BACKWARD   
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "193"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; {
+;   "trid": "20",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "193"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "13"
+;   }
+; }
+; List.som:28:PUSH_CONSTANT   
+; List.som:28:SEND            
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "290"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; {
+;   "trid": "21",
+;   "start": {
+;     "kind": "Guard",
+;     "src_trid": "16",
+;     "gidx": "290"
+;   },
+;   "end": {
+;     "kind": "Coupler",
+;     "tgt_trid": "0"
+;   }
+; }
+; List.som:60:PUSH_ARG_2      
+; List.som:60:PUSH_ARG_1      
+; List.som:60:SEND            
+; List.som:49:PUSH_ARG_1      
+; List.som:49:POP_LOCAL_0     
+; List.som:49:PUSH_ARG_2      
+; List.som:49:POP_LOCAL_1     
