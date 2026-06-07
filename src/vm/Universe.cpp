@@ -59,6 +59,7 @@
 #include "../vmobjects/VMObject.h"
 #include "../vmobjects/VMObjectBase.h"
 #include "../vmobjects/VMString.h"
+#include "../vmobjects/VMVector.h"
 #include "../yk/yk_linkage.h"
 #include "Globals.h"
 #include "IsValidObject.h"
@@ -76,6 +77,7 @@ YK_STATIC gc_oop_t prebuildInts[INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE + 1];
 // Here we go:
 uint8_t dumpBytecodes;
 uint8_t gcVerbosity;
+bool abortOnCoreLibHashMismatch = false;
 
 YK_STATIC std::string bm_name;
 YK_STATIC map<int64_t, int64_t> integerHist;
@@ -173,6 +175,12 @@ static void printVmConfig() {
         cout << "\tnot caching integers\n";
     }
 
+    if (USE_VECTOR_PRIMITIVES) {
+        cout << "\tVector primitives: enabled\n";
+    } else {
+        cout << "\tVector primitives: disabled\n";
+    }
+
     cout << "--------------------------------------\n";
 }
 
@@ -180,20 +188,21 @@ vector<std::string> Universe::handleArguments(int32_t argc, char** argv) {
     vector<std::string> vmArgs = vector<std::string>();
     dumpBytecodes = 0;
     gcVerbosity = 0;
+    bool sawOtherArgs = false;
 
     for (int32_t i = 1; i < argc; ++i) {
-        if (strncmp(argv[i], "-cp", 3) == 0) {
+        if (!sawOtherArgs && strncmp(argv[i], "-cp", 3) == 0) {
             if ((argc == i + 1) || !classPath.empty()) {
                 printUsageAndExit(argv[0]);
             }
             setupClassPath(std::string(argv[++i]));
-        } else if (strncmp(argv[i], "-d", 2) == 0) {
+        } else if (!sawOtherArgs && strncmp(argv[i], "-d", 2) == 0) {
             ++dumpBytecodes;
-        } else if (strncmp(argv[i], "-cfg", 4) == 0) {
+        } else if (!sawOtherArgs && strncmp(argv[i], "-cfg", 4) == 0) {
             printVmConfig();
-        } else if (strncmp(argv[i], "-g", 2) == 0) {
+        } else if (!sawOtherArgs && strncmp(argv[i], "-g", 2) == 0) {
             ++gcVerbosity;
-        } else if (strncmp(argv[i], "-H", 2) == 0) {
+        } else if (!sawOtherArgs && strncmp(argv[i], "-H", 2) == 0) {
             size_t heap_size = 0;
             char unit[3];
             // NOLINTNEXTLINE (cert-err34-c)
@@ -206,26 +215,30 @@ vector<std::string> Universe::handleArguments(int32_t argc, char** argv) {
             } else {
                 printUsageAndExit(argv[0]);
             }
-
-        } else if ((strncmp(argv[i], "-h", 2) == 0) ||
-                   (strncmp(argv[i], "--help", 6) == 0)) {
+        } else if (!sawOtherArgs && ((strncmp(argv[i], "-h", 2) == 0) ||
+                                     (strncmp(argv[i], "--help", 6) == 0))) {
             printUsageAndExit(argv[0]);
+        } else if (!sawOtherArgs &&
+                   (strncmp(argv[i], "-prim-hash-check", 16)) == 0) {
+            abortOnCoreLibHashMismatch = true;
         } else {
-            vector<std::string> extPathTokens = vector<std::string>(2);
+            sawOtherArgs = true;
+
             std::string const tmpString = std::string(argv[i]);
-            if (getClassPathExt(extPathTokens, tmpString)) {
-                addClassPath(extPathTokens[0]);
-            }
-            // Different from CSOM!!!:
-            // In CSOM there is an else, where the original filename is pushed
-            // into the vm_args. But unlike the class name in extPathTokens
-            // (extPathTokens[1]) that could still have the .som suffix though.
-            // So in SOM++ getClassPathExt will strip the suffix and add it to
-            // extPathTokens even if there is no new class path present. So we
-            // can in any case do the following:
-            vmArgs.push_back(extPathTokens[1]);
+            vmArgs.push_back(tmpString);
         }
     }
+
+    if (!vmArgs.empty()) {
+        vector<std::string> extPathTokens = vector<std::string>(2);
+        std::string const firstArg = vmArgs[0];
+        if (getClassPathExt(extPathTokens, firstArg)) {
+            addClassPath(extPathTokens[0]);
+        }
+
+        vmArgs[0] = extPathTokens[1];
+    }
+
     addClassPath(std::string("."));
 
     return vmArgs;
@@ -279,6 +292,10 @@ void Universe::printUsageAndExit(char* executable) {
     cout << "         set search path for application classes\n";
     cout << "    -d   enable disassembling (twice for tracing)\n";
     cout << "    -cfg print VM configuration\n";
+    cout << "    -prim-hash-check check that method replacements have expected "
+            "hash.\n";
+    cout
+        << "                     Exit with error when a hash does not match.\n";
     cout
         << "    -g   enable garbage collection details:\n"
         << "         1x - print statistics when VM shuts down\n"
@@ -287,7 +304,7 @@ void Universe::printUsageAndExit(char* executable) {
         << "\n";
     cout << "    -HxMB set the heap size to x MB (default: 1 MB)\n";
     cout << "    -HxKB set the heap size to x KB (default: 1 MB)\n";
-    cout << "    -h  show this help\n";
+    cout << "    -h|--help show this help\n";
 
     Quit(ERR_SUCCESS);
 }
@@ -428,6 +445,7 @@ VMObject* Universe::InitializeGlobals() {
     nilClass = store_root(NewSystemClass());
     classClass = store_root(NewSystemClass());
     arrayClass = store_root(NewSystemClass());
+    vectorClass = store_root(NewSystemClass());
     symbolClass = store_root(NewSystemClass());
     methodClass = store_root(NewSystemClass());
     integerClass = store_root(NewSystemClass());
@@ -443,6 +461,8 @@ VMObject* Universe::InitializeGlobals() {
                           "Metaclass");
     InitializeSystemClass(load_ptr(nilClass), load_ptr(objectClass), "Nil");
     InitializeSystemClass(load_ptr(arrayClass), load_ptr(objectClass), "Array");
+    InitializeSystemClass(load_ptr(vectorClass), load_ptr(objectClass),
+                          "Vector");
     InitializeSystemClass(load_ptr(methodClass), load_ptr(arrayClass),
                           "Method");
     InitializeSystemClass(load_ptr(stringClass), load_ptr(objectClass),
@@ -470,6 +490,7 @@ VMObject* Universe::InitializeGlobals() {
     LoadSystemClass(load_ptr(metaClassClass));
     LoadSystemClass(load_ptr(nilClass));
     LoadSystemClass(load_ptr(arrayClass));
+    LoadSystemClass(load_ptr(vectorClass));
     LoadSystemClass(load_ptr(methodClass));
     LoadSystemClass(load_ptr(symbolClass));
     LoadSystemClass(load_ptr(integerClass));
@@ -524,8 +545,9 @@ VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
     VMSymbol* name = SymbolFor(Str.str());
     VMClass* result = LoadClassBasic(name, nullptr);
 
-    result->AddInstanceInvokable(new (GetHeap<HEAP_CLS>(), 0)
-                                     VMEvaluationPrimitive(numberOfArguments));
+    result->InstallPrimitive(new (GetHeap<HEAP_CLS>(), 0)
+                                 VMEvaluationPrimitive(numberOfArguments),
+                             0, false);
 
     SetGlobal(name, result);
     blockClassesByNoOfArgs[numberOfArguments] = store_root(result);
@@ -592,7 +614,7 @@ VMClass* Universe::LoadClass(VMSymbol* name) {
     }
 
     if (result->HasPrimitives() || result->GetClass()->HasPrimitives()) {
-        result->LoadPrimitives();
+        result->LoadPrimitives(true);
     }
 
     SetGlobal(name, result);
@@ -611,6 +633,7 @@ VMClass* Universe::LoadClassBasic(VMSymbol* name, VMClass* systemClass) {
                 Disassembler::Dump(result->GetClass());
                 Disassembler::Dump(result);
             }
+
             return result;
         }
     }
@@ -634,9 +657,24 @@ void Universe::LoadSystemClass(VMClass* systemClass) {
         Quit(ERR_FAIL);
     }
 
-    if (result->HasPrimitives() || result->GetClass()->HasPrimitives()) {
-        result->LoadPrimitives();
+    // Vector has primitive methods and should be loaded (This is temporary)
+    if (result->HasPrimitives() || result->GetClass()->HasPrimitives() ||
+        (result->GetName()->GetStdString() == "Vector" &&
+         USE_VECTOR_PRIMITIVES == true)) {
+        result->LoadPrimitives(false);
     }
+}
+
+// Should create a new instance of Vector
+VMVector* Universe::NewVector(size_t size, VMClass* cls) {
+    vm_oop_t first = NEW_INT(1);
+    vm_oop_t last = NEW_INT(1);
+    auto* storageArray = NewArray(size);
+    auto* result =
+        new (GetHeap<HEAP_CLS>(), 0) VMVector(first, last, storageArray);
+    result->SetClass(cls);
+    LOG_ALLOCATION("VMVector", result->GetObjectSize());
+    return result;
 }
 
 VMArray* Universe::NewArray(size_t size) {
@@ -662,6 +700,39 @@ VMArray* Universe::NewArray(size_t size) {
     result->SetClass(load_ptr(arrayClass));
 
     LOG_ALLOCATION("VMArray", result->GetObjectSize());
+    return result;
+}
+
+VMArray* Universe::NewExpandedArrayFromArray(size_t size, VMArray* array) {
+    size_t const additionalBytes = size * sizeof(VMObject*);
+
+    bool outsideNursery = false;  // NOLINT
+
+    size_t const currentArraySize = array->GetNumberOfIndexableFields();
+
+#if GC_TYPE == GENERATIONAL
+    // if the array is too big for the nursery, we will directly allocate a
+    // mature object
+    outsideNursery = additionalBytes + sizeof(VMArray) >
+                     GetHeap<HEAP_CLS>()->GetMaxNurseryObjectSize();
+#endif
+
+    auto* result = new (GetHeap<HEAP_CLS>(),
+                        additionalBytes ALLOC_OUTSIDE_NURSERY(outsideNursery))
+        VMArray(size, additionalBytes, currentArraySize);
+    // NOLINTNEXTLINE(misc-redundant-expression)
+    if ((GC_TYPE == GENERATIONAL) && outsideNursery) {
+        result->SetGCField(MASK_OBJECT_IS_OLD);
+    }
+
+    result->SetClass(load_ptr(arrayClass));
+
+    LOG_ALLOCATION("VMArray", result->GetObjectSize());
+
+    // Now copy the contents of the old array into the new one
+    for (size_t i = 0; i < currentArraySize; ++i) {
+        result->SetIndexableField(i, array->GetIndexableField(i));
+    }
     return result;
 }
 
@@ -839,6 +910,7 @@ void Universe::WalkGlobals(walk_heap_fn walk) {
     nilClass = static_cast<GCClass*>(walk(nilClass));
     integerClass = static_cast<GCClass*>(walk(integerClass));
     arrayClass = static_cast<GCClass*>(walk(arrayClass));
+    vectorClass = static_cast<GCClass*>(walk(vectorClass));
     methodClass = static_cast<GCClass*>(walk(methodClass));
     symbolClass = static_cast<GCClass*>(walk(symbolClass));
     primitiveClass = static_cast<GCClass*>(walk(primitiveClass));
