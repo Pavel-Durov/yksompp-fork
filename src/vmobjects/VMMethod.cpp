@@ -154,15 +154,15 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
 #ifdef USE_YK
-    if (yk_is_interpreting()) {
-        if (called && yk_location_is_null(yklocs[0])) {
+    if (called) {
+        if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
             yklocs[0] = yk_location_new();
-  #if YKLUA_DEBUG_STRS
+  #ifdef YK_DEBUG_STRS
             yk_location_set_debug_str(&yklocs[0], instdebugstrs[0]);
   #endif
-        } else if (!called) {
-            called = true;
         }
+    } else {
+        called = true;
     }
 #endif
 
@@ -177,12 +177,12 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
 #ifdef USE_YK
-    if (yk_is_interpreting()) {
-        if (called && yk_location_is_null(yklocs[0])) {
+    if (called) {
+        if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
             yklocs[0] = yk_location_new();
-        } else if (!called) {
-            called = true;
         }
+    } else {
+        called = true;
     }
 #endif
 
