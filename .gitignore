@@ -24,3 +24,4 @@ build/Smalltalk
 build/SOM.build
 
 cmake-*
+traces
