@@ -51,6 +51,7 @@
 #include "../vmobjects/VMPrimitive.h"  // NOLINT(misc-include-cleaner) it's required to make the types complete
 #include "../vmobjects/VMString.h"
 #include "../vmobjects/VMSymbol.h"
+#include "../yk/yk_linkage.h"
 #include "BytecodeGenerator.h"
 #include "Lexer.h"
 #include "MethodGenerationContext.h"
@@ -184,15 +185,15 @@ void Parser::genPopVariable(MethodGenerationContext& mgenc,
 // grammar
 //
 
-static Symbol singleOpSyms[] = {Not,   And,  Or,    Star,  Div,
-                                Mod,   Plus, Equal, More,  Less,
-                                Comma, At,   Per,   Minus, NONE};
+YK_STATIC Symbol singleOpSyms[] = {Not,   And,  Or,    Star,  Div,
+                                   Mod,   Plus, Equal, More,  Less,
+                                   Comma, At,   Per,   Minus, NONE};
 
-static Symbol binaryOpSyms[] = {Or,   Comma, Minus, Equal, Not,  And,
-                                Or,   Star,  Div,   Mod,   Plus, Equal,
-                                More, Less,  Comma, At,    Per,  NONE};
+YK_STATIC Symbol binaryOpSyms[] = {Or,   Comma, Minus, Equal, Not,  And,
+                                   Or,   Star,  Div,   Mod,   Plus, Equal,
+                                   More, Less,  Comma, At,    Per,  NONE};
 
-static Symbol keywordSelectorSyms[] = {Keyword, KeywordSequence, NONE};
+YK_STATIC Symbol keywordSelectorSyms[] = {Keyword, KeywordSequence, NONE};
 
 void Parser::Classdef(ClassGenerationContext& cgenc) {
     cgenc.SetName(SymbolFor(text));
@@ -209,6 +210,9 @@ void Parser::Classdef(ClassGenerationContext& cgenc) {
         MethodGenerationContext mgenc(cgenc);
         std::string self = strSelf;
         mgenc.AddArgument(self, lexer.GetCurrentSource(), this);
+#ifdef YK_DEBUG_STRS
+        mgenc.SetSourceFile(fname);
+#endif
 
         method(mgenc);
 
@@ -227,6 +231,9 @@ void Parser::Classdef(ClassGenerationContext& cgenc) {
             MethodGenerationContext mgenc(cgenc);
             std::string self = strSelf;
             mgenc.AddArgument(self, lexer.GetCurrentSource(), this);
+#ifdef YK_DEBUG_STRS
+            mgenc.SetSourceFile(fname);
+#endif
 
             method(mgenc);
 

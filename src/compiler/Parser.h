@@ -47,6 +47,12 @@ public:
 
     __attribute__((noreturn)) void ParseError(const char* msg) const;
 
+    [[nodiscard]] SourceCoordinate GetCurrentSource() const {
+        return lexer.GetCurrentSource();
+    }
+
+    [[nodiscard]] const std::string& GetFilename() const { return fname; }
+
 private:
     __attribute__((noreturn)) void parseError(const char* msg, Symbol expected);
     __attribute__((noreturn)) void parseError(const char* msg,

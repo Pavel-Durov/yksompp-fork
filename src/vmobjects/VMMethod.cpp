@@ -68,11 +68,24 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     cachedFrame = nullptr;
 #endif
 
+#ifdef USE_YK
+    // yklocs is appended to VMMethod, growing the struct. Use sizeof(VMMethod)
+    // to find the end of the struct rather than field-offset arithmetic.
+    indexableFields = static_cast<gc_oop_t*>(static_cast<void*>(
+        static_cast<char*>(static_cast<void*>(this)) + sizeof(VMMethod)));
+    for (size_t i = 0; i < numberOfConstants; ++i) {
+        indexableFields[i] = nilObject;
+    }
+    bytecodes = static_cast<uint8_t*>(
+        static_cast<void*>(indexableFields + numberOfConstants));
+    YkMethodInit(yklocs, bcCount);
+#else
     indexableFields = (gc_oop_t*)(&indexableFields + 2);
     for (size_t i = 0; i < numberOfConstants; ++i) {
         indexableFields[i] = nilObject;
     }
     bytecodes = (uint8_t*)(&indexableFields + 2 + GetNumberOfIndexableFields());
+#endif
 
     write_barrier(this, signature);
 }
@@ -84,12 +97,18 @@ VMMethod* VMMethod::CloneForMovingGC() const {
     memcpy(SHIFTED_PTR(clone, sizeof(VMObject)),
            SHIFTED_PTR(this, sizeof(VMObject)),
            GetObjectSize() - sizeof(VMObject));
-    clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
-
     size_t const numIndexableFields = GetNumberOfIndexableFields();
-    clone->bytecodes =
-        (uint8_t*)(&(clone->indexableFields) + 2 + numIndexableFields);
-
+#ifdef USE_YK
+    // yklocs appended to VMMethod shifts the extra data region; use sizeof to
+    // find the end of the struct instead of field-offset arithmetic.
+    clone->indexableFields = static_cast<gc_oop_t*>(static_cast<void*>(
+        static_cast<char*>(static_cast<void*>(clone)) + sizeof(VMMethod)));
+    clone->bytecodes = static_cast<uint8_t*>(
+        static_cast<void*>(clone->indexableFields + numIndexableFields));
+#else
+    clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
+    clone->bytecodes = (uint8_t*)(clone->indexableFields + numIndexableFields);
+#endif
     // Use of GetNumberOfIndexableFields() is problematic here, because it may
     // be invalid object while cloning/moving within GC
     return clone;

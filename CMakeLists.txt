@@ -51,6 +51,7 @@ set(UNITTEST_DIR     "${SRC_DIR}/unitTests")
 
 set(PRIMITIVES_DIR       "${SRC_DIR}/primitives")
 set(PRIMITIVESCORE_DIR   "${SRC_DIR}/primitivesCore")
+set(YK_DIR               "${SRC_DIR}/yk")
 
 file(GLOB COMPILER_SRC    ${COMPILER_DIR}/*.cpp)
 file(GLOB INTERPRETER_SRC ${INTERPRETER_DIR}/*.cpp)
@@ -58,6 +59,7 @@ file(GLOB MEMORY_SRC      ${MEMORY_DIR}/*.cpp)
 file(GLOB MISC_SRC        ${MISC_DIR}/*.cpp)
 file(GLOB VM_SRC          ${VM_DIR}/*.cpp)
 file(GLOB VMOBJECTS_SRC   ${VMOBJECTS_DIR}/*.cpp)
+file(GLOB YK_SRC          ${YK_DIR}/*.cpp)
 
 file(GLOB MAIN_SRC           ${SRC_DIR}/*.cpp)
 file(GLOB PRIMITIVES_SRC     ${PRIMITIVES_DIR}/*.cpp)
@@ -118,15 +120,7 @@ if (ADDITIONAL_ALLOCATION)
   add_definitions(-DADDITIONAL_ALLOCATION)
 endif ()
 
-if (FOR_PROFILING)
-  add_definitions(-g -pg)
-endif ()
-
 add_definitions(-DGC_TYPE=${GC_TYPE})
-
-if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-  add_definitions(-fdiagnostics-absolute-paths)
-endif()
 
 add_executable(SOM++ "")
 
@@ -137,6 +131,7 @@ target_sources(SOM++ PRIVATE
   ${MISC_SRC}
   ${VM_SRC}
   ${VMOBJECTS_SRC}
+  ${YK_SRC}
 
   ${MAIN_SRC}
   ${PRIMITIVES_SRC}
@@ -144,15 +139,49 @@ target_sources(SOM++ PRIVATE
 
 target_compile_options(SOM++ PRIVATE
   -m64
-  -Wno-endif-labels)
+  -Wno-endif-labels
+  $<$<CXX_COMPILER_ID:Clang>:-fdiagnostics-absolute-paths>
+  $<$<BOOL:${FOR_PROFILING}>:-g -pg>)
 
 target_include_directories(SOM++ PRIVATE ${SRC_DIR})
-
-target_link_libraries(SOM++)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
   target_compile_options(SOM++ PRIVATE -O3 -flto)
   target_link_options(SOM++ PRIVATE -flto)
+endif()
+
+set(YK_BUILD_TYPE "" CACHE STRING "Yk build type (debug or release). Enables Yk JIT when set.")
+
+if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
+  execute_process(COMMAND yk-config ${YK_BUILD_TYPE} --cppflags
+    OUTPUT_VARIABLE YK_CPPFLAGS OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
+
+  execute_process(COMMAND yk-config ${YK_BUILD_TYPE} --cflags
+    OUTPUT_VARIABLE YK_CFLAGS OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
+
+  execute_process(COMMAND yk-config ${YK_BUILD_TYPE} --ldflags
+    OUTPUT_VARIABLE YK_LDFLAGS OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
+
+  execute_process(COMMAND yk-config ${YK_BUILD_TYPE} --libs
+    OUTPUT_VARIABLE YK_LIBS OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
+
+  separate_arguments(YK_CPPFLAGS_LIST UNIX_COMMAND "${YK_CPPFLAGS}")
+  separate_arguments(YK_CFLAGS_LIST UNIX_COMMAND "${YK_CFLAGS}")
+  separate_arguments(YK_LDFLAGS_LIST UNIX_COMMAND "${YK_LDFLAGS}")
+  separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
+
+  target_compile_definitions(SOM++ PRIVATE USE_YK)
+  if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_definitions(SOM++ PRIVATE YK_DEBUG_STRS)
+    # Export vtables so yk can resolve them using dlsym.
+    target_link_options(SOM++ PRIVATE -Wl,--export-dynamic-symbol=_ZTV*)
+  endif()
+  target_compile_options(SOM++ PRIVATE ${YK_CPPFLAGS_LIST} ${YK_CFLAGS_LIST} -fno-exceptions)
+  target_link_options(SOM++ PRIVATE ${YK_LDFLAGS_LIST})
+  target_link_libraries(SOM++ ${YK_LIBS_LIST})
+
+  message(STATUS "Yk JIT enabled (${YK_BUILD_TYPE})")
+  message(STATUS "  Ensure CMAKE_CXX_COMPILER is set to: yk-config ${YK_BUILD_TYPE} --cc")
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
@@ -165,6 +194,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     ${MISC_SRC}
     ${VM_SRC}
     ${VMOBJECTS_SRC}
+    ${YK_SRC}
 
     ${PRIMITIVES_SRC}
     ${PRIMITIVESCORE_SRC}
@@ -175,13 +205,9 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 
   target_compile_options(unittests PRIVATE -O0 -g)
 
-  target_include_directories(unittests PRIVATE
-    ${SRC_DIR}
-    /opt/local/include)
+  target_include_directories(unittests PRIVATE ${SRC_DIR})
 
-  find_library(LIB_CPPUNIT
-    NAMES cppunit
-    HINTS /opt/local/lib)
+  find_library(LIB_CPPUNIT NAMES cppunit)
 
   target_link_libraries(unittests ${LIB_CPPUNIT})
 endif()

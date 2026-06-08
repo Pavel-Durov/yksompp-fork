@@ -29,22 +29,23 @@
 #include "../vmobjects/VMMethod.h"
 #include "../vmobjects/VMPrimitive.h"
 #include "../vmobjects/VMSymbol.h"
+#include "../yk/yk_linkage.h"
 
-static const size_t NoOfFields_Object = 1;
-static const size_t NoOfFields_String = 0;
-static const size_t NoOfFields_Symbol = 0;
-static const size_t NoOfFields_Double = 0;
-static const size_t NoOfFields_Integer = 0;
-static const size_t NoOfFields_Array = NoOfFields_Object;
-static const size_t NoOfFields_Invokable = 2;
-static const size_t NoOfFields_Method = NoOfFields_Invokable;
-static const size_t NoOfFields_Class = 4 + NoOfFields_Object;
-static const size_t NoOfFields_Frame = 3 + NoOfFields_Array;
-static const size_t NoOfFields_Block = 2 + NoOfFields_Object;
-static const size_t NoOfFields_Primitive = NoOfFields_Invokable;
-static const size_t NoOfFields_EvaluationPrimitive = NoOfFields_Invokable;
+YK_STATIC const size_t NoOfFields_Object = 1;
+YK_STATIC const size_t NoOfFields_String = 0;
+YK_STATIC const size_t NoOfFields_Symbol = 0;
+YK_STATIC const size_t NoOfFields_Double = 0;
+YK_STATIC const size_t NoOfFields_Integer = 0;
+YK_STATIC const size_t NoOfFields_Array = NoOfFields_Object;
+YK_STATIC const size_t NoOfFields_Invokable = 2;
+YK_STATIC const size_t NoOfFields_Method = NoOfFields_Invokable;
+YK_STATIC const size_t NoOfFields_Class = 4 + NoOfFields_Object;
+YK_STATIC const size_t NoOfFields_Frame = 3 + NoOfFields_Array;
+YK_STATIC const size_t NoOfFields_Block = 2 + NoOfFields_Object;
+YK_STATIC const size_t NoOfFields_Primitive = NoOfFields_Invokable;
+YK_STATIC const size_t NoOfFields_EvaluationPrimitive = NoOfFields_Invokable;
 
-static vector<gc_oop_t> walkedObjects;
+YK_STATIC vector<gc_oop_t> walkedObjects;
 /*
  * This method simply pushes all objects into the vector walkedObjects
  */

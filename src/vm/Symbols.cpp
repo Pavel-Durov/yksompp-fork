@@ -8,9 +8,10 @@
 #include "../misc/defs.h"
 #include "../vmobjects/ObjectFormats.h"
 #include "../vmobjects/VMSymbol.h"
+#include "../yk/yk_linkage.h"
 #include "LogAllocation.h"
 
-static map<std::string, GCSymbol*> symbolsMap;
+YK_STATIC map<std::string, GCSymbol*> symbolsMap;
 
 GCSymbol* symbolSelf;
 GCSymbol* symbolSuper;

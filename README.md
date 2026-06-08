@@ -1,129 +1,65 @@
-SOM++ - The Simple Object Machine implemented in C++
-====================================================
+# yksompp
 
-Introduction
-------------
+This is an experimental [yk-jit](https://github.com/ykjit/yk)-enabled [SOM++](https://github.com/SOM-st/SOMpp) interpreter.
 
-SOM is a minimal Smalltalk dialect used to teach VM construction at the [Hasso
-Plattner Institute][SOM]. It was originally built at the University of Århus
-(Denmark) where it was also used for teaching.
+## Building
 
-Implementations exist for instance for Java (SOM), C (CSOM), C++ (SOM++), Python & RPython
-(PySOM), the Truffle framework (TruffleSOM), and Squeak/Pharo Smalltalk (AweSOM).
+First, initialise the core-lib submodule (SOM standard library):
 
-A simple SOM Hello World looks like:
-
-```Smalltalk
-Hello = (
-  run = (
-    'Hello World!' println.
-  )
-)
+```
+$ git submodule update --init
 ```
 
-This repository contains the C++ implementation of SOM. The implementation of
-the SOM standard library and a number of examples are included as a git submodule.
-Please see the [main project page][SOMst] for links to other VM implementations.
+Yk requires its own modified clang toolchain, supplied via `yk-config`. Update the `yk_config` path at the top of `justfile` to point to your installation.
 
+To build with Yk support:
 
-Prerequisites
--------------
-
-The SOM standard library and examples are located in the `core-lib` git submodule.
-Before building, initialize and fetch the submodules:
-
-```bash
-git submodule update --init --recursive
+```shell
+$ just build-yk        # debug build  → cmake-yk/SOM++
+$ just build-yk-release  # release build → cmake-yk/SOM++
 ```
 
+To build without Yk (plain SOM++):
 
-Building
---------
-
-SOM++ uses CMake and an optimized release build can be built like this:
-
-```bash
-mkdir cmake-build && cd cmake-build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make
+```shell
+$ just build          # release build → cmake-build/SOM++
+$ just build-debug    # debug build   → cmake-debug/SOM++
 ```
 
-Afterwards, the tests can be executed with:
+## Running
 
-```bash
-./SOM++ -cp ../Smalltalk ../TestSuite/TestHarness.som
+```shell
+$ just hello-yk       # run Examples/Hello.som under the JIT
+$ just test-yk        # run the full SOM test suite under the JIT
 ```
 
-A simple Hello World program is executed with:
+To run an Are-We-Fast-Yet benchmark directly:
 
-```bash
-./SOM++ -cp ../Smalltalk ../Examples/Hello.som
+```shell
+$ cmake-yk/SOM++ -cp Smalltalk:Examples/AreWeFastYet Examples/AreWeFastYet/Harness.som <Benchmark> <iterations> <inner-iterations>
 ```
 
-Information on previous authors are included in the AUTHORS file. This code is
-distributed under the MIT License. Please see the LICENSE file for details.
-Additional documentation, detailing for instance the object model and how to
-implement primitives, is available in the `doc` folder.
+To compare all AWFY benchmarks plain vs Yk side-by-side:
 
-
-Advanced Compilation Settings
------------------------------
-
-SOM++ supports different garbage collectors, including a basic mark/sweep, and
-a generational GC. Furthermore, it implements different variants for integer
-handling.
-
-
-Tagged integers:
-
-    default: off
-    option name: TAGGING
-    example: cmake .. -DUSE_TAGGING=true
-
-Integer caching:
-
-    default: off
-    option name: INT_CACHE
-    example: cmake .. -DCACHE_INTEGER=true
-
-
-Development Build and Testing
------------------------------
-
-A build with assertions for development and debugging can be built with:
-
-```bash
-mkdir cmake-debug && cd cmake-debug
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make -j
+```shell
+$ just awfy-compare
 ```
 
-This build also creates a `unittests` binary, which uses cppunit for
-implementation-level unit tests, to run the basic interpreter tests
-in `TestSuite/BasicInterpreterTests`, as well as the SOM test suite.
+## yk-related tips
 
-The unit tests need the SOM classpath set as follows:
+ - Lower the hot-loop threshold so tracing fires quickly:
 
-```bash
-./unittests -cp ../Smalltalk:../TestSuite/BasicInterpreterTests ../Examples/Hello.som
-```
+   ```
+   YK_HOT_THRESHOLD=5 cmake-yk/SOM++ -cp Smalltalk Examples/Hello.som
+   ```
 
-Code Style and Linting
-----------------------
+ - Write tracing statistics to a JSON file:
 
-To have a somewhat consistent code style and catch some basic bugs, the CI
-setup runs `clang-format` and `clang-tidy`
+   ```
+   YKD_LOG_STATS=ykstats.json cmake-yk/SOM++ -cp Smalltalk:Examples/AreWeFastYet Examples/AreWeFastYet/Harness.som Sieve 5 1
+   cat ykstats.json
+   ```
 
-```bash
-clang-tidy --config-file=.clang-tidy src/**/*.cpp -- -fdiagnostics-absolute-paths
-clang-format --dry-run --style=file --Werror src/*.cpp  src/**/*.cpp src/**/*.h
-```
+   `traces_compiled_ok > 0` and `trace_executions > 0` confirm the JIT is working.
 
-Build Status
-------------
-
-Thanks to GitHub Actions, this repository is automatically tested.
-The current build status is: [![Build Status](https://github.com/SOM-st/SOMpp/actions/workflows/ci.yml/badge.svg)](https://github.com/SOM-st/SOMpp/actions/workflows/ci.yml)
-
- [SOM]: http://www.hpi.uni-potsdam.de/hirschfeld/projects/som/
- [SOMst]: https://som-st.github.io
+ - See `doc/Yk/` for a full account of the integration.
