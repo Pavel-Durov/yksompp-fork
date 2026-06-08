@@ -709,6 +709,12 @@ VMFrame* Interpreter::popFrame() {
 
     result->ClearPreviousFrame();
 
+#ifdef USE_YK
+    if (yk_is_interpreting()) {
+        result->GetMethod()->called = false;
+    }
+#endif
+
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     // remember this frame as free frame
     result->GetMethod()->SetCachedFrame(result);
