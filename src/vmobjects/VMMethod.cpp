@@ -152,6 +152,19 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
+#ifdef USE_YK
+    if (yk_is_interpreting()) {
+        if (called && yk_location_is_null(yklocs[0])) {
+            yklocs[0] = yk_location_new();
+  #if YKLUA_DEBUG_STRS
+            yk_location_set_debug_str(&yklocs[0], instdebugstrs[0]);
+  #endif
+        } else if (!called) {
+            called = true;
+        }
+    }
+#endif
+
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->CopyArgumentsFrom(frame);
     return frm;
@@ -161,6 +174,16 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
+
+#ifdef USE_YK
+    if (yk_is_interpreting()) {
+        if (called && yk_location_is_null(yklocs[0])) {
+            yklocs[0] = yk_location_new();
+        } else if (!called) {
+            called = true;
+        }
+    }
+#endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->SetArgument(0, frame->Top());

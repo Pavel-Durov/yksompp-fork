@@ -96,10 +96,13 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
     instdebugstrs = buildDebugStrs(bytecodes, bcLength, lineNums, sourceFile);
   #else
     (void)lineNums;
-    (void)sourceFile;
   #endif
 
-    // Walk the variable-length bytecode stream one instruction at a time.
+    // Skip the SOM standard library.
+    if (sourceFile != nullptr && strstr(sourceFile, "Smalltalk/") != nullptr) {
+        return;
+    }
+    // Backward-jump targets: hot loop headers.
     for (size_t i = 0; i < bcLength;
          i += Bytecode::GetBytecodeLength(bytecodes[i])) {
         size_t target = SIZE_MAX;
