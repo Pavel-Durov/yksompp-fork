@@ -30,6 +30,10 @@
 #include <cstdio>
 #include <cstring>
 
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
+
 #include "../interpreter/bytecodes.h"
 #include "../misc/debug.h"
 #include "../vm/Globals.h"
@@ -177,8 +181,19 @@ void Disassembler::dumpMethod(uint8_t* bytecodes, size_t numberOfBytecodes,
         // the bytecode.
         uint8_t const bytecode = bytecodes[bc_idx];
         // indent, bytecode index, bytecode mnemonic
+#ifdef USE_YK
+        if (method != nullptr && method->yklocs != nullptr &&
+            !yk_location_is_null(method->yklocs[bc_idx])) {
+            DebugDump("%sykloc%4d:%s  ", indent, bc_idx,
+                      Bytecode::GetBytecodeName(bytecode));
+        } else {
+            DebugDump("%s%4d:%s  ", indent, bc_idx,
+                      Bytecode::GetBytecodeName(bytecode));
+        }
+#else
         DebugDump("%s%4d:%s  ", indent, bc_idx,
                   Bytecode::GetBytecodeName(bytecode));
+#endif
         // parameters (if any)
         if (Bytecode::GetBytecodeLength(bytecode) == 1) {
             DebugPrint("\n");
