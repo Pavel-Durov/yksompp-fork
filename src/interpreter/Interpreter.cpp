@@ -62,11 +62,17 @@ size_t Interpreter::bytecodeIndexGlobal;
 uint8_t* Interpreter::currentBytecodes;
 
 vm_oop_t Interpreter::Start(bool printBytecodes) {
+#ifdef BYTECODE_HEATMAP
+  #define HEATMAP_INC() method->heatmap[bytecodeIndexGlobal]++
+#else
+  #define HEATMAP_INC() ((void)0)
+#endif
 #define PROLOGUE(bcCount)                 \
     {                                     \
         if (printBytecodes) {             \
             disassembleMethod();          \
         }                                 \
+        HEATMAP_INC();                    \
         bytecodeIndexGlobal += (bcCount); \
     }
 
