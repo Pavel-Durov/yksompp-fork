@@ -51,10 +51,10 @@ jobs:
             export CXX=g++
           fi
           echo $CC $CXX
-          echo cmake . -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }}
           mkdir cmake-build
           cd cmake-build
-          cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DCMAKE_BUILD_TYPE=Debug
+          echo cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DFIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS=false  -DCMAKE_BUILD_TYPE=Debug
+          cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DFIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS=false -DCMAKE_BUILD_TYPE=Debug
           make -j5
 
       - name: Run Unit Tests
@@ -93,3 +93,30 @@ jobs:
       #   run: |
       #     export ASAN_OPTIONS=detect_leaks=0
       #     cmake-build/SOM++ -cp Smalltalk:TestSuite:core-lib/SomSom/src/compiler:core-lib/SomSom/src/interpreter:core-lib/SomSom/src/primitives:core-lib/SomSom/src/vm:core-lib/SomSom/src/vmobjects core-lib/SomSom/tests/SomSomTests.som
+
+  build_all_debugging_variants:
+    name: Build All Debugging Variants
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout SOM Repository
+        uses: actions/checkout@v6
+
+      - name: Try building all variants
+        run: |
+          build_options=(
+              "BYTECODE_HEATMAP"
+              "GENERATE_ALLOCATION_STATISTICS"
+              "LOG_RECEIVER_TYPES"
+              "UNSAFE_FRAME_OPTIMIZATION"
+              "ADDITIONAL_ALLOCATION"
+          )
+
+          for opt in "${build_options[@]}"; do
+              echo "Processing: $opt"
+              mkdir cmake-build && cd cmake-build
+              echo cmake .. -D$opt=true
+              cmake .. -D$opt=true
+              make -j5
+              cd ..
+              rm -Rf cmake-build
+          done

@@ -87,6 +87,10 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     bytecodes = (uint8_t*)(&indexableFields + 2 + GetNumberOfIndexableFields());
 #endif
 
+#ifdef BYTECODE_HEATMAP
+    heatmap = new uint64_t[bcCount]();
+#endif
+
     write_barrier(this, signature);
 }
 
@@ -119,7 +123,7 @@ void VMMethod::WalkObjects(walk_heap_fn walk) {
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     if (cachedFrame != nullptr) {
-        cachedFrame = static_cast<VMFrame*>(walk(cachedFrame));
+        cachedFrame = static_cast<GCFrame*>(walk(cachedFrame));
     }
 #endif
 
@@ -132,12 +136,12 @@ void VMMethod::WalkObjects(walk_heap_fn walk) {
 }
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
-VMFrame* VMMethod::GetCachedFrame() const {
+GCFrame* VMMethod::GetCachedFrame() const {
     return cachedFrame;
 }
 
 void VMMethod::SetCachedFrame(VMFrame* frame) {
-    cachedFrame = frame;
+    cachedFrame = store_with_separate_barrier(frame);
     if (frame != nullptr) {
         frame->SetContext(nullptr);
         frame->SetBytecodeIndex(0);

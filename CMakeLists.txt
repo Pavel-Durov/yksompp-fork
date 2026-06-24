@@ -74,6 +74,7 @@ option(CACHE_INTEGER "Enable caching of boxed integers" FALSE)
 set(INT_CACHE_MIN_VALUE -5  CACHE STRING "Lower bound of cached integers")
 set(INT_CACHE_MAX_VALUE 100 CACHE STRING "Upper bound of cached integers")
 option(GENERATE_INTEGER_HISTOGRAM "Generate histogram of allocated integers" FALSE)
+option(BYTECODE_HEATMAP "Count per-method bytecode hits and show them in the disassembler" FALSE)
 
 option(USE_VECTOR_PRIMITIVES "Use Vector primitives" TRUE)
 
@@ -102,6 +103,9 @@ endif ()
 if (GENERATE_INTEGER_HISTOGRAM)
   add_definitions(-DGENERATE_INTEGER_HISTOGRAM)
 endif ()
+if (BYTECODE_HEATMAP)
+  add_definitions(-DBYTECODE_HEATMAP)
+endif ()
 if(USE_VECTOR_PRIMITIVES)
   add_definitions(-DUSE_VECTOR_PRIMITIVES=true)
 else ()
@@ -121,6 +125,71 @@ if (ADDITIONAL_ALLOCATION)
 endif ()
 
 add_definitions(-DGC_TYPE=${GC_TYPE})
+
+
+if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+  add_definitions(-fdiagnostics-absolute-paths)
+endif()
+
+option(FIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS
+  "Find the C++ standard library known to be compatible with the Clang toolchain"
+  FALSE)
+
+set(SOM_CLANG_STDLIB_INCLUDE_DIRS "")
+if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND FIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS AND UNIX AND NOT APPLE)
+  string(REGEX MATCH "^[0-9]+" SOM_CLANG_VERSION_MAJOR "${CMAKE_CXX_COMPILER_VERSION}")
+
+  if(NOT SOM_CLANG_VERSION_MAJOR)
+    message(WARNING "Could not determine Clang major version from '${CMAKE_CXX_COMPILER_VERSION}'.")
+  else()
+    set(SOM_CLANG_STDLIB_CANDIDATES "")
+    if(SOM_CLANG_VERSION_MAJOR LESS 20)
+      set(SOM_CLANG_STDLIB_CANDIDATES 14 13 12 11)
+    elseif(SOM_CLANG_VERSION_MAJOR LESS 22)
+      set(SOM_CLANG_STDLIB_CANDIDATES 15 14 13 12 11)
+    else()
+      set(SOM_CLANG_STDLIB_CANDIDATES 16 15 14 13 12 11)
+    endif()
+
+    foreach(SOM_STDLIB_VERSION IN LISTS SOM_CLANG_STDLIB_CANDIDATES)
+      set(SOM_STDLIB_BASE_DIR "/usr/include/c++/${SOM_STDLIB_VERSION}")
+      if(EXISTS "${SOM_STDLIB_BASE_DIR}")
+        set(SOM_STDLIB_ARCH_DIRS "")
+        if(CMAKE_LIBRARY_ARCHITECTURE)
+          list(APPEND SOM_STDLIB_ARCH_DIRS "/usr/include/${CMAKE_LIBRARY_ARCHITECTURE}/c++/${SOM_STDLIB_VERSION}")
+          list(APPEND SOM_STDLIB_ARCH_DIRS "${SOM_STDLIB_BASE_DIR}/${CMAKE_LIBRARY_ARCHITECTURE}")
+        endif()
+        if(CMAKE_SYSTEM_PROCESSOR)
+          list(APPEND SOM_STDLIB_ARCH_DIRS "/usr/include/${CMAKE_SYSTEM_PROCESSOR}-linux-gnu/c++/${SOM_STDLIB_VERSION}")
+        endif()
+
+        set(SOM_STDLIB_ARCH_DIR "")
+        foreach(SOM_CANDIDATE_ARCH_DIR IN LISTS SOM_STDLIB_ARCH_DIRS)
+          if(SOM_CANDIDATE_ARCH_DIR AND EXISTS "${SOM_CANDIDATE_ARCH_DIR}")
+            set(SOM_STDLIB_ARCH_DIR "${SOM_CANDIDATE_ARCH_DIR}")
+            break()
+          endif()
+        endforeach()
+
+        set(SOM_CLANG_STDLIB_VERSION "${SOM_STDLIB_VERSION}")
+        set(SOM_CLANG_STDLIB_INCLUDE_DIRS "${SOM_STDLIB_BASE_DIR}")
+        if(SOM_STDLIB_ARCH_DIR)
+          list(APPEND SOM_CLANG_STDLIB_INCLUDE_DIRS "${SOM_STDLIB_ARCH_DIR}")
+        endif()
+        break()
+      endif()
+    endforeach()
+
+    if(SOM_CLANG_STDLIB_INCLUDE_DIRS)
+      add_compile_options(-nostdinc++)
+      message(STATUS
+        "Clang ${SOM_CLANG_VERSION_MAJOR}: using libstdc++ headers v${SOM_CLANG_STDLIB_VERSION}: ${SOM_CLANG_STDLIB_INCLUDE_DIRS}")
+    else()
+      message(WARNING
+        "Clang ${SOM_CLANG_VERSION_MAJOR}: no compatible libstdc++ headers found under /usr/include/c++; using compiler defaults.")
+    endif()
+  endif()
+endif()
 
 add_executable(SOM++ "")
 
@@ -144,6 +213,9 @@ target_compile_options(SOM++ PRIVATE
   $<$<BOOL:${FOR_PROFILING}>:-g -pg>)
 
 target_include_directories(SOM++ PRIVATE ${SRC_DIR})
+if(SOM_CLANG_STDLIB_INCLUDE_DIRS)
+  target_include_directories(SOM++ SYSTEM PRIVATE ${SOM_CLANG_STDLIB_INCLUDE_DIRS})
+endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
   target_compile_options(SOM++ PRIVATE -O3 -flto)
@@ -205,7 +277,12 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 
   target_compile_options(unittests PRIVATE -O0 -g)
 
-  target_include_directories(unittests PRIVATE ${SRC_DIR})
+    target_include_directories(unittests PRIVATE
+    ${SRC_DIR}
+    /opt/local/include)
+  if(SOM_CLANG_STDLIB_INCLUDE_DIRS)
+    target_include_directories(unittests SYSTEM PRIVATE ${SOM_CLANG_STDLIB_INCLUDE_DIRS})
+  endif()
 
   find_library(LIB_CPPUNIT NAMES cppunit)
 
