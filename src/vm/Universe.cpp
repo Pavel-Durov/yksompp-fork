@@ -87,6 +87,11 @@ map<uint8_t, GCClass*> Universe::blockClassesByNoOfArgs;
 vector<std::string> Universe::classPath;
 size_t Universe::heapSize;
 
+#ifdef LOG_RECEIVER_TYPES
+map<std::string, long> Universe::receiverTypes;
+map<std::string, Universe::stat_data> Universe::callStats;
+#endif
+
 void Universe::Start(int32_t argc, char** argv) {
     BasicInit();
     Universe::initialize(argc, argv);
@@ -122,9 +127,8 @@ void Universe::Shutdown() {
     std::string file_name_receivers = std::string(bm_name);
     file_name_receivers.append("_receivers.csv");
     fstream receivers(file_name_receivers.c_str(), ios::out);
-    for (map<std::string, long>::iterator it =
-             theUniverse->receiverTypes.begin();
-         it != theUniverse->receiverTypes.end();
+    for (map<std::string, long>::iterator it = Universe::receiverTypes.begin();
+         it != Universe::receiverTypes.end();
          it++) {
         receivers << it->first << ",  " << it->second << endl;
     }
@@ -136,8 +140,8 @@ void Universe::Shutdown() {
                  "no_non_primitive_calls"
               << endl;
     for (map<std::string, Universe::stat_data>::iterator it =
-             theUniverse->callStats.begin();
-         it != theUniverse->callStats.end();
+             Universe::callStats.begin();
+         it != Universe::callStats.end();
          it++) {
         send_stat << it->first << ", " << setiosflags(ios::fixed)
                   << setprecision(2)
@@ -420,6 +424,18 @@ void Universe::initialize(int32_t _argc, char** _argv) {
 
     VMArray* argumentsArray = NewArrayFromStrings(argv);
     interpretMethod(systemObject, initialize, argumentsArray);
+
+#ifdef BYTECODE_HEATMAP
+    if (dumpBytecodes != 0) {
+        for (auto& g : globals) {
+            auto* cls =
+                dynamic_cast<VMClass*>((AbstractVMObject*)load_ptr(g.second));
+            if (cls != nullptr) {
+                Disassembler::Dump(cls);
+            }
+        }
+    }
+#endif
 }
 
 Universe::~Universe() {
@@ -815,10 +831,10 @@ VMDouble* Universe::NewDouble(double value) {
 VMFrame* Universe::NewFrame(VMFrame* previousFrame, VMMethod* method) {
     VMFrame* result = nullptr;
 #ifdef UNSAFE_FRAME_OPTIMIZATION
-    result = method->GetCachedFrame();
+    result = load_ptr(method->GetCachedFrame());
     if (result != nullptr) {
         method->SetCachedFrame(nullptr);
-        result->SetPreviousFrame(previousFrame);
+        result->SetPreviousFrameOnReuse(previousFrame);
         return result;
     }
 #endif
