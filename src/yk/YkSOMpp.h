@@ -23,6 +23,8 @@ void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
+uint8_t load_bc(uint8_t* bc, size_t big);
+
 #ifdef YK_DEBUG_STRS
 void YkDestroyDebugStrs(char** strs, size_t bcLen);
 #endif
@@ -56,10 +58,12 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen);
     }
 #define YK_DISPATCH_TRAMPOLINE()                               \
     YK_DISPATCH_START:                                         \
+    bc = (uint8_t*) yk_promote((void*) currentBytecodes);      \
+    big = (size_t) yk_promote((uintptr_t) bytecodeIndexGlobal);\
     yk_mt_control_point(Universe::yk_mt,                       \
                         &method->yklocs[bytecodeIndexGlobal]); \
     YK_DEBUG_STR_CALL();                                       \
-    switch (currentBytecodes[bytecodeIndexGlobal]) {           \
+    switch (load_bc(bc, big)) {                                \
         case BC_HALT:                                          \
             goto LABEL_BC_HALT;                                \
         case BC_DUP:                                           \

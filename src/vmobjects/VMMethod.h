@@ -104,6 +104,7 @@ public:
     ~VMMethod() override {
         delete lexicalScope;
 #ifdef USE_YK
+        free(bytecodes);
         YkMethodDestroy(yklocs, bcLength);
   #ifdef YK_DEBUG_STRS
         YkDestroyDebugStrs(instdebugstrs, bcLength);
@@ -208,6 +209,9 @@ public:
     [[nodiscard]] inline uint8_t* GetBytecodes() const { return bytecodes; }
 
 private:
+#ifdef USE_YK
+    void setYkLocation(size_t bcIdx);
+#endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
 
@@ -247,6 +251,7 @@ private:
     uint8_t* bytecodes;
 #ifdef USE_YK
     YkLocation* yklocs{nullptr};  // one per bytecode; malloc'd (not GC-managed)
+  #if YK_RECURSIVE_CALLS_LOC
     // Used to detect recursive function calls. When a function is
     // called this is set to `true` and when we return it is set to `false`.
     // This works because a recursive function call must detect the `true` case
@@ -254,6 +259,7 @@ private:
     // not mean "this isn't a recursive call", but if it's `true` it definitely
     // is a recursive call.
     bool called{false};
+  #endif
   #ifdef YK_DEBUG_STRS
     char** instdebugstrs{
         nullptr};  // one per bytecode opcode position; malloc'd

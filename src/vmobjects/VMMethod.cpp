@@ -76,8 +76,10 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     for (size_t i = 0; i < numberOfConstants; ++i) {
         indexableFields[i] = nilObject;
     }
-    bytecodes = static_cast<uint8_t*>(
-        static_cast<void*>(indexableFields + numberOfConstants));
+    // Bytecodes are malloc'd so the COPYING GC can never relocate them.
+    // This potentially goes againts the spirit of SOMpp, but it keeps their address stable
+    // across moves, which is important for the yk_idempotent yk optimisation.
+    bytecodes = static_cast<uint8_t*>(malloc(bcCount));
     YkMethodInit(yklocs, bcCount);
 #else
     indexableFields = (gc_oop_t*)(&indexableFields + 2);
@@ -101,15 +103,13 @@ VMMethod* VMMethod::CloneForMovingGC() const {
     memcpy(SHIFTED_PTR(clone, sizeof(VMObject)),
            SHIFTED_PTR(this, sizeof(VMObject)),
            GetObjectSize() - sizeof(VMObject));
-    size_t const numIndexableFields = GetNumberOfIndexableFields();
 #ifdef USE_YK
     // yklocs appended to VMMethod shifts the extra data region; use sizeof to
     // find the end of the struct instead of field-offset arithmetic.
     clone->indexableFields = static_cast<gc_oop_t*>(static_cast<void*>(
         static_cast<char*>(static_cast<void*>(clone)) + sizeof(VMMethod)));
-    clone->bytecodes = static_cast<uint8_t*>(
-        static_cast<void*>(clone->indexableFields + numIndexableFields));
 #else
+    size_t const numIndexableFields = GetNumberOfIndexableFields();
     clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
     clone->bytecodes = (uint8_t*)(clone->indexableFields + numIndexableFields);
 #endif
@@ -156,7 +156,7 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
-#ifdef USE_YK
+#if YK_RECURSIVE_CALLS_LOC
     if (called) {
         if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
             yklocs[0] = yk_location_new();
@@ -179,7 +179,7 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
-#ifdef USE_YK
+#if YK_RECURSIVE_CALLS_LOC
     if (called) {
         if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
             yklocs[0] = yk_location_new();

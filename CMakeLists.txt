@@ -86,6 +86,10 @@ option(ADDITIONAL_ALLOCATION     "Enable additional allocations" FALSE)
 
 option(FOR_PROFILING "Compile for profiling" FALSE)
 
+option(YK_RECURSIVE_CALLS_LOC "Set yk trace locations at recursive method entries" TRUE)
+option(YK_SKIP_SMALLTALK_STD "Skip setting yk trace locations in the SOM standard library" TRUE)
+option(YK_DEBUG_STRS "Embed source-location debug strings into yk locations (always forced on for Debug builds)" FALSE)
+
 if (USE_TAGGING)
   add_definitions(-DUSE_TAGGING)
   if (CACHE_INTEGER)
@@ -243,8 +247,16 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
   separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
 
   target_compile_definitions(SOM++ PRIVATE USE_YK)
-  if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  if(YK_RECURSIVE_CALLS_LOC)
+    target_compile_definitions(SOM++ PRIVATE YK_RECURSIVE_CALLS_LOC)
+  endif()
+  if(YK_SKIP_SMALLTALK_STD)
+    target_compile_definitions(SOM++ PRIVATE YK_SKIP_SMALLTALK_STD)
+  endif()
+  if(YK_DEBUG_STRS OR CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(SOM++ PRIVATE YK_DEBUG_STRS)
+  endif()
+  if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     # Export vtables so yk can resolve them using dlsym.
     target_link_options(SOM++ PRIVATE -Wl,--export-dynamic-symbol=_ZTV*)
   endif()

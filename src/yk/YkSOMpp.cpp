@@ -86,6 +86,14 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen) {
 
   #endif  // YK_DEBUG_STRS
 
+#define NOOPT_VAL(X) asm volatile("" : "+r,m"(X) : : "memory");
+
+__attribute__((yk_idempotent))
+uint8_t load_bc(uint8_t* bc, size_t big) {
+  NOOPT_VAL(bc);
+  NOOPT_VAL(big);
+  return bc[big];
+}
 // Assign a yk location to each loop header (backward-jump target).
 //
 // Yk traces loops by recording execution from a control point until it cycles
@@ -98,10 +106,11 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
     (void)lineNums;
   #endif
 
-    // Skip the SOM standard library.
+  #ifdef YK_SKIP_SMALLTALK_STD
     if (sourceFile != nullptr && strstr(sourceFile, "Smalltalk/") != nullptr) {
         return;
     }
+  #endif
     // Backward-jump targets: hot loop headers.
     for (size_t i = 0; i < bcLength;
          i += Bytecode::GetBytecodeLength(bytecodes[i])) {
@@ -114,12 +123,11 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
 
         if (target != SIZE_MAX) {
             yklocs[target] = yk_location_new();
-  #ifdef YK_DEBUG_STRS
+#ifdef YK_DEBUG_STRS
             if (instdebugstrs != nullptr && instdebugstrs[target] != nullptr) {
-                yk_location_set_debug_str(&yklocs[target],
-                                          instdebugstrs[target]);
+                yk_location_set_debug_str(&yklocs[target], instdebugstrs[target]);
             }
-  #endif
+#endif
         }
     }
 }

@@ -79,6 +79,8 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // initialization
     method = GetMethod();
     currentBytecodes = GetBytecodes();
+    uint8_t* bc = currentBytecodes;
+    size_t big = bytecodeIndexGlobal;
 
     void* loopTargets[] = {&&LABEL_BC_HALT,
                            &&LABEL_BC_DUP,
@@ -715,7 +717,7 @@ VMFrame* Interpreter::popFrame() {
 
     result->ClearPreviousFrame();
 
-#ifdef USE_YK
+#if YK_RECURSIVE_CALLS_LOC
     result->GetMethod()->called = false;
 #endif
 
@@ -1010,6 +1012,9 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 void Interpreter::doSuperSend(size_t bytecodeIndex) {
     auto* signature =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
