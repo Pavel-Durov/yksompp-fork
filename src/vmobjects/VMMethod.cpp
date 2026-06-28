@@ -77,8 +77,9 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
         indexableFields[i] = nilObject;
     }
     // Bytecodes are malloc'd so the COPYING GC can never relocate them.
-    // This potentially goes againts the spirit of SOMpp, but it keeps their address stable
-    // across moves, which is important for the yk_idempotent yk optimisation.
+    // This potentially goes againts the spirit of SOMpp, but it keeps their
+    // address stable across moves, which is important for the yk_idempotent yk
+    // optimisation.
     bytecodes = static_cast<uint8_t*>(malloc(bcCount));
     YkMethodInit(yklocs, bcCount);
 #else

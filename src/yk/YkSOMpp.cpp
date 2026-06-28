@@ -84,15 +84,14 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen) {
     free(strs);
 }
 
-  #endif  // YK_DEBUG_STRS
+  #endif  // End of YK_DEBUG_STRS
 
-#define NOOPT_VAL(X) asm volatile("" : "+r,m"(X) : : "memory");
+  #define NOOPT_VAL(X) asm volatile("" : "+r,m"(X) : : "memory");
 
-__attribute__((yk_idempotent))
-uint8_t load_bc(uint8_t* bc, size_t big) {
-  NOOPT_VAL(bc);
-  NOOPT_VAL(big);
-  return bc[big];
+__attribute__((yk_idempotent)) uint8_t load_bc(uint8_t* bc, size_t big) {
+    NOOPT_VAL(bc);
+    NOOPT_VAL(big);
+    return bc[big];
 }
 // Assign a yk location to each loop header (backward-jump target).
 //
@@ -123,13 +122,14 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
 
         if (target != SIZE_MAX) {
             yklocs[target] = yk_location_new();
-#ifdef YK_DEBUG_STRS
+  #ifdef YK_DEBUG_STRS
             if (instdebugstrs != nullptr && instdebugstrs[target] != nullptr) {
-                yk_location_set_debug_str(&yklocs[target], instdebugstrs[target]);
+                yk_location_set_debug_str(&yklocs[target],
+                                          instdebugstrs[target]);
             }
-#endif
+  #endif
         }
     }
 }
 
-#endif
+#endif  // End of USE_YK

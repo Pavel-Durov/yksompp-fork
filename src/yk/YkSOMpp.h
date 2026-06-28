@@ -58,8 +58,8 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen);
     }
 #define YK_DISPATCH_TRAMPOLINE()                               \
     YK_DISPATCH_START:                                         \
-    bc = (uint8_t*) yk_promote((void*) currentBytecodes);      \
-    big = (size_t) yk_promote((uintptr_t) bytecodeIndexGlobal);\
+    bc = (uint8_t*)yk_promote((void*)currentBytecodes);        \
+    big = (size_t)yk_promote((uintptr_t)bytecodeIndexGlobal);  \
     yk_mt_control_point(Universe::yk_mt,                       \
                         &method->yklocs[bytecodeIndexGlobal]); \
     YK_DEBUG_STR_CALL();                                       \
