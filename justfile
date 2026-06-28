@@ -1,4 +1,4 @@
-yk_config := "/path/to/yk-config"
+yk_config := "/home/pd/yk/bin/yk-config"
 yk_debug_strs := "true"
 
 build: build-release
@@ -24,7 +24,7 @@ build-debug:
 build-yk-debug:
     mkdir -p cmake-yk-debug
     PATH="$(dirname {{yk_config}}):$PATH" cmake \
-        -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cc)++ \
+        -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cxx) \
         -DCMAKE_BUILD_TYPE=Debug \
         -DYK_BUILD_TYPE=debug \
         -DYK_DEBUG_STRS={{yk_debug_strs}} \
@@ -36,7 +36,7 @@ build-yk-debug:
 build-yk-release:
     mkdir -p cmake-yk-release
     PATH="$(dirname {{yk_config}}):$PATH" cmake \
-        -DCMAKE_CXX_COMPILER=$({{yk_config}} release --cc)++ \
+        -DCMAKE_CXX_COMPILER=$({{yk_config}} release --cxx) \
         -DCMAKE_BUILD_TYPE=Release \
         -DYK_BUILD_TYPE=release \
         -DYK_DEBUG_STRS={{yk_debug_strs}} \
