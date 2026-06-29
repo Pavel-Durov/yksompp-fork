@@ -93,6 +93,10 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     heatmap = new uint64_t[bcCount]();
 #endif
 
+#ifdef BYTECODE_HEATMAP
+    heatmap = new uint64_t[bcCount]();
+#endif
+
     write_barrier(this, signature);
 }
 
