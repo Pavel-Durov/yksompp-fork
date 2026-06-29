@@ -2,7 +2,7 @@ yk_config := "/path/to/yk-config"
 YK_DEBUG_STRS := "false"
 YK_SKIP_SMALLTALK_STD := "false"
 YK_RECURSIVE_CALLS_LOC := "true"
-GC_TYPE := "COPYING"
+GC_TYPE := "MARK_SWEEP"
 BYTECODE_HEATMAP := "FALSE"
 
 build: build-release

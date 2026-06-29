@@ -76,11 +76,11 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     for (size_t i = 0; i < numberOfConstants; ++i) {
         indexableFields[i] = nilObject;
     }
-    // Bytecodes are malloc'd so the COPYING GC can never relocate them.
-    // This potentially goes againts the spirit of SOMpp, but it keeps their
-    // address stable across moves, which is important for the yk_idempotent yk
-    // optimisation.
-    bytecodes = static_cast<uint8_t*>(malloc(bcCount));
+    // Bytecodes live inline, right after the constants (GetObjectSize already
+    // reserves the space). The mark-sweep GC is non-moving, so this address is
+    // stable for the method's lifetime; the off-heap malloc that the moving
+    // COPYING GC required is no longer needed.
+    bytecodes = reinterpret_cast<uint8_t*>(indexableFields + numberOfConstants);
     YkMethodInit(yklocs, bcCount);
 #else
     indexableFields = (gc_oop_t*)(&indexableFields + 2);
@@ -113,6 +113,10 @@ VMMethod* VMMethod::CloneForMovingGC() const {
     // find the end of the struct instead of field-offset arithmetic.
     clone->indexableFields = static_cast<gc_oop_t*>(static_cast<void*>(
         static_cast<char*>(static_cast<void*>(clone)) + sizeof(VMMethod)));
+    // Bytecodes are inline; recompute the pointer into the clone. (Only a
+    // moving GC clones; the non-moving mark-sweep GC never calls this.)
+    clone->bytecodes = reinterpret_cast<uint8_t*>(clone->indexableFields +
+                                                  GetNumberOfIndexableFields());
 #else
     size_t const numIndexableFields = GetNumberOfIndexableFields();
     clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
