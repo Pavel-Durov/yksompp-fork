@@ -77,8 +77,9 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
         indexableFields[i] = nilObject;
     }
     // Bytecodes are malloc'd so the COPYING GC can never relocate them.
-    // This potentially goes againts the spirit of SOMpp, but it keeps their address stable
-    // across moves, which is important for the yk_idempotent yk optimisation.
+    // This potentially goes againts the spirit of SOMpp, but it keeps their
+    // address stable across moves, which is important for the yk_idempotent yk
+    // optimisation.
     bytecodes = static_cast<uint8_t*>(malloc(bcCount));
     YkMethodInit(yklocs, bcCount);
 #else
@@ -161,15 +162,20 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
 #if YK_RECURSIVE_CALLS_LOC
-    if (called) {
+    // Anchor a yk trace location at the entry of *directly* recursive methods:
+    // the executing method (Interpreter::GetMethod()) is invoking itself. The
+    // recursion level is a small, bounded cycle.
+    //
+    // Mutually-recursive dispatchers are deliberately NOT anchored.
+    // Their entry does technically close a cycle but it's a large,
+    // guard-heavy cycle.
+    if (Interpreter::GetMethod() == this) {
         if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
             yklocs[0] = yk_location_new();
   #ifdef YK_DEBUG_STRS
             yk_location_set_debug_str(&yklocs[0], instdebugstrs[0]);
   #endif
         }
-    } else {
-        called = true;
     }
 #endif
 
@@ -184,12 +190,11 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
 #if YK_RECURSIVE_CALLS_LOC
-    if (called) {
+    // See Invoke(): anchor only directly-recursive method entries.
+    if (Interpreter::GetMethod() == this) {
         if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
             yklocs[0] = yk_location_new();
         }
-    } else {
-        called = true;
     }
 #endif
 
