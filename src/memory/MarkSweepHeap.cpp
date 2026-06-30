@@ -8,6 +8,7 @@
 #include "../memory/Heap.h"
 #include "../vm/Print.h"
 #include "../vmobjects/AbstractObject.h"
+#include "../yk/yk_linkage.h"
 #include "MarkSweepCollector.h"
 
 // Objects larger than this use the large-object space; smaller ones are
@@ -170,6 +171,10 @@ AbstractVMObject* MarkSweepHeap::allocateLargeObject(size_t size) {
     return newObject;
 }
 
+
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 AbstractVMObject* MarkSweepHeap::AllocateObject(size_t size) {
     if (size > MAX_SMALL_OBJECT_SIZE) {
         return allocateLargeObject(size);

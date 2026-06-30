@@ -552,6 +552,9 @@ VMClass* Universe::GetBlockClass() {
     return load_ptr(blockClass);
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
     auto const it = blockClassesByNoOfArgs.find(numberOfArguments);
     if (it != blockClassesByNoOfArgs.end()) {
@@ -575,6 +578,9 @@ VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
     return result;
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 vm_oop_t Universe::GetGlobal(VMSymbol* name) {
     auto it = globals.find(tmp_ptr(name));
     if (it == globals.end()) {
