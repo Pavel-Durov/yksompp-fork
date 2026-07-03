@@ -124,6 +124,14 @@ public:
 
 #ifdef USE_YK
     static YkMT* yk_mt;
+    // Soundness epochs for the yk_idempotent lookup folds (see
+    // lookup_invokable_idem / get_global_idem in YkSOMpp.cpp). Compiled traces
+    // fold those lookups to constants keyed on a promoted epoch value; any
+    // mutation of the underlying table must bump the matching epoch so the
+    // trace's epoch promote-guard fails and it deopts instead of using a
+    // stale result.
+    static uintptr_t globalsEpoch;
+    static uintptr_t invokablesEpoch;
 #endif
 #ifdef LOG_RECEIVER_TYPES
     struct stat_data {

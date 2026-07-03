@@ -25,6 +25,16 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
 uint8_t load_bc(uint8_t* bc, size_t big);
 
+// yk_idempotent lookup wrappers (YkSOMpp.cpp): with all args promoted, the
+// call folds out of compiled traces to the recorded result. Pass the matching
+// promoted epoch (Universe::invokablesEpoch / globalsEpoch) for soundness.
+class VMClass;
+class VMSymbol;
+uintptr_t lookup_invokable_idem(VMClass* cls, VMSymbol* signature,
+                                uintptr_t epoch);
+uintptr_t get_global_idem(VMSymbol* name, uintptr_t epoch);
+uintptr_t get_block_class_idem(uintptr_t numArgs, uintptr_t epoch);
+
 #ifdef YK_DEBUG_STRS
 void YkDestroyDebugStrs(char** strs, size_t bcLen);
 #endif
@@ -48,20 +58,39 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen);
   #define YK_DEBUG_STR_CALL() (void)0
 #endif
 
+// `bc` (the currentBytecodes pointer) is threaded, not re-promoted per bytecode.
+// It is loop-invariant between frame changes, so only the dispatches that can
+// change currentBytecodes re-promote it:
+//   DISPATCH_FULL   — returns and backward jumps. Returns restore the caller's
+//                     bytecodes; backward jumps land on a loop header, and
+//                     re-promoting there keeps `bc` a per-iteration trace
+//                     constant so load_bc still folds inside the loop trace.
+//   DISPATCH_GC     — sends and allocating bytecodes. A send enters a callee
+//                     (new bytecodes); startGC() reloads currentBytecodes after
+//                     a collection; PUSH_GLOBAL can trigger an implicit
+//                     unknownGlobal: send. All change the frame, so re-promote.
+//   DISPATCH_NOGC   — straight-line bytecodes. currentBytecodes is unchanged, so
+//                     reuse the threaded `bc` and skip its reload+guard (~half of
+//                     the per-bytecode promotion guards). `pc` is still promoted
+//                     and the control point still runs (in YK_DISPATCH_START), so
+//                     trace formation is unchanged.
+#define YK_PROMOTE_BC() bc = (uint8_t*) yk_promote((void*) currentBytecodes)
 #define DISPATCH_NOGC() goto YK_DISPATCH_START
+#define DISPATCH_FULL() \
+    {                   \
+        YK_PROMOTE_BC();\
+        goto YK_DISPATCH_START; \
+    }
 #define DISPATCH_GC()                                       \
     {                                                       \
         if (GetHeap<HEAP_CLS>()->isCollectionTriggered()) { \
             startGC();                                      \
         }                                                   \
+        YK_PROMOTE_BC();                                    \
         goto YK_DISPATCH_START;                             \
     }
-#define YK_DISPATCH_TRAMPOLINE()                               \
-    YK_DISPATCH_START:                                         \
-    bc = (uint8_t*) yk_promote((void*) currentBytecodes);      \
-    big = (size_t) yk_promote((uintptr_t) bytecodeIndexGlobal);\
-    yk_mt_control_point(Universe::yk_mt,                       \
-                        &method->yklocs[bytecodeIndexGlobal]); \
+#define DISPATCH_FULL_GC() DISPATCH_GC()
+#define YK_BC_SWITCH()                                         \
     YK_DEBUG_STR_CALL();                                       \
     switch (load_bc(bc, big)) {                                \
         case BC_HALT:                                          \
@@ -201,4 +230,10 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen);
         default:                                               \
             __builtin_unreachable();                           \
     }
+#define YK_DISPATCH_TRAMPOLINE()                                \
+    YK_DISPATCH_START:                                          \
+    big = (size_t) yk_promote((uintptr_t) bytecodeIndexGlobal); \
+    yk_mt_control_point(Universe::yk_mt,                        \
+                        &method->yklocs[bytecodeIndexGlobal]);  \
+    YK_BC_SWITCH();
 // NOLINTEND(cppcoreguidelines-macro-usage)

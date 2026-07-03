@@ -38,6 +38,9 @@
 #include "../vm/Globals.h"
 #include "../vm/IsValidObject.h"
 #include "../vm/Print.h"
+#ifdef USE_YK
+  #include "../vm/Universe.h"
+#endif
 #include "ObjectFormats.h"
 #include "VMArray.h"
 #include "VMInvokable.h"
@@ -134,6 +137,9 @@ PrimInstallResult VMClass::InstallPrimitive(VMInvokable* invokable,
         }
     }
     // it's a new invokable so we need to expand the invokables array.
+#ifdef USE_YK
+    Universe::invokablesEpoch++;
+#endif
     store_ptr(instanceInvokables,
               instInvokables->CopyAndExtendWith((vm_oop_t)invokable));
 
@@ -157,6 +163,10 @@ VMSymbol* VMClass::GetInstanceFieldName(size_t index) const {
 }
 
 void VMClass::SetInstanceInvokables(VMArray* invokables) {
+#ifdef USE_YK
+    // Invalidate compiled traces that folded lookup_invokable_idem results.
+    Universe::invokablesEpoch++;
+#endif
     store_ptr(instanceInvokables, invokables);
     vm_oop_t nil = load_ptr(nilObject);
 
@@ -182,6 +192,9 @@ VMInvokable* VMClass::GetInstanceInvokable(size_t index) const {
 }
 
 void VMClass::SetInstanceInvokable(size_t index, VMInvokable* invokable) {
+#ifdef USE_YK
+    Universe::invokablesEpoch++;
+#endif
     load_ptr(instanceInvokables)->SetIndexableField(index, invokable);
 
     // NOLINTNEXTLINE (cppcoreguidelines-pro-type-reinterpret-cast)
@@ -190,6 +203,9 @@ void VMClass::SetInstanceInvokable(size_t index, VMInvokable* invokable) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 VMInvokable* VMClass::LookupInvokable(VMSymbol* name) {
     assert(IsValidObject(this));
 

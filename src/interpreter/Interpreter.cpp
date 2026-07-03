@@ -154,6 +154,9 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // Skip the computed-goto dispatch: goto* compiles to LLVM indirectbr which
     // yk cannot trace. Jump directly to YK_DISPATCH_START where the single
     // yk_mt_control_point call lives and a switch dispatches instead.
+    // Establish the initial promoted `bc`; thereafter it is only re-promoted at
+    // frame changes (DISPATCH_FULL/GC), staying threaded through straight-line.
+    YK_PROMOTE_BC();
     goto YK_DISPATCH_START;
 #else
     goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]];
@@ -359,35 +362,35 @@ LABEL_BC_SUPER_SEND:
 LABEL_BC_RETURN_LOCAL:
     PROLOGUE(1);
     doReturnLocal();
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_NON_LOCAL:
     PROLOGUE(1);
     doReturnNonLocal();
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_SELF: {
     PROLOGUE(1);
     assert(GetFrame()->GetContext() == nullptr &&
            "RETURN_SELF is not allowed in blocks");
     popFrameAndPushResult(GetFrame()->GetArgumentInCurrentContext(0));
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 }
 
 LABEL_BC_RETURN_FIELD_0:
     PROLOGUE(1);
     doReturnFieldWithIndex(0);
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_FIELD_1:
     PROLOGUE(1);
     doReturnFieldWithIndex(1);
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_FIELD_2:
     PROLOGUE(1);
     doReturnFieldWithIndex(2);
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_INC:
     PROLOGUE(1);
@@ -536,7 +539,7 @@ LABEL_BC_JUMP_BACKWARD: {
     uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
     bytecodeIndexGlobal -= offset;
 }
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_JUMP2: {
     uint16_t const offset =
@@ -681,7 +684,7 @@ LABEL_BC_JUMP2_BACKWARD: {
                       currentBytecodes[bytecodeIndexGlobal + 2]);
     bytecodeIndexGlobal -= offset;
 }
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
     // Single control-point trampoline for Yk. All DISPATCH_NOGC/GC paths jump
     // here when USE_YK is set, giving Yk exactly one call site.
@@ -758,6 +761,9 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 void Interpreter::triggerDoesNotUnderstand(VMSymbol* signature) {
     uint8_t const numberOfArgs = Signature::GetNumberOfArguments(signature);
 
@@ -874,10 +880,26 @@ void Interpreter::doPushBlock(size_t bytecodeIndex) {
     GetFrame()->Push(Universe::NewBlock(blockMethod, GetFrame(), numOfArgs));
 }
 
+#ifdef USE_YK
+// The inliner may clone this body into Start() and orphan the standalone
+// copy; OutlineUntraceable would then auto-mark it yk_outline, which is
+// rejected because of the yk_promote calls below. yk_indirect_inline is the
+// pass's escape hatch: keep the orphan traceable.
+__attribute__((yk_indirect_inline))
+#endif
 void Interpreter::doPushGlobal(size_t bytecodeIndex) {
     auto* globalName =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
+#ifdef USE_YK
+    // yk-only: promote the name and globals epoch so the yk_idempotent global
+    // lookup folds to a trace constant. Universe::SetGlobal (e.g. via the
+    // system global:put: primitive) bumps the epoch, deopting stale folds.
+    globalName = (VMSymbol*)yk_promote((void*)globalName);
+    auto global = (vm_oop_t)get_global_idem(
+        globalName, yk_promote(Universe::globalsEpoch));
+#else
     vm_oop_t global = Universe::GetGlobal(globalName);
+#endif
 
     if (global != nullptr) {
         GetFrame()->Push(global);
@@ -966,7 +988,29 @@ void Interpreter::doSend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#ifdef USE_YK
+    // yk-only send-site dispatch fold: promote the receiver class, signature
+    // and invokables epoch so all of lookup_invokable_idem's args are trace
+    // constants — the yk_idempotent lookup then folds out of compiled traces
+    // to the recorded callee, and the virtual Invoke devirtualizes to a
+    // direct, inlinable call. The epoch promote-guard deopts the trace if any
+    // method table is mutated (see Universe::invokablesEpoch). No promote of
+    // the result: the folded value is already pinned by the argument guards,
+    // and a redundant promote costs a recorder-shim call per send at
+    // interpreter time. Gated to yk — the plain interpreter keeps the send()
+    // path below unchanged.
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        receiverClass, signature, yk_promote(Universe::invokablesEpoch));
+    if (invokable != nullptr) {
+        invokable->Invoke(GetFrame());
+    } else {
+        triggerDoesNotUnderstand(signature);
+    }
+#else
     send(signature, receiverClass);
+#endif
 }
 
 void Interpreter::doUnarySend(size_t bytecodeIndex) {
@@ -989,7 +1033,17 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#ifdef USE_YK
+    // yk-only send-site dispatch fold (unary): see doSend. Promote all of
+    // lookup_invokable_idem's args so the lookup folds out of compiled traces
+    // and Invoke1 devirtualizes.
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        receiverClass, signature, yk_promote(Universe::invokablesEpoch));
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
 #ifdef LOG_RECEIVER_TYPES
@@ -1009,7 +1063,9 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 }
 
 #ifdef USE_YK
-__attribute__((yk_unroll))
+// yk_indirect_inline: promotes below; keep an inliner-orphaned copy traceable
+// (see doPushGlobal).
+__attribute__((yk_unroll, yk_indirect_inline))
 #endif
 void Interpreter::doSuperSend(size_t bytecodeIndex) {
     auto* signature =
@@ -1020,7 +1076,16 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     VMClass* holder = realMethod->GetHolder();
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
+#ifdef USE_YK
+    // yk-only super-send fold: see doSend. The super class is a constant per
+    // call site (fixed holder), so the promoted lookup folds out of traces.
+    super = (VMClass*)yk_promote((void*)super);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        super, signature, yk_promote(Universe::invokablesEpoch));
+#else
     auto* invokable = super->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());

@@ -61,6 +61,9 @@
 #include "../vmobjects/VMString.h"
 #include "../vmobjects/VMVector.h"
 #include "../yk/yk_linkage.h"
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
 #include "Globals.h"
 #include "IsValidObject.h"
 #include "LogAllocation.h"
@@ -806,10 +809,22 @@ VMArray* Universe::NewArrayList(std::vector<vm_oop_t>& list) {
     return result;
 }
 
+#ifdef USE_YK
+// yk_indirect_inline: promotes below; keep an inliner-orphaned copy traceable
+// (see Interpreter::doPushGlobal).
+__attribute__((yk_indirect_inline))
+#endif
 VMBlock* Universe::NewBlock(VMInvokable* method, VMFrame* context,
                             uint8_t arguments) {
     auto* result = new (GetHeap<HEAP_CLS>(), 0) VMBlock(method, context);
+#ifdef USE_YK
+    // yk-only: numArgs is a per-site constant, so the yk_idempotent block
+    // class lookup folds out of compiled traces (see get_block_class_idem).
+    result->SetClass((VMClass*)get_block_class_idem(
+        yk_promote((uintptr_t)arguments), yk_promote(Universe::globalsEpoch)));
+#else
     result->SetClass(GetBlockClassWithArgs(arguments));
+#endif
 
     LOG_ALLOCATION("VMBlock", result->GetObjectSize());
     return result;
@@ -1038,5 +1053,9 @@ VMClass* Universe::NewSystemClass() {
 }
 
 void Universe::SetGlobal(VMSymbol* name, vm_oop_t val) {
+#ifdef USE_YK
+    // Invalidate compiled traces that folded get_global_idem results.
+    globalsEpoch++;
+#endif
     globals[store_root(name)] = store_root(val);
 }

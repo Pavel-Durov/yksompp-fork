@@ -27,6 +27,19 @@ build-debug:
         -S . -B cmake-debug
     cmake --build cmake-debug --parallel
 
+# Non-yk pure-interpreter build with per-bytecode execution counters, used by
+# dump_traces.sh for the bytecode heatmap. No JIT, so every bytecode is counted
+# (a yk build would skip JIT-covered ones and invert the heatmap).
+build-heatmap:
+    mkdir -p cmake-heatmap
+    cmake -DCMAKE_BUILD_TYPE=Release \
+        -DGC_TYPE={{GC_TYPE}} \
+        -DBYTECODE_HEATMAP=TRUE \
+        "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
+        "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
+        -S . -B cmake-heatmap
+    cmake --build cmake-heatmap --parallel
+
 build-yk-debug:
     mkdir -p cmake-yk-debug
     PATH="$(dirname {{yk_config}}):$PATH" cmake \

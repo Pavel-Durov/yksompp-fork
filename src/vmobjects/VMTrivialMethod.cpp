@@ -1,5 +1,9 @@
 #include "VMTrivialMethod.h"
 
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
+
 #include <cassert>
 #include <cstddef>
 #include <string>
@@ -51,6 +55,13 @@ VMTrivialMethod* MakeSetter(VMSymbol* sig, vector<Variable>& arguments,
     return result;
 }
 
+#ifdef USE_YK
+// Trivial methods are only ever called virtually (auto-outlined otherwise):
+// yk_indirect_inline keeps the tiny body traceable; yk_unroll linearizes the
+// arg-pop loop (numberOfArguments is a per-invokable constant, so the unroll
+// count is stable). See EXPERIMENTS.md E6.
+__attribute__((yk_unroll, yk_indirect_inline))
+#endif
 VMFrame* VMLiteralReturn::Invoke(VMFrame* frame) {
     for (int i = 0; i < numberOfArguments; i += 1) {
         frame->Pop();
@@ -59,6 +70,9 @@ VMFrame* VMLiteralReturn::Invoke(VMFrame* frame) {
     return nullptr;
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))  // see VMLiteralReturn::Invoke()
+#endif
 VMFrame* VMLiteralReturn::Invoke1(VMFrame* frame) {
     assert(numberOfArguments == 1);
     frame->Pop();
@@ -87,12 +101,22 @@ void VMLiteralReturn::InlineInto(MethodGenerationContext& mgenc,
     EmitPUSHCONSTANT(mgenc, parser, load_ptr(literal));
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll, yk_indirect_inline))  // see VMLiteralReturn::Invoke()
+#endif
 VMFrame* VMGlobalReturn::Invoke(VMFrame* frame) {
     for (int i = 0; i < numberOfArguments; i += 1) {
         frame->Pop();
     }
 
+#ifdef USE_YK
+    // Fold the global lookup out of traces (see get_global_idem).
+    auto* name = (VMSymbol*)yk_promote((void*)load_ptr(globalName));
+    auto value =
+        (vm_oop_t)get_global_idem(name, yk_promote(Universe::globalsEpoch));
+#else
     vm_oop_t value = Universe::GetGlobal(load_ptr(globalName));
+#endif
     if (value != nullptr) {
         frame->Push(value);
     } else {
@@ -102,11 +126,21 @@ VMFrame* VMGlobalReturn::Invoke(VMFrame* frame) {
     return nullptr;
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))  // see VMLiteralReturn::Invoke()
+#endif
 VMFrame* VMGlobalReturn::Invoke1(VMFrame* frame) {
     assert(numberOfArguments == 1);
     frame->Pop();
 
+#ifdef USE_YK
+    // Fold the global lookup out of traces (see get_global_idem).
+    auto* name = (VMSymbol*)yk_promote((void*)load_ptr(globalName));
+    auto value =
+        (vm_oop_t)get_global_idem(name, yk_promote(Universe::globalsEpoch));
+#else
     vm_oop_t value = Universe::GetGlobal(load_ptr(globalName));
+#endif
     if (value != nullptr) {
         frame->Push(value);
     } else {
@@ -137,6 +171,9 @@ AbstractVMObject* VMGlobalReturn::CloneForMovingGC() const {
     return prim;
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll, yk_indirect_inline))  // see VMLiteralReturn::Invoke()
+#endif
 VMFrame* VMGetter::Invoke(VMFrame* frame) {
     vm_oop_t self = nullptr;
     for (int i = 0; i < numberOfArguments; i += 1) {
@@ -158,6 +195,9 @@ VMFrame* VMGetter::Invoke(VMFrame* frame) {
     return nullptr;
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))  // see VMLiteralReturn::Invoke()
+#endif
 VMFrame* VMGetter::Invoke1(VMFrame* frame) {
     assert(numberOfArguments == 1);
     vm_oop_t self = frame->Pop();
@@ -195,6 +235,9 @@ std::string VMGetter::AsDebugString() const {
     return "VMGetter(fieldIndex: " + to_string(fieldIndex) + ")";
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll, yk_indirect_inline))  // see VMLiteralReturn::Invoke()
+#endif
 VMFrame* VMSetter::Invoke(VMFrame* frame) {
     vm_oop_t value = nullptr;
     vm_oop_t self = nullptr;

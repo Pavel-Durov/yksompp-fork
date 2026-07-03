@@ -11,11 +11,14 @@
 
   #include "../interpreter/bytecodes.h"
   #include "../vm/Universe.h"
+  #include "../vmobjects/VMClass.h"
   #include "../vmobjects/VMMethod.h"
 
 // --- Universe ---
 
 YkMT* Universe::yk_mt = nullptr;
+uintptr_t Universe::globalsEpoch = 0;
+uintptr_t Universe::invokablesEpoch = 0;
 
 void YkUniverseInit() {
     char* yk_err = nullptr;
@@ -93,6 +96,41 @@ uint8_t load_bc(uint8_t* bc, size_t big) {
   NOOPT_VAL(bc);
   NOOPT_VAL(big);
   return bc[big];
+}
+
+// Idempotent lookup wrappers. At call sites where every argument is a trace
+// constant (all promoted), yk's j2 compiler replaces the call with the return
+// value recorded while tracing — the runtime lookup vanishes from compiled
+// traces. The fold emits no guard of its own, so each wrapper takes the
+// matching epoch (Universe::invokablesEpoch / globalsEpoch) as an argument:
+// callers promote it, and any table mutation bumps it, turning a stale fold
+// into a failed promote-guard and a clean deopt.
+//
+// Return type is uintptr_t, not a pointer: ykllvm's idempotent-recorder pass
+// only supports integer returns. NOOPT_VAL pins `epoch` as used so LTO's
+// dead-argument elimination cannot strip it (that would silently unsound the
+// fold).
+__attribute__((yk_idempotent))
+uintptr_t lookup_invokable_idem(VMClass* cls, VMSymbol* signature,
+                                uintptr_t epoch) {
+  NOOPT_VAL(epoch);
+  return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
+}
+
+__attribute__((yk_idempotent))
+uintptr_t get_global_idem(VMSymbol* name, uintptr_t epoch) {
+  NOOPT_VAL(epoch);
+  return reinterpret_cast<uintptr_t>(Universe::GetGlobal(name));
+}
+
+// Block classes are created once per arg count and then cached; a lazy first
+// load goes through SetGlobal, which bumps globalsEpoch, so that epoch also
+// guards this fold.
+__attribute__((yk_idempotent))
+uintptr_t get_block_class_idem(uintptr_t numArgs, uintptr_t epoch) {
+  NOOPT_VAL(epoch);
+  return reinterpret_cast<uintptr_t>(
+      Universe::GetBlockClassWithArgs((uint8_t)numArgs));
 }
 // Assign a yk location to each loop header (backward-jump target).
 //
