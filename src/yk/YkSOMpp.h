@@ -89,7 +89,6 @@ void YkDestroyDebugStrs(char** strs, size_t bcLen);
         YK_PROMOTE_BC();                                    \
         goto YK_DISPATCH_START;                             \
     }
-#define DISPATCH_FULL_GC() DISPATCH_GC()
 #define YK_BC_SWITCH()                                         \
     YK_DEBUG_STR_CALL();                                       \
     switch (load_bc(bc, big)) {                                \

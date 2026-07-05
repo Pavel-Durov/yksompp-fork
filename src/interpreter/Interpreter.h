@@ -50,7 +50,6 @@
       }
   // No dispatch tiering without yk: FULL is identical to the plain variants.
   #define DISPATCH_FULL() DISPATCH_NOGC()
-  #define DISPATCH_FULL_GC() DISPATCH_GC()
   #define YK_DISPATCH_TRAMPOLINE() (void)0
 // NOLINTEND(cppcoreguidelines-macro-usage)
 #endif

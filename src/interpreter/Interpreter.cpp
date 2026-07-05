@@ -82,6 +82,10 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     uint8_t* bc = currentBytecodes;
     size_t big = bytecodeIndexGlobal;
 
+#ifdef USE_YK
+    YK_PROMOTE_BC();
+    goto YK_DISPATCH_START;
+#else
     void* loopTargets[] = {&&LABEL_BC_HALT,
                            &&LABEL_BC_DUP,
                            &&LABEL_BC_DUP_SECOND,
@@ -149,16 +153,6 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
                            &&LABEL_BC_JUMP2_ON_NIL_TOP_TOP,
                            &&LABEL_BC_JUMP2_IF_GREATER,
                            &&LABEL_BC_JUMP2_BACKWARD};
-
-#ifdef USE_YK
-    // Skip the computed-goto dispatch: goto* compiles to LLVM indirectbr which
-    // yk cannot trace. Jump directly to YK_DISPATCH_START where the single
-    // yk_mt_control_point call lives and a switch dispatches instead.
-    // Establish the initial promoted `bc`; thereafter it is only re-promoted at
-    // frame changes (DISPATCH_FULL/GC), staying threaded through straight-line.
-    YK_PROMOTE_BC();
-    goto YK_DISPATCH_START;
-#else
     goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]];
 #endif
 
