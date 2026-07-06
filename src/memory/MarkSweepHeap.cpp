@@ -23,13 +23,10 @@ static inline size_t cellSizeForClass(size_t classIndex) {
     return (classIndex + 1) * ALIGNMENT;
 }
 
-// Page granularity; must be >= the largest size class.
 static const size_t PAGE_SIZE = (size_t)32 * 1024;
 
 static const size_t GC_UNMARKED = 0;
 
-// Access a cell's gcfield via the non-virtual accessors, so the sweeper and the
-// mark phase agree on its location and it works on a free (unconstructed) cell.
 static inline size_t cellMark(void* cell) {
     return ((AbstractVMObject*)cell)->GetGCField();
 }
@@ -78,8 +75,6 @@ void MarkSweepHeap::carveNewPage(size_t classIndex) {
         Quit(-1);
     }
 
-    // Mark the page swept for this epoch: its cells are already free below, so
-    // the sweeper skips it this cycle.
     auto* page = new Page{memory, epoch};
     classPages[classIndex].push_back(page);
 
@@ -103,7 +98,7 @@ bool MarkSweepHeap::sweepPageAt(size_t classIndex, size_t pageIndex) {
     char* const base = page->memory;
 
     // Stage reclaimed cells on a local chain; only publish them if the page has
-    // a live cell, so a fully-dead page can be freed without dangling entries.
+    // a live cell.
     FreeListEntry* localHead = nullptr;
     FreeListEntry* localTail = nullptr;
     size_t liveCells = 0;
@@ -142,12 +137,12 @@ bool MarkSweepHeap::sweepNextPage(size_t classIndex) {
     auto& pages = classPages[classIndex];
     while (sweepCursor[classIndex] < pages.size()) {
         size_t const idx = sweepCursor[classIndex];
-        if (pages[idx]->sweptEpoch == epoch) {  // already swept this cycle
+        if (pages[idx]->sweptEpoch == epoch) {
             sweepCursor[classIndex]++;
             continue;
         }
         if (sweepPageAt(classIndex, idx)) {
-            continue;  // page freed; a different page is now at idx
+            continue;
         }
         sweepCursor[classIndex]++;
         if (freeLists[classIndex] != nullptr) {
@@ -177,7 +172,6 @@ AbstractVMObject* MarkSweepHeap::AllocateObject(size_t size) {
 
     size_t const classIndex = sizeClassIndex(size);
     if (freeLists[classIndex] == nullptr) {
-        // reclaim from a not-yet-swept page before growing the heap
         if (!sweepNextPage(classIndex)) {
             carveNewPage(classIndex);
         }
@@ -186,8 +180,6 @@ AbstractVMObject* MarkSweepHeap::AllocateObject(size_t size) {
     FreeListEntry* cell = freeLists[classIndex];
     freeLists[classIndex] = cell->next;
 
-    // zero the requested bytes (also sets gcfield to GC_UNMARKED); padding
-    // bytes are never read as fields
     memset((void*)cell, 0, size);
 
     accountAllocation(size);

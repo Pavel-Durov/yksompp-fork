@@ -1,14 +1,3 @@
-// A mark-and-sweep garbage collector. When memory runs low it finds every
-// object the program can still reach ("mark"), and treats everything else as
-// garbage whose memory can be reused ("sweep"). Objects are never moved.
-//
-// Marking starts from the roots - the globals and the interpreter's stack
-// and follows references outward until the whole set of reachable objects has
-// been visited.
-//
-// Sweeping is lazy. A collection itself only marks, which keeps the process
-// pause short; reclaiming dead objects happens as the the program allocates.
-// Reclaimed memory is recycled for new objects of the same size.
 #include "MarkSweepCollector.h"
 
 #include <cstddef>
@@ -24,8 +13,6 @@
 #include "../vmobjects/VMFrame.h"
 #include "MarkSweepHeap.h"
 
-// File scope so the static mark callback can reach them; the worklist is reused
-// across collections.
 static size_t s_epoch = 0;
 static size_t s_markedBytes = 0;
 static std::vector<AbstractVMObject*> s_markStack;
@@ -43,9 +30,6 @@ void MarkSweepCollector::Collect() {
     s_epoch = heap->epoch;
     s_markedBytes = 0;
 
-    // Drop all free lists (re-harvested by sweeping). This is what guarantees
-    // no allocation into a not-yet-swept page, so any cell without the current
-    // epoch found while sweeping is reclaimable.
     for (auto& list : heap->freeLists) {
         list = nullptr;
     }
@@ -55,7 +39,7 @@ void MarkSweepCollector::Collect() {
 
     markReachableObjects();
 
-    // Sweep the large-object space eagerly (few objects, so cheap).
+    // Sweep the large-object space.
     std::vector<AbstractVMObject*> survivingLarge;
     for (auto* obj : heap->largeObjects) {
         if (obj->GetGCField() == heap->epoch) {
@@ -66,8 +50,6 @@ void MarkSweepCollector::Collect() {
     }
     heap->largeObjects = std::move(survivingLarge);
 
-    // Small dead objects (and empty pages) are reclaimed lazily during
-    // allocation, not here, keeping this pause to just the mark phase.
 
     heap->spcAlloc = s_markedBytes;
     // Collect again after allocating ~max(live, a heap's worth). The floor

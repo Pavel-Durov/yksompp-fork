@@ -66,9 +66,9 @@
 //
 #define GENERATIONAL 1
 #define COPYING 2
-#define MARK_SWEEP 3
+#define DEBUG_MARK_SWEEP 3
 #define DEBUG_COPYING 4
-#define DEBUG_MARK_SWEEP 5
+#define MARK_SWEEP 5
 
 #if GC_TYPE == GENERATIONAL
 class GenerationalHeap;

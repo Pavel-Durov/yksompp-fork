@@ -11,7 +11,7 @@ jobs:
       fail-fast: false # we want all jobs to run, because they may fail independently
       matrix:
         compiler: [clang, gcc]
-        gc: [GENERATIONAL, MARK_SWEEP, COPYING]
+        gc: [GENERATIONAL, DEBUG_MARK_SWEEP, COPYING, MARK_SWEEP]
         cmake_flags:
           - "-DUSE_TAGGING=true"
           - "-DUSE_TAGGING=false -DCACHE_INTEGER=true"
@@ -53,8 +53,8 @@ jobs:
           echo $CC $CXX
           mkdir cmake-build
           cd cmake-build
-          echo cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DFIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS=false  -DCMAKE_BUILD_TYPE=Debug
-          cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DFIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS=false -DCMAKE_BUILD_TYPE=Debug
+          echo cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DCMAKE_BUILD_TYPE=Debug
+          cmake .. -DGC_TYPE=${{ matrix.gc}} ${{ matrix.cmake_flags }} -DCMAKE_BUILD_TYPE=Debug
           make -j5
 
       - name: Run Unit Tests

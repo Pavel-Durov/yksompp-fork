@@ -156,12 +156,12 @@ static void printVmConfig() {
         cout << "\tgarbage collector: generational\n";
     } else if (GC_TYPE == COPYING) {
         cout << "\tgarbage collector: copying\n";
-    } else if (GC_TYPE == MARK_SWEEP) {
-        cout << "\tgarbage collector: mark-sweep\n";
-    } else if (GC_TYPE == DEBUG_COPYING) {
-        cout << "\tgarbage collector: debug copying\n";
     } else if (GC_TYPE == DEBUG_MARK_SWEEP) {
         cout << "\tgarbage collector: debug mark-sweep\n";
+    } else if (GC_TYPE == DEBUG_COPYING) {
+        cout << "\tgarbage collector: debug copying\n";
+    } else if (GC_TYPE == MARK_SWEEP) {
+        cout << "\tgarbage collector: mark-sweep\n";
     } else {
         cout << "\tgarbage collector: unknown\n";
     }

@@ -11,10 +11,10 @@ class MarkSweepHeap : public Heap<MarkSweepHeap> {
     struct FreeListEntry {
         FreeListEntry* next;
     };
-    // NOLINTNEXTLINE(altera-struct-pack-align): FPGA-specific, not relevant
+    // NOLINTNEXTLINE(altera-struct-pack-align):
     struct Page {
         char* memory;
-        size_t sweptEpoch;  // last epoch this page was swept in
+        size_t sweptEpoch;
     };
 
 public:
@@ -35,16 +35,13 @@ private:
     AbstractVMObject* allocateLargeObject(size_t size);
     void accountAllocation(size_t bytes);
 
-    std::vector<FreeListEntry*> freeLists;        // per size class
-    std::vector<std::vector<Page*>> classPages;   // per size class
-    std::vector<size_t> sweepCursor;              // per size class
-    std::vector<AbstractVMObject*> largeObjects;  // not page-allocated
+    std::vector<FreeListEntry*> freeLists;
+    std::vector<std::vector<Page*>> classPages;
+    std::vector<size_t> sweepCursor;
+    std::vector<AbstractVMObject*> largeObjects;
 
-    size_t epoch{0};  // current live mark; bumped each collection
+    size_t epoch{0};
     size_t spcAlloc{0};
     size_t collectionLimit;
-    // floor for collectionLimit (~the configured heap size): collect only once
-    // about a heap's worth has been allocated, like the copying collector,
-    // rather than every ~live-set bytes.
     size_t minCollectionLimit;
 };
