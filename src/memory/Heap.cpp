@@ -82,7 +82,3 @@ template Heap<DebugMarkSweepHeap>::~Heap();
 class MarkSweepHeap;
 template MarkSweepHeap* Heap<MarkSweepHeap>::theHeap;
 template Heap<MarkSweepHeap>::~Heap();
-
-class DebugMarkSweepHeap;
-template DebugMarkSweepHeap* Heap<DebugMarkSweepHeap>::theHeap;
-template Heap<DebugMarkSweepHeap>::~Heap();
