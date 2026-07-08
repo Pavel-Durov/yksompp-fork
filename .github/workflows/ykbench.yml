@@ -13,8 +13,42 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Cache rust + haste build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.rustup
+          key: haste-${{ runner.os }}-${{ hashFiles('.github/workflows/ykbench.yml') }}
+          restore-keys: haste-${{ runner.os }}-
+
+      - name: Install rust (if not cached)
+        run: |
+          if ! command -v cargo >/dev/null; then
+            apt-get update
+            apt-get install -y --no-install-recommends ca-certificates curl
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+              | sh -s -- -y --default-toolchain stable --profile minimal
+          fi
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+
+      - name: Install haste (if not cached)
+        run: command -v haste >/dev/null || cargo install --git https://github.com/ykjit/haste
+
+      - name: Clone yk-benchmarks
+        run: |
+          git clone --depth 1 --recurse-submodules --shallow-submodules \
+            https://github.com/ykjit/yk-benchmarks .bench-work/yk-benchmarks
+
       - name: Build + test SOM++ against prebuilt Yk
         run: scripts/yk/build-and-test.sh
 
       - name: Run haste bench
-        run: scripts/yk/bench.sh "ci ${{ github.sha }}"
+        run: |
+          scripts/yk/bench.sh \
+            yk-build/SOM++ \
+            Smalltalk \
+            .bench-work/yk-benchmarks \
+            "ci ${{ github.sha }}"
