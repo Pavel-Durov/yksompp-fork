@@ -1,0 +1,51 @@
+# syntax=docker/dockerfile:1.7
+# Prebuilt yk toolchain image for CI.
+# Build context is the parent of the yk/ checkout (see build-yk-image.sh).
+# Base: debian:bookworm (glibc 2.36) — safely older than any GH runner glibc,
+# so binaries built here run on any ubuntu-* / debian-* runner.
+#
+# Caching strategy (needs DOCKER_BUILDKIT=1, set by build-yk-image.sh):
+#   - apt-get:      /var/cache/apt + /var/lib/apt/lists cached across builds.
+#   - cargo deps:   ~/.cargo/registry + ~/.cargo/git cached across builds.
+#   - cargo target: NOT cached. yk's build scripts write to hard-coded relative
+#                   paths under yk/target — redirecting via CARGO_TARGET_DIR
+#                   or mounting yk/target breaks them.
+# Result: unchanged apt/rustup layers reuse Docker's layer cache; touching yk/
+# invalidates the cargo build layer but crate downloads and apt fetches are
+# still reused via the mounts.
+
+FROM debian:bookworm-slim AS builder
+ENV DEBIAN_FRONTEND=noninteractive
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt/lists,sharing=locked \
+    rm -f /etc/apt/apt.conf.d/docker-clean && \
+    apt-get update && apt-get install -y --no-install-recommends \
+      ca-certificates build-essential cmake ninja-build python3 \
+      curl clang lld pkg-config zlib1g-dev libtinfo-dev libffi-dev git \
+      gdb
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+      | sh -s -- -y --default-toolchain nightly --profile minimal
+ENV PATH=/root/.cargo/bin:$PATH
+
+COPY yk/ /opt/yk/
+WORKDIR /opt/yk
+
+# Forward clang so ykllvm bootstraps against the system clang.
+RUN --mount=type=cache,target=/root/.cargo/registry,sharing=locked \
+    --mount=type=cache,target=/root/.cargo/git,sharing=locked \
+    YKB_YKLLVM_BUILD_ARGS="define:CMAKE_C_COMPILER=/usr/bin/clang,define:CMAKE_CXX_COMPILER=/usr/bin/clang++" \
+    cargo build --release
+
+FROM debian:bookworm-slim
+ENV DEBIAN_FRONTEND=noninteractive
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt/lists,sharing=locked \
+    rm -f /etc/apt/apt.conf.d/docker-clean && \
+    apt-get update && apt-get install -y --no-install-recommends \
+      ca-certificates build-essential cmake python3 python3-pip python3-pytest \
+      libcppunit-dev libtinfo-dev libffi-dev git
+
+COPY --from=builder /opt/yk /opt/yk
+# yk-config lives in yk/bin; ykllvm's clang lives in yk/ykllvm/inst/bin.
+ENV PATH=/opt/yk/bin:/opt/yk/ykllvm/inst/bin:$PATH

@@ -1,0 +1,20 @@
+name: Yk Bench
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  bench:
+    name: Build + haste bench yksompp+Yk
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/pavel-durov/yk-build:latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Build + test SOM++ against prebuilt Yk
+        run: scripts/yk/build-and-test.sh
+
+      - name: Run haste bench
+        run: scripts/yk/bench.sh "ci ${{ github.sha }}"
