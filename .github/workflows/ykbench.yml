@@ -24,8 +24,8 @@ jobs:
           key: haste-${{ runner.os }}-${{ hashFiles('.github/workflows/ykbench.yml') }}
           restore-keys: haste-${{ runner.os }}-
 
-      - name: Install bc (haste harness dep)
-        run: apt-get update && apt-get install -y --no-install-recommends bc
+      - name: Install harness deps
+        run: apt-get update && apt-get install -y --no-install-recommends bc gettext-base
 
       - name: Install rust (if not cached)
         run: |
