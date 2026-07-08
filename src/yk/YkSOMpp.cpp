@@ -54,10 +54,6 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength) {
 static char** buildDebugStrs(const uint8_t* bytecodes, size_t bcLen,
                              const size_t* lineNums, const char* sourceFile) {
     char** strs = static_cast<char**>(calloc(bcLen, sizeof(char*)));
-    const char* slash = strrchr(sourceFile, '/');
-    if (slash != nullptr) {
-        sourceFile = slash + 1;
-    }
     for (size_t i = 0; i < bcLen;
          i += Bytecode::GetBytecodeLength(bytecodes[i])) {
         char tmp[256];
