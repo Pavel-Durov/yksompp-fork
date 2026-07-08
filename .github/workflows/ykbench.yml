@@ -2,6 +2,10 @@ name: Yk Bench
 
 on: [pull_request, workflow_dispatch]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   bench:
     name: Build + haste bench yksompp+Yk
@@ -25,7 +29,7 @@ jobs:
           restore-keys: haste-${{ runner.os }}-
 
       - name: Install harness deps
-        run: apt-get update && apt-get install -y --no-install-recommends bc gettext-base
+        run: apt-get update && apt-get install -y --no-install-recommends bc gettext-base curl jq
 
       - name: Install rust (if not cached)
         run: |
@@ -54,4 +58,22 @@ jobs:
             yk-build/SOM++ \
             Smalltalk \
             .bench-work/yk-benchmarks \
-            "ci ${{ github.sha }}"
+            "ci ${{ github.sha }}" 2>&1 | tee bench.out
+
+      - name: Comment results on PR
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          tail -c 8000 bench.out > tail.out
+          jq -Rs --arg sha "$SHA" \
+            '{body: ("### Haste bench (`" + $sha + "`)\n```\n" + . + "\n```")}' \
+            < tail.out > body.json
+          curl -sSf -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR/comments" \
+            -d @body.json
