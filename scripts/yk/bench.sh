@@ -29,3 +29,8 @@ envsubst '${SOMPP} ${SOM_LIB}' \
 
 cd "$YK_BENCHMARKS"
 haste bench -f ./haste_yksompp_fork.toml -c "$COMMENT" --order declaration
+
+# Emit a haste-diff table for the fresh datum. yk-benchmarks is cloned fresh in
+# CI so IDs restart from 1; take the highest just in case.
+DATUM_ID=$(ls -1 .haste 2>/dev/null | grep -E '^[0-9]+$' | sort -n | tail -1)
+[ -n "$DATUM_ID" ] && haste diff -f ./haste_yksompp_fork.toml "$DATUM_ID" "$DATUM_ID"

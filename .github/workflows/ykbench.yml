@@ -68,7 +68,10 @@ jobs:
           REPO: ${{ github.repository }}
           SHA: ${{ github.sha }}
         run: |
-          tail -c 8000 bench.out > tail.out
+          # Prefer the haste-diff block emitted at the end of bench.out; on
+          # bench failure it's missing, so fall back to the tail for triage.
+          awk '/^Datum[0-9]+:/{keep=1} keep' bench.out > tail.out
+          [ -s tail.out ] || tail -c 8000 bench.out > tail.out
           jq -Rs --arg sha "$SHA" \
             '{body: ("### Haste bench (`" + $sha + "`)\n```\n" + . + "\n```")}' \
             < tail.out > body.json
