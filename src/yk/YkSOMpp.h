@@ -11,21 +11,19 @@
   #define restrict __restrict
 extern "C" {
 #endif
-#include <yk.h>
+#include <yk.h>  // IWYU pragma: export
 #ifdef __cplusplus
   #undef restrict
 }
 #endif
+
+#include "YkDebugStr.h"
 
 // Yk lifecycle — implemented in YkSOMpp.cpp.
 void YkUniverseInit();
 void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
-
-#ifdef YK_DEBUG_STRS
-void YkDestroyDebugStrs(char** strs, size_t bcLen);
-#endif
 
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)

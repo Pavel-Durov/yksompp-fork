@@ -27,6 +27,7 @@
  */
 
 #include <array>
+#include <optional>
 #include <vector>
 
 #include "../misc/defs.h"
@@ -103,6 +104,10 @@ public:
     void SetSourceCoordinate(const SourceCoordinate& c) {
         currentSourceCoordinate = c;
     }
+    void SetOriginalSourceCoordinate(const SourceCoordinate& c) {
+        originalSourceCoordinate = c;
+    }
+    void ClearOriginalSourceCoordinate() { originalSourceCoordinate.reset(); }
     void SetSourceFile(std::string f) { sourceFile = std::move(f); }
 #endif
 
@@ -182,11 +187,11 @@ private:
     std::vector<vm_oop_t> literals;
     bool finished{false};
     std::vector<uint8_t> bytecode;
-#ifdef YK_DEBUG_STRS
-    SourceCoordinate currentSourceCoordinate{};
-    std::vector<SourceCoordinate>
-        bcCoords;  // parallel to bytecode, one per byte
+#ifdef USE_YK
+    std::vector<SourceCoordinate> bcCoords;
     std::string sourceFile;
+    SourceCoordinate currentSourceCoordinate;
+    std::optional<SourceCoordinate> originalSourceCoordinate;
 #endif
     LexicalScope* lexicalScope{nullptr};
 

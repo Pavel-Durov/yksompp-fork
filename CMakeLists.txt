@@ -200,7 +200,6 @@ target_sources(SOM++ PRIVATE
   ${MISC_SRC}
   ${VM_SRC}
   ${VMOBJECTS_SRC}
-  ${YK_SRC}
 
   ${MAIN_SRC}
   ${PRIMITIVES_SRC}
@@ -241,6 +240,8 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
   separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
 
   target_compile_definitions(SOM++ PRIVATE USE_YK)
+  # yk-only sources compile only when yk is enabled
+  target_sources(SOM++ PRIVATE ${YK_SRC})
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(SOM++ PRIVATE YK_DEBUG_STRS)
     # Export vtables so yk can resolve them using dlsym.
@@ -264,7 +265,6 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     ${MISC_SRC}
     ${VM_SRC}
     ${VMOBJECTS_SRC}
-    ${YK_SRC}
 
     ${PRIMITIVES_SRC}
     ${PRIMITIVESCORE_SRC}

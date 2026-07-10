@@ -40,8 +40,20 @@ public:
 
     void Dump(const char* indent, bool printObjects) override;
 
+#ifdef YK_DEBUG_STRS
+    void SetSourceCoordinate(const SourceCoordinate& c) {
+        sourceCoordinate = c;
+    }
+    [[nodiscard]] const SourceCoordinate& GetSourceCoordinate() const {
+        return sourceCoordinate;
+    }
+#endif
+
 private:
     vector<Variable> arguments;
+#ifdef YK_DEBUG_STRS
+    SourceCoordinate sourceCoordinate;
+#endif
 };
 
 VMTrivialMethod* MakeLiteralReturn(VMSymbol* sig, vector<Variable>& arguments,

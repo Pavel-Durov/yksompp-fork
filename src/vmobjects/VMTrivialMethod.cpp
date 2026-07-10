@@ -84,7 +84,13 @@ void VMLiteralReturn::WalkObjects(walk_heap_fn walk) {
 
 void VMLiteralReturn::InlineInto(MethodGenerationContext& mgenc,
                                  const Parser& parser, bool /*mergeScope*/) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetOriginalSourceCoordinate(GetSourceCoordinate());
+#endif
     EmitPUSHCONSTANT(mgenc, parser, load_ptr(literal));
+#ifdef YK_DEBUG_STRS
+    mgenc.ClearOriginalSourceCoordinate();
+#endif
 }
 
 VMFrame* VMGlobalReturn::Invoke(VMFrame* frame) {
@@ -118,7 +124,13 @@ VMFrame* VMGlobalReturn::Invoke1(VMFrame* frame) {
 
 void VMGlobalReturn::InlineInto(MethodGenerationContext& mgenc,
                                 const Parser& parser, bool /*mergeScope*/) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetOriginalSourceCoordinate(GetSourceCoordinate());
+#endif
     EmitPUSHGLOBAL(mgenc, parser, load_ptr(globalName));
+#ifdef YK_DEBUG_STRS
+    mgenc.ClearOriginalSourceCoordinate();
+#endif
 }
 
 void VMGlobalReturn::WalkObjects(walk_heap_fn walk) {
@@ -179,7 +191,13 @@ VMFrame* VMGetter::Invoke1(VMFrame* frame) {
 
 void VMGetter::InlineInto(MethodGenerationContext& mgenc,
                           const Parser& /*parser*/, bool /*mergeScope*/) {
+#ifdef YK_DEBUG_STRS
+    mgenc.SetOriginalSourceCoordinate(GetSourceCoordinate());
+#endif
     EmitPushFieldWithIndex(mgenc, fieldIndex);
+#ifdef YK_DEBUG_STRS
+    mgenc.ClearOriginalSourceCoordinate();
+#endif
 }
 
 AbstractVMObject* VMGetter::CloneForMovingGC() const {
