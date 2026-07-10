@@ -35,6 +35,7 @@
 #endif
 
 #include "../compiler/LexicalScope.h"
+#include "../compiler/SourceCoordinate.h"
 #include "../vm/Globals.h"
 #include "../vm/Print.h"
 #include "VMInteger.h"
@@ -107,6 +108,7 @@ public:
         free(bytecodes);
         YkMethodDestroy(yklocs, bcLength);
   #ifdef YK_DEBUG_STRS
+        free(instsrccoords);
         YkDestroyDebugStrs(instdebugstrs, bcLength);
   #endif
 #endif
@@ -157,7 +159,7 @@ public:
     inline void SetBytecode(size_t indx, uint8_t val) { bytecodes[indx] = val; }
 
 #ifdef USE_YK
-    void InitYkLocs(const size_t* lineNums = nullptr,
+    void InitYkLocs(const SourceCoordinate* coords = nullptr,
                     const char* sourceFile = nullptr);
 #endif
 
@@ -250,10 +252,10 @@ private:
     gc_oop_t* indexableFields;
     uint8_t* bytecodes;
 #ifdef USE_YK
-    YkLocation* yklocs{nullptr};  // one per bytecode; malloc'd (not GC-managed)
+    YkLocation* yklocs{nullptr};
   #ifdef YK_DEBUG_STRS
-    char** instdebugstrs{
-        nullptr};  // one per bytecode opcode position; malloc'd
+    SourceCoordinate* instsrccoords{nullptr};
+    char** instdebugstrs{nullptr};
   #endif
 #endif
 };

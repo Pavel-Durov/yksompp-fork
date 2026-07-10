@@ -271,6 +271,11 @@ void VMMethod::inlineInto(MethodGenerationContext& mgenc,
     size_t i = 0;
     const size_t numBytecodes = GetNumberOfBytecodes();
     while (i < numBytecodes) {
+#ifdef YK_DEBUG_STRS
+        if (instsrccoords != nullptr) {
+            mgenc.SetOriginalSourceCoordinate(instsrccoords[i]);
+        }
+#endif
         prepareBackJumpToCurrentAddress(backJumps, backJumpsToPatch, i, mgenc);
         patchJumpToCurrentAddress(i, jumps, mgenc);
 
@@ -551,6 +556,9 @@ void VMMethod::inlineInto(MethodGenerationContext& mgenc,
 
         i += bcLength;
     }
+#ifdef YK_DEBUG_STRS
+    mgenc.ClearOriginalSourceCoordinate();
+#endif
 
     assert(jumps.empty());
 }

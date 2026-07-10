@@ -11,33 +11,19 @@
   #define restrict __restrict
 extern "C" {
 #endif
-#include <yk.h>
+#include <yk.h>  // IWYU pragma: export
 #ifdef __cplusplus
   #undef restrict
 }
 #endif
+
+#include "YkDebugStr.h"
 
 // Yk lifecycle — implemented in YkSOMpp.cpp.
 void YkUniverseInit();
 void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
-
-uint8_t load_bc(uint8_t* bc, size_t big);
-
-// yk_idempotent lookup wrappers (YkSOMpp.cpp): with all args promoted, the
-// call folds out of compiled traces to the recorded result. Pass the matching
-// promoted epoch (Universe::invokablesEpoch / globalsEpoch) for soundness.
-class VMClass;
-class VMSymbol;
-uintptr_t lookup_invokable_idem(VMClass* cls, VMSymbol* signature,
-                                uintptr_t epoch);
-uintptr_t get_global_idem(VMSymbol* name, uintptr_t epoch);
-uintptr_t get_block_class_idem(uintptr_t numArgs, uintptr_t epoch);
-
-#ifdef YK_DEBUG_STRS
-void YkDestroyDebugStrs(char** strs, size_t bcLen);
-#endif
 
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)

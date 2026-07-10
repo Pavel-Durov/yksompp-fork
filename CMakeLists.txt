@@ -204,7 +204,6 @@ target_sources(SOM++ PRIVATE
   ${MISC_SRC}
   ${VM_SRC}
   ${VMOBJECTS_SRC}
-  ${YK_SRC}
 
   ${MAIN_SRC}
   ${PRIMITIVES_SRC}
@@ -241,31 +240,25 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
   execute_process(COMMAND yk-config ${YK_BUILD_TYPE} --libs
     OUTPUT_VARIABLE YK_LIBS OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
 
-  separate_arguments(YK_CPPFLAGS_LIST UNIX_COMMAND "${YK_CPPFLAGS}")
-  separate_arguments(YK_CFLAGS_LIST UNIX_COMMAND "${YK_CFLAGS}")
   separate_arguments(YK_LDFLAGS_LIST UNIX_COMMAND "${YK_LDFLAGS}")
   separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
 
   target_compile_definitions(SOM++ PRIVATE USE_YK)
-  if(YK_RECURSIVE_CALLS_LOC)
-    target_compile_definitions(SOM++ PRIVATE YK_RECURSIVE_CALLS_LOC)
-  endif()
-  if(YK_SKIP_SMALLTALK_STD)
-    target_compile_definitions(SOM++ PRIVATE YK_SKIP_SMALLTALK_STD)
-  endif()
-  if(YK_DEBUG_STRS OR CMAKE_BUILD_TYPE STREQUAL "Debug")
+  # yk-only sources compile only when yk is enabled
+  target_sources(SOM++ PRIVATE ${YK_SRC})
+  if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(SOM++ PRIVATE YK_DEBUG_STRS)
   endif()
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     # Export vtables so yk can resolve them using dlsym.
     target_link_options(SOM++ PRIVATE -Wl,--export-dynamic-symbol=_ZTV*)
   endif()
-  target_compile_options(SOM++ PRIVATE ${YK_CPPFLAGS_LIST} ${YK_CFLAGS_LIST} -fno-exceptions)
+  target_compile_options(SOM++ PRIVATE "SHELL:${YK_CPPFLAGS}" "SHELL:${YK_CFLAGS}" -fno-exceptions)
   target_link_options(SOM++ PRIVATE ${YK_LDFLAGS_LIST})
   target_link_libraries(SOM++ ${YK_LIBS_LIST})
 
   message(STATUS "Yk JIT enabled (${YK_BUILD_TYPE})")
-  message(STATUS "  Ensure CMAKE_CXX_COMPILER is set to: yk-config ${YK_BUILD_TYPE} --cc")
+  message(STATUS "  Ensure CMAKE_CXX_COMPILER is set to: yk-config ${YK_BUILD_TYPE} --cxx")
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
@@ -278,7 +271,6 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     ${MISC_SRC}
     ${VM_SRC}
     ${VMOBJECTS_SRC}
-    ${YK_SRC}
 
     ${PRIMITIVES_SRC}
     ${PRIMITIVESCORE_SRC}
