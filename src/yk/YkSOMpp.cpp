@@ -1,17 +1,16 @@
-#ifdef USE_YK
+#include "YkSOMpp.h"
 
-  #include "YkSOMpp.h"
+#include <cstddef>
+#include <cstdint>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-  #include <climits>
-  #include <cstddef>
-  #include <cstdint>
-  #include <cstdio>
-  #include <cstdlib>
-  #include <cstring>
-
-  #include "../interpreter/bytecodes.h"
-  #include "../vm/Universe.h"
-  #include "../vmobjects/VMMethod.h"
+#include "../compiler/SourceCoordinate.h"
+#include "../interpreter/bytecodes.h"
+#include "../vm/Universe.h"
+#include "../vmobjects/VMMethod.h"
+#include "YkDebugStr.h"
 
 // --- Universe ---
 
@@ -21,7 +20,7 @@ void YkUniverseInit() {
     char* yk_err = nullptr;
     Universe::yk_mt = yk_mt_new(&yk_err);
     if (yk_err != nullptr) {
-        fprintf(stderr, "yk failed to initialise: %s\n", yk_err);
+        (void)fprintf(stderr, "yk failed to initialise: %s\n", yk_err);
         exit(1);
     }
 }
@@ -49,53 +48,22 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength) {
     free(yklocs);
 }
 
-  #ifdef YK_DEBUG_STRS
-
-static char** buildDebugStrs(const uint8_t* bytecodes, size_t bcLen,
-                             const size_t* lineNums, const char* sourceFile) {
-    char** strs = static_cast<char**>(calloc(bcLen, sizeof(char*)));
-    for (size_t i = 0; i < bcLen;
-         i += Bytecode::GetBytecodeLength(bytecodes[i])) {
-        char tmp[256];
-        if (lineNums[i] != 0) {
-            snprintf(tmp, sizeof(tmp), "%s:%zu:%s", sourceFile, lineNums[i],
-                     Bytecode::GetBytecodeName(bytecodes[i]));
-        } else {
-            snprintf(tmp, sizeof(tmp), "%s:<unknown>:%s", sourceFile,
-                     Bytecode::GetBytecodeName(bytecodes[i]));
-        }
-        strs[i] = static_cast<char*>(malloc(strlen(tmp) + 1));
-        strcpy(strs[i], tmp);
+// Give each loop header (backward-jump target) a yk location. Yk only traces
+// loops, and backward jumps are the only cycles, so other slots stay null.
+// The per-bytecode debug strings are built by YkDebugStr and attached here.
+void VMMethod::InitYkLocs([[maybe_unused]] const SourceCoordinate* coords,
+                          [[maybe_unused]] const char* sourceFile) {
+#ifdef YK_DEBUG_STRS
+    if (coords != nullptr) {
+        instdebugstrs =
+            YkBuildDebugStrs(bytecodes, bcLength, coords, sourceFile);
+        // Raw copy so inlineInto can carry each bytecode's coordinate.
+        instsrccoords = static_cast<SourceCoordinate*>(
+            malloc(bcLength * sizeof(SourceCoordinate)));
+        memcpy(instsrccoords, coords, bcLength * sizeof(SourceCoordinate));
     }
-    return strs;
-}
+#endif
 
-void YkDestroyDebugStrs(char** strs, size_t bcLen) {
-    if (strs == nullptr) {
-        return;
-    }
-    for (size_t i = 0; i < bcLen; i++) {
-        free(strs[i]);
-    }
-    free(strs);
-}
-
-  #endif  // YK_DEBUG_STRS
-
-// Assign a yk location to each loop header (backward-jump target).
-//
-// Yk traces loops by recording execution from a control point until it cycles
-// back to the same point. Only backward jumps create such cycles, so we only
-// need locations at their targets. All other yklocs slots stay null.
-void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
-  #ifdef YK_DEBUG_STRS
-    instdebugstrs = buildDebugStrs(bytecodes, bcLength, lineNums, sourceFile);
-  #else
-    (void)lineNums;
-    (void)sourceFile;
-  #endif
-
-    // Walk the variable-length bytecode stream one instruction at a time.
     for (size_t i = 0; i < bcLength;
          i += Bytecode::GetBytecodeLength(bytecodes[i])) {
         size_t target = SIZE_MAX;
@@ -107,14 +75,12 @@ void VMMethod::InitYkLocs(const size_t* lineNums, const char* sourceFile) {
 
         if (target != SIZE_MAX) {
             yklocs[target] = yk_location_new();
-  #ifdef YK_DEBUG_STRS
+#ifdef YK_DEBUG_STRS
             if (instdebugstrs != nullptr && instdebugstrs[target] != nullptr) {
                 yk_location_set_debug_str(&yklocs[target],
                                           instdebugstrs[target]);
             }
-  #endif
+#endif
         }
     }
 }
-
-#endif

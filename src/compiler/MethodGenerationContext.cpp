@@ -70,6 +70,11 @@ MethodGenerationContext::MethodGenerationContext(ClassGenerationContext& holder,
 VMInvokable* MethodGenerationContext::Assemble() {
     VMTrivialMethod* trivialMethod = assembleTrivialMethod();
     if (trivialMethod != nullptr) {
+#ifdef YK_DEBUG_STRS
+        if (!bcCoords.empty()) {
+            trivialMethod->SetSourceCoordinate(bcCoords.front());
+        }
+#endif
         return trivialMethod;
     }
 
@@ -93,17 +98,7 @@ VMInvokable* MethodGenerationContext::Assemble() {
     }
 
 #ifdef USE_YK
-  #ifdef YK_DEBUG_STRS
-    {
-        std::vector<size_t> lineNums(bc_size);
-        for (size_t i = 0; i < bc_size; i++) {
-            lineNums[i] = i < bcCoords.size() ? bcCoords[i].GetLine() : 0;
-        }
-        meth->InitYkLocs(lineNums.data(), sourceFile.c_str());
-    }
-  #else
-    meth->InitYkLocs();
-  #endif
+    YkInitMethodLocs(meth, bcCoords, sourceFile);
 #endif
 
     // return the method - the holder field is to be set later on!
@@ -454,7 +449,8 @@ void MethodGenerationContext::AddBytecode(uint8_t bc, int64_t stackEffect) {
 
     bytecode.push_back(bc);
 #ifdef YK_DEBUG_STRS
-    bcCoords.push_back(currentSourceCoordinate);
+    bcCoords.push_back(
+        originalSourceCoordinate.value_or(currentSourceCoordinate));
 #endif
 
     last4Bytecodes[0] = last4Bytecodes[1];
@@ -466,7 +462,8 @@ void MethodGenerationContext::AddBytecode(uint8_t bc, int64_t stackEffect) {
 void MethodGenerationContext::AddBytecodeArgument(uint8_t arg) {
     bytecode.push_back(arg);
 #ifdef YK_DEBUG_STRS
-    bcCoords.push_back(currentSourceCoordinate);
+    bcCoords.push_back(
+        originalSourceCoordinate.value_or(currentSourceCoordinate));
 #endif
 }
 
