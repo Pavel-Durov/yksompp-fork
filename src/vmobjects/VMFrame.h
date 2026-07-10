@@ -196,9 +196,20 @@ public:
     void SetPreviousFrameOnReuse(VMFrame* previousFrame) {
         this->previousFrame = store_root(previousFrame);
     }
+    [[nodiscard]] bool DoNotPool() const { return doNotPool; }
+    void SetDoNotPool() { doNotPool = true; }
+    void NilLocals() {
+        size_t const n = GetMethod()->GetNumberOfLocals();
+        for (size_t i = 0; i < n; ++i) {
+            locals[i] = nilObject;
+        }
+    }
 #endif
 
 private:
+#ifdef UNSAFE_FRAME_OPTIMIZATION
+    bool doNotPool{false};
+#endif
     GCFrame* previousFrame;
     GCFrame* context{nullptr};
     GCMethod* method;

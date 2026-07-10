@@ -79,8 +79,6 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // initialization
     method = GetMethod();
     currentBytecodes = GetBytecodes();
-    uint8_t* bc = currentBytecodes;
-    size_t big = bytecodeIndexGlobal;
 
 #ifdef USE_YK
     YK_PROMOTE_BC();
@@ -715,8 +713,9 @@ VMFrame* Interpreter::popFrame() {
     result->ClearPreviousFrame();
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
-    // remember this frame as free frame
-    result->GetMethod()->SetCachedFrame(result);
+    if (!result->DoNotPool()) {
+        result->GetMethod()->SetCachedFrame(result);
+    }
 #endif
     return result;
 }
@@ -872,6 +871,15 @@ void Interpreter::doPushBlock(size_t bytecodeIndex) {
     uint8_t const numOfArgs = blockMethod->GetNumberOfArguments();
 
     GetFrame()->Push(Universe::NewBlock(blockMethod, GetFrame(), numOfArgs));
+
+#ifdef UNSAFE_FRAME_OPTIMIZATION
+    for (VMFrame* f = GetFrame();; f = f->GetContext()) {
+        f->SetDoNotPool();
+        if (!f->HasContext()) {
+            break;
+        }
+    }
+#endif
 }
 
 #ifdef USE_YK

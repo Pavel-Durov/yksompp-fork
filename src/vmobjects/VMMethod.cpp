@@ -155,6 +155,7 @@ void VMMethod::SetCachedFrame(VMFrame* frame) {
         frame->SetContext(nullptr);
         frame->SetBytecodeIndex(0);
         frame->ResetStackPointer();
+        frame->NilLocals();
         write_barrier(this, cachedFrame);
     }
 }

@@ -8,7 +8,6 @@
 #include "../memory/Heap.h"
 #include "../vm/Print.h"
 #include "../vmobjects/AbstractObject.h"
-#include "../yk/yk_linkage.h"
 #include "MarkSweepCollector.h"
 
 // Objects larger than this use the large-object space; smaller ones are
