@@ -25,6 +25,21 @@ void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
+// Loads the bytecode at `big` from `bc`. yk_idempotent (see YkSOMpp.cpp) so the
+// fetch folds to a trace constant once `bc`/`big` are promoted.
+uint8_t load_bc(uint8_t* bc, size_t big);
+
+// yk_idempotent lookup wrappers (YkSOMpp.cpp): with all args promoted, the
+// call folds out of compiled traces to the recorded result. Pass the matching
+// promoted epoch (Universe::invokablesEpoch / globalsEpoch) for soundness.
+class VMClass;
+class VMSymbol;
+
+uintptr_t lookup_invokable_idem(VMClass* cls, VMSymbol* signature,
+                                uintptr_t epoch);
+uintptr_t get_global_idem(VMSymbol* name, uintptr_t epoch);
+uintptr_t get_block_class_idem(uintptr_t numArgs, uintptr_t epoch);
+
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)
 // where the single control point call lives. The trampoline is defined in
