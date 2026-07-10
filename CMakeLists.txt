@@ -79,7 +79,7 @@ option(USE_VECTOR_PRIMITIVES "Use Vector primitives" TRUE)
 option(GENERATE_ALLOCATION_STATISTICS "Generate allocation statistics" FALSE)
 
 option(LOG_RECEIVER_TYPES        "Log types of receivers" FALSE)
-option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" FALSE)
+option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" TRUE)
 option(ADDITIONAL_ALLOCATION     "Enable additional allocations" FALSE)
 
 option(FOR_PROFILING "Compile for profiling" FALSE)
