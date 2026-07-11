@@ -26,6 +26,10 @@ void YkUniverseInit() {
         (void)fprintf(stderr, "yk failed to initialise: %s\n", yk_err);
         exit(1);
     }
+    const char* stEnv = getenv("YK_SIDETRACE_THRESHOLD");
+    yk_mt_sidetrace_threshold_set(
+        Universe::yk_mt, stEnv != nullptr ? (uint32_t)strtoul(stEnv, nullptr, 10)
+                                          : 500);
 }
 
 void YkUniverseShutdown() {
