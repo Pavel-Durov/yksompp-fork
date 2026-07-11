@@ -150,6 +150,13 @@ GCFrame* VMMethod::GetCachedFrame() const {
 }
 
 void VMMethod::SetCachedFrame(VMFrame* frame) {
+#ifdef USE_YK
+    // Don't pool frames for directly-recursive methods: reusing one cached frame
+    // across recursion levels makes NewFrame's reuse/allocate branch guards.
+    if (frame != nullptr && isDirectlyRecursive) {
+        return;
+    }
+#endif
     cachedFrame = store_with_separate_barrier(frame);
     if (frame != nullptr) {
         frame->SetContext(nullptr);
@@ -183,6 +190,18 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     }
 #endif
 
+
+#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef USE_YK
+    // Self-invocation means a frame of this method is already live below us, so
+    // pooling would reuse one frame across recursion levels. Flag it so
+    // SetCachedFrame skips pooling (which otherwise shatters the yk trace).
+    if (!isDirectlyRecursive && Interpreter::GetMethod() == this) {
+        isDirectlyRecursive = true;
+    }
+#endif
+#endif
+
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->CopyArgumentsFrom(frame);
     return frm;
@@ -200,6 +219,15 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
             yklocs[0] = yk_location_new();
         }
     }
+#endif
+
+#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef USE_YK
+    // See Invoke(): flag directly-recursive methods so they opt out of pooling.
+    if (!isDirectlyRecursive && Interpreter::GetMethod() == this) {
+        isDirectlyRecursive = true;
+    }
+#endif
 #endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);

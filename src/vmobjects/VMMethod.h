@@ -244,6 +244,9 @@ private:
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
+    // Directly-recursive methods opt out of frame pooling under yk: reusing one
+    // cached frame across recursion levels.
+    bool isDirectlyRecursive{false};
 #endif
 
 #ifdef BYTECODE_HEATMAP
