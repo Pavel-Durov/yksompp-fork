@@ -61,6 +61,9 @@
 #include "../vmobjects/VMString.h"
 #include "../vmobjects/VMVector.h"
 #include "../yk/yk_linkage.h"
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
 #include "Globals.h"
 #include "IsValidObject.h"
 #include "LogAllocation.h"
@@ -154,17 +157,21 @@ void Universe::Shutdown() {
 }
 
 static void printVmConfig() {
-    if (GC_TYPE == GENERATIONAL) {  // NOLINT(misc-redundant-expression)
+    // NOLINTBEGIN(misc-redundant-expression)
+    if (GC_TYPE == GENERATIONAL) {
         cout << "\tgarbage collector: generational\n";
-    } else if (GC_TYPE == COPYING) {  // NOLINT(misc-redundant-expression)
+    } else if (GC_TYPE == COPYING) {
         cout << "\tgarbage collector: copying\n";
-    } else if (GC_TYPE == MARK_SWEEP) {  // NOLINT(misc-redundant-expression)
+    } else if (GC_TYPE == MARK_SWEEP) {
         cout << "\tgarbage collector: mark-sweep\n";
-    } else if (GC_TYPE == DEBUG_COPYING) {  // NOLINT(misc-redundant-expression)
+    } else if (GC_TYPE == DEBUG_COPYING) {
         cout << "\tgarbage collector: debug copying\n";
+    } else if (GC_TYPE == DEBUG_MARK_SWEEP) {
+        cout << "\tgarbage collector: debug mark-sweep\n";
     } else {
         cout << "\tgarbage collector: unknown\n";
     }
+    // NOLINTEND(misc-redundant-expression)
 
     if (USE_TAGGING) {
         cout << "\twith tagged integers\n";

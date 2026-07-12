@@ -68,7 +68,7 @@ file(GLOB PRIMITIVESCORE_SRC ${PRIMITIVESCORE_DIR}/*.cpp)
 file(GLOB UNITTEST_SRC    ${UNITTEST_DIR}/*.cpp)
 
 option(USE_TAGGING "Enable immediate integers using tagging" FALSE)
-set(GC_TYPE "COPYING" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, GENERATIONAL")
+set(GC_TYPE "MARK_SWEEP" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, GENERATIONAL")
 
 option(CACHE_INTEGER "Enable caching of boxed integers" FALSE)
 set(INT_CACHE_MIN_VALUE -5  CACHE STRING "Lower bound of cached integers")
@@ -81,7 +81,7 @@ option(USE_VECTOR_PRIMITIVES "Use Vector primitives" TRUE)
 option(GENERATE_ALLOCATION_STATISTICS "Generate allocation statistics" FALSE)
 
 option(LOG_RECEIVER_TYPES        "Log types of receivers" FALSE)
-option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" FALSE)
+option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" TRUE)
 option(ADDITIONAL_ALLOCATION     "Enable additional allocations" FALSE)
 
 option(FOR_PROFILING "Compile for profiling" FALSE)
@@ -240,10 +240,15 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
   separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
 
   target_compile_definitions(SOM++ PRIVATE USE_YK)
+  if (YK_RECURSIVE_CALLS_LOC)
+    target_compile_definitions(SOM++ PRIVATE YK_RECURSIVE_CALLS_LOC=1)
+  endif()
   # yk-only sources compile only when yk is enabled
   target_sources(SOM++ PRIVATE ${YK_SRC})
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(SOM++ PRIVATE YK_DEBUG_STRS)
+  endif()
+  if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     # Export vtables so yk can resolve them using dlsym.
     target_link_options(SOM++ PRIVATE -Wl,--export-dynamic-symbol=_ZTV*)
   endif()
