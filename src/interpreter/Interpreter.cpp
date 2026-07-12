@@ -79,6 +79,10 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // initialization
     method = GetMethod();
     currentBytecodes = GetBytecodes();
+#ifdef USE_YK
+    uint8_t* bc = currentBytecodes;
+    size_t big = bytecodeIndexGlobal;
+#endif
 
     void* loopTargets[] = {&&LABEL_BC_HALT,
                            &&LABEL_BC_DUP,
@@ -152,6 +156,7 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // Skip the computed-goto dispatch: goto* compiles to LLVM indirectbr which
     // yk cannot trace. Jump directly to YK_DISPATCH_START where the single
     // yk_mt_control_point call lives and a switch dispatches instead.
+    YK_PROMOTE_BC();
     goto YK_DISPATCH_START;
 #else
     goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]];
@@ -357,35 +362,35 @@ LABEL_BC_SUPER_SEND:
 LABEL_BC_RETURN_LOCAL:
     PROLOGUE(1);
     doReturnLocal();
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_NON_LOCAL:
     PROLOGUE(1);
     doReturnNonLocal();
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_SELF: {
     PROLOGUE(1);
     assert(GetFrame()->GetContext() == nullptr &&
            "RETURN_SELF is not allowed in blocks");
     popFrameAndPushResult(GetFrame()->GetArgumentInCurrentContext(0));
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 }
 
 LABEL_BC_RETURN_FIELD_0:
     PROLOGUE(1);
     doReturnFieldWithIndex(0);
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_FIELD_1:
     PROLOGUE(1);
     doReturnFieldWithIndex(1);
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_RETURN_FIELD_2:
     PROLOGUE(1);
     doReturnFieldWithIndex(2);
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_INC:
     PROLOGUE(1);
@@ -534,7 +539,7 @@ LABEL_BC_JUMP_BACKWARD: {
     uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
     bytecodeIndexGlobal -= offset;
 }
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
 LABEL_BC_JUMP2: {
     uint16_t const offset =
@@ -679,7 +684,7 @@ LABEL_BC_JUMP2_BACKWARD: {
                       currentBytecodes[bytecodeIndexGlobal + 2]);
     bytecodeIndexGlobal -= offset;
 }
-    DISPATCH_NOGC();
+    DISPATCH_FULL();
 
     // Single control-point trampoline for Yk. All DISPATCH_NOGC/GC paths jump
     // here when USE_YK is set, giving Yk exactly one call site.

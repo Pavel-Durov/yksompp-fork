@@ -48,6 +48,7 @@
           }                                                         \
           goto* loopTargets[currentBytecodes[bytecodeIndexGlobal]]; \
       }
+  #define DISPATCH_FULL() DISPATCH_NOGC()
   #define YK_DISPATCH_TRAMPOLINE() (void)0
 // NOLINTEND(cppcoreguidelines-macro-usage)
 #endif

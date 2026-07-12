@@ -52,22 +52,42 @@ uintptr_t get_block_class_idem(uintptr_t numArgs, uintptr_t count);
   #define YK_DEBUG_STR_CALL() (void)0
 #endif
 
+// `bc` (the currentBytecodes pointer) is threaded, not re-promoted per bytecode.
+// It is loop-invariant between frame changes, so only the dispatches that can
+// change currentBytecodes re-promote it:
+//   DISPATCH_FULL   — returns and backward jumps. Returns restore the caller's
+//                     bytecodes; backward jumps land on a loop header, and
+//                     re-promoting there keeps `bc` a per-iteration trace
+//                     constant so load_bc still folds inside the loop trace.
+//   DISPATCH_GC     — sends and allocating bytecodes. A send enters a callee
+//                     (new bytecodes); startGC() reloads currentBytecodes after
+//                     a collection; PUSH_GLOBAL can trigger an implicit
+//                     unknownGlobal: send. All change the frame, so re-promote.
+//   DISPATCH_NOGC   — straight-line bytecodes. currentBytecodes is unchanged, so
+//                     reuse the threaded `bc` and skip its reload+promote guard.
+#define YK_PROMOTE_BC() bc = (uint8_t*)yk_promote((void*)currentBytecodes)
 #define DISPATCH_NOGC() goto YK_DISPATCH_START
+#define DISPATCH_FULL()             \
+    {                               \
+        YK_PROMOTE_BC();            \
+        goto YK_DISPATCH_START;     \
+    }
 #define DISPATCH_GC()                                       \
     {                                                       \
         if (GetHeap<HEAP_CLS>()->isCollectionTriggered()) { \
             startGC();                                      \
         }                                                   \
+        YK_PROMOTE_BC();                                    \
         goto YK_DISPATCH_START;                             \
     }
 
-#define YK_DISPATCH_TRAMPOLINE()                                           \
-    YK_DISPATCH_START:                                                     \
-    yk_mt_control_point(Universe::yk_mt,                                   \
-                        &method->yklocs[bytecodeIndexGlobal]);             \
-    YK_DEBUG_STR_CALL();                                                   \
-    switch (load_bc((uint8_t*)yk_promote((void*)currentBytecodes),         \
-                    (size_t)yk_promote((uintptr_t)bytecodeIndexGlobal))) { \
+#define YK_DISPATCH_TRAMPOLINE()                                \
+    YK_DISPATCH_START:                                          \
+    big = (size_t)yk_promote((uintptr_t)bytecodeIndexGlobal);   \
+    yk_mt_control_point(Universe::yk_mt,                        \
+                        &method->yklocs[bytecodeIndexGlobal]);  \
+    YK_DEBUG_STR_CALL();                                        \
+    switch (load_bc(bc, big)) {                                 \
         case BC_HALT:                                                      \
             goto LABEL_BC_HALT;                                            \
         case BC_DUP:                                                       \
