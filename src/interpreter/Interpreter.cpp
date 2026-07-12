@@ -756,6 +756,9 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 void Interpreter::triggerDoesNotUnderstand(VMSymbol* signature) {
     uint8_t const numberOfArgs = Signature::GetNumberOfArguments(signature);
 
@@ -872,10 +875,26 @@ void Interpreter::doPushBlock(size_t bytecodeIndex) {
     GetFrame()->Push(Universe::NewBlock(blockMethod, GetFrame(), numOfArgs));
 }
 
+#ifdef USE_YK
+// The inliner may clone this body into Start() and orphan the standalone
+// copy; OutlineUntraceable would then auto-mark it yk_outline, which is
+// rejected because of the yk_promote calls below. yk_indirect_inline is the
+// pass's escape hatch: keep the orphan traceable.
+__attribute__((yk_indirect_inline))
+#endif
 void Interpreter::doPushGlobal(size_t bytecodeIndex) {
     auto* globalName =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
+#ifdef USE_YK
+    // yk-only: promote the name and globals count so the yk_idempotent global
+    // lookup folds to a trace constant. Universe::SetGlobal (e.g. via the
+    // system global:put: primitive) bumps the count, deopting stale folds.
+    globalName = (VMSymbol*)yk_promote((void*)globalName);
+    auto global = (vm_oop_t)get_global_idem(
+        globalName, yk_promote(Universe::globalsCount));
+#else
     vm_oop_t global = Universe::GetGlobal(globalName);
+#endif
 
     if (global != nullptr) {
         GetFrame()->Push(global);
@@ -964,7 +983,29 @@ void Interpreter::doSend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#ifdef USE_YK
+    // yk-only send-site dispatch fold: promote the receiver class, signature
+    // and invokables count so all of lookup_invokable_idem's args are trace
+    // constants — the yk_idempotent lookup then folds out of compiled traces
+    // to the recorded callee, and the virtual Invoke devirtualizes to a
+    // direct, inlinable call. The count promote-guard deopts the trace if any
+    // method table is mutated (see Universe::invokablesCount). No promote of
+    // the result: the folded value is already pinned by the argument guards,
+    // and a redundant promote costs a recorder-shim call per send at
+    // interpreter time. Gated to yk — the plain interpreter keeps the send()
+    // path below unchanged.
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        receiverClass, signature, yk_promote(Universe::invokablesCount));
+    if (invokable != nullptr) {
+        invokable->Invoke(GetFrame());
+    } else {
+        triggerDoesNotUnderstand(signature);
+    }
+#else
     send(signature, receiverClass);
+#endif
 }
 
 void Interpreter::doUnarySend(size_t bytecodeIndex) {
@@ -987,7 +1028,17 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#ifdef USE_YK
+    // yk-only send-site dispatch fold (unary): see doSend. Promote all of
+    // lookup_invokable_idem's args so the lookup folds out of compiled traces
+    // and Invoke1 devirtualizes.
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        receiverClass, signature, yk_promote(Universe::invokablesCount));
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
 #ifdef LOG_RECEIVER_TYPES
@@ -1006,6 +1057,11 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     }
 }
 
+#ifdef USE_YK
+// yk_indirect_inline: promotes below; keep an inliner-orphaned copy traceable
+// (see doPushGlobal).
+__attribute__((yk_unroll, yk_indirect_inline))
+#endif
 void Interpreter::doSuperSend(size_t bytecodeIndex) {
     auto* signature =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
@@ -1015,7 +1071,16 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     VMClass* holder = realMethod->GetHolder();
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
+#ifdef USE_YK
+    // yk-only super-send fold: see doSend. The super class is a constant per
+    // call site (fixed holder), so the promoted lookup folds out of traces.
+    super = (VMClass*)yk_promote((void*)super);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        super, signature, yk_promote(Universe::invokablesCount));
+#else
     auto* invokable = super->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());

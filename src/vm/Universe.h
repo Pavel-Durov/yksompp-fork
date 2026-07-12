@@ -124,6 +124,8 @@ public:
 
 #ifdef USE_YK
     static YkMT* yk_mt;
+    static uintptr_t globalsCount;
+    static uintptr_t invokablesCount;
 #endif
 #ifdef LOG_RECEIVER_TYPES
     struct stat_data {

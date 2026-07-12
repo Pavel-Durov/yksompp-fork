@@ -1,5 +1,8 @@
 yk_config := "/path/to/yk-config"
-yk_debug_strs := "true"
+YK_DEBUG_STRS := "false"
+YK_RECURSIVE_CALLS_LOC := "true"
+GC_TYPE := "MARK_SWEEP"
+BYTECODE_HEATMAP := "FALSE"
 
 build: build-release
 
@@ -7,6 +10,7 @@ build: build-release
 build-release:
     mkdir -p cmake-build
     cmake -DCMAKE_BUILD_TYPE=Release \
+        -DGC_TYPE={{GC_TYPE}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-build
@@ -16,10 +20,24 @@ build-release:
 build-debug:
     mkdir -p cmake-debug
     cmake -DCMAKE_BUILD_TYPE=Debug \
+        -DGC_TYPE={{GC_TYPE}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-debug
     cmake --build cmake-debug --parallel
+
+# Non-yk pure-interpreter build with per-bytecode execution counters, used by
+# dump_traces.sh for the bytecode heatmap. No JIT, so every bytecode is counted
+# (a yk build would skip JIT-covered ones and invert the heatmap).
+build-heatmap:
+    mkdir -p cmake-heatmap
+    cmake -DCMAKE_BUILD_TYPE=Release \
+        -DGC_TYPE={{GC_TYPE}} \
+        -DBYTECODE_HEATMAP=TRUE \
+        "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
+        "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
+        -S . -B cmake-heatmap
+    cmake --build cmake-heatmap --parallel
 
 build-yk-debug:
     mkdir -p cmake-yk-debug
@@ -27,7 +45,10 @@ build-yk-debug:
         -DCMAKE_CXX_COMPILER=$({{yk_config}} debug --cxx) \
         -DCMAKE_BUILD_TYPE=Debug \
         -DYK_BUILD_TYPE=debug \
-        -DYK_DEBUG_STRS={{yk_debug_strs}} \
+        -DBYTECODE_HEATMAP={{BYTECODE_HEATMAP}} \
+        -DYK_DEBUG_STRS={{YK_DEBUG_STRS}} \
+        -DYK_RECURSIVE_CALLS_LOC={{YK_RECURSIVE_CALLS_LOC}} \
+        -DGC_TYPE={{GC_TYPE}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-yk-debug
@@ -39,7 +60,10 @@ build-yk-release:
         -DCMAKE_CXX_COMPILER=$({{yk_config}} release --cxx) \
         -DCMAKE_BUILD_TYPE=Release \
         -DYK_BUILD_TYPE=release \
-        -DYK_DEBUG_STRS={{yk_debug_strs}} \
+        -DBYTECODE_HEATMAP={{BYTECODE_HEATMAP}} \
+        -DYK_DEBUG_STRS={{YK_DEBUG_STRS}} \
+        -DYK_RECURSIVE_CALLS_LOC={{YK_RECURSIVE_CALLS_LOC}} \
+        -DGC_TYPE={{GC_TYPE}} \
         -S . -B cmake-yk-release
     cmake --build cmake-yk-release --parallel
 

@@ -105,6 +105,7 @@ public:
     ~VMMethod() override {
         delete lexicalScope;
 #ifdef USE_YK
+        free(bytecodes);
         YkMethodDestroy(yklocs, bcLength);
   #ifdef YK_DEBUG_STRS
         free(instsrccoords);
@@ -210,6 +211,9 @@ public:
     [[nodiscard]] inline uint8_t* GetBytecodes() const { return bytecodes; }
 
 private:
+#ifdef USE_YK
+    void setYkLocation(size_t bcIdx);
+#endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
 
@@ -240,6 +244,9 @@ private:
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
+    // Directly-recursive methods opt out of frame pooling under yk: reusing one
+    // cached frame across recursion levels.
+    bool isDirectlyRecursive{false};
 #endif
 
 #ifdef BYTECODE_HEATMAP

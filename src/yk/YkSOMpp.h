@@ -25,6 +25,14 @@ void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
+class VMClass;
+class VMSymbol;
+
+uintptr_t lookup_invokable_idem(VMClass* cls, VMSymbol* signature,
+                                uintptr_t count);
+uintptr_t get_global_idem(VMSymbol* name, uintptr_t count);
+uintptr_t get_block_class_idem(uintptr_t numArgs, uintptr_t count);
+
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)
 // where the single control point call lives. The trampoline is defined in
