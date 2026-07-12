@@ -54,6 +54,13 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength) {
 #define NOOPT_VAL(X) asm volatile("" : "+r,m"(X) : : "memory");
 
 __attribute__((yk_idempotent))
+uint8_t load_bc(uint8_t* bc, size_t big) {
+    NOOPT_VAL(bc);
+    NOOPT_VAL(big);
+    return bc[big];
+}
+
+__attribute__((yk_idempotent))
 uintptr_t lookup_invokable_idem(VMClass* cls, VMSymbol* signature,
                                 uintptr_t count) {
     NOOPT_VAL(count);
