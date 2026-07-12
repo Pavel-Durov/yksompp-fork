@@ -578,6 +578,9 @@ VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
     return result;
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 vm_oop_t Universe::GetGlobal(VMSymbol* name) {
     auto it = globals.find(tmp_ptr(name));
     if (it == globals.end()) {
@@ -803,10 +806,18 @@ VMArray* Universe::NewArrayList(std::vector<vm_oop_t>& list) {
     return result;
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
 VMBlock* Universe::NewBlock(VMInvokable* method, VMFrame* context,
                             uint8_t arguments) {
     auto* result = new (GetHeap<HEAP_CLS>(), 0) VMBlock(method, context);
+#ifdef USE_YK
+    result->SetClass((VMClass*)get_block_class_idem(
+        yk_promote((uintptr_t)arguments), yk_promote(Universe::globalsCount)));
+#else
     result->SetClass(GetBlockClassWithArgs(arguments));
+#endif
 
     LOG_ALLOCATION("VMBlock", result->GetObjectSize());
     return result;
@@ -1035,5 +1046,8 @@ VMClass* Universe::NewSystemClass() {
 }
 
 void Universe::SetGlobal(VMSymbol* name, vm_oop_t val) {
+#ifdef USE_YK
+    globalsCount++;
+#endif
     globals[store_root(name)] = store_root(val);
 }

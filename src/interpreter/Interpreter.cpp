@@ -756,6 +756,9 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 void Interpreter::triggerDoesNotUnderstand(VMSymbol* signature) {
     uint8_t const numberOfArgs = Signature::GetNumberOfArguments(signature);
 
@@ -872,10 +875,19 @@ void Interpreter::doPushBlock(size_t bytecodeIndex) {
     GetFrame()->Push(Universe::NewBlock(blockMethod, GetFrame(), numOfArgs));
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
 void Interpreter::doPushGlobal(size_t bytecodeIndex) {
     auto* globalName =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
+#ifdef USE_YK
+    globalName = (VMSymbol*)yk_promote((void*)globalName);
+    auto global = (vm_oop_t)get_global_idem(
+        globalName, yk_promote(Universe::globalsCount));
+#else
     vm_oop_t global = Universe::GetGlobal(globalName);
+#endif
 
     if (global != nullptr) {
         GetFrame()->Push(global);
@@ -964,7 +976,19 @@ void Interpreter::doSend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#ifdef USE_YK
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        receiverClass, signature, yk_promote(Universe::invokablesCount));
+    if (invokable != nullptr) {
+        invokable->Invoke(GetFrame());
+    } else {
+        triggerDoesNotUnderstand(signature);
+    }
+#else
     send(signature, receiverClass);
+#endif
 }
 
 void Interpreter::doUnarySend(size_t bytecodeIndex) {
@@ -987,7 +1011,14 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#ifdef USE_YK
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        receiverClass, signature, yk_promote(Universe::invokablesCount));
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
 #ifdef LOG_RECEIVER_TYPES
@@ -1006,6 +1037,9 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll, yk_indirect_inline))
+#endif
 void Interpreter::doSuperSend(size_t bytecodeIndex) {
     auto* signature =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
@@ -1015,7 +1049,14 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     VMClass* holder = realMethod->GetHolder();
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
+#ifdef USE_YK
+    super = (VMClass*)yk_promote((void*)super);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(
+        super, signature, yk_promote(Universe::invokablesCount));
+#else
     auto* invokable = super->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());
