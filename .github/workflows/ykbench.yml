@@ -70,14 +70,15 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
           SRC_SHA: ${{ github.event.pull_request.head.sha }}
+          SRC_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.event.pull_request.head.sha }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           # Prefer the haste-diff block emitted at the end of bench.out; on
           # bench failure it's missing, so fall back to the tail for triage.
           awk '/^Datum[0-9]+:/{keep=1} keep' bench.out > tail.out
           [ -s tail.out ] || tail -c 8000 bench.out > tail.out
-          jq -Rs --arg src "$SRC_SHA" --arg run "$RUN_URL" --arg dur "$BENCH_DURATION" \
-            '{body: ("### Haste bench\nyksompp commit: `" + $src + "`\nduration: " + $dur + "\n```\n" + . + "\n```\n\n[workflow run](" + $run + ")")}' \
+          jq -Rs --arg src "$SRC_SHA" --arg srcurl "$SRC_URL" --arg run "$RUN_URL" --arg dur "$BENCH_DURATION" \
+            '{body: ("### Haste bench\nyksompp commit: [`" + $src + "`](" + $srcurl + ")\nduration: " + $dur + "\n```\n" + . + "\n```\n\n[workflow run](" + $run + ")")}' \
             < tail.out > body.json
           curl -sSf -X POST \
             -H "Authorization: Bearer $GH_TOKEN" \
