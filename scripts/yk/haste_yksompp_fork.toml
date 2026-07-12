@@ -1,5 +1,5 @@
-proc_execs = 2
-inproc_iters = 3
+proc_execs = 3
+inproc_iters = 10
 
 [executors]
 yksompp = "${SOMPP}"
