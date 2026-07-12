@@ -1,8 +1,7 @@
 comment = "nightly_SOMpp_ms-frameopt_msgc_inttag"
 
 [executors]
-csom = "/home/pd/yk-benchmarks-nighlty/workspace/SOMpp_ms-frameopt_msgc_inttag/cmake-build/SOM++"
+som = "/home/pd/yk-benchmarks-nighlty/workspace/SOMpp_ms-frameopt_msgc_inttag/cmake-build/SOM++"
 
 [suite_env.awfy]
 SOM_LIB = "/home/pd/yk-benchmarks-nighlty/workspace/SOMpp_ms-frameopt_msgc_inttag/Smalltalk"
-

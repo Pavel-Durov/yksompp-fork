@@ -2,7 +2,7 @@ proc_execs = 3
 inproc_iters = 10
 
 [executors]
-yksompp = "${SOMPP}"
+som = "${SOMPP}"
 
 [suites.awfy]
 dir = "suites/awfy/SOM"
