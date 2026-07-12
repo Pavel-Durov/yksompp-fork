@@ -54,11 +54,14 @@ jobs:
 
       - name: Run haste bench
         run: |
+          start=$SECONDS
           scripts/yk/bench.sh \
             yk-build/SOM++ \
             Smalltalk \
             .bench-work/yk-benchmarks \
             "ci ${{ github.sha }}" 2>&1 | tee bench.out
+          dur=$((SECONDS - start))
+          printf 'BENCH_DURATION=%dm%02ds\n' $((dur / 60)) $((dur % 60)) >> "$GITHUB_ENV"
 
       - name: Comment results on PR
         if: github.event_name == 'pull_request'
@@ -66,14 +69,15 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
-          SHA: ${{ github.sha }}
+          SRC_SHA: ${{ github.event.pull_request.head.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           # Prefer the haste-diff block emitted at the end of bench.out; on
           # bench failure it's missing, so fall back to the tail for triage.
           awk '/^Datum[0-9]+:/{keep=1} keep' bench.out > tail.out
           [ -s tail.out ] || tail -c 8000 bench.out > tail.out
-          jq -Rs --arg sha "$SHA" \
-            '{body: ("### Haste bench (`" + $sha + "`)\n```\n" + . + "\n```")}' \
+          jq -Rs --arg src "$SRC_SHA" --arg run "$RUN_URL" --arg dur "$BENCH_DURATION" \
+            '{body: ("### Haste bench\nyksompp commit: `" + $src + "`\nduration: " + $dur + "\n```\n" + . + "\n```\n\n[workflow run](" + $run + ")")}' \
             < tail.out > body.json
           curl -sSf -X POST \
             -H "Authorization: Bearer $GH_TOKEN" \
