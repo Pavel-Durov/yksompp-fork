@@ -244,6 +244,9 @@ if(NOT "${YK_BUILD_TYPE}" STREQUAL "")
   separate_arguments(YK_LIBS_LIST UNIX_COMMAND "${YK_LIBS}")
 
   target_compile_definitions(SOM++ PRIVATE USE_YK)
+  if (YK_RECURSIVE_CALLS_LOC)
+    target_compile_definitions(SOM++ PRIVATE YK_RECURSIVE_CALLS_LOC=1)
+  endif()
   # yk-only sources compile only when yk is enabled
   target_sources(SOM++ PRIVATE ${YK_SRC})
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
