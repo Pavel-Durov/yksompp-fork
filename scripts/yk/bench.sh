@@ -30,7 +30,10 @@ envsubst '${SOMPP} ${SOM_LIB}' \
 cd "$YK_BENCHMARKS"
 haste bench -f ./haste_yksompp_fork.toml -c "$COMMENT" --order declaration
 
-# Emit a haste-diff table for the fresh datum. yk-benchmarks is cloned fresh in
-# CI so IDs restart from 1; take the highest just in case.
-DATUM_ID=$(ls -1 .haste 2>/dev/null | grep -E '^[0-9]+$' | sort -n | tail -1)
-[ -n "$DATUM_ID" ] && haste diff -f ./haste_yksompp_fork.toml "$DATUM_ID" "$DATUM_ID"
+# Committed baseline lives at .haste/0/ (seeded before the run). Diff it
+# against the freshest datum; fall back to self-diff if the baseline isn't
+# present (e.g. running outside CI).
+LATEST=$(ls -1 .haste 2>/dev/null | grep -E '^[0-9]+$' | sort -n | tail -1)
+BASELINE=0
+[ -d ".haste/$BASELINE" ] || BASELINE="$LATEST"
+[ -n "$LATEST" ] && haste diff -f ./haste_yksompp_fork.toml "$BASELINE" "$LATEST"

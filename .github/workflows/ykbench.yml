@@ -49,6 +49,13 @@ jobs:
           git clone --depth 1 --recurse-submodules --shallow-submodules \
             https://github.com/ykjit/yk-benchmarks .bench-work/yk-benchmarks
 
+      - name: Seed .haste with committed baseline
+        run: |
+          if [ -d scripts/yk/baseline-haste ]; then
+            mkdir -p .bench-work/yk-benchmarks/.haste
+            cp -a scripts/yk/baseline-haste/. .bench-work/yk-benchmarks/.haste/
+          fi
+
       - name: Build + test SOM++ against prebuilt Yk
         run: scripts/yk/build-and-test.sh
 
