@@ -45,6 +45,9 @@ public:
 
     static VMFrame* EmergencyFrameFrom(VMFrame* from, size_t extraLength);
 
+#ifdef USE_YK
+    __attribute__((yk_unroll))
+#endif
     explicit VMFrame(size_t additionalBytes, VMMethod* method,
                      VMFrame* previousFrame)
         : totalObjectSize(additionalBytes + sizeof(VMFrame)),

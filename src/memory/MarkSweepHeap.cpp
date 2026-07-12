@@ -171,7 +171,6 @@ AbstractVMObject* MarkSweepHeap::allocateLargeObject(size_t size) {
     return newObject;
 }
 
-
 #ifdef USE_YK
 __attribute__((yk_outline))
 #endif
