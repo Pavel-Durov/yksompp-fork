@@ -26,6 +26,9 @@ void YkUniverseInit() {
         (void)fprintf(stderr, "yk failed to initialise: %s\n", yk_err);
         exit(1);
     }
+    // Set hot threshold (default is 131) marginal loop locations stop
+    // This gives Richards benchmark additioanl 4% boost.
+    yk_mt_hot_threshold_set(Universe::yk_mt, 500);
 }
 
 void YkUniverseShutdown() {
