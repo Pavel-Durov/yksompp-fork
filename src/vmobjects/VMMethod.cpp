@@ -140,6 +140,25 @@ GCFrame* VMMethod::GetCachedFrame() const {
     return cachedFrame;
 }
 
+bool VMMethod::HasPotentiallyEscapingBlocks() const {
+    if (hasPotentiallyEscapingBlocks != -1) {
+        return hasPotentiallyEscapingBlocks == 1;
+    }
+
+    size_t i = 0;
+    while (i < bcLength) {
+        uint8_t const bytecode = bytecodes[i];
+        if (bytecode == BC_PUSH_BLOCK) {
+            hasPotentiallyEscapingBlocks = 1;
+            return true;
+        }
+        i += Bytecode::GetBytecodeLength(bytecode);
+    }
+
+    hasPotentiallyEscapingBlocks = 0;
+    return false;
+}
+
 void VMMethod::SetCachedFrame(VMFrame* frame) {
   #ifdef USE_YK
     // Do not cache recursive method frames

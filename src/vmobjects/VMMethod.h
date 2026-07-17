@@ -27,6 +27,7 @@
  */
 
 #include <cstdlib>
+#include <cstdint>
 #include <iostream>
 #include <queue>
 
@@ -155,7 +156,12 @@ public:
         return bytecodes[indx];
     }
 
-    inline void SetBytecode(size_t indx, uint8_t val) { bytecodes[indx] = val; }
+    inline void SetBytecode(size_t indx, uint8_t val) {
+        bytecodes[indx] = val;
+#ifdef UNSAFE_FRAME_OPTIMIZATION
+        hasPotentiallyEscapingBlocks = -1;
+#endif
+    }
 
 #ifdef USE_YK
     void InitYkLocs(const SourceCoordinate* coords = nullptr,
@@ -165,6 +171,7 @@ public:
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     void SetCachedFrame(VMFrame* frame);
     GCFrame* GetCachedFrame() const;
+    [[nodiscard]] bool HasPotentiallyEscapingBlocks() const;
 #endif
 
     void WalkObjects(walk_heap_fn /*unused*/) override;
@@ -244,6 +251,7 @@ private:
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
     bool isDirectlyRecursive{false};
+    mutable int8_t hasPotentiallyEscapingBlocks{-1};
 #endif
 
 #ifdef BYTECODE_HEATMAP
