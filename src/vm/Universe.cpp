@@ -122,10 +122,6 @@ void Universe::Shutdown() {
     }
 #endif
 
-#ifdef USE_YK
-    YkUniverseShutdown();
-#endif
-
 #ifdef LOG_RECEIVER_TYPES
     std::string file_name_receivers = std::string(bm_name);
     file_name_receivers.append("_receivers.csv");
@@ -193,6 +189,9 @@ static void printVmConfig() {
     }
 
     cout << "--------------------------------------\n";
+#ifdef USE_YK
+    YkUniverseShutdown();
+#endif
 }
 
 vector<std::string> Universe::handleArguments(int32_t argc, char** argv) {
@@ -578,6 +577,9 @@ VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
     return result;
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 vm_oop_t Universe::GetGlobal(VMSymbol* name) {
     auto it = globals.find(tmp_ptr(name));
     if (it == globals.end()) {
@@ -803,6 +805,9 @@ VMArray* Universe::NewArrayList(std::vector<vm_oop_t>& list) {
     return result;
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
 VMBlock* Universe::NewBlock(VMInvokable* method, VMFrame* context,
                             uint8_t arguments) {
     auto* result = new (GetHeap<HEAP_CLS>(), 0) VMBlock(method, context);
