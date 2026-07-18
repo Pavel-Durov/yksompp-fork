@@ -6,9 +6,8 @@
 // and follows references outward until the whole set of reachable objects has
 // been visited.
 //
-// Sweeping is lazy. A collection itself only marks, which keeps the process
-// pause short; reclaiming dead objects happens as the the program allocates.
-// Reclaimed memory is recycled for new objects of the same size.
+// Each object is its own malloc'd allocation; sweeping walks all of them and
+// frees the ones not reached this cycle.
 #include "MarkSweepCollector.h"
 
 #include <cstddef>
@@ -43,31 +42,18 @@ void MarkSweepCollector::Collect() {
     s_epoch = heap->epoch;
     s_markedBytes = 0;
 
-    // Drop all free lists (re-harvested by sweeping). This is what guarantees
-    // no allocation into a not-yet-swept page, so any cell without the current
-    // epoch found while sweeping is reclaimable.
-    for (auto& list : heap->freeLists) {
-        list = nullptr;
-    }
-    for (auto& cursor : heap->sweepCursor) {
-        cursor = 0;
-    }
-
     markReachableObjects();
 
-    // Sweep the large-object space eagerly (few objects, so cheap).
-    std::vector<AbstractVMObject*> survivingLarge;
-    for (auto* obj : heap->largeObjects) {
+    // Sweep: free everything not reached this cycle, keep the rest.
+    std::vector<AbstractVMObject*> surviving;
+    for (auto* obj : heap->objects) {
         if (obj->GetGCField() == heap->epoch) {
-            survivingLarge.push_back(obj);
+            surviving.push_back(obj);
         } else {
             heap->FreeObject(obj);
         }
     }
-    heap->largeObjects = std::move(survivingLarge);
-
-    // Small dead objects (and empty pages) are reclaimed lazily during
-    // allocation, not here, keeping this pause to just the mark phase.
+    heap->objects = std::move(surviving);
 
     heap->spcAlloc = s_markedBytes;
     // Collect again after allocating ~max(live, a heap's worth). The floor
