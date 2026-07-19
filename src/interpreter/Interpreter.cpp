@@ -717,7 +717,7 @@ VMFrame* Interpreter::popFrame() {
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     // remember this frame as free frame
-    if (!result->GetMethod()->HasPotentiallyEscapingBlocks()) {
+    if (!result->GetMethod()->HasPushBlockBytecode()) {
         result->GetMethod()->SetCachedFrame(result);
     }
 #endif

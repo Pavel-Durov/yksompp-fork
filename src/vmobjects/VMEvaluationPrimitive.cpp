@@ -91,7 +91,8 @@ VMSymbol* VMEvaluationPrimitive::computeSignatureString(size_t argc) {
 #ifdef USE_YK
 __attribute__((yk_indirect_inline))
 #endif
-VMFrame* VMEvaluationPrimitive::Invoke(VMFrame* frm) {
+VMFrame*
+VMEvaluationPrimitive::Invoke(VMFrame* frm) {
     // Get the block (the receiver) from the stack
     auto* block =
         static_cast<VMBlock*>(frm->GetStackElement(numberOfArguments - 1));
@@ -114,7 +115,8 @@ VMFrame* VMEvaluationPrimitive::Invoke(VMFrame* frm) {
 #ifdef USE_YK
 __attribute__((yk_indirect_inline))
 #endif
-VMFrame* VMEvaluationPrimitive::Invoke1(VMFrame* frm) {
+VMFrame*
+VMEvaluationPrimitive::Invoke1(VMFrame* frm) {
     assert(numberOfArguments == 1);
     // Get the block (the receiver) from the stack
     auto* block = static_cast<VMBlock*>(frm->GetStackElement(0));

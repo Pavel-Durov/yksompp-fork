@@ -58,7 +58,8 @@ VMTrivialMethod* MakeSetter(VMSymbol* sig, vector<Variable>& arguments,
 #ifdef USE_YK
 __attribute__((yk_unroll, yk_indirect_inline))
 #endif
-VMFrame* VMLiteralReturn::Invoke(VMFrame* frame) {
+VMFrame*
+VMLiteralReturn::Invoke(VMFrame* frame) {
     for (int i = 0; i < numberOfArguments; i += 1) {
         frame->Pop();
     }
@@ -69,7 +70,8 @@ VMFrame* VMLiteralReturn::Invoke(VMFrame* frame) {
 #ifdef USE_YK
 __attribute__((yk_indirect_inline))  // see VMLiteralReturn::Invoke()
 #endif
-VMFrame* VMLiteralReturn::Invoke1(VMFrame* frame) {
+VMFrame*
+VMLiteralReturn::Invoke1(VMFrame* frame) {
     assert(numberOfArguments == 1);
     frame->Pop();
     frame->Push(load_ptr(literal));
@@ -106,7 +108,8 @@ void VMLiteralReturn::InlineInto(MethodGenerationContext& mgenc,
 #ifdef USE_YK
 __attribute__((yk_unroll, yk_indirect_inline))
 #endif
-VMFrame* VMGlobalReturn::Invoke(VMFrame* frame) {
+VMFrame*
+VMGlobalReturn::Invoke(VMFrame* frame) {
     for (int i = 0; i < numberOfArguments; i += 1) {
         frame->Pop();
     }
@@ -129,7 +132,8 @@ VMFrame* VMGlobalReturn::Invoke(VMFrame* frame) {
 #ifdef USE_YK
 __attribute__((yk_indirect_inline))
 #endif
-VMFrame* VMGlobalReturn::Invoke1(VMFrame* frame) {
+VMFrame*
+VMGlobalReturn::Invoke1(VMFrame* frame) {
     assert(numberOfArguments == 1);
     frame->Pop();
 
@@ -178,7 +182,8 @@ AbstractVMObject* VMGlobalReturn::CloneForMovingGC() const {
 #ifdef USE_YK
 __attribute__((yk_unroll, yk_indirect_inline))
 #endif
-VMFrame* VMGetter::Invoke(VMFrame* frame) {
+VMFrame*
+VMGetter::Invoke(VMFrame* frame) {
     vm_oop_t self = nullptr;
     for (int i = 0; i < numberOfArguments; i += 1) {
         self = frame->Pop();
@@ -202,7 +207,8 @@ VMFrame* VMGetter::Invoke(VMFrame* frame) {
 #ifdef USE_YK
 __attribute__((yk_indirect_inline))
 #endif
-VMFrame* VMGetter::Invoke1(VMFrame* frame) {
+VMFrame*
+VMGetter::Invoke1(VMFrame* frame) {
     assert(numberOfArguments == 1);
     vm_oop_t self = frame->Pop();
 
@@ -248,7 +254,8 @@ std::string VMGetter::AsDebugString() const {
 #ifdef USE_YK
 __attribute__((yk_unroll, yk_indirect_inline))
 #endif
-VMFrame* VMSetter::Invoke(VMFrame* frame) {
+VMFrame*
+VMSetter::Invoke(VMFrame* frame) {
     vm_oop_t value = nullptr;
     vm_oop_t self = nullptr;
 

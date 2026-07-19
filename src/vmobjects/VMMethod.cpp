@@ -140,23 +140,20 @@ GCFrame* VMMethod::GetCachedFrame() const {
     return cachedFrame;
 }
 
-bool VMMethod::HasPotentiallyEscapingBlocks() const {
-    if (hasPotentiallyEscapingBlocks != -1) {
-        return hasPotentiallyEscapingBlocks == 1;
-    }
-
-    size_t i = 0;
-    while (i < bcLength) {
-        uint8_t const bytecode = bytecodes[i];
-        if (bytecode == BC_PUSH_BLOCK) {
-            hasPotentiallyEscapingBlocks = 1;
-            return true;
+bool VMMethod::HasPushBlockBytecode() const {
+    if (!hasPushBlockBytecode) {
+        size_t i = 0;
+        while (i < bcLength) {
+            uint8_t const bytecode = bytecodes[i];
+            if (bytecode == BC_PUSH_BLOCK) {
+                hasPushBlockBytecode = true;
+                return true;
+            }
+            i += Bytecode::GetBytecodeLength(bytecode);
         }
-        i += Bytecode::GetBytecodeLength(bytecode);
+        hasPushBlockBytecode = false;
     }
-
-    hasPotentiallyEscapingBlocks = 0;
-    return false;
+    return *hasPushBlockBytecode;
 }
 
 void VMMethod::SetCachedFrame(VMFrame* frame) {
@@ -171,7 +168,7 @@ void VMMethod::SetCachedFrame(VMFrame* frame) {
         frame->SetContext(nullptr);
         frame->SetBytecodeIndex(0);
         frame->ResetStackPointer();
-        write_barrier(this, cachedFrame);
+        write_barrier(this, frame);
     }
 }
 #endif

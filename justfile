@@ -93,7 +93,7 @@ lint-changed:
     if [[ ${#cpp_files[@]} -gt 0 ]]; then
         for gc in GENERATIONAL MARK_SWEEP COPYING; do
             for integers in "-DUSE_TAGGING=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=false"; do
-                $CLANG_TIDY --config-file=.clang-tidy "${cpp_files[@]}" -- -fdiagnostics-absolute-paths -Dgc_type="$gc" $integers -DUNITTESTS
+                $CLANG_TIDY --config-file=.clang-tidy "${cpp_files[@]}" -- -fdiagnostics-absolute-paths -DGC_TYPE="$gc" $integers -DUNITTESTS
             done
         done
     fi

@@ -124,7 +124,8 @@ const size_t VMFrame::VMFrameNumberOfFields = 0;
 #ifdef USE_YK
 __attribute__((yk_unroll))
 #endif
-VMFrame* VMFrame::GetContextLevel(uint8_t lvl) {
+VMFrame*
+VMFrame::GetContextLevel(uint8_t lvl) {
     VMFrame* current = this;
     while (lvl > 0) {
         current = current->GetContext();
@@ -135,7 +136,8 @@ VMFrame* VMFrame::GetContextLevel(uint8_t lvl) {
 #ifdef USE_YK
 __attribute__((yk_unroll))
 #endif
-VMFrame* VMFrame::GetOuterContext() {
+VMFrame*
+VMFrame::GetOuterContext() {
     VMFrame* current = this;
     while (current->HasContext()) {
         current = current->GetContext();

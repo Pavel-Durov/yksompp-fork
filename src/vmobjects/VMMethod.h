@@ -26,9 +26,10 @@
  THE SOFTWARE.
  */
 
-#include <cstdlib>
 #include <cstdint>
+#include <cstdlib>
 #include <iostream>
+#include <optional>
 #include <queue>
 
 #ifdef USE_YK
@@ -159,7 +160,7 @@ public:
     inline void SetBytecode(size_t indx, uint8_t val) {
         bytecodes[indx] = val;
 #ifdef UNSAFE_FRAME_OPTIMIZATION
-        hasPotentiallyEscapingBlocks = -1;
+        hasPushBlockBytecode.reset();
 #endif
     }
 
@@ -171,7 +172,7 @@ public:
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     void SetCachedFrame(VMFrame* frame);
     GCFrame* GetCachedFrame() const;
-    [[nodiscard]] bool HasPotentiallyEscapingBlocks() const;
+    [[nodiscard]] bool HasPushBlockBytecode() const;
 #endif
 
     void WalkObjects(walk_heap_fn /*unused*/) override;
@@ -251,7 +252,7 @@ private:
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
     bool isDirectlyRecursive{false};
-    mutable int8_t hasPotentiallyEscapingBlocks{-1};
+    mutable std::optional<bool> hasPushBlockBytecode;
 #endif
 
 #ifdef BYTECODE_HEATMAP

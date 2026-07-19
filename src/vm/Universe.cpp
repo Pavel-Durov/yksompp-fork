@@ -580,7 +580,8 @@ VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
 #ifdef USE_YK
 __attribute__((yk_outline))
 #endif
-vm_oop_t Universe::GetGlobal(VMSymbol* name) {
+vm_oop_t
+Universe::GetGlobal(VMSymbol* name) {
     auto it = globals.find(tmp_ptr(name));
     if (it == globals.end()) {
         return nullptr;
@@ -808,8 +809,8 @@ VMArray* Universe::NewArrayList(std::vector<vm_oop_t>& list) {
 #ifdef USE_YK
 __attribute__((yk_indirect_inline))
 #endif
-VMBlock* Universe::NewBlock(VMInvokable* method, VMFrame* context,
-                            uint8_t arguments) {
+VMBlock*
+Universe::NewBlock(VMInvokable* method, VMFrame* context, uint8_t arguments) {
     auto* result = new (GetHeap<HEAP_CLS>(), 0) VMBlock(method, context);
     result->SetClass(GetBlockClassWithArgs(arguments));
 
