@@ -2,6 +2,11 @@
 
 This is an experimental [yk-jit](https://github.com/ykjit/yk)-enabled [SOM++](https://github.com/SOM-st/SOMpp) interpreter.
 
+## Branches
+
+ - `master` - the base [SOM++](https://github.com/SOM-st/SOMpp) branch, unmodified.
+ - `main` - the yksompp branch, with yk-jit integration.
+
 ## Building
 
 First, initialise the core-lib submodule (SOM standard library):
