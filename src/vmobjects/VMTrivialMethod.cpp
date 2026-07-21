@@ -116,10 +116,10 @@ VMGlobalReturn::Invoke(VMFrame* frame) {
 
 #ifdef USE_YK
     auto* name = (VMSymbol*)yk_promote((void*)load_ptr(globalName));
-    auto value = (vm_oop_t)get_global_idem(name);
 #else
-    vm_oop_t value = Universe::GetGlobal(load_ptr(globalName));
+    auto* name = load_ptr(globalName);
 #endif
+    vm_oop_t value = Universe::GetGlobal(name);
     if (value != nullptr) {
         frame->Push(value);
     } else {
@@ -139,10 +139,10 @@ VMGlobalReturn::Invoke1(VMFrame* frame) {
 
 #ifdef USE_YK
     auto* name = (VMSymbol*)yk_promote((void*)load_ptr(globalName));
-    auto value = (vm_oop_t)get_global_idem(name);
 #else
-    vm_oop_t value = Universe::GetGlobal(load_ptr(globalName));
+    auto* name = load_ptr(globalName);
 #endif
+    vm_oop_t value = Universe::GetGlobal(name);
     if (value != nullptr) {
         frame->Push(value);
     } else {

@@ -9,7 +9,6 @@
 #include "../compiler/SourceCoordinate.h"
 #include "../interpreter/bytecodes.h"
 #include "../vm/Universe.h"
-#include "../vmobjects/VMClass.h"
 #include "../vmobjects/VMMethod.h"
 #include "YkDebugStr.h"
 
@@ -55,17 +54,6 @@ __attribute__((yk_idempotent)) uint8_t load_bc(uint8_t* bc, size_t big) {
     NOOPT_VAL(bc);
     NOOPT_VAL(big);
     return bc[big];
-}
-
-__attribute__((yk_idempotent)) uintptr_t
-lookup_invokable_idem(VMClass* cls, VMSymbol* signature) {
-    NOOPT_VAL(cls);
-    return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
-}
-
-__attribute__((yk_idempotent)) uintptr_t get_global_idem(VMSymbol* name) {
-    NOOPT_VAL(name);
-    return reinterpret_cast<uintptr_t>(Universe::GetGlobal(name));
 }
 
 // Give each loop header (backward-jump target) a yk location. Yk only traces

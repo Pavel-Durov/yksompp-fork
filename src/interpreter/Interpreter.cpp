@@ -885,7 +885,7 @@ void Interpreter::doPushGlobal(size_t bytecodeIndex) {
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
 #ifdef USE_YK
     globalName = (VMSymbol*)yk_promote((void*)globalName);
-    auto global = (vm_oop_t)get_global_idem(globalName);
+    vm_oop_t global = Universe::GetGlobal(globalName);
 #else
     vm_oop_t global = Universe::GetGlobal(globalName);
 #endif
@@ -980,8 +980,7 @@ void Interpreter::doSend(size_t bytecodeIndex) {
 #ifdef USE_YK
     receiverClass = (VMClass*)yk_promote((void*)receiverClass);
     signature = (VMSymbol*)yk_promote((void*)signature);
-    auto* invokable =
-        (VMInvokable*)lookup_invokable_idem(receiverClass, signature);
+    VMInvokable* invokable = receiverClass->LookupInvokable(signature);
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());
     } else {
@@ -1015,11 +1014,8 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 #ifdef USE_YK
     receiverClass = (VMClass*)yk_promote((void*)receiverClass);
     signature = (VMSymbol*)yk_promote((void*)signature);
-    auto* invokable =
-        (VMInvokable*)lookup_invokable_idem(receiverClass, signature);
-#else
-    VMInvokable* invokable = receiverClass->LookupInvokable(signature);
 #endif
+    VMInvokable* invokable = receiverClass->LookupInvokable(signature);
 
     if (invokable != nullptr) {
 #ifdef LOG_RECEIVER_TYPES
@@ -1053,10 +1049,8 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
 #ifdef USE_YK
     super = (VMClass*)yk_promote((void*)super);
     signature = (VMSymbol*)yk_promote((void*)signature);
-    auto* invokable = (VMInvokable*)lookup_invokable_idem(super, signature);
-#else
-    auto* invokable = super->LookupInvokable(signature);
 #endif
+    auto* invokable = super->LookupInvokable(signature);
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());
