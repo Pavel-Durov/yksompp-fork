@@ -1,5 +1,6 @@
 yk_config := "/path/to/yk-config"
 yk_debug_strs := "true"
+tools_venv := ".venv"
 
 build: build-release
 
@@ -63,36 +64,23 @@ hello: build-release
 hello-yk: build-yk-debug
     cmake-yk/SOM++ -cp Smalltalk Examples/Hello.som
 
-# Lint only files changed relative to HEAD (staged, unstaged, and untracked).
-lint-changed:
+install-tools:
+    python3 -m venv {{tools_venv}}
+    {{tools_venv}}/bin/pip install --quiet 'clang-format==20.1.8' 'clang-tidy==20.1.0'
+
+# Format all C++ source under src.
+format: install-tools
+    find src -type f \( -name '*.cpp' -o -name '*.h' \) -print0 | xargs -0 {{tools_venv}}/bin/clang-format -i --style=file
+
+# Lint all C++ source under src with clang-tidy, across each GC/tagging config.
+tidy: install-tools
     #!/usr/bin/env bash
     set -euo pipefail
-    # Find a v20 binary; try the versioned name first, then the plain one.
-    find_v20() {
-        local tool=$1
-        for bin in "$tool-20" "$tool"; do
-            command -v "$bin" &>/dev/null && "$bin" --version 2>/dev/null | grep -q "version 20" && echo "$bin" && return
+    for gc in GENERATIONAL MARK_SWEEP COPYING; do
+        for integers in "-DUSE_TAGGING=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=false -DUSE_VECTOR_PRIMITIVES=false"; do
+            {{tools_venv}}/bin/clang-tidy --config-file=.clang-tidy $(find src -name '*.cpp' -not -path 'src/yk/*') -- -fdiagnostics-absolute-paths -isysroot "$(xcrun --show-sdk-path 2>/dev/null || echo /)" -DGC_TYPE="$gc" $integers -DUNITTESTS
         done
-        echo "$tool 20 not found. Install with: pip install '$tool==20.*'" >&2
-        exit 1
-    }
-    CLANG_TIDY=$(find_v20 clang-tidy)
-    CLANG_FORMAT=$(find_v20 clang-format)
-    mapfile -t changed < <(
-        { git diff HEAD --name-only --diff-filter=d; git ls-files --others --exclude-standard; } \
-        | grep '^src/.*\.\(cpp\|h\)$' | sort -u
-    )
-    if [[ ${#changed[@]} -eq 0 ]]; then echo "No changed source files."; exit 0; fi
-    echo "Linting ${#changed[@]} file(s): ${changed[*]}"
-    mapfile -t cpp_files < <(printf '%s\n' "${changed[@]}" | grep '\.cpp$' || true)
-    if [[ ${#cpp_files[@]} -gt 0 ]]; then
-        for gc in GENERATIONAL MARK_SWEEP COPYING; do
-            for integers in "-DUSE_TAGGING=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=true" "-DUSE_TAGGING=false -DCACHE_INTEGER=false"; do
-                $CLANG_TIDY --config-file=.clang-tidy "${cpp_files[@]}" -- -fdiagnostics-absolute-paths -DGC_TYPE="$gc" $integers -DUNITTESTS
-            done
-        done
-    fi
-    $CLANG_FORMAT --dry-run --style=file --Werror "${changed[@]}"
+    done
 
 clean:
     rm -rf cmake-build cmake-debug cmake-yk-debug cmake-yk-release
