@@ -67,8 +67,8 @@ file(GLOB PRIMITIVESCORE_SRC ${PRIMITIVESCORE_DIR}/*.cpp)
 
 file(GLOB UNITTEST_SRC    ${UNITTEST_DIR}/*.cpp)
 
-option(USE_TAGGING "Enable immediate integers using tagging" TRUE)
-set(GC_TYPE "MARK_SWEEP" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, GENERATIONAL, DEBUG_MARK_SWEEP")
+option(USE_TAGGING "Enable immediate integers using tagging" FALSE)
+set(GC_TYPE "COPYING" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, GENERATIONAL, DEBUG_MARK_SWEEP")
 
 option(CACHE_INTEGER "Enable caching of boxed integers" FALSE)
 set(INT_CACHE_MIN_VALUE -5  CACHE STRING "Lower bound of cached integers")
@@ -81,7 +81,7 @@ option(USE_VECTOR_PRIMITIVES "Use Vector primitives" TRUE)
 option(GENERATE_ALLOCATION_STATISTICS "Generate allocation statistics" FALSE)
 
 option(LOG_RECEIVER_TYPES        "Log types of receivers" FALSE)
-option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" TRUE)
+option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" FALSE)
 option(ADDITIONAL_ALLOCATION     "Enable additional allocations" FALSE)
 
 option(FOR_PROFILING "Compile for profiling" FALSE)
