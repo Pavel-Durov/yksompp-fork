@@ -1006,9 +1006,11 @@ VMMethod* Universe::NewMethod(VMSymbol* signature, size_t numberOfBytecodes,
         inlinedLoopsArr[i] = BackJump();
     }
 
-    // method needs space for the bytecodes and the pointers to the constants
-    size_t const additionalBytes = PADDED_SIZE(
-        numberOfBytecodes + (numberOfConstants * sizeof(VMObject*)));
+    // method object only needs space for the pointers to the constants;
+    // bytecodes are malloc'd separately so they keep a stable address across
+    // moving GC (see VMMethod::CloneForMovingGC).
+    size_t const additionalBytes =
+        PADDED_SIZE(numberOfConstants * sizeof(VMObject*));
     auto* result = new (GetHeap<HEAP_CLS>(), additionalBytes)
         VMMethod(signature, numberOfBytecodes, numberOfConstants, numLocals,
                  maxStackDepth, lexicalScope, inlinedLoopsArr);

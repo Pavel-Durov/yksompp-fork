@@ -106,6 +106,7 @@ public:
 
     ~VMMethod() override {
         delete lexicalScope;
+        free(bytecodes);
 #ifdef USE_YK
         YkMethodDestroy(yklocs, bcLength);
   #ifdef YK_DEBUG_STRS
@@ -124,8 +125,11 @@ public:
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
+        // bytecodes are malloc'd separately (see bytecodes field) so they
+        // keep a stable address across moving GC; only the constants array
+        // is part of this GC-managed object.
         size_t const additionalBytes =
-            PADDED_SIZE(bcLength + (numberOfConstants * sizeof(VMObject*)));
+            PADDED_SIZE(numberOfConstants * sizeof(VMObject*));
         return additionalBytes + sizeof(VMMethod);
     }
 

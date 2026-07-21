@@ -76,15 +76,17 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     for (size_t i = 0; i < numberOfConstants; ++i) {
         indexableFields[i] = nilObject;
     }
-    bytecodes = static_cast<uint8_t*>(
-        static_cast<void*>(indexableFields + numberOfConstants));
+    // bytecodes are malloc'd rather than stored inline in the GC-managed
+    // object, so their address stays stable when a moving GC clones/copies
+    // this method (see CloneForMovingGC).
+    bytecodes = static_cast<uint8_t*>(malloc(bcCount));
     YkMethodInit(yklocs, bcCount);
 #else
     indexableFields = (gc_oop_t*)(&indexableFields + 2);
     for (size_t i = 0; i < numberOfConstants; ++i) {
         indexableFields[i] = nilObject;
     }
-    bytecodes = (uint8_t*)(&indexableFields + 2 + GetNumberOfIndexableFields());
+    bytecodes = static_cast<uint8_t*>(malloc(bcCount));
 #endif
 
 #ifdef BYTECODE_HEATMAP
@@ -101,20 +103,17 @@ VMMethod* VMMethod::CloneForMovingGC() const {
     memcpy(SHIFTED_PTR(clone, sizeof(VMObject)),
            SHIFTED_PTR(this, sizeof(VMObject)),
            GetObjectSize() - sizeof(VMObject));
-    size_t const numIndexableFields = GetNumberOfIndexableFields();
 #ifdef USE_YK
     // yklocs appended to VMMethod shifts the extra data region; use sizeof to
     // find the end of the struct instead of field-offset arithmetic.
     clone->indexableFields = static_cast<gc_oop_t*>(static_cast<void*>(
         static_cast<char*>(static_cast<void*>(clone)) + sizeof(VMMethod)));
-    clone->bytecodes = static_cast<uint8_t*>(
-        static_cast<void*>(clone->indexableFields + numIndexableFields));
 #else
     clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
-    clone->bytecodes = (uint8_t*)(clone->indexableFields + numIndexableFields);
 #endif
-    // Use of GetNumberOfIndexableFields() is problematic here, because it may
-    // be invalid object while cloning/moving within GC
+    // clone->bytecodes was already copied by the copy constructor above: it's
+    // a malloc'd buffer shared with `this`, not inline data, so it keeps the
+    // same address across the move.
     return clone;
 }
 
