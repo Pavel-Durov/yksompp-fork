@@ -45,6 +45,13 @@ To compare all AWFY benchmarks plain vs Yk side-by-side:
 $ just awfy-compare
 ```
 
+## Linting & formatting
+
+```shell
+$ just format         # clang-format (v20) all C++ source under src/, in place
+$ just tidy           # clang-tidy (v20) all C++ source under src/
+```
+
 ## yk-related tips
 
  - Lower the hot-loop threshold so tracing fires quickly:
