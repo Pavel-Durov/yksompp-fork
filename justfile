@@ -1,5 +1,6 @@
 yk_config := "/path/to/yk-config"
-yk_debug_strs := "true"
+yk_debug_strs := "false"
+gc_type := "COPYING"
 tools_venv := ".venv"
 
 build: build-release
@@ -8,6 +9,7 @@ build: build-release
 build-release:
     mkdir -p cmake-build
     cmake -DCMAKE_BUILD_TYPE=Release \
+        -DGC_TYPE={{gc_type}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-build
@@ -17,6 +19,7 @@ build-release:
 build-debug:
     mkdir -p cmake-debug
     cmake -DCMAKE_BUILD_TYPE=Debug \
+        -DGC_TYPE={{gc_type}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-debug
@@ -29,6 +32,7 @@ build-yk-debug:
         -DCMAKE_BUILD_TYPE=Debug \
         -DYK_BUILD_TYPE=debug \
         -DYK_DEBUG_STRS={{yk_debug_strs}} \
+        -Dgc_type={{gc_type}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-yk-debug
@@ -41,6 +45,7 @@ build-yk-release:
         -DCMAKE_BUILD_TYPE=Release \
         -DYK_BUILD_TYPE=release \
         -DYK_DEBUG_STRS={{yk_debug_strs}} \
+        -Dgc_type={{gc_type}} \
         -S . -B cmake-yk-release
     cmake --build cmake-yk-release --parallel
 

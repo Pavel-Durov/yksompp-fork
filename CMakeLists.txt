@@ -67,7 +67,7 @@ file(GLOB PRIMITIVESCORE_SRC ${PRIMITIVESCORE_DIR}/*.cpp)
 
 file(GLOB UNITTEST_SRC    ${UNITTEST_DIR}/*.cpp)
 
-option(USE_TAGGING "Enable immediate integers using tagging" FALSE)
+option(USE_TAGGING "Enable immediate integers using tagging" TRUE)
 set(GC_TYPE "COPYING" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, GENERATIONAL")
 
 option(CACHE_INTEGER "Enable caching of boxed integers" FALSE)
@@ -81,10 +81,11 @@ option(USE_VECTOR_PRIMITIVES "Use Vector primitives" TRUE)
 option(GENERATE_ALLOCATION_STATISTICS "Generate allocation statistics" FALSE)
 
 option(LOG_RECEIVER_TYPES        "Log types of receivers" FALSE)
-option(UNSAFE_FRAME_OPTIMIZATION "Enable unsafe frame optimization" FALSE)
+option(FRAME_OPTIMIZATION "Enable unsafe frame optimization" TRUE)
 option(ADDITIONAL_ALLOCATION     "Enable additional allocations" FALSE)
 
 option(FOR_PROFILING "Compile for profiling" FALSE)
+option(YK_DEBUG_STRS "Embed source-location debug strings into yk locations (always forced on for Debug builds)" FALSE)
 
 if (USE_TAGGING)
   add_definitions(-DUSE_TAGGING)
@@ -114,8 +115,8 @@ endif ()
 if (GENERATE_ALLOCATION_STATISTICS)
   add_definitions(-DGENERATE_ALLOCATION_STATISTICS)
 endif ()
-if (UNSAFE_FRAME_OPTIMIZATION)
-  add_definitions(-DUNSAFE_FRAME_OPTIMIZATION)
+if (FRAME_OPTIMIZATION)
+  add_definitions(-DFRAME_OPTIMIZATION)
 endif ()
 if (LOG_RECEIVER_TYPES)
   add_definitions(-DLOG_RECEIVER_TYPES)
