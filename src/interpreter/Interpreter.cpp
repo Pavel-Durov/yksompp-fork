@@ -717,7 +717,7 @@ VMFrame* Interpreter::popFrame() {
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     // remember this frame as free frame
-    result->GetMethod()->SetCachedFrame(result);
+        result->GetMethod()->SetCachedFrame(result);
 #endif
     return result;
 }
@@ -756,6 +756,9 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
 void Interpreter::triggerDoesNotUnderstand(VMSymbol* signature) {
     uint8_t const numberOfArgs = Signature::GetNumberOfArguments(signature);
 
@@ -872,10 +875,18 @@ void Interpreter::doPushBlock(size_t bytecodeIndex) {
     GetFrame()->Push(Universe::NewBlock(blockMethod, GetFrame(), numOfArgs));
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
 void Interpreter::doPushGlobal(size_t bytecodeIndex) {
     auto* globalName =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
+#if defined(USE_YK) && !GC_IS_MOVING
+    globalName = (VMSymbol*)yk_promote((void*)globalName);
+    auto global = (vm_oop_t)get_global_idem(globalName);
+#else
     vm_oop_t global = Universe::GetGlobal(globalName);
+#endif
 
     if (global != nullptr) {
         GetFrame()->Push(global);
@@ -964,7 +975,26 @@ void Interpreter::doSend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#if defined(USE_YK) && !GC_IS_MOVING
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable =
+        (VMInvokable*)lookup_invokable_idem(receiverClass, signature);
+    if (invokable != nullptr) {
+        invokable->Invoke(GetFrame());
+    } else {
+        triggerDoesNotUnderstand(signature);
+    }
+#elif defined(USE_YK)
+    auto* invokable = receiverClass->LookupInvokable(signature);
+    if (invokable != nullptr) {
+        invokable->Invoke(GetFrame());
+    } else {
+        triggerDoesNotUnderstand(signature);
+    }
+#else
     send(signature, receiverClass);
+#endif
 }
 
 void Interpreter::doUnarySend(size_t bytecodeIndex) {
@@ -987,7 +1017,17 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     Universe::receiverTypes[receiverClass->GetName()->GetStdString()]++;
 #endif
 
+#if defined(USE_YK) && !GC_IS_MOVING
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable =
+        (VMInvokable*)lookup_invokable_idem(receiverClass, signature);
+#else
+    // Promoting into a trace bakes the raw VMClass*/VMInvokable* in as a
+    // constant; under a moving GC those objects can relocate mid-trace, see
+    // GC_IS_MOVING in misc/defs.h.
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
 #ifdef LOG_RECEIVER_TYPES
@@ -1006,6 +1046,9 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll, yk_indirect_inline))
+#endif
 void Interpreter::doSuperSend(size_t bytecodeIndex) {
     auto* signature =
         static_cast<VMSymbol*>(method->GetConstant(bytecodeIndex));
@@ -1015,7 +1058,13 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     VMClass* holder = realMethod->GetHolder();
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
+#if defined(USE_YK) && !GC_IS_MOVING
+    super = (VMClass*)yk_promote((void*)super);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)lookup_invokable_idem(super, signature);
+#else
     auto* invokable = super->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());

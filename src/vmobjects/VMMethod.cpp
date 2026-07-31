@@ -64,7 +64,7 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
                             : Signature::GetNumberOfArguments(signature)),
       numberOfConstants(numberOfConstants), lexicalScope(lexicalScope),
       inlinedLoops(inlinedLoops) {
-#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef FRAME_OPTIMIZATION
     cachedFrame = nullptr;
 #endif
 
@@ -76,8 +76,16 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     for (size_t i = 0; i < numberOfConstants; ++i) {
         indexableFields[i] = nilObject;
     }
+#if GC_IS_MOVING
+    // Malloc'd outside the GC-managed object body: a moving GC relocates
+    // VMMethod, and this pointer must not move with it (see defs.h).
+    bytecodes = static_cast<uint8_t*>(malloc(bcCount));
+    assert((bytecodes != nullptr || bcCount == 0) &&
+           "malloc failed for VMMethod bytecodes");
+#else
     bytecodes = static_cast<uint8_t*>(
-        static_cast<void*>(indexableFields + numberOfConstants));
+            static_cast<void*>(indexableFields + numberOfConstants));
+#endif
     YkMethodInit(yklocs, bcCount);
 #else
     indexableFields = (gc_oop_t*)(&indexableFields + 2);
@@ -101,15 +109,18 @@ VMMethod* VMMethod::CloneForMovingGC() const {
     memcpy(SHIFTED_PTR(clone, sizeof(VMObject)),
            SHIFTED_PTR(this, sizeof(VMObject)),
            GetObjectSize() - sizeof(VMObject));
-    size_t const numIndexableFields = GetNumberOfIndexableFields();
 #ifdef USE_YK
     // yklocs appended to VMMethod shifts the extra data region; use sizeof to
     // find the end of the struct instead of field-offset arithmetic.
     clone->indexableFields = static_cast<gc_oop_t*>(static_cast<void*>(
         static_cast<char*>(static_cast<void*>(clone)) + sizeof(VMMethod)));
-    clone->bytecodes = static_cast<uint8_t*>(
-        static_cast<void*>(clone->indexableFields + numIndexableFields));
+    // Only reached via a moving collector (GC_IS_MOVING), which is exactly
+    // when bytecodes is malloc'd outside the object body (see constructor)
+    // and so carries over unchanged - no relocation needed.
+    assert(clone->bytecodes == bytecodes &&
+           "bytecodes must be unaffected by relocating this object");
 #else
+    size_t const numIndexableFields = GetNumberOfIndexableFields();
     clone->indexableFields = (gc_oop_t*)(&(clone->indexableFields) + 2);
     clone->bytecodes = (uint8_t*)(clone->indexableFields + numIndexableFields);
 #endif
@@ -121,7 +132,7 @@ VMMethod* VMMethod::CloneForMovingGC() const {
 void VMMethod::WalkObjects(walk_heap_fn walk) {
     VMInvokable::WalkObjects(walk);
 
-#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef FRAME_OPTIMIZATION
     if (cachedFrame != nullptr) {
         cachedFrame = static_cast<GCFrame*>(walk(cachedFrame));
     }
@@ -135,18 +146,24 @@ void VMMethod::WalkObjects(walk_heap_fn walk) {
     }
 }
 
-#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef FRAME_OPTIMIZATION
 GCFrame* VMMethod::GetCachedFrame() const {
     return cachedFrame;
 }
 
 void VMMethod::SetCachedFrame(VMFrame* frame) {
+  #ifdef USE_YK
+    // Do not cache recursive method frames
+    if (frame != nullptr && isDirectlyRecursive) {
+        return;
+    }
+  #endif
     cachedFrame = store_with_separate_barrier(frame);
     if (frame != nullptr) {
         frame->SetContext(nullptr);
         frame->SetBytecodeIndex(0);
         frame->ResetStackPointer();
-        write_barrier(this, cachedFrame);
+        write_barrier(this, frame);
     }
 }
 #endif
@@ -155,6 +172,22 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
+#if USE_YK
+    if (Interpreter::GetMethod() == this && yk_is_interpreting()) {
+        if (yk_location_is_null(yklocs[0])) {
+            yklocs[0] = yk_location_new();
+  #ifdef YK_DEBUG_STRS
+            yk_location_set_debug_str(&yklocs[0], instdebugstrs[0]);
+  #endif
+        }
+    }
+#endif
+
+#if defined(USE_YK) && defined(FRAME_OPTIMIZATION)
+    if (Interpreter::GetMethod() == this) {
+        isDirectlyRecursive = true;
+    }
+#endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->CopyArgumentsFrom(frame);
@@ -165,6 +198,20 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
+
+#if USE_YK
+    if (Interpreter::GetMethod() == this && yk_is_interpreting()) {
+        if (yk_location_is_null(yklocs[0])) {
+            yklocs[0] = yk_location_new();
+        }
+    }
+#endif
+
+#if defined(USE_YK) && defined(FRAME_OPTIMIZATION)
+    if (Interpreter::GetMethod() == this) {
+        isDirectlyRecursive = true;
+    }
+#endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->SetArgument(0, frame->Top());
@@ -210,6 +257,14 @@ void VMMethod::InlineInto(MethodGenerationContext& mgenc, const Parser& parser,
     if (mergeScope) {
         mgenc.MergeIntoScope(*lexicalScope);
     }
+#ifdef FRAME_OPTIMIZATION
+    if (hasNonLocalReturn) {
+        mgenc.SetHasNonLocalReturn();
+    }
+    if (accessesClosureVariables) {
+        mgenc.SetAccessesClosureVariables();
+    }
+#endif
     inlineInto(mgenc, parser);
 }
 

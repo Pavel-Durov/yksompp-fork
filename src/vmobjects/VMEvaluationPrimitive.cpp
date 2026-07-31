@@ -37,6 +37,9 @@
 #include "../vm/Print.h"
 #include "../vm/Symbols.h"
 #include "../vm/Universe.h"  // NOLINT(misc-include-cleaner) it's required to make the types complete
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
 #include "ObjectFormats.h"
 #include "VMBlock.h"
 #include "VMFrame.h"
@@ -85,7 +88,11 @@ VMSymbol* VMEvaluationPrimitive::computeSignatureString(size_t argc) {
     return SymbolFor(signatureString);
 }
 
-VMFrame* VMEvaluationPrimitive::Invoke(VMFrame* frm) {
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
+VMFrame*
+VMEvaluationPrimitive::Invoke(VMFrame* frm) {
     // Get the block (the receiver) from the stack
     auto* block =
         static_cast<VMBlock*>(frm->GetStackElement(numberOfArguments - 1));
@@ -93,6 +100,9 @@ VMFrame* VMEvaluationPrimitive::Invoke(VMFrame* frm) {
     // Get the context of the block...
     VMFrame* context = block->GetContext();
     VMInvokable* method = block->GetMethod();
+#ifdef USE_YK
+    method = (VMInvokable*)yk_promote((void*)method);
+#endif
     VMFrame* newFrame = method->Invoke(frm);
 
     // Push set its context to be the one specified in the block
@@ -102,7 +112,11 @@ VMFrame* VMEvaluationPrimitive::Invoke(VMFrame* frm) {
     return nullptr;
 }
 
-VMFrame* VMEvaluationPrimitive::Invoke1(VMFrame* frm) {
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
+VMFrame*
+VMEvaluationPrimitive::Invoke1(VMFrame* frm) {
     assert(numberOfArguments == 1);
     // Get the block (the receiver) from the stack
     auto* block = static_cast<VMBlock*>(frm->GetStackElement(0));
@@ -110,6 +124,9 @@ VMFrame* VMEvaluationPrimitive::Invoke1(VMFrame* frm) {
     // Get the context of the block...
     VMFrame* context = block->GetContext();
     VMInvokable* method = block->GetMethod();
+#ifdef USE_YK
+    method = (VMInvokable*)yk_promote((void*)method);
+#endif
     VMFrame* newFrame = method->Invoke1(frm);
 
     // Push set its context to be the one specified in the block

@@ -45,6 +45,9 @@ public:
 
     static VMFrame* EmergencyFrameFrom(VMFrame* from, size_t extraLength);
 
+#ifdef USE_YK
+    __attribute__((yk_unroll))
+#endif
     explicit VMFrame(size_t additionalBytes, VMMethod* method,
                      VMFrame* previousFrame)
         : totalObjectSize(additionalBytes + sizeof(VMFrame)),
@@ -189,7 +192,7 @@ public:
 
     void ResetBytecodeIndex();
 
-#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef FRAME_OPTIMIZATION
     void SetPreviousFrameOnReuse(VMFrame* previousFrame) {
         this->previousFrame = store_root(previousFrame);
     }

@@ -121,7 +121,11 @@ VMFrame* VMFrame::CloneForMovingGC() const {
 
 const size_t VMFrame::VMFrameNumberOfFields = 0;
 
-VMFrame* VMFrame::GetContextLevel(uint8_t lvl) {
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
+VMFrame*
+VMFrame::GetContextLevel(uint8_t lvl) {
     VMFrame* current = this;
     while (lvl > 0) {
         current = current->GetContext();
@@ -129,8 +133,11 @@ VMFrame* VMFrame::GetContextLevel(uint8_t lvl) {
     }
     return current;
 }
-
-VMFrame* VMFrame::GetOuterContext() {
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
+VMFrame*
+VMFrame::GetOuterContext() {
     VMFrame* current = this;
     while (current->HasContext()) {
         current = current->GetContext();
@@ -243,6 +250,9 @@ void VMFrame::PrintStackTrace() const {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 void VMFrame::CopyArgumentsFrom(VMFrame* frame) {
     // copy arguments from frame:
     // - arguments are at the top of the stack of frame.

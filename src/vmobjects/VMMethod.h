@@ -26,6 +26,7 @@
  THE SOFTWARE.
  */
 
+#include <cstdint>
 #include <cstdlib>
 #include <iostream>
 #include <queue>
@@ -105,6 +106,9 @@ public:
     ~VMMethod() override {
         delete lexicalScope;
 #ifdef USE_YK
+    #if GC_IS_MOVING
+        free(bytecodes);  // malloc'd separately, see the constructor
+    #endif
         YkMethodDestroy(yklocs, bcLength);
   #ifdef YK_DEBUG_STRS
         free(instsrccoords);
@@ -122,8 +126,14 @@ public:
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
+#if defined(USE_YK) && GC_IS_MOVING
+        // bytecodes is malloc'd separately, see the constructor.
+        size_t const additionalBytes =
+            PADDED_SIZE(numberOfConstants * sizeof(VMObject*));
+#else
         size_t const additionalBytes =
             PADDED_SIZE(bcLength + (numberOfConstants * sizeof(VMObject*)));
+#endif
         return additionalBytes + sizeof(VMMethod);
     }
 
@@ -210,6 +220,9 @@ public:
     [[nodiscard]] inline uint8_t* GetBytecodes() const { return bytecodes; }
 
 private:
+#ifdef USE_YK
+    void setYkLocation(size_t bcIdx);
+#endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
 
@@ -240,6 +253,10 @@ private:
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
+    bool isDirectlyRecursive{false};
+    bool hasPushBlockBytecode{false};
+    bool hasNonLocalReturn{false};
+    bool accessesClosureVariables{false};
 #endif
 
 #ifdef BYTECODE_HEATMAP

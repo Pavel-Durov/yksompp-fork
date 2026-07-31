@@ -61,6 +61,9 @@
 #include "../vmobjects/VMString.h"
 #include "../vmobjects/VMVector.h"
 #include "../yk/yk_linkage.h"
+#ifdef USE_YK
+  #include "../yk/YkSOMpp.h"
+#endif
 #include "Globals.h"
 #include "IsValidObject.h"
 #include "LogAllocation.h"
@@ -117,10 +120,6 @@ void Universe::Shutdown() {
          it++) {
         hist_csv << it->first << ", " << it->second << endl;
     }
-#endif
-
-#ifdef USE_YK
-    YkUniverseShutdown();
 #endif
 
 #ifdef LOG_RECEIVER_TYPES
@@ -186,6 +185,9 @@ static void printVmConfig() {
     }
 
     cout << "--------------------------------------\n";
+#ifdef USE_YK
+    YkUniverseShutdown();
+#endif
 }
 
 vector<std::string> Universe::handleArguments(int32_t argc, char** argv) {
@@ -571,7 +573,11 @@ VMClass* Universe::GetBlockClassWithArgs(uint8_t numberOfArguments) {
     return result;
 }
 
-vm_oop_t Universe::GetGlobal(VMSymbol* name) {
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
+vm_oop_t
+Universe::GetGlobal(VMSymbol* name) {
     auto it = globals.find(tmp_ptr(name));
     if (it == globals.end()) {
         return nullptr;
@@ -796,8 +802,11 @@ VMArray* Universe::NewArrayList(std::vector<vm_oop_t>& list) {
     return result;
 }
 
-VMBlock* Universe::NewBlock(VMInvokable* method, VMFrame* context,
-                            uint8_t arguments) {
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
+VMBlock*
+Universe::NewBlock(VMInvokable* method, VMFrame* context, uint8_t arguments) {
     auto* result = new (GetHeap<HEAP_CLS>(), 0) VMBlock(method, context);
     result->SetClass(GetBlockClassWithArgs(arguments));
 
@@ -993,9 +1002,14 @@ VMMethod* Universe::NewMethod(VMSymbol* signature, size_t numberOfBytecodes,
         inlinedLoopsArr[i] = BackJump();
     }
 
+#if defined(USE_YK) && GC_IS_MOVING
+    size_t const additionalBytes =
+        PADDED_SIZE(numberOfConstants * sizeof(VMObject*));
+#else
     // method needs space for the bytecodes and the pointers to the constants
     size_t const additionalBytes = PADDED_SIZE(
         numberOfBytecodes + (numberOfConstants * sizeof(VMObject*)));
+#endif
     auto* result = new (GetHeap<HEAP_CLS>(), additionalBytes)
         VMMethod(signature, numberOfBytecodes, numberOfConstants, numLocals,
                  maxStackDepth, lexicalScope, inlinedLoopsArr);

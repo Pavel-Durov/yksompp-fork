@@ -100,6 +100,16 @@ typedef DebugCopyingHeap HEAP_CLS;
   #define ALLOC_OUTSIDE_NURSERY_DECL
 #endif
 
+// Whether the configured GC relocates surviving objects.
+// yk_promote/yk_idempotent bake raw object pointers into compiled traces as
+// constants, so promoting a VMClass*/VMSymbol*/VMInvokable* is only safe
+// when the configured GC can't relocate the object it points at.
+#if GC_TYPE == MARK_SWEEP
+  #define GC_IS_MOVING 0
+#else
+  #define GC_IS_MOVING 1
+#endif
+
 //
 // Integer Settings
 //

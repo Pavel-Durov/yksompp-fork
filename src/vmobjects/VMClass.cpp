@@ -38,6 +38,9 @@
 #include "../vm/Globals.h"
 #include "../vm/IsValidObject.h"
 #include "../vm/Print.h"
+#ifdef USE_YK
+  #include "../vm/Universe.h"
+#endif
 #include "ObjectFormats.h"
 #include "VMArray.h"
 #include "VMInvokable.h"
@@ -190,7 +193,11 @@ void VMClass::SetInstanceInvokable(size_t index, VMInvokable* invokable) {
     }
 }
 
-VMInvokable* VMClass::LookupInvokable(VMSymbol* name) {
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
+VMInvokable*
+VMClass::LookupInvokable(VMSymbol* name) {
     assert(IsValidObject(this));
 
     VMInvokable* invokable = name->GetCachedInvokable(this);
