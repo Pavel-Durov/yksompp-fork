@@ -172,9 +172,15 @@ public:
                     const char* sourceFile = nullptr);
 #endif
 
-#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef FRAME_OPTIMIZATION
     void SetCachedFrame(VMFrame* frame);
     GCFrame* GetCachedFrame() const;
+
+    void SetRequiresClosureContext() { requiresClosureContext = true; }
+
+    [[nodiscard]] bool RequiresClosureContext() const override {
+        return requiresClosureContext;
+    }
 #endif
 
     void WalkObjects(walk_heap_fn /*unused*/) override;
@@ -251,12 +257,10 @@ private:
     LexicalScope* lexicalScope;
     BackJump* inlinedLoops;
 
-#ifdef UNSAFE_FRAME_OPTIMIZATION
+#ifdef FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
     bool isDirectlyRecursive{false};
-    bool hasPushBlockBytecode{false};
-    bool hasNonLocalReturn{false};
-    bool accessesClosureVariables{false};
+    bool requiresClosureContext{false};
 #endif
 
 #ifdef BYTECODE_HEATMAP
