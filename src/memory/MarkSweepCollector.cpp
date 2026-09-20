@@ -11,10 +11,11 @@
 #include "../vmobjects/IntegerBox.h"
 #include "../vmobjects/ObjectFormats.h"
 #include "../vmobjects/VMFrame.h"
+#include "../yk/yk_linkage.h"
 #include "MarkSweepHeap.h"
 
-static size_t markedBytes = 0;
-static std::vector<AbstractVMObject*> markStack;
+YK_STATIC size_t markedBytes = 0;
+YK_STATIC std::vector<AbstractVMObject*> markStack;
 
 static gc_oop_t mark_object(gc_oop_t oop) {
     if (IS_TAGGED(oop)) {
