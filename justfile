@@ -1,6 +1,6 @@
 yk_config := "/path/to/yk-config"
 yk_debug_strs := "true"
-gc_type := "MARK_SWEEP"
+gc_type := "PAGED_MARK_SWEEP"
 tools_venv := ".venv"
 
 build: build-release

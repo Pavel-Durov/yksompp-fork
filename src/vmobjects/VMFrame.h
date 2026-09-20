@@ -113,7 +113,7 @@ public:
         return result;
     }
 
-    inline void SetTop(gc_oop_t val) { *stack_ptr = val; }
+    inline void SetTop(vm_oop_t val) { store_ptr(*stack_ptr, val); }
 
     inline void Push(vm_oop_t obj) {
         assert(RemainingStackSize() > 0);
@@ -150,7 +150,8 @@ public:
         return load_ptr(context->arguments[index]);
     }
 
-    inline vm_oop_t GetArgumentInCurrentContext(uint8_t index) {
+    [[nodiscard]] inline vm_oop_t GetArgumentInCurrentContext(
+        uint8_t index) const {
         return load_ptr(this->arguments[index]);
     }
 

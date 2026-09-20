@@ -56,7 +56,7 @@ public:
 private:
     __attribute__((noreturn)) void parseError(const char* msg, Symbol expected);
     __attribute__((noreturn)) void parseError(const char* msg,
-                                              Symbol* expected);
+                                              Symbol const* expected);
     __attribute__((noreturn)) void parseError(const char* msg,
                                               std::string expected);
 

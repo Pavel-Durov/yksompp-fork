@@ -45,7 +45,7 @@
 #include "../vmobjects/VMSymbol.h"
 #include "../yk/yk_linkage.h"
 
-#if defined(__GNUC__)
+#ifdef __GNUC__
 
   #include <sys/time.h>
 

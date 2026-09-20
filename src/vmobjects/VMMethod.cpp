@@ -91,6 +91,10 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
     heatmap = new uint64_t[bcCount]();
 #endif
 
+#ifdef BYTECODE_HEATMAP
+    heatmap = new uint64_t[bcCount]();
+#endif
+
     write_barrier(this, signature);
 }
 
@@ -246,7 +250,7 @@ void VMMethod::Dump(const char* indent, bool printObjects) {
 }
 
 std::string VMMethod::AsDebugString() const {
-    VMClass* holder = GetHolder();
+    VMClass const* const holder = GetHolder();
     std::string holder_str;
     if (holder == load_ptr(nilObject)) {
         holder_str = "nil";

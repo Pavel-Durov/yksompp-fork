@@ -1,4 +1,20 @@
 #pragma once
+/**
+ * This is a text-book mark-sweep heap.
+ *
+ * It's a fixed-sized heap that is allocated on creation
+ * as a contiguous block of memory.
+ *
+ * It uses a first-fit free list to allocate objects.
+ * The free list is stored in the heap itself.
+ * This means, the smallest allocation unit is `sizeof(VMFreeListEntry)`.
+ *
+ * The free-list uses a first-fit search strategy and is not sorted.
+ * If we find a free block that is larger than the requested size,
+ * and larger than the requested size + `sizeof(VMFreeListEntry)`, then
+ * we split the block and return the part at the end, and adjust the size of the
+ * free block.
+ */
 
 #include <cstddef>
 #include <vector>
@@ -6,45 +22,29 @@
 #include "../misc/defs.h"
 #include "Heap.h"
 
+class VMFreeListEntry;
+
 class MarkSweepHeap : public Heap<MarkSweepHeap> {
     friend class MarkSweepCollector;
-    struct FreeListEntry {
-        FreeListEntry* next;
-    };
-    // NOLINTNEXTLINE(altera-struct-pack-align): FPGA-specific, not relevant
-    struct Page {
-        char* memory;
-        size_t sweptEpoch;  // last epoch this page was swept in
-    };
 
 public:
-    explicit MarkSweepHeap(size_t objectSpaceSize = 1048576);
+    explicit MarkSweepHeap(size_t objectSpaceSize);
     ~MarkSweepHeap();
-    AbstractVMObject* AllocateObject(size_t size);
+    void* AllocateObject(size_t size);
+
+    static void findFittingEntry(VMFreeListEntry*& cur, VMFreeListEntry*& prev,
+                                 size_t allocSize);
+
+    static constexpr int GC_MARKED = 1;
+    static constexpr int GC_UNMARKED = 0;
 
 private:
-    static size_t sizeClassIndex(size_t size);
-    // Grab a new page from the OS and put all its cells on the class' free
-    // list.
-    void carveNewPage(size_t classIndex);
-    // Sweep one page; reclaim unmarked cells, or free the page if none are
-    // live.
-    bool sweepPageAt(size_t classIndex, size_t pageIndex);
-    // Sweep pages of the class until its free list has a cell.
-    bool sweepNextPage(size_t classIndex);
-    AbstractVMObject* allocateLargeObject(size_t size);
-    void accountAllocation(size_t bytes);
+    void sweep();
 
-    std::vector<FreeListEntry*> freeLists;        // per size class
-    std::vector<std::vector<Page*>> classPages;   // per size class
-    std::vector<size_t> sweepCursor;              // per size class
-    std::vector<AbstractVMObject*> largeObjects;  // not page-allocated
+    AbstractVMObject* heap;
+    AbstractVMObject* heapEnd;
+    VMFreeListEntry* freeList;
 
-    size_t epoch{0};  // current live mark; bumped each collection
-    size_t spcAlloc{0};
-    size_t collectionLimit;
-    // floor for collectionLimit (~the configured heap size): collect only once
-    // about a heap's worth has been allocated, like the copying collector,
-    // rather than every ~live-set bytes.
-    size_t minCollectionLimit;
+    uintptr_t liveBytes{0};
+    const uintptr_t collectionLimit;
 };
