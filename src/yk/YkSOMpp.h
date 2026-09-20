@@ -61,13 +61,9 @@ uintptr_t get_global_idem(VMSymbol* name);
 
 #define YK_DISPATCH_TRAMPOLINE()                                      \
     YK_DISPATCH_START:                                                \
-    uint8_t* bc;                                                      \
-    size_t bci;                                                       \
-    if (yk_is_interpreting()) {                                       \
-        /* Not tracing: yk_promote is a net loss here, so skip it. */ \
-        bc = currentBytecodes;                                        \
-        bci = bytecodeIndexGlobal;                                    \
-    } else {                                                          \
+    uint8_t* bc = currentBytecodes;                                   \
+    size_t bci = bytecodeIndexGlobal;                                 \
+    if (!yk_is_interpreting()) {                                      \
         bc = (uint8_t*)yk_promote((void*)currentBytecodes);           \
         bci = (size_t)yk_promote((uintptr_t)bytecodeIndexGlobal);     \
     }                                                                 \
