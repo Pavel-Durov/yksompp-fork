@@ -22,6 +22,7 @@ project(SOMpp LANGUAGES CXX)
 
 set(CMAKE_PROJECT_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Make sure we have the SOM core-lib
 find_package(Git QUIET)
@@ -68,7 +69,7 @@ file(GLOB PRIMITIVESCORE_SRC ${PRIMITIVESCORE_DIR}/*.cpp)
 file(GLOB UNITTEST_SRC    ${UNITTEST_DIR}/*.cpp)
 
 option(USE_TAGGING "Enable immediate integers using tagging" FALSE)
-set(GC_TYPE "COPYING" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, GENERATIONAL")
+set(GC_TYPE "COPYING" CACHE STRING "Select the type of GC to be used: COPYING, MARK_SWEEP, PAGED_MARK_SWEEP, DEBUG_MARK_SWEEP, GENERATIONAL")
 
 option(CACHE_INTEGER "Enable caching of boxed integers" FALSE)
 set(INT_CACHE_MIN_VALUE -5  CACHE STRING "Lower bound of cached integers")
@@ -133,60 +134,59 @@ endif()
 
 option(FIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS
   "Find the C++ standard library known to be compatible with the Clang toolchain"
-  FALSE)
+  TRUE)
 
-set(SOM_CLANG_STDLIB_INCLUDE_DIRS "")
+set(CLANG_STDLIB_INCLUDE_DIRS "")
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND FIND_COMPATIBLE_CLANG_STDLIB_INCLUDE_DIRS AND UNIX AND NOT APPLE)
-  string(REGEX MATCH "^[0-9]+" SOM_CLANG_VERSION_MAJOR "${CMAKE_CXX_COMPILER_VERSION}")
+  string(REGEX MATCH "^[0-9]+" CLANG_VERSION_MAJOR "${CMAKE_CXX_COMPILER_VERSION}")
 
-  if(NOT SOM_CLANG_VERSION_MAJOR)
+  if(NOT CLANG_VERSION_MAJOR)
     message(WARNING "Could not determine Clang major version from '${CMAKE_CXX_COMPILER_VERSION}'.")
   else()
-    set(SOM_CLANG_STDLIB_CANDIDATES "")
-    if(SOM_CLANG_VERSION_MAJOR LESS 20)
-      set(SOM_CLANG_STDLIB_CANDIDATES 14 13 12 11)
-    elseif(SOM_CLANG_VERSION_MAJOR LESS 22)
-      set(SOM_CLANG_STDLIB_CANDIDATES 15 14 13 12 11)
+    set(CLANG_STDLIB_CANDIDATES "")
+    if(CLANG_VERSION_MAJOR LESS 20)
+      set(CLANG_STDLIB_CANDIDATES 14 13 12 11)
+    elseif(CLANG_VERSION_MAJOR LESS 22)
+      set(CLANG_STDLIB_CANDIDATES 15 14 13 12 11)
     else()
-      set(SOM_CLANG_STDLIB_CANDIDATES 16 15 14 13 12 11)
+      set(CLANG_STDLIB_CANDIDATES 16 15 14 13 12 11)
     endif()
 
-    foreach(SOM_STDLIB_VERSION IN LISTS SOM_CLANG_STDLIB_CANDIDATES)
-      set(SOM_STDLIB_BASE_DIR "/usr/include/c++/${SOM_STDLIB_VERSION}")
-      if(EXISTS "${SOM_STDLIB_BASE_DIR}")
-        set(SOM_STDLIB_ARCH_DIRS "")
-        if(CMAKE_LIBRARY_ARCHITECTURE)
-          list(APPEND SOM_STDLIB_ARCH_DIRS "/usr/include/${CMAKE_LIBRARY_ARCHITECTURE}/c++/${SOM_STDLIB_VERSION}")
-          list(APPEND SOM_STDLIB_ARCH_DIRS "${SOM_STDLIB_BASE_DIR}/${CMAKE_LIBRARY_ARCHITECTURE}")
-        endif()
+    foreach(stdlib_version IN LISTS CLANG_STDLIB_CANDIDATES)
+      set(CLANG_STDLIB_BASE_DIR "/usr/include/c++/${stdlib_version}")
+      if(EXISTS "${CLANG_STDLIB_BASE_DIR}")
+        set(CLANG_STDLIB_ARCH_DIRS "")
         if(CMAKE_SYSTEM_PROCESSOR)
-          list(APPEND SOM_STDLIB_ARCH_DIRS "/usr/include/${CMAKE_SYSTEM_PROCESSOR}-linux-gnu/c++/${SOM_STDLIB_VERSION}")
+          list(APPEND CLANG_STDLIB_ARCH_DIRS "/usr/include/${CMAKE_SYSTEM_PROCESSOR}-linux-gnu/c++/${stdlib_version}")
         endif()
 
-        set(SOM_STDLIB_ARCH_DIR "")
-        foreach(SOM_CANDIDATE_ARCH_DIR IN LISTS SOM_STDLIB_ARCH_DIRS)
-          if(SOM_CANDIDATE_ARCH_DIR AND EXISTS "${SOM_CANDIDATE_ARCH_DIR}")
-            set(SOM_STDLIB_ARCH_DIR "${SOM_CANDIDATE_ARCH_DIR}")
+        set(CLANG_STDLIB_ARCH_DIR "")
+        foreach(arch_dir IN LISTS CLANG_STDLIB_ARCH_DIRS)
+          if(arch_dir AND EXISTS "${arch_dir}")
+            set(CLANG_STDLIB_ARCH_DIR "${arch_dir}")
             break()
           endif()
         endforeach()
 
-        set(SOM_CLANG_STDLIB_VERSION "${SOM_STDLIB_VERSION}")
-        set(SOM_CLANG_STDLIB_INCLUDE_DIRS "${SOM_STDLIB_BASE_DIR}")
-        if(SOM_STDLIB_ARCH_DIR)
-          list(APPEND SOM_CLANG_STDLIB_INCLUDE_DIRS "${SOM_STDLIB_ARCH_DIR}")
+        set(CLANG_STDLIB_VERSION "${stdlib_version}")
+        set(CLANG_STDLIB_INCLUDE_DIRS "${CLANG_STDLIB_BASE_DIR}")
+        if(CLANG_STDLIB_ARCH_DIR)
+          list(APPEND CLANG_STDLIB_INCLUDE_DIRS "${CLANG_STDLIB_ARCH_DIR}")
         endif()
         break()
       endif()
     endforeach()
 
-    if(SOM_CLANG_STDLIB_INCLUDE_DIRS)
+    if(CLANG_STDLIB_INCLUDE_DIRS)
+      # we now have the include directories and disable the use of the default ones
       add_compile_options(-nostdinc++)
+      unset(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES)
+
       message(STATUS
-        "Clang ${SOM_CLANG_VERSION_MAJOR}: using libstdc++ headers v${SOM_CLANG_STDLIB_VERSION}: ${SOM_CLANG_STDLIB_INCLUDE_DIRS}")
+        "Clang ${CLANG_VERSION_MAJOR}: using libstdc++ headers v${CLANG_STDLIB_VERSION}: ${CLANG_STDLIB_INCLUDE_DIRS}")
     else()
       message(WARNING
-        "Clang ${SOM_CLANG_VERSION_MAJOR}: no compatible libstdc++ headers found under /usr/include/c++; using compiler defaults.")
+        "Clang ${CLANG_VERSION_MAJOR}: no compatible libstdc++ headers found under /usr/include/c++; using compiler defaults.")
     endif()
   endif()
 endif()
@@ -206,14 +206,13 @@ target_sources(SOM++ PRIVATE
   ${PRIMITIVESCORE_SRC})
 
 target_compile_options(SOM++ PRIVATE
-  -m64
   -Wno-endif-labels
   $<$<CXX_COMPILER_ID:Clang>:-fdiagnostics-absolute-paths>
   $<$<BOOL:${FOR_PROFILING}>:-g -pg>)
 
 target_include_directories(SOM++ PRIVATE ${SRC_DIR})
-if(SOM_CLANG_STDLIB_INCLUDE_DIRS)
-  target_include_directories(SOM++ SYSTEM PRIVATE ${SOM_CLANG_STDLIB_INCLUDE_DIRS})
+if(CLANG_STDLIB_INCLUDE_DIRS)
+  target_include_directories(SOM++ SYSTEM PRIVATE ${CLANG_STDLIB_INCLUDE_DIRS})
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
@@ -278,8 +277,8 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_include_directories(unittests PRIVATE
     ${SRC_DIR}
     /opt/local/include)
-  if(SOM_CLANG_STDLIB_INCLUDE_DIRS)
-    target_include_directories(unittests SYSTEM PRIVATE ${SOM_CLANG_STDLIB_INCLUDE_DIRS})
+  if(CLANG_STDLIB_INCLUDE_DIRS)
+    target_include_directories(unittests SYSTEM PRIVATE ${CLANG_STDLIB_INCLUDE_DIRS})
   endif()
 
   find_library(LIB_CPPUNIT NAMES cppunit)
@@ -287,17 +286,109 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   target_link_libraries(unittests ${LIB_CPPUNIT})
 endif()
 
+find_program(CLANG_TIDY_EXE NAMES clang-tidy-22 clang-tidy-mp-22 clang-tidy)
+find_program(RUN_CLANG_TIDY_EXE NAMES run-clang-tidy-22 run-clang-tidy-mp-22 run-clang-tidy run-clang-tidy.py)
+if(CLANG_TIDY_EXE)
+  set(TIDY_SOURCE_FILES
+    ${MAIN_SRC}
+    ${COMPILER_SRC}
+    ${INTERPRETER_SRC}
+    ${MEMORY_SRC}
+    ${MISC_SRC}
+    ${VM_SRC}
+    ${VMOBJECTS_SRC}
+    ${PRIMITIVES_SRC}
+    ${PRIMITIVESCORE_SRC}
+    ${UNITTEST_SRC})
+
+  if(RUN_CLANG_TIDY_EXE)
+    add_custom_target(check-tidy
+      COMMAND ${RUN_CLANG_TIDY_EXE}
+        -quiet
+        -clang-tidy-binary ${CLANG_TIDY_EXE}
+        -p ${CMAKE_BINARY_DIR}
+        ${TIDY_SOURCE_FILES}
+      WORKING_DIRECTORY ${ROOT_DIR}
+      COMMENT "Checking code with run-clang-tidy using compile_commands.json"
+      VERBATIM
+    )
+    find_program(CLANG_APPLY_REPLACEMENT_BINARY NAMES clang-apply-replacements-mp-22 clang-apply-replacements-22 clang-apply-replacements)
+    add_custom_target(tidy
+      COMMAND ${RUN_CLANG_TIDY_EXE}
+        -quiet
+        -clang-tidy-binary ${CLANG_TIDY_EXE}
+        -clang-apply-replacements-binary ${CLANG_APPLY_REPLACEMENT_BINARY}
+        -p ${CMAKE_BINARY_DIR}
+        -fix
+        ${TIDY_SOURCE_FILES}
+      WORKING_DIRECTORY ${ROOT_DIR}
+      COMMENT "Run run-clang-tidy --fix, using compile_commands.json"
+      VERBATIM
+    )
+  else()
+    add_custom_target(check-tidy
+      COMMAND ${CLANG_TIDY_EXE}
+        -p=${CMAKE_BINARY_DIR}
+        --config-file=${ROOT_DIR}/.clang-tidy
+        ${TIDY_SOURCE_FILES}
+      WORKING_DIRECTORY ${ROOT_DIR}
+      COMMENT "Checking code with clang-tidy using compile_commands.json"
+      VERBATIM
+    )
+    add_custom_target(tidy
+      COMMAND ${CLANG_TIDY_EXE}
+        --fix
+        -p=${CMAKE_BINARY_DIR}
+        --config-file=${ROOT_DIR}/.clang-tidy
+        ${TIDY_SOURCE_FILES}
+      WORKING_DIRECTORY ${ROOT_DIR}
+      COMMENT "Run clang-tidy --fix, using compile_commands.json"
+      VERBATIM
+    )
+  endif()
+endif()
+
+find_program(CLANG_FORMAT_EXE NAMES clang-format-22 clang-format-mp-22 clang-format)
+if(CLANG_FORMAT_EXE)
+  add_custom_target(check-format
+      COMMAND ${CLANG_FORMAT_EXE} --dry-run --Werror -style=file ${SRC_DIR}/*.cpp ${SRC_DIR}/**/*.cpp ${SRC_DIR}/**/*.h
+      COMMENT "Checking code formatting with clang-format"
+  )
+  add_custom_target(format
+      COMMAND ${CLANG_FORMAT_EXE} -i --Werror -style=file ${SRC_DIR}/*.cpp ${SRC_DIR}/**/*.cpp ${SRC_DIR}/**/*.h
+      COMMENT "Format code with clang-format"
+  )
+endif()
+
 
 enable_testing()
 
 add_test(
   NAME    unittests
-  COMMAND unittests -cp ${ROOT_DIR}/Smalltalk ${ROOT_DIR}/Examples/Hello.som)
+  COMMAND unittests -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/TestSuite/BasicInterpreterTests ${ROOT_DIR}/Examples/Hello.som)
 
 add_test(
   NAME som-tests
   COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk ${ROOT_DIR}/TestSuite/TestHarness.som)
 
 add_test(
-  NAME benchmarks
-  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/LanguageFeatures ${ROOT_DIR}/Examples/Benchmarks/All.som)
+  NAME benchmark-richards
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/Richards ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som Richards 1 1)
+add_test(
+  NAME benchmark-deltablue
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/DeltaBlue ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som DeltaBlue 1 100)
+add_test(
+  NAME benchmark-nbody
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/NBody ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som NBody 1 1000)
+add_test(
+  NAME benchmark-json
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/Json ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som Json 1 1)
+add_test(
+  NAME benchmark-graphsearch
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/GraphSearch ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som GraphSearch 1 7)
+add_test(
+  NAME benchmark-pageranke
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk:${ROOT_DIR}/Examples/Benchmarks/PageRank ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som PageRank 1 7)
+add_test(
+  NAME benchmark-fannkuch
+  COMMAND SOM++ -cp ${ROOT_DIR}/Smalltalk ${ROOT_DIR}/Examples/Benchmarks/BenchmarkHarness.som Fannkuch 1 7)
