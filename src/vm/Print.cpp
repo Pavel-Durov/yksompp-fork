@@ -8,7 +8,6 @@
 
 #include "../misc/defs.h"
 #include "../yk/yk_linkage.h"
-#include "LogAllocation.h"
 #include "Universe.h"
 
 using namespace std;
@@ -43,7 +42,5 @@ __attribute__((noreturn)) __attribute__((noinline)) void ErrorExit(
 
 __attribute__((noreturn)) __attribute__((noinline)) void Quit(int32_t err) {
     Universe::Shutdown();
-
-    OutputAllocationLogFile();
     exit(err);
 }

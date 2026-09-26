@@ -125,15 +125,6 @@ public:
 #ifdef USE_YK
     static YkMT* yk_mt;
 #endif
-#ifdef LOG_RECEIVER_TYPES
-    struct stat_data {
-        long noCalls;
-        long noPrimitiveCalls;
-    };
-    static map<std::string, long> receiverTypes;
-    static map<std::string, stat_data> callStats;
-#endif
-    //
 
     static void Shutdown();
 
