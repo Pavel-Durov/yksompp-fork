@@ -32,7 +32,7 @@ build-yk-debug:
         -DCMAKE_BUILD_TYPE=Debug \
         -DYK_BUILD_TYPE=debug \
         -DYK_DEBUG_STRS={{yk_debug_strs}} \
-        -Dgc_type={{gc_type}} \
+        -DGC_TYPE={{gc_type}} \
         "-DCMAKE_CXX_FLAGS=-I$HOME/.local/include" \
         "-DLIB_CPPUNIT=$HOME/.local/lib/libcppunit.so" \
         -S . -B cmake-yk-debug
@@ -45,7 +45,7 @@ build-yk-release:
         -DCMAKE_BUILD_TYPE=Release \
         -DYK_BUILD_TYPE=release \
         -DYK_DEBUG_STRS={{yk_debug_strs}} \
-        -Dgc_type={{gc_type}} \
+        -DGC_TYPE={{gc_type}} \
         -S . -B cmake-yk-release
     cmake --build cmake-yk-release --parallel
 
