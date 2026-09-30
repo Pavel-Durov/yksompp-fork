@@ -190,7 +190,11 @@ void VMClass::SetInstanceInvokable(size_t index, VMInvokable* invokable) {
     }
 }
 
-VMInvokable* VMClass::LookupInvokable(VMSymbol* name) {
+#ifdef USE_YK
+__attribute__((yk_outline))
+#endif
+VMInvokable*
+VMClass::LookupInvokable(VMSymbol* name) {
     assert(IsValidObject(this));
 
     VMInvokable* invokable = name->GetCachedInvokable(this);
