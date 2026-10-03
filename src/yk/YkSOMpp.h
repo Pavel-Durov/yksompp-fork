@@ -25,6 +25,13 @@ void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
+class VMClass;
+class VMSymbol;
+
+#define NOOP(X) asm volatile("" : "+r,m"(X) : : "memory");
+
+uintptr_t YkFetchBytecode(uint8_t* bytecodes, size_t index);
+
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)
 // where the single control point call lives. The trampoline is defined in
@@ -57,7 +64,15 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
     yk_mt_control_point(Universe::yk_mt,                       \
                         &method->yklocs[bytecodeIndexGlobal]); \
     YK_DEBUG_STR_CALL();                                       \
-    switch (currentBytecodes[bytecodeIndexGlobal]) {           \
+    uint8_t ykOp;                                              \
+    if (yk_is_interpreting()) {                                \
+        ykOp = currentBytecodes[bytecodeIndexGlobal];          \
+    } else {                                                   \
+        ykOp = (uint8_t)YkFetchBytecode(                       \
+            (uint8_t*)yk_promote((void*)currentBytecodes),     \
+            (size_t)yk_promote(bytecodeIndexGlobal));          \
+    }                                                          \
+    switch (ykOp) {                                            \
         case BC_HALT:                                          \
             goto LABEL_BC_HALT;                                \
         case BC_DUP:                                           \
