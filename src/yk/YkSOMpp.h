@@ -31,6 +31,7 @@ class VMSymbol;
 #define NOOP(X) asm volatile("" : "+r,m"(X) : : "memory");
 
 uintptr_t YkFetchBytecode(uint8_t* bytecodes, size_t index);
+uintptr_t YkFetchIntegerClass();
 
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)
