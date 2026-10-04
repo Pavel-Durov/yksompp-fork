@@ -68,18 +68,24 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
 #else
   #define HEATMAP_INC() ((void)0)
 #endif
-#define PROLOGUE(bcCount)                 \
-    {                                     \
-        if (printBytecodes) {             \
-            disassembleMethod();          \
-        }                                 \
-        HEATMAP_INC();                    \
-        bytecodeIndexGlobal += (bcCount); \
+#define PROLOGUE(bcCount)                                       \
+    {                                                           \
+        if (printBytecodes) {                                   \
+            disassembleMethod();                                \
+        }                                                       \
+        HEATMAP_INC();                                          \
+        bytecodeIndexGlobal += (bcCount);                       \
+        Interpreter::bytecodeIndexGlobal = bytecodeIndexGlobal; \
     }
 
     // initialization
     method = GetMethod();
     currentBytecodes = GetBytecodes();
+#ifdef USE_YK
+    uint8_t* currentBytecodes = Interpreter::currentBytecodes;
+    size_t bytecodeIndexGlobal = Interpreter::bytecodeIndexGlobal;
+    uint8_t ykOp = BC_HALT;
+#endif
 
     void const* const loopTargets[] = {&&LABEL_BC_HALT,
                                        &&LABEL_BC_DUP,

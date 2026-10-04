@@ -57,21 +57,34 @@ uintptr_t YkFetchIntegerClass();
     {                                                       \
         if (GetHeap<HEAP_CLS>()->isCollectionTriggered()) { \
             startGC();                                      \
+            currentBytecodes =                              \
+                Interpreter::currentBytecodes;              \
+            bytecodeIndexGlobal =                           \
+                Interpreter::bytecodeIndexGlobal;           \
         }                                                   \
         goto YK_DISPATCH_START;                             \
     }
 #define YK_DISPATCH_TRAMPOLINE()                               \
     YK_DISPATCH_START:                                         \
+    /* Did the previous bytecode change the VMFrame? */        \
+    if ((ykOp >= BC_SEND && ykOp <= BC_RETURN_FIELD_2) ||      \
+        ykOp == BC_PUSH_GLOBAL) {                              \
+        currentBytecodes = Interpreter::currentBytecodes;      \
+        bytecodeIndexGlobal =                                  \
+            Interpreter::bytecodeIndexGlobal;                  \
+    }                                                          \
     yk_mt_control_point(Universe::yk_mt,                       \
                         &method->yklocs[bytecodeIndexGlobal]); \
     YK_DEBUG_STR_CALL();                                       \
-    uint8_t ykOp;                                              \
     if (yk_is_interpreting()) {                                \
         ykOp = currentBytecodes[bytecodeIndexGlobal];          \
     } else {                                                   \
-        ykOp = (uint8_t)YkFetchBytecode(                       \
-            (uint8_t*)yk_promote((void*)currentBytecodes),     \
-            (size_t)yk_promote(bytecodeIndexGlobal));          \
+        currentBytecodes =                                     \
+            (uint8_t*)yk_promote((void*)currentBytecodes);     \
+        bytecodeIndexGlobal =                                  \
+            (size_t)yk_promote(bytecodeIndexGlobal);           \
+        ykOp = (uint8_t)YkFetchBytecode(currentBytecodes,      \
+                                        bytecodeIndexGlobal);  \
     }                                                          \
     switch (ykOp) {                                            \
         case BC_HALT:                                          \
