@@ -211,7 +211,7 @@ public:
 
 private:
 #ifdef USE_YK
-    inline void SetIsRecursiveCall();
+    inline void SetRecursiveCall();
 #endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
