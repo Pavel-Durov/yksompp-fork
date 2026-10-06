@@ -209,9 +209,17 @@ public:
 
     [[nodiscard]] inline uint8_t* GetBytecodes() const { return bytecodes; }
 
+#ifdef USE_YK
+    inline void ClearCalled() {
+        if (yk_is_interpreting()) {
+            called = false;
+        }
+    }
+#endif
+
 private:
 #ifdef USE_YK
-    inline void SetRecursiveCall();
+    void SetRecursiveCall();
 #endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
@@ -244,9 +252,6 @@ private:
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
     #endif
-#ifdef USE_YK
-    bool isRecursiveCall{false};
-#endif
 
 #ifdef BYTECODE_HEATMAP
     uint64_t* heatmap;
@@ -255,6 +260,7 @@ private:
     uint8_t* bytecodes;
 #ifdef USE_YK
     YkLocation* yklocs{nullptr};
+    bool called{false};
   #ifdef YK_DEBUG_STRS
     SourceCoordinate* instsrccoords{nullptr};
     char** instdebugstrs{nullptr};
