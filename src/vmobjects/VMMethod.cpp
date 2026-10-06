@@ -157,9 +157,6 @@ void VMMethod::SetCachedFrame(VMFrame* frame) {
 
 #ifdef USE_YK
 void VMMethod::SetIsRecursiveCall() {
-    if (Interpreter::GetMethod() != this) {
-        return;
-    }
     isRecursiveCall = true;
     if (yk_location_is_null(yklocs[0]) && yk_is_interpreting()) {
         yklocs[0] = yk_location_new();
@@ -177,7 +174,9 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
 #ifdef USE_YK
-    SetIsRecursiveCall();
+    if (Interpreter::GetMethod() == this) {
+        SetIsRecursiveCall();
+    }
 #endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
@@ -191,7 +190,9 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
 
 #ifdef USE_YK
-    SetIsRecursiveCall();
+    if (Interpreter::GetMethod() == this) {
+        SetIsRecursiveCall();
+    }
 #endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
