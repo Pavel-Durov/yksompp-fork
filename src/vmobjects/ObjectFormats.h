@@ -90,14 +90,14 @@ __attribute__((always_inline)) inline bool VMTAGGED_INTEGER_WITHIN_RANGE_CHECK(
   #define IS_DOUBLE(X) IsVMDouble(X)
   #define AS_DOUBLE(X) (static_cast<VMDouble*>(X)->GetEmbeddedDouble())
   #ifdef USE_YK
-    #define CLASS_OF(X)                                   \
+    #define CLASS_OF(X)                                 \
         (IS_TAGGED(X) ? (VMClass*)YkFetchIntegerClass() \
                       : ((AbstractVMObject*)(X))->GetClass())
   #else
     #define CLASS_OF(X)                        \
         (IS_TAGGED(X) ? load_ptr(integerClass) \
                       : ((AbstractVMObject*)(X))->GetClass())
-  #endif // end of USE_YK
+  #endif  // end of USE_YK
   #define AS_OBJ(X) \
       (IS_TAGGED(X) ? GlobalBox::IntegerBox() : ((AbstractVMObject*)(X)))
 #else

@@ -20,7 +20,7 @@ MarkSweepHeap::MarkSweepHeap(size_t objectSpaceSize)
       heapEnd(reinterpret_cast<AbstractVMObject*>(
           // NOLINTNEXTLINE (cppcoreguidelines-pro-type-reinterpret-cast)
           reinterpret_cast<char*>(heap) + objectSpaceSize)),
-      freeList(new (heap) VMFreeListEntry(objectSpaceSize, nullptr)),
+      freeList(new(heap) VMFreeListEntry(objectSpaceSize, nullptr)),
 
       collectionLimit((uintptr_t)((double)objectSpaceSize * 0.9)) {
     if (heap == nullptr) {
@@ -42,8 +42,7 @@ MarkSweepHeap::~MarkSweepHeap() {
 #ifdef USE_YK
 __attribute__((yk_outline))
 #endif
-void*
-MarkSweepHeap::AllocateObject(size_t size) {
+void* MarkSweepHeap::AllocateObject(size_t size) {
     // first fit allocation, searching the free list
     VMFreeListEntry* prev = nullptr;
     VMFreeListEntry* cur = freeList;

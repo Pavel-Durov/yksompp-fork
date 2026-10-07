@@ -173,7 +173,7 @@ void VMMethod::SetCalled() {
   #endif
     }
 }
-#endif // end of USE_YK
+#endif  // end of USE_YK
 VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling

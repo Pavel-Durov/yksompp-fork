@@ -251,7 +251,7 @@ private:
 
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     GCFrame* cachedFrame;
-    #endif
+#endif
 
 #ifdef BYTECODE_HEATMAP
     uint64_t* heatmap;
