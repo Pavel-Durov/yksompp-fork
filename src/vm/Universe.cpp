@@ -68,10 +68,10 @@
 #include "Statistics.h"
 #include "Symbols.h"
 
+#if CACHE_INTEGER
 #if USE_YK
 #include "../yk/yk_linkage.h"
 #endif
-#if CACHE_INTEGER
 YK_STATIC gc_oop_t prebuildInts[INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE + 1];
 #endif
 
