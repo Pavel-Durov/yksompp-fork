@@ -748,10 +748,22 @@ void Interpreter::popFrameAndPushResult(vm_oop_t result) {
     GetFrame()->Push(result);
 }
 
+#ifdef USE_YK
+static inline VMInvokable* lookupInvokable(VMClass* cls, VMSymbol* signature) {
+    cls = (VMClass*)yk_promote((void*)cls);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    return (VMInvokable*)YkFetchInvokable(cls, signature);
+}
+#endif
+
 void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     recordStat(ReceiverType, receiverClass);
 
+#ifdef USE_YK
+    VMInvokable* invokable = lookupInvokable(receiverClass, signature);
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
@@ -983,7 +995,11 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 
     assert(IsValidObject(receiverClass));
     recordStat(ReceiverType, receiverClass);
+#ifdef USE_YK
+    VMInvokable* invokable = lookupInvokable(receiverClass, signature);
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
@@ -1002,7 +1018,11 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     VMClass const* const holder = realMethod->GetHolder();
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
+#ifdef USE_YK
+    auto* invokable = lookupInvokable(super, signature);
+#else
     auto* invokable = super->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());
