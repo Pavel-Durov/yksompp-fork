@@ -157,11 +157,11 @@ void VMMethod::SetCachedFrame(VMFrame* frame) {
 
 #ifdef USE_YK
 void VMMethod::SetCalled() {
-    if (!yk_is_interpreting()) {
-        return;
-    }
     if (!called) {
         called = true;
+        return;
+    }
+    if (!yk_is_interpreting() || coreLib) {
         return;
     }
     if (yk_location_is_null(yklocs[0])) {
@@ -207,6 +207,22 @@ void VMMethod::SetHolder(VMClass* hld) {
     VMInvokable::SetHolder(hld);
     SetHolderAll(hld);
 }
+
+#ifdef USE_YK
+void VMMethod::SetCoreLib() {
+    coreLib = true;
+    size_t const numIndexableFields = GetNumberOfIndexableFields();
+    for (size_t i = 0; i < numIndexableFields; ++i) {
+        vm_oop_t o = GetIndexableField(i);
+        if (!IS_TAGGED(o)) {
+            auto* m = dynamic_cast<VMMethod*>(AS_OBJ(o));
+            if (m != nullptr) {
+                m->SetCoreLib();
+            }
+        }
+    }
+}
+#endif
 
 void VMMethod::SetHolderAll(VMClass* hld) const {
     size_t const numIndexableFields = GetNumberOfIndexableFields();

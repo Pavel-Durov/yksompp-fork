@@ -211,6 +211,7 @@ public:
 
 #ifdef USE_YK
     inline void ClearCalled() { called = false; }
+    void SetCoreLib();
 #endif
 
 private:
@@ -257,6 +258,7 @@ private:
 #ifdef USE_YK
     YkLocation* yklocs{nullptr};
     bool called{false};
+    bool coreLib{false};
   #ifdef YK_DEBUG_STRS
     SourceCoordinate* instsrccoords{nullptr};
     char** instdebugstrs{nullptr};

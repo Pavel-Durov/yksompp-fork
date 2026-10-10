@@ -606,6 +606,18 @@ VMClass* Universe::LoadClass(VMSymbol* name) {
     return result;
 }
 
+#ifdef USE_YK
+static void markCoreLib(VMClass* cls) {
+    size_t const n = cls->GetNumberOfInstanceInvokables();
+    for (size_t i = 0; i < n; ++i) {
+        auto* m = dynamic_cast<VMMethod*>(cls->GetInstanceInvokable(i));
+        if (m != nullptr) {
+            m->SetCoreLib();
+        }
+    }
+}
+#endif
+
 VMClass* Universe::LoadClassBasic(VMSymbol* name, VMClass* systemClass) {
     std::string const sName = name->GetStdString();
     VMClass* result = nullptr;
@@ -613,6 +625,18 @@ VMClass* Universe::LoadClassBasic(VMSymbol* name, VMClass* systemClass) {
     for (auto& i : classPath) {
         result = SourcecodeCompiler::CompileClass(i, sName, systemClass);
         if (result != nullptr) {
+#ifdef USE_YK
+            // The core library is whichever classpath entry supplies Object.
+            static std::string coreLibPath;
+            if (coreLibPath.empty() && sName == "Object") {
+                coreLibPath = i;
+            }
+            // Mark instance and class methods
+            if (i == coreLibPath) {
+                markCoreLib(result);
+                markCoreLib(result->GetClass());
+            }
+#endif
             if (dumpBytecodes != 0) {
                 Disassembler::Dump(result->GetClass());
                 Disassembler::Dump(result);
