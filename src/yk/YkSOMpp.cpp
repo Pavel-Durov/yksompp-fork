@@ -8,7 +8,9 @@
 
 #include "../compiler/SourceCoordinate.h"
 #include "../interpreter/bytecodes.h"
+#include "../vm/Globals.h"
 #include "../vm/Universe.h"
+#include "../vmobjects/VMClass.h"
 #include "../vmobjects/VMMethod.h"
 #include "YkDebugStr.h"
 
@@ -89,4 +91,14 @@ __attribute__((yk_idempotent, noinline)) uintptr_t
 YkFetchBytecode(uint8_t* bytecodes, size_t index) {
     NOOP(bytecodes);
     return bytecodes[index];
+}
+
+__attribute__((yk_idempotent, noinline)) uintptr_t
+YkFetchInvokable(VMClass* cls, VMSymbol* signature) {
+    NOOP(cls);
+    return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
+}
+
+__attribute__((yk_idempotent, noinline)) uintptr_t YkFetchIntegerClass() {
+    return reinterpret_cast<uintptr_t>(load_ptr(integerClass));
 }
