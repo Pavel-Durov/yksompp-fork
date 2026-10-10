@@ -210,6 +210,9 @@ public:
     [[nodiscard]] inline uint8_t* GetBytecodes() const { return bytecodes; }
 
 private:
+#ifdef USE_YK
+    void AddEntryLocIfRecursive();
+#endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
 
