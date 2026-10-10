@@ -156,16 +156,6 @@ void VMMethod::SetCachedFrame(VMFrame* frame) {
 #endif
 
 #ifdef USE_YK
-// Yk only traces from locations, and loop headers are the only ones created
-// up front. A recursive method has no back-jump, so give it a location at
-// bytecode 0 when it is entered from itself: the trace then runs from method
-// entry to the recursive call, which closes the loop.
-//
-// "From itself" means the calling frame's outer context belongs to this
-// method: a direct self-send, or a send from one of this method's blocks.
-// This is loads only, so it is cheap inside traces too. It excludes core-lib
-// iterators such as do: that merely get nested by user code, and also mutual
-// recursion (f -> g -> f) through two plain methods.
 void VMMethod::AddEntryLocIfRecursive() {
     if (Interpreter::GetFrame()->GetOuterContext()->GetMethod() != this) {
         return;
