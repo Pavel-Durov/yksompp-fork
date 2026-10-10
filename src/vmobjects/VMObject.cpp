@@ -53,6 +53,9 @@ VMObject* VMObject::CloneForMovingGC() const {
     return clone;
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 void VMObject::nilInitializeFields() {
     for (size_t i = 0; i < numberOfFields; ++i) {
         FIELDS[i] = nilObject;
@@ -60,6 +63,9 @@ void VMObject::nilInitializeFields() {
 }
 
 /* Allows only a certain subset of fields to be made nil */
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 void VMObject::nilInitializeFieldsFrom(size_t nillableFrom) {
     for (size_t i = nillableFrom; i < numberOfFields; ++i) {
         FIELDS[i] = nilObject;
