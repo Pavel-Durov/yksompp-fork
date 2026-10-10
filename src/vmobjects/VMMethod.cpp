@@ -155,10 +155,34 @@ void VMMethod::SetCachedFrame(VMFrame* frame) {
 }
 #endif
 
+#ifdef USE_YK
+void VMMethod::SetCalled() {
+    if (!yk_is_interpreting()) {
+        return;
+    }
+    if (!called) {
+        called = true;
+        return;
+    }
+    if (yk_location_is_null(yklocs[0])) {
+        yklocs[0] = yk_location_new();
+  #ifdef YK_DEBUG_STRS
+        if (instdebugstrs != nullptr && instdebugstrs[0] != nullptr) {
+            yk_location_set_debug_str(&yklocs[0], instdebugstrs[0]);
+        }
+  #endif
+    }
+}
+#endif
+
 VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
+
+#ifdef USE_YK
+    SetCalled();
+#endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->CopyArgumentsFrom(frame);
@@ -169,6 +193,10 @@ VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
     frame->SetBytecodeIndex(Interpreter::GetBytecodeIndex());
+
+#ifdef USE_YK
+    SetCalled();
+#endif
 
     VMFrame* frm = Interpreter::PushNewFrame(this);
     frm->SetArgument(0, frame->Top());
