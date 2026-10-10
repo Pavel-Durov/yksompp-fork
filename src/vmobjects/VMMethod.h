@@ -209,14 +209,9 @@ public:
 
     [[nodiscard]] inline uint8_t* GetBytecodes() const { return bytecodes; }
 
-#ifdef USE_YK
-    inline void ClearCalled() { called = false; }
-    void SetCoreLib();
-#endif
-
 private:
 #ifdef USE_YK
-    void SetCalled();
+    void AddEntryLocIfRecursive();
 #endif
     void inlineInto(MethodGenerationContext& mgenc, const Parser& parser);
     std::priority_queue<BackJump> createBackJumpHeap();
@@ -257,8 +252,6 @@ private:
     uint8_t* bytecodes;
 #ifdef USE_YK
     YkLocation* yklocs{nullptr};
-    bool called{false};
-    bool coreLib{false};
   #ifdef YK_DEBUG_STRS
     SourceCoordinate* instsrccoords{nullptr};
     char** instdebugstrs{nullptr};
