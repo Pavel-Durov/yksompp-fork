@@ -81,7 +81,7 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
         }                                 \
         HEATMAP_INC();                    \
         bytecodeIndexGlobal += (bcCount); \
-        YK_SET_BC_INDEX();               \
+        YK_SET_BC_INDEX();                \
     }
 
     // initialization
