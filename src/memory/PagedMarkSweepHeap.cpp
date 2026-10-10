@@ -160,8 +160,7 @@ void* PagedMarkSweepHeap::allocateLargeObject(size_t size) {
 #ifdef USE_YK
 __attribute__((yk_outline))
 #endif
-void*
-PagedMarkSweepHeap::AllocateObject(size_t size) {
+void* PagedMarkSweepHeap::AllocateObject(size_t size) {
     if (size > MAX_SMALL_OBJECT_SIZE) {
         return allocateLargeObject(size);
     }
