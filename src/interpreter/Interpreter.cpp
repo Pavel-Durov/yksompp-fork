@@ -80,6 +80,9 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // initialization
     method = GetMethod();
     currentBytecodes = GetBytecodes();
+#ifdef USE_YK
+    uint8_t ykOp = BC_HALT;
+#endif
 
     void const* const loopTargets[] = {&&LABEL_BC_HALT,
                                        &&LABEL_BC_DUP,
