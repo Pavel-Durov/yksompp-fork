@@ -42,8 +42,7 @@ MarkSweepHeap::~MarkSweepHeap() {
 #ifdef USE_YK
 __attribute__((yk_outline))
 #endif
-void*
-MarkSweepHeap::AllocateObject(size_t size) {
+void* MarkSweepHeap::AllocateObject(size_t size) {
     // first fit allocation, searching the free list
     VMFreeListEntry* prev = nullptr;
     VMFreeListEntry* cur = freeList;
