@@ -54,6 +54,16 @@
 #include "../vmobjects/VMObject.h"
 #include "../vmobjects/VMSymbol.h"
 
+#if defined(USE_YK) && USE_TAGGING
+__attribute__((yk_idempotent, noinline)) static VMClass* YkFetchIntegerClass() {
+    return load_ptr(integerClass);
+}
+  #undef CLASS_OF
+  #define CLASS_OF(X)       \
+      (IS_TAGGED(X) ? YkFetchIntegerClass() \
+                    : ((AbstractVMObject*)(X))->GetClass())
+#endif
+
 VMFrame* Interpreter::frame = nullptr;
 VMMethod* Interpreter::method = nullptr;
 
@@ -739,10 +749,24 @@ void Interpreter::popFrameAndPushResult(vm_oop_t result) {
     GetFrame()->Push(result);
 }
 
+#ifdef USE_YK
+__attribute__((yk_idempotent, noinline)) static uintptr_t YkFetchInvokable(
+    VMClass* cls, VMSymbol* signature) {
+    NOOP(cls);
+    return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
+}
+#endif
+
 void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     recordStat(ReceiverType, receiverClass);
 
+#ifdef USE_YK
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    VMInvokable* invokable = (VMInvokable*)YkFetchInvokable(receiverClass, signature);
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
@@ -974,7 +998,13 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 
     assert(IsValidObject(receiverClass));
     recordStat(ReceiverType, receiverClass);
+#ifdef USE_YK
+    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    VMInvokable* invokable = (VMInvokable*)YkFetchInvokable(receiverClass, signature);
+#else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
@@ -993,7 +1023,13 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     VMClass const* const holder = realMethod->GetHolder();
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
+#ifdef USE_YK
+    super = (VMClass*)yk_promote((void*)super);
+    signature = (VMSymbol*)yk_promote((void*)signature);
+    auto* invokable = (VMInvokable*)YkFetchInvokable(super, signature);
+#else
     auto* invokable = super->LookupInvokable(signature);
+#endif
 
     if (invokable != nullptr) {
         invokable->Invoke(GetFrame());
