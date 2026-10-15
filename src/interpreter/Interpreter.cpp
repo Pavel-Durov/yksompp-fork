@@ -56,7 +56,9 @@
 
 #if defined(USE_YK) && USE_TAGGING
 __attribute__((yk_idempotent, noinline)) static VMClass* YkFetchIntegerClass() {
-    return load_ptr(integerClass);
+    VMClass* cls = load_ptr(integerClass);
+    NOOP(cls);
+    return cls;
 }
   #undef CLASS_OF
   #define CLASS_OF(X)       \
