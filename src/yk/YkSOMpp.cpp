@@ -87,6 +87,6 @@ void VMMethod::InitYkLocs([[maybe_unused]] const SourceCoordinate* coords,
 
 __attribute__((yk_idempotent, noinline)) uintptr_t
 YkFetchBytecode(uint8_t* bytecodes, size_t index) {
-    NOOP(bytecodes);
+    NOOPT_VAL(bytecodes);
     return bytecodes[index];
 }

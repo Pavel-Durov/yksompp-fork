@@ -57,7 +57,7 @@
 #if defined(USE_YK) && USE_TAGGING
 __attribute__((yk_idempotent, noinline)) static VMClass* YkFetchIntegerClass() {
     VMClass* cls = load_ptr(integerClass);
-    NOOP(cls);
+    NOOPT_VAL(cls);
     return cls;
 }
   #undef CLASS_OF
@@ -754,7 +754,7 @@ void Interpreter::popFrameAndPushResult(vm_oop_t result) {
 #ifdef USE_YK
 __attribute__((yk_idempotent, noinline)) static uintptr_t YkFetchInvokable(
     VMClass* cls, VMSymbol* signature) {
-    NOOP(cls);
+    NOOPT_VAL(cls);
     return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
 }
 #endif

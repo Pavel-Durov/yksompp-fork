@@ -25,7 +25,7 @@ void YkUniverseShutdown();
 void YkMethodInit(YkLocation*& yklocs, size_t bcCount);
 void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
-#define NOOP(X) asm volatile("" : "+r,m"(X) : : "memory");
+#define NOOPT_VAL(X) asm volatile("" : "+r,m"(X) : : "memory");
 
 uintptr_t YkFetchBytecode(uint8_t* bytecodes, size_t index);
 
