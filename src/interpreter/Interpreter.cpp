@@ -61,7 +61,7 @@ __attribute__((yk_idempotent, noinline)) static VMClass* YkFetchIntegerClass() {
     return cls;
 }
   #undef CLASS_OF
-  #define CLASS_OF(X)       \
+  #define CLASS_OF(X)                       \
       (IS_TAGGED(X) ? YkFetchIntegerClass() \
                     : ((AbstractVMObject*)(X))->GetClass())
 #endif
@@ -753,7 +753,8 @@ void Interpreter::popFrameAndPushResult(vm_oop_t result) {
 
 #ifdef USE_YK
 __attribute__((yk_idempotent, noinline)) static uintptr_t YkFetchInvokable(
-    VMClass* cls, VMSymbol* signature) {
+    VMClass* cls,
+    VMSymbol* signature) {
     NOOPT_VAL(cls);
     return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
 }
@@ -765,7 +766,8 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
 #ifdef USE_YK
     receiverClass = (VMClass*)yk_promote((void*)receiverClass);
     signature = (VMSymbol*)yk_promote((void*)signature);
-    VMInvokable* invokable = (VMInvokable*)YkFetchInvokable(receiverClass, signature);
+    VMInvokable* invokable =
+        (VMInvokable*)YkFetchInvokable(receiverClass, signature);
 #else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
 #endif
@@ -1003,7 +1005,8 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 #ifdef USE_YK
     receiverClass = (VMClass*)yk_promote((void*)receiverClass);
     signature = (VMSymbol*)yk_promote((void*)signature);
-    VMInvokable* invokable = (VMInvokable*)YkFetchInvokable(receiverClass, signature);
+    VMInvokable* invokable =
+        (VMInvokable*)YkFetchInvokable(receiverClass, signature);
 #else
     VMInvokable* invokable = receiverClass->LookupInvokable(signature);
 #endif
