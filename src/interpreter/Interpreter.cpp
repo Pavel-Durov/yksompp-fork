@@ -55,14 +55,9 @@
 #include "../vmobjects/VMSymbol.h"
 
 #if defined(USE_YK) && USE_TAGGING
-__attribute__((yk_idempotent, noinline)) static VMClass* YkFetchIntegerClass() {
-    VMClass* cls = load_ptr(integerClass);
-    NOOPT_VAL(cls);
-    return cls;
-}
   #undef CLASS_OF
-  #define CLASS_OF(X)                       \
-      (IS_TAGGED(X) ? YkFetchIntegerClass() \
+  #define CLASS_OF(X)                                             \
+      (IS_TAGGED(X) ? load_ptr(yk_idempotent_load(&integerClass)) \
                     : ((AbstractVMObject*)(X))->GetClass())
 #endif
 

@@ -27,8 +27,6 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 
 #define NOOPT_VAL(X) asm volatile("" : "+r,m"(X) : : "memory");
 
-uintptr_t YkFetchBytecode(uint8_t* bytecodes, size_t index);
-
 // Yk requires exactly one call site for yk_mt_control_point in the binary.
 // DISPATCH_NOGC/GC therefore jump to a trampoline label (YK_DISPATCH_START)
 // where the single control point call lives. The trampoline is defined in
@@ -66,8 +64,7 @@ uintptr_t YkFetchBytecode(uint8_t* bytecodes, size_t index);
     } else {                                                                 \
         currentBytecodes = (uint8_t*)yk_promote((void*)currentBytecodes);    \
         bytecodeIndexGlobal = (size_t)yk_promote(bytecodeIndexGlobal);       \
-        ykOp =                                                               \
-            (uint8_t)YkFetchBytecode(currentBytecodes, bytecodeIndexGlobal); \
+        ykOp = yk_idempotent_load(&currentBytecodes[bytecodeIndexGlobal]);   \
     }                                                                        \
     switch (ykOp) {                                                          \
         case BC_HALT:                                                        \
