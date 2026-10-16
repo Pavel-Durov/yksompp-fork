@@ -84,4 +84,3 @@ void VMMethod::InitYkLocs([[maybe_unused]] const SourceCoordinate* coords,
         }
     }
 }
-
