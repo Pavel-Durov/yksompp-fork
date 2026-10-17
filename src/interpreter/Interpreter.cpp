@@ -759,8 +759,8 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     recordStat(ReceiverType, receiverClass);
 
 #ifdef USE_YK
-    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
-    signature = (VMSymbol*)yk_promote((void*)signature);
+    receiverClass = yk_promote(receiverClass);
+    signature = yk_promote(signature);
     VMInvokable* invokable =
         (VMInvokable*)YkFetchInvokable(receiverClass, signature);
 #else
@@ -998,8 +998,8 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     assert(IsValidObject(receiverClass));
     recordStat(ReceiverType, receiverClass);
 #ifdef USE_YK
-    receiverClass = (VMClass*)yk_promote((void*)receiverClass);
-    signature = (VMSymbol*)yk_promote((void*)signature);
+    receiverClass = yk_promote(receiverClass);
+    signature = yk_promote(signature);
     VMInvokable* invokable =
         (VMInvokable*)YkFetchInvokable(receiverClass, signature);
 #else
@@ -1024,8 +1024,8 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
     assert(holder->HasSuperClass());
     auto* super = (VMClass*)holder->GetSuperClass();
 #ifdef USE_YK
-    super = (VMClass*)yk_promote((void*)super);
-    signature = (VMSymbol*)yk_promote((void*)signature);
+    super = yk_promote(super);
+    signature = yk_promote(signature);
     auto* invokable = (VMInvokable*)YkFetchInvokable(super, signature);
 #else
     auto* invokable = super->LookupInvokable(signature);

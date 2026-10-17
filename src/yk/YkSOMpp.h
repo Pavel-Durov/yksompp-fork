@@ -62,8 +62,8 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
     if (yk_is_interpreting()) {                                            \
         ykOp = currentBytecodes[bytecodeIndexGlobal];                      \
     } else {                                                               \
-        currentBytecodes = (uint8_t*)yk_promote((void*)currentBytecodes);  \
-        bytecodeIndexGlobal = (size_t)yk_promote(bytecodeIndexGlobal);     \
+        currentBytecodes = yk_promote(currentBytecodes);                   \
+        bytecodeIndexGlobal = yk_promote(bytecodeIndexGlobal);             \
         ykOp = yk_idempotent_load(&currentBytecodes[bytecodeIndexGlobal]); \
     }                                                                      \
     switch (ykOp) {                                                        \
