@@ -728,6 +728,9 @@ VMFrame* Interpreter::popFrame() {
 
     result->ClearPreviousFrame();
 
+#ifdef USE_YK
+    result->GetMethod()->called = false;
+#endif
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     // remember this frame as free frame
     result->GetMethod()->SetCachedFrame(result);
@@ -771,6 +774,23 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
+#ifdef USE_YK
+        if (yk_is_interpreting() && invokable->IsVMMethod) {
+            auto* ykm = static_cast<VMMethod*>(invokable);
+            if (!ykm->called) {
+                ykm->called = true;
+            } else if (yk_location_is_null(ykm->yklocs[0])) {
+                ykm->yklocs[0] = yk_location_new();
+  #ifdef YK_DEBUG_STRS
+                if (ykm->instdebugstrs != nullptr &&
+                    ykm->instdebugstrs[0] != nullptr) {
+                    yk_location_set_debug_str(&ykm->yklocs[0],
+                                              ykm->instdebugstrs[0]);
+                }
+  #endif
+            }
+        }
+#endif
         invokable->Invoke(GetFrame());
     } else {
         triggerDoesNotUnderstand(signature);
@@ -1010,6 +1030,23 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
+#ifdef USE_YK
+        if (yk_is_interpreting() && invokable->IsVMMethod) {
+            auto* ykm = static_cast<VMMethod*>(invokable);
+            if (!ykm->called) {
+                ykm->called = true;
+            } else if (yk_location_is_null(ykm->yklocs[0])) {
+                ykm->yklocs[0] = yk_location_new();
+  #ifdef YK_DEBUG_STRS
+                if (ykm->instdebugstrs != nullptr &&
+                    ykm->instdebugstrs[0] != nullptr) {
+                    yk_location_set_debug_str(&ykm->yklocs[0],
+                                              ykm->instdebugstrs[0]);
+                }
+  #endif
+            }
+        }
+#endif
         invokable->Invoke1(GetFrame());
     } else {
         triggerDoesNotUnderstand(signature);
@@ -1034,6 +1071,23 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
 #endif
 
     if (invokable != nullptr) {
+#ifdef USE_YK
+        if (yk_is_interpreting() && invokable->IsVMMethod) {
+            auto* ykm = static_cast<VMMethod*>(invokable);
+            if (!ykm->called) {
+                ykm->called = true;
+            } else if (yk_location_is_null(ykm->yklocs[0])) {
+                ykm->yklocs[0] = yk_location_new();
+  #ifdef YK_DEBUG_STRS
+                if (ykm->instdebugstrs != nullptr &&
+                    ykm->instdebugstrs[0] != nullptr) {
+                    yk_location_set_debug_str(&ykm->yklocs[0],
+                                              ykm->instdebugstrs[0]);
+                }
+  #endif
+            }
+        }
+#endif
         invokable->Invoke(GetFrame());
     } else {
         uint8_t const numOfArgs = Signature::GetNumberOfArguments(signature);
