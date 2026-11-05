@@ -728,6 +728,9 @@ VMFrame* Interpreter::popFrame() {
 
     result->ClearPreviousFrame();
 
+#ifdef USE_YK
+    result->GetMethod()->called = false;
+#endif
 #ifdef UNSAFE_FRAME_OPTIMIZATION
     // remember this frame as free frame
     result->GetMethod()->SetCachedFrame(result);
@@ -755,6 +758,32 @@ __attribute__((yk_idempotent, noinline)) static uintptr_t YkFetchInvokable(
     NOOPT_VAL(cls);
     return reinterpret_cast<uintptr_t>(cls->LookupInvokable(signature));
 }
+
+  #ifdef YK_DEBUG_STRS
+    #define YK_SET_ENTRY_DEBUG_STR(ykm)                         \
+        if ((ykm)->instdebugstrs != nullptr &&                  \
+            (ykm)->instdebugstrs[0] != nullptr) {               \
+            yk_location_set_debug_str(&(ykm)->yklocs[0],        \
+                                      (ykm)->instdebugstrs[0]); \
+        }
+  #else
+    #define YK_SET_ENTRY_DEBUG_STR(ykm)
+  #endif
+
+  #define YK_MARK_CALLED(invokable)                              \
+      do {                                                       \
+          if (yk_is_interpreting() && (invokable)->IsVMMethod) { \
+              auto* ykm = static_cast<VMMethod*>(invokable);     \
+              if (!ykm->called) {                                \
+                  ykm->called = true;                            \
+              } else if (yk_location_is_null(ykm->yklocs[0])) {  \
+                  ykm->yklocs[0] = yk_location_new();            \
+                  YK_SET_ENTRY_DEBUG_STR(ykm)                    \
+              }                                                  \
+          }                                                      \
+      } while (0)
+#else
+  #define YK_MARK_CALLED(invokable)
 #endif
 
 void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
@@ -771,6 +800,7 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
+        YK_MARK_CALLED(invokable);
         invokable->Invoke(GetFrame());
     } else {
         triggerDoesNotUnderstand(signature);
@@ -1010,6 +1040,7 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
 
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
+        YK_MARK_CALLED(invokable);
         invokable->Invoke1(GetFrame());
     } else {
         triggerDoesNotUnderstand(signature);
@@ -1034,6 +1065,7 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
 #endif
 
     if (invokable != nullptr) {
+        YK_MARK_CALLED(invokable);
         invokable->Invoke(GetFrame());
     } else {
         uint8_t const numOfArgs = Signature::GetNumberOfArguments(signature);
