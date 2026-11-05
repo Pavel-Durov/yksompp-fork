@@ -249,6 +249,7 @@ private:
     uint8_t* bytecodes;
 #ifdef USE_YK
     YkLocation* yklocs{nullptr};
+    bool called{false};
   #ifdef YK_DEBUG_STRS
     SourceCoordinate* instsrccoords{nullptr};
     char** instdebugstrs{nullptr};

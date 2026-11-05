@@ -62,6 +62,10 @@ public:
 
     [[nodiscard]] virtual bool IsPrimitive() const;
 
+#ifdef USE_YK
+    bool IsVMMethod{false};
+#endif
+
     [[nodiscard]] inline VMSymbol* GetSignature() const {
         return load_ptr(signature);
     }
