@@ -463,9 +463,9 @@ VMObject* Universe::InitializeGlobals() {
     // Fix up objectClass
     load_ptr(objectClass)->SetSuperClass(nil);
 
-#if USE_TAGGING
-    GlobalBox::updateIntegerBox(NewInteger(1));
-#endif
+    if (USE_TAGGING) {
+        GlobalBox::updateIntegerBox(NewInteger(1));
+    }
     InitializeSymbols();
     obtain_vtables_of_known_classes(load_ptr(symbolSelf));
 
@@ -777,10 +777,12 @@ VMClass* Universe::NewClass(VMClass* classOfClass) {
     size_t const numFields = classOfClass->GetNumberOfInstanceFields();
     VMClass* result = nullptr;
 
-    if (numFields != 0U) {
-        size_t const additionalBytes = numFields * sizeof(VMObject*);
+    if (numFields > VMClass::VMClassNumberOfFields) {
+        size_t const numClassVariables =
+            numFields - VMClass::VMClassNumberOfFields;
+        size_t const additionalBytes = numClassVariables * sizeof(VMObject*);
         result = new (GetHeap<HEAP_CLS>(), additionalBytes)
-            VMClass(numFields, additionalBytes);
+            VMClass(numClassVariables, additionalBytes);
     } else {
         result = new (GetHeap<HEAP_CLS>(), 0) VMClass;
     }
@@ -798,14 +800,6 @@ VMDouble* Universe::NewDouble(double value) {
 
 VMFrame* Universe::NewFrame(VMFrame* previousFrame, VMMethod* method) {
     VMFrame* result = nullptr;
-#ifdef UNSAFE_FRAME_OPTIMIZATION
-    result = load_ptr(method->GetCachedFrame());
-    if (result != nullptr) {
-        method->SetCachedFrame(nullptr);
-        result->SetPreviousFrameOnReuse(previousFrame);
-        return result;
-    }
-#endif
     size_t const length = method->GetNumberOfArguments() +
                           method->GetNumberOfLocals() +
                           method->GetMaximumNumberOfStackElements();
@@ -877,53 +871,58 @@ VMClass* Universe::NewMetaclassClass() {
 }
 
 void Universe::WalkGlobals(walk_heap_fn walk) {
-    nilObject = static_cast<GCObject*>(walk(nilObject));
-    trueObject = static_cast<GCObject*>(walk(trueObject));
-    falseObject = static_cast<GCObject*>(walk(falseObject));
+    walk_ptr(nilObject, walk);
+    walk_ptr(trueObject, walk);
+    walk_ptr(falseObject, walk);
 
-#if USE_TAGGING
-    GlobalBox::WalkGlobals(walk);
-#endif
+    if (USE_TAGGING) {
+        GlobalBox::WalkGlobals(walk);
+    }
 
-    objectClass = static_cast<GCClass*>(walk(objectClass));
-    classClass = static_cast<GCClass*>(walk(classClass));
-    metaClassClass = static_cast<GCClass*>(walk(metaClassClass));
+    walk_ptr(objectClass, walk);
+    walk_ptr(classClass, walk);
+    walk_ptr(metaClassClass, walk);
 
-    nilClass = static_cast<GCClass*>(walk(nilClass));
-    integerClass = static_cast<GCClass*>(walk(integerClass));
-    arrayClass = static_cast<GCClass*>(walk(arrayClass));
-    vectorClass = static_cast<GCClass*>(walk(vectorClass));
-    methodClass = static_cast<GCClass*>(walk(methodClass));
-    symbolClass = static_cast<GCClass*>(walk(symbolClass));
-    primitiveClass = static_cast<GCClass*>(walk(primitiveClass));
-    stringClass = static_cast<GCClass*>(walk(stringClass));
-    systemClass = static_cast<GCClass*>(walk(systemClass));
-    blockClass = static_cast<GCClass*>(walk(blockClass));
-    doubleClass = static_cast<GCClass*>(walk(doubleClass));
+    walk_ptr(nilClass, walk);
+    walk_ptr(integerClass, walk);
+    walk_ptr(arrayClass, walk);
+    walk_ptr(vectorClass, walk);
+    walk_ptr(methodClass, walk);
+    walk_ptr(symbolClass, walk);
+    walk_ptr(primitiveClass, walk);
+    walk_ptr(stringClass, walk);
+    walk_ptr(systemClass, walk);
+    walk_ptr(blockClass, walk);
+    walk_ptr(doubleClass, walk);
 
-    trueClass = static_cast<GCClass*>(walk(trueClass));
-    falseClass = static_cast<GCClass*>(walk(falseClass));
+    walk_ptr(trueClass, walk);
+    walk_ptr(falseClass, walk);
 
 #if CACHE_INTEGER
     for (size_t i = 0; i < (INT_CACHE_MAX_VALUE - INT_CACHE_MIN_VALUE); i++) {
-  #if USE_TAGGING
-        prebuildInts[i] = TAG_INTEGER(INT_CACHE_MIN_VALUE + i);
-  #else
-        prebuildInts[i] = walk(prebuildInts[i]);
-  #endif
+        walk_ptr(prebuildInts[i], walk);
     }
 #endif
 
     // walk all entries in globals map
-    map<GCSymbol*, gc_oop_t> globs = globals;
-    globals.clear();
-    map<GCSymbol*, gc_oop_t>::iterator iter;
-    for (iter = globs.begin(); iter != globs.end(); iter++) {
-        assert(iter->second != nullptr);
+    if constexpr (GC_MOVES_OBJECTS) {
+        // keys may move, so the map needs to be rebuilt
+        map<GCSymbol*, gc_oop_t> globs = globals;
+        globals.clear();
+        map<GCSymbol*, gc_oop_t>::iterator iter;
+        for (iter = globs.begin(); iter != globs.end(); iter++) {
+            assert(iter->second != nullptr);
 
-        auto* key = static_cast<GCSymbol*>(walk(iter->first));
-        gc_oop_t val = walk(iter->second);
-        globals[key] = val;
+            auto* key = static_cast<GCSymbol*>(walk(iter->first));
+            gc_oop_t val = walk(iter->second);
+            globals[key] = val;
+        }
+    } else {
+        for (auto& [key, val] : globals) {
+            assert(val != nullptr);
+            walk(key);
+            walk(val);
+        }
     }
 
     WalkSymbols(walk);
@@ -932,7 +931,7 @@ void Universe::WalkGlobals(walk_heap_fn walk) {
     for (bcIter = blockClassesByNoOfArgs.begin();
          bcIter != blockClassesByNoOfArgs.end();
          bcIter++) {
-        bcIter->second = static_cast<GCClass*>(walk(bcIter->second));
+        walk_ptr(bcIter->second, walk);
     }
 
     Interpreter::WalkGlobals(walk);
