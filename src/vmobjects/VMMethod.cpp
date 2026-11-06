@@ -64,10 +64,6 @@ VMMethod::VMMethod(VMSymbol* signature, size_t bcCount,
                             : Signature::GetNumberOfArguments(signature)),
       numberOfConstants(numberOfConstants), lexicalScope(lexicalScope),
       inlinedLoops(inlinedLoops) {
-#ifdef UNSAFE_FRAME_OPTIMIZATION
-    cachedFrame = nullptr;
-#endif
-
 #ifdef USE_YK
     // yklocs is appended to VMMethod, growing the struct. Use sizeof(VMMethod)
     // to find the end of the struct rather than field-offset arithmetic.
@@ -126,35 +122,13 @@ VMMethod* VMMethod::CloneForMovingGC() const {
 void VMMethod::WalkObjects(walk_heap_fn walk) {
     VMInvokable::WalkObjects(walk);
 
-#ifdef UNSAFE_FRAME_OPTIMIZATION
-    if (cachedFrame != nullptr) {
-        cachedFrame = static_cast<GCFrame*>(walk(cachedFrame));
-    }
-#endif
-
     size_t const numIndexableFields = GetNumberOfIndexableFields();
     for (size_t i = 0; i < numIndexableFields; ++i) {
         if (indexableFields[i] != nullptr) {
-            indexableFields[i] = walk(indexableFields[i]);
+            walk_ptr(indexableFields[i], walk);
         }
     }
 }
-
-#ifdef UNSAFE_FRAME_OPTIMIZATION
-GCFrame* VMMethod::GetCachedFrame() const {
-    return cachedFrame;
-}
-
-void VMMethod::SetCachedFrame(VMFrame* frame) {
-    cachedFrame = store_with_separate_barrier(frame);
-    if (frame != nullptr) {
-        frame->SetContext(nullptr);
-        frame->SetBytecodeIndex(0);
-        frame->ResetStackPointer();
-        write_barrier(this, frame);
-    }
-}
-#endif
 
 VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write

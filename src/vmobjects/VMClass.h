@@ -81,12 +81,11 @@ public:
 
     [[nodiscard]] std::string AsDebugString() const override;
 
+    static const size_t VMClassNumberOfFields;
+
 private:
     static bool hasPrimitivesFor(const std::string& cl);
     void setPrimitives(const std::string& cname, bool classSide);
-    [[nodiscard]] size_t numberOfSuperInstanceFields() const;
-
-    static const size_t VMClassNumberOfFields;
 
     make_testable(public);
 
