@@ -50,7 +50,9 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
 #define DISPATCH_GC()                                       \
     {                                                       \
         if (GetHeap<HEAP_CLS>()->isCollectionTriggered()) { \
+            globalBci = localBci;                           \
             startGC();                                      \
+            localBci = globalBci;                           \
         }                                                   \
         goto YK_DISPATCH_START;                             \
     }
