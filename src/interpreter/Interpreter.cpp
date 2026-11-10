@@ -63,6 +63,12 @@
                     : ((AbstractVMObject*)(X))->GetClass())
 #endif
 
+#ifdef USE_YK
+  #define BC_OPERAND(I) yk_idempotent_load(&currentBytecodes[(I)])
+#else
+  #define BC_OPERAND(I) (currentBytecodes[(I)])
+#endif
+
 VMFrame* Interpreter::frame = nullptr;
 VMMethod* Interpreter::method = nullptr;
 
@@ -91,6 +97,9 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     currentBytecodes = GetBytecodes();
 #ifdef USE_YK
     uint8_t ykOp = BC_HALT;
+    size_t& globalBci = bytecodeIndexGlobal;
+    size_t localBci = bytecodeIndexGlobal;
+  #define bytecodeIndexGlobal localBci
 #endif
 
     void const* const loopTargets[] = {&&LABEL_BC_HALT,
@@ -174,6 +183,9 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     // THIS IS THE former interpretation loop
 LABEL_BC_HALT:
     PROLOGUE(1);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     return GetFrame()->GetStackElement(0);  // handle the halt bytecode
 
 LABEL_BC_DUP:
@@ -312,7 +324,13 @@ LABEL_BC_PUSH_NIL:
 
 LABEL_BC_PUSH_GLOBAL:
     PROLOGUE(2);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doPushGlobal(bytecodeIndexGlobal - 2);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_GC();
 
 LABEL_BC_POP:
@@ -362,50 +380,104 @@ LABEL_BC_POP_FIELD_1:
 
 LABEL_BC_SEND:
     PROLOGUE(2);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doSend(bytecodeIndexGlobal - 2);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_GC();
 
 LABEL_BC_SEND_1:
     PROLOGUE(2);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doUnarySend(bytecodeIndexGlobal - 2);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_GC();
 
 LABEL_BC_SUPER_SEND:
     PROLOGUE(2);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doSuperSend(bytecodeIndexGlobal - 2);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_GC();
 
 LABEL_BC_RETURN_LOCAL:
     PROLOGUE(1);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doReturnLocal();
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_NOGC();
 
 LABEL_BC_RETURN_NON_LOCAL:
     PROLOGUE(1);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doReturnNonLocal();
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_NOGC();
 
 LABEL_BC_RETURN_SELF: {
     PROLOGUE(1);
     assert(GetFrame()->GetContext() == nullptr &&
            "RETURN_SELF is not allowed in blocks");
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     popFrameAndPushResult(GetFrame()->GetArgumentInCurrentContext(0));
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_NOGC();
 }
 
 LABEL_BC_RETURN_FIELD_0:
     PROLOGUE(1);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doReturnFieldWithIndex(0);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_NOGC();
 
 LABEL_BC_RETURN_FIELD_1:
     PROLOGUE(1);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doReturnFieldWithIndex(1);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_NOGC();
 
 LABEL_BC_RETURN_FIELD_2:
     PROLOGUE(1);
+#ifdef USE_YK
+    globalBci = localBci;
+#endif
     doReturnFieldWithIndex(2);
+#ifdef USE_YK
+    localBci = globalBci;
+#endif
     DISPATCH_NOGC();
 
 LABEL_BC_INC:
@@ -427,16 +499,16 @@ LABEL_BC_DEC:
 
 LABEL_BC_INC_FIELD:
     PROLOGUE(2);
-    doIncField(currentBytecodes[bytecodeIndexGlobal - 1]);
+    doIncField(BC_OPERAND(bytecodeIndexGlobal - 1));
     DISPATCH_NOGC();
 
 LABEL_BC_INC_FIELD_PUSH:
     PROLOGUE(2);
-    doIncFieldPush(currentBytecodes[bytecodeIndexGlobal - 1]);
+    doIncFieldPush(BC_OPERAND(bytecodeIndexGlobal - 1));
     DISPATCH_NOGC();
 
 LABEL_BC_JUMP: {
-    uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+    uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
     bytecodeIndexGlobal += offset;
 }
     DISPATCH_NOGC();
@@ -444,7 +516,7 @@ LABEL_BC_JUMP: {
 LABEL_BC_JUMP_ON_FALSE_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(falseObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -456,7 +528,7 @@ LABEL_BC_JUMP_ON_FALSE_POP: {
 LABEL_BC_JUMP_ON_TRUE_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(trueObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -468,7 +540,7 @@ LABEL_BC_JUMP_ON_TRUE_POP: {
 LABEL_BC_JUMP_ON_FALSE_TOP_NIL: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(falseObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
         GetFrame()->SetTopNoBarrier(load_ptr(nilObject));
     } else {
@@ -481,7 +553,7 @@ LABEL_BC_JUMP_ON_FALSE_TOP_NIL: {
 LABEL_BC_JUMP_ON_TRUE_TOP_NIL: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(trueObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
         GetFrame()->SetTopNoBarrier(load_ptr(nilObject));
     } else {
@@ -494,7 +566,7 @@ LABEL_BC_JUMP_ON_TRUE_TOP_NIL: {
 LABEL_BC_JUMP_ON_NOT_NIL_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val != load_ptr(nilObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -506,7 +578,7 @@ LABEL_BC_JUMP_ON_NOT_NIL_POP: {
 LABEL_BC_JUMP_ON_NIL_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(nilObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -518,7 +590,7 @@ LABEL_BC_JUMP_ON_NIL_POP: {
 LABEL_BC_JUMP_ON_NOT_NIL_TOP_TOP: {
     vm_oop_t val = GetFrame()->Top();
     if (val != load_ptr(nilObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
         // GetFrame()->SetTop(val);
     } else {
@@ -531,7 +603,7 @@ LABEL_BC_JUMP_ON_NOT_NIL_TOP_TOP: {
 LABEL_BC_JUMP_ON_NIL_TOP_TOP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(nilObject)) {
-        uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+        uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
         bytecodeIndexGlobal += offset;
         // GetFrame()->SetTop(val);
     } else {
@@ -543,7 +615,7 @@ LABEL_BC_JUMP_ON_NIL_TOP_TOP: {
 
 LABEL_BC_JUMP_IF_GREATER: {
     if (checkIsGreater()) {
-        bytecodeIndexGlobal += currentBytecodes[bytecodeIndexGlobal + 1];
+        bytecodeIndexGlobal += BC_OPERAND(bytecodeIndexGlobal + 1);
         GetFrame()->Pop();
         GetFrame()->Pop();
     } else {
@@ -553,15 +625,14 @@ LABEL_BC_JUMP_IF_GREATER: {
     DISPATCH_NOGC();
 
 LABEL_BC_JUMP_BACKWARD: {
-    uint8_t const offset = currentBytecodes[bytecodeIndexGlobal + 1];
+    uint8_t const offset = BC_OPERAND(bytecodeIndexGlobal + 1);
     bytecodeIndexGlobal -= offset;
 }
     DISPATCH_NOGC();
 
 LABEL_BC_JUMP2: {
-    uint16_t const offset =
-        ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                      currentBytecodes[bytecodeIndexGlobal + 2]);
+    uint16_t const offset = ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                                          BC_OPERAND(bytecodeIndexGlobal + 2));
     bytecodeIndexGlobal += offset;
 }
     DISPATCH_NOGC();
@@ -570,8 +641,8 @@ LABEL_BC_JUMP2_ON_FALSE_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(falseObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -584,8 +655,8 @@ LABEL_BC_JUMP2_ON_TRUE_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(trueObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -598,8 +669,8 @@ LABEL_BC_JUMP2_ON_FALSE_TOP_NIL: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(falseObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
         GetFrame()->SetTopNoBarrier(load_ptr(nilObject));
     } else {
@@ -613,8 +684,8 @@ LABEL_BC_JUMP2_ON_TRUE_TOP_NIL: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(trueObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
         GetFrame()->SetTopNoBarrier(load_ptr(nilObject));
     } else {
@@ -628,8 +699,8 @@ LABEL_BC_JUMP2_ON_NOT_NIL_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val != load_ptr(nilObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -642,8 +713,8 @@ LABEL_BC_JUMP2_ON_NIL_POP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(nilObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
     } else {
         bytecodeIndexGlobal += 3;
@@ -656,8 +727,8 @@ LABEL_BC_JUMP2_ON_NOT_NIL_TOP_TOP: {
     vm_oop_t val = GetFrame()->Top();
     if (val != load_ptr(nilObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
         // GetFrame()->SetTop(val);
     } else {
@@ -671,8 +742,8 @@ LABEL_BC_JUMP2_ON_NIL_TOP_TOP: {
     vm_oop_t val = GetFrame()->Top();
     if (val == load_ptr(nilObject)) {
         uint16_t const offset =
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         bytecodeIndexGlobal += offset;
         // GetFrame()->SetTop(val);
     } else {
@@ -685,8 +756,8 @@ LABEL_BC_JUMP2_ON_NIL_TOP_TOP: {
 LABEL_BC_JUMP2_IF_GREATER: {
     if (checkIsGreater()) {
         bytecodeIndexGlobal +=
-            ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                          currentBytecodes[bytecodeIndexGlobal + 2]);
+            ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                          BC_OPERAND(bytecodeIndexGlobal + 2));
         GetFrame()->Pop();
         GetFrame()->Pop();
     } else {
@@ -696,9 +767,8 @@ LABEL_BC_JUMP2_IF_GREATER: {
     DISPATCH_NOGC();
 
 LABEL_BC_JUMP2_BACKWARD: {
-    uint16_t const offset =
-        ComputeOffset(currentBytecodes[bytecodeIndexGlobal + 1],
-                      currentBytecodes[bytecodeIndexGlobal + 2]);
+    uint16_t const offset = ComputeOffset(BC_OPERAND(bytecodeIndexGlobal + 1),
+                                          BC_OPERAND(bytecodeIndexGlobal + 2));
     bytecodeIndexGlobal -= offset;
 }
     DISPATCH_NOGC();
@@ -707,6 +777,9 @@ LABEL_BC_JUMP2_BACKWARD: {
     // here when USE_YK is set, giving Yk exactly one call site.
     YK_DISPATCH_TRAMPOLINE();
 }
+#ifdef USE_YK
+  #undef bytecodeIndexGlobal
+#endif
 
 VMFrame* Interpreter::PushNewFrame(VMMethod* method) {
     SetFrame(Universe::NewFrame(GetFrame(), method));
@@ -850,8 +923,8 @@ void Interpreter::doDup() {
 }
 
 void Interpreter::doPushLocal(size_t bytecodeIndex) {
-    uint8_t const bc1 = method->GetBytecode(bytecodeIndex + 1);
-    uint8_t const bc2 = method->GetBytecode(bytecodeIndex + 2);
+    uint8_t const bc1 = BC_OPERAND(bytecodeIndex + 1);
+    uint8_t const bc2 = BC_OPERAND(bytecodeIndex + 2);
 
     assert((bc1 != 0 || bc2 != 0) && "should have been BC_PUSH_LOCAL_0");
     assert((bc1 != 1 || bc2 != 0) && "should have been BC_PUSH_LOCAL_1");
@@ -868,8 +941,8 @@ void Interpreter::doPushLocalWithIndex(uint8_t localIndex) {
 }
 
 void Interpreter::doPushArgument(size_t bytecodeIndex) {
-    uint8_t const argIndex = method->GetBytecode(bytecodeIndex + 1);
-    uint8_t const contextLevel = method->GetBytecode(bytecodeIndex + 2);
+    uint8_t const argIndex = BC_OPERAND(bytecodeIndex + 1);
+    uint8_t const contextLevel = BC_OPERAND(bytecodeIndex + 2);
 
     assert((argIndex != 0 || contextLevel != 0) &&
            "should have been BC_PUSH_SELF");
@@ -884,7 +957,7 @@ void Interpreter::doPushArgument(size_t bytecodeIndex) {
 }
 
 void Interpreter::doPushField(size_t bytecodeIndex) {
-    uint8_t const fieldIndex = method->GetBytecode(bytecodeIndex + 1);
+    uint8_t const fieldIndex = BC_OPERAND(bytecodeIndex + 1);
     assert(fieldIndex != 0 && fieldIndex != 1 &&
            "should have been BC_PUSH_FIELD_0|1");
 
@@ -963,8 +1036,8 @@ void Interpreter::doPop() {
 }
 
 void Interpreter::doPopLocal(size_t bytecodeIndex) {
-    uint8_t const bc1 = method->GetBytecode(bytecodeIndex + 1);
-    uint8_t const bc2 = method->GetBytecode(bytecodeIndex + 2);
+    uint8_t const bc1 = BC_OPERAND(bytecodeIndex + 1);
+    uint8_t const bc2 = BC_OPERAND(bytecodeIndex + 2);
 
     vm_oop_t o = GetFrame()->Pop();
 
@@ -977,15 +1050,15 @@ void Interpreter::doPopLocalWithIndex(uint8_t localIndex) {
 }
 
 void Interpreter::doPopArgument(size_t bytecodeIndex) {
-    uint8_t const bc1 = method->GetBytecode(bytecodeIndex + 1);
-    uint8_t const bc2 = method->GetBytecode(bytecodeIndex + 2);
+    uint8_t const bc1 = BC_OPERAND(bytecodeIndex + 1);
+    uint8_t const bc2 = BC_OPERAND(bytecodeIndex + 2);
 
     vm_oop_t o = GetFrame()->Pop();
     GetFrame()->SetArgument(bc1, bc2, o);
 }
 
 void Interpreter::doPopField(size_t bytecodeIndex) {
-    uint8_t const fieldIndex = method->GetBytecode(bytecodeIndex + 1);
+    uint8_t const fieldIndex = BC_OPERAND(bytecodeIndex + 1);
     doPopFieldWithIndex(fieldIndex);
 }
 
