@@ -99,7 +99,10 @@ vm_oop_t Interpreter::Start(bool printBytecodes) {
     uint8_t ykOp = BC_HALT;
     size_t& globalBci = bytecodeIndexGlobal;
     size_t localBci = bytecodeIndexGlobal;
+    uint8_t*& globalBytecodes = currentBytecodes;
+    uint8_t* localBytecodes = currentBytecodes;
   #define bytecodeIndexGlobal localBci
+  #define currentBytecodes localBytecodes
 #endif
 
     void const* const loopTargets[] = {&&LABEL_BC_HALT,
@@ -330,6 +333,7 @@ LABEL_BC_PUSH_GLOBAL:
     doPushGlobal(bytecodeIndexGlobal - 2);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_GC();
 
@@ -386,6 +390,7 @@ LABEL_BC_SEND:
     doSend(bytecodeIndexGlobal - 2);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_GC();
 
@@ -397,6 +402,7 @@ LABEL_BC_SEND_1:
     doUnarySend(bytecodeIndexGlobal - 2);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_GC();
 
@@ -408,6 +414,7 @@ LABEL_BC_SUPER_SEND:
     doSuperSend(bytecodeIndexGlobal - 2);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_GC();
 
@@ -419,6 +426,7 @@ LABEL_BC_RETURN_LOCAL:
     doReturnLocal();
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_NOGC();
 
@@ -430,6 +438,7 @@ LABEL_BC_RETURN_NON_LOCAL:
     doReturnNonLocal();
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_NOGC();
 
@@ -443,6 +452,7 @@ LABEL_BC_RETURN_SELF: {
     popFrameAndPushResult(GetFrame()->GetArgumentInCurrentContext(0));
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_NOGC();
 }
@@ -455,6 +465,7 @@ LABEL_BC_RETURN_FIELD_0:
     doReturnFieldWithIndex(0);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_NOGC();
 
@@ -466,6 +477,7 @@ LABEL_BC_RETURN_FIELD_1:
     doReturnFieldWithIndex(1);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_NOGC();
 
@@ -477,6 +489,7 @@ LABEL_BC_RETURN_FIELD_2:
     doReturnFieldWithIndex(2);
 #ifdef USE_YK
     localBci = globalBci;
+    localBytecodes = globalBytecodes;
 #endif
     DISPATCH_NOGC();
 
@@ -779,6 +792,7 @@ LABEL_BC_JUMP2_BACKWARD: {
 }
 #ifdef USE_YK
   #undef bytecodeIndexGlobal
+  #undef currentBytecodes
 #endif
 
 VMFrame* Interpreter::PushNewFrame(VMMethod* method) {

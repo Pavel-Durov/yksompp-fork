@@ -53,6 +53,7 @@ void YkMethodDestroy(YkLocation* yklocs, size_t bcLength);
             globalBci = localBci;                           \
             startGC();                                      \
             localBci = globalBci;                           \
+            localBytecodes = globalBytecodes;               \
         }                                                   \
         goto YK_DISPATCH_START;                             \
     }
