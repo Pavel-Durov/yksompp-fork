@@ -1,0 +1,7 @@
+comment = "yksompp-yk-method-lookup"
+
+[executors]
+sompp = "~/yksompp-fork/cmake-yk-release/SOM++"
+
+[suite_env.awfy]
+SOM_LIB = "~/yksompp/Smalltalk"

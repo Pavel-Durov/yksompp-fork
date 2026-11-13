@@ -1,0 +1,15 @@
+comment = "yksompp-fork-bytecode-operands-idempotent-load"
+date = "2026-11-08T14:41:53Z"
+
+[executors]
+som = "/home/pd/yksompp-fork/cmake-yk-release/SOM++"
+
+[suite_env.awfy]
+SOM_LIB = "/home/pd/yksompp-fork/Smalltalk"
+
+[machine]
+os = "Linux (Debian GNU/Linux 13)"
+cpu = "Intel(R) Xeon(R) Platinum 8452Y"
+memory = "345.9 GiB"
+arch = "x86_64"
+cpu_count = "72"
