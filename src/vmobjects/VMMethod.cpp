@@ -130,6 +130,9 @@ void VMMethod::WalkObjects(walk_heap_fn walk) {
     }
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
 VMFrame* VMMethod::Invoke(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
@@ -140,6 +143,9 @@ VMFrame* VMMethod::Invoke(VMFrame* frame) {
     return frm;
 }
 
+#ifdef USE_YK
+__attribute__((yk_indirect_inline))
+#endif
 VMFrame* VMMethod::Invoke1(VMFrame* frame) {
     // since an invokable is able to change/use the frame, we have to write
     // cached values before, and read cached values after calling
