@@ -64,6 +64,19 @@ public:
 
 #ifdef USE_YK
     bool IsVMMethod{false};
+    enum class YkKind : uint8_t {
+        Other,
+        Primitive,
+        SafeUnaryPrimitive,
+        SafeBinaryPrimitive,
+        SafeTernaryPrimitive,
+        EvaluationPrimitive,
+        LiteralReturn,
+        GlobalReturn,
+        Getter,
+        Setter,
+    };
+    YkKind ykKind{YkKind::Other};
 #endif
 
     [[nodiscard]] inline VMSymbol* GetSignature() const {

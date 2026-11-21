@@ -41,6 +41,9 @@ public:
 
     VMPrimitive(VMSymbol* sig, FramePrim prim) : VMInvokable(sig), prim(prim) {
         write_barrier(this, sig);
+#ifdef USE_YK
+        ykKind = YkKind::Primitive;
+#endif
     }
 
     [[nodiscard]] VMClass* GetClass() const final {

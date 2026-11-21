@@ -46,6 +46,9 @@
 VMEvaluationPrimitive::VMEvaluationPrimitive(uint8_t argc)
     : VMInvokable(computeSignatureString(argc)), numberOfArguments(argc) {
     write_barrier(this, load_ptr(signature));
+#ifdef USE_YK
+    ykKind = YkKind::EvaluationPrimitive;
+#endif
 }
 
 VMEvaluationPrimitive* VMEvaluationPrimitive::CloneForMovingGC() const {

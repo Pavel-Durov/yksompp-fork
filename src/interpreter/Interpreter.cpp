@@ -54,6 +54,13 @@
 #include "../vmobjects/VMObject.h"
 #include "../vmobjects/VMSymbol.h"
 
+#ifdef USE_YK
+  #include "../vmobjects/VMEvaluationPrimitive.h"
+  #include "../vmobjects/VMPrimitive.h"
+  #include "../vmobjects/VMSafePrimitive.h"
+  #include "../vmobjects/VMTrivialMethod.h"
+#endif
+
 #if defined(USE_YK) && USE_TAGGING &&                        \
     (GC_TYPE == MARK_SWEEP || GC_TYPE == PAGED_MARK_SWEEP || \
      GC_TYPE == DEBUG_MARK_SWEEP)
@@ -860,8 +867,56 @@ __attribute__((yk_idempotent, noinline)) static uintptr_t YkFetchInvokable(
               }                                                  \
           }                                                      \
       } while (0)
+
+  #define YK_SEND_INVOKE(invokable, Method, frame)                             \
+      if (yk_is_interpreting()) {                                              \
+          (invokable)->Method(frame);                                          \
+      } else {                                                                 \
+          switch (yk_idempotent_load(&(invokable)->ykKind)) {                  \
+              case VMInvokable::YkKind::Primitive:                             \
+                  static_cast<VMPrimitive*>(invokable)                         \
+                      ->VMPrimitive::Method(frame);                            \
+                  break;                                                       \
+              case VMInvokable::YkKind::SafeUnaryPrimitive:                    \
+                  static_cast<VMSafeUnaryPrimitive*>(invokable)                \
+                      ->VMSafeUnaryPrimitive::Method(frame);                   \
+                  break;                                                       \
+              case VMInvokable::YkKind::SafeBinaryPrimitive:                   \
+                  static_cast<VMSafeBinaryPrimitive*>(invokable)               \
+                      ->VMSafeBinaryPrimitive::Method(frame);                  \
+                  break;                                                       \
+              case VMInvokable::YkKind::SafeTernaryPrimitive:                  \
+                  static_cast<VMSafeTernaryPrimitive*>(invokable)              \
+                      ->VMSafeTernaryPrimitive::Method(frame);                 \
+                  break;                                                       \
+              case VMInvokable::YkKind::EvaluationPrimitive:                   \
+                  static_cast<VMEvaluationPrimitive*>(invokable)               \
+                      ->VMEvaluationPrimitive::Method(frame);                  \
+                  break;                                                       \
+              case VMInvokable::YkKind::LiteralReturn:                         \
+                  static_cast<VMLiteralReturn*>(invokable)                     \
+                      ->VMLiteralReturn::Method(frame);                        \
+                  break;                                                       \
+              case VMInvokable::YkKind::GlobalReturn:                          \
+                  static_cast<VMGlobalReturn*>(invokable)                      \
+                      ->VMGlobalReturn::Method(frame);                         \
+                  break;                                                       \
+              case VMInvokable::YkKind::Getter:                                \
+                  static_cast<VMGetter*>(invokable)                            \
+                      ->VMGetter::Method(frame);                               \
+                  break;                                                       \
+              case VMInvokable::YkKind::Setter:                                \
+                  static_cast<VMSetter*>(invokable)                            \
+                      ->VMSetter::Method(frame);                               \
+                  break;                                                       \
+              case VMInvokable::YkKind::Other:                                 \
+                  (invokable)->Method(frame);                                  \
+                  break;                                                       \
+          }                                                                    \
+      }
 #else
   #define YK_MARK_CALLED(invokable)
+  #define YK_SEND_INVOKE(invokable, Method, frame) (invokable)->Method(frame)
 #endif
 
 void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
@@ -879,7 +934,7 @@ void Interpreter::send(VMSymbol* signature, VMClass* receiverClass) {
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
         YK_MARK_CALLED(invokable);
-        invokable->Invoke(GetFrame());
+        YK_SEND_INVOKE(invokable, Invoke, GetFrame());
     } else {
         triggerDoesNotUnderstand(signature);
     }
@@ -1119,7 +1174,7 @@ void Interpreter::doUnarySend(size_t bytecodeIndex) {
     if (invokable != nullptr) {
         recordStat(CallStats, receiverClass, invokable);
         YK_MARK_CALLED(invokable);
-        invokable->Invoke1(GetFrame());
+        YK_SEND_INVOKE(invokable, Invoke1, GetFrame());
     } else {
         triggerDoesNotUnderstand(signature);
     }
@@ -1144,7 +1199,7 @@ void Interpreter::doSuperSend(size_t bytecodeIndex) {
 
     if (invokable != nullptr) {
         YK_MARK_CALLED(invokable);
-        invokable->Invoke(GetFrame());
+        YK_SEND_INVOKE(invokable, Invoke, GetFrame());
     } else {
         uint8_t const numOfArgs = Signature::GetNumberOfArguments(signature);
         vm_oop_t receiver = GetFrame()->GetStackElement(numOfArgs - 1);

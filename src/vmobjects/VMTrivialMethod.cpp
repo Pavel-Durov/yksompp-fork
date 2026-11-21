@@ -19,6 +19,15 @@
 #include "ObjectFormats.h"
 #include "VMFrame.h"
 
+#ifdef USE_YK
+  #define YK_CONST_FIELD(FIELD)               \
+      auto const FIELD = yk_is_interpreting() \
+          ? this->FIELD                       \
+          : yk_idempotent_load(&this->FIELD)
+#else
+  #define YK_CONST_FIELD(FIELD) (void)0
+#endif
+
 VMTrivialMethod* MakeLiteralReturn(VMSymbol* sig, vector<Variable>& arguments,
                                    vm_oop_t literal) {
     auto* result =
@@ -51,7 +60,11 @@ VMTrivialMethod* MakeSetter(VMSymbol* sig, vector<Variable>& arguments,
     return result;
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 VMFrame* VMLiteralReturn::Invoke(VMFrame* frame) {
+    YK_CONST_FIELD(numberOfArguments);
     for (int i = 0; i < numberOfArguments; i += 1) {
         frame->Pop();
     }
@@ -149,7 +162,12 @@ AbstractVMObject* VMGlobalReturn::CloneForMovingGC() const {
     return prim;
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 VMFrame* VMGetter::Invoke(VMFrame* frame) {
+    YK_CONST_FIELD(numberOfArguments);
+    YK_CONST_FIELD(fieldIndex);
     vm_oop_t self = nullptr;
     for (int i = 0; i < numberOfArguments; i += 1) {
         self = frame->Pop();
@@ -171,6 +189,7 @@ VMFrame* VMGetter::Invoke(VMFrame* frame) {
 }
 
 VMFrame* VMGetter::Invoke1(VMFrame* frame) {
+    YK_CONST_FIELD(fieldIndex);
     assert(numberOfArguments == 1);
     vm_oop_t self = frame->Pop();
 
@@ -213,7 +232,13 @@ std::string VMGetter::AsDebugString() const {
     return "VMGetter(fieldIndex: " + to_string(fieldIndex) + ")";
 }
 
+#ifdef USE_YK
+__attribute__((yk_unroll))
+#endif
 VMFrame* VMSetter::Invoke(VMFrame* frame) {
+    YK_CONST_FIELD(numberOfArguments);
+    YK_CONST_FIELD(argIndex);
+    YK_CONST_FIELD(fieldIndex);
     vm_oop_t value = nullptr;
     vm_oop_t self = nullptr;
 

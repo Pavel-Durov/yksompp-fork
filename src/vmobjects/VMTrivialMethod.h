@@ -76,6 +76,9 @@ public:
           numberOfArguments(Signature::GetNumberOfArguments(sig)) {
         write_barrier(this, sig);
         write_barrier(this, literal);
+#ifdef USE_YK
+        ykKind = YkKind::LiteralReturn;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
@@ -119,6 +122,9 @@ public:
           numberOfArguments(Signature::GetNumberOfArguments(sig)) {
         write_barrier(this, sig);
         write_barrier(this, globalName);
+#ifdef USE_YK
+        ykKind = YkKind::GlobalReturn;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
@@ -159,6 +165,9 @@ public:
         : VMTrivialMethod(sig, arguments), fieldIndex(fieldIndex),
           numberOfArguments(Signature::GetNumberOfArguments(sig)) {
         write_barrier(this, sig);
+#ifdef USE_YK
+        ykKind = YkKind::Getter;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
@@ -198,6 +207,9 @@ public:
           argIndex(argIndex),
           numberOfArguments(Signature::GetNumberOfArguments(sig)) {
         write_barrier(this, sig);
+#ifdef USE_YK
+        ykKind = YkKind::Setter;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {

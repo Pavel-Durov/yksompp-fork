@@ -39,6 +39,9 @@ public:
     VMSafeUnaryPrimitive(VMSymbol* sig, UnaryPrim prim)
         : VMSafePrimitive(sig), prim(prim) {
         write_barrier(this, sig);
+#ifdef USE_YK
+        ykKind = YkKind::SafeUnaryPrimitive;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
@@ -68,6 +71,9 @@ public:
     VMSafeBinaryPrimitive(VMSymbol* sig, BinaryPrim prim)
         : VMSafePrimitive(sig), prim(prim) {
         write_barrier(this, sig);
+#ifdef USE_YK
+        ykKind = YkKind::SafeBinaryPrimitive;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
@@ -97,6 +103,9 @@ public:
     VMSafeTernaryPrimitive(VMSymbol* sig, TernaryPrim prim)
         : VMSafePrimitive(sig), prim(prim) {
         write_barrier(this, sig);
+#ifdef USE_YK
+        ykKind = YkKind::SafeTernaryPrimitive;
+#endif
     }
 
     [[nodiscard]] inline size_t GetObjectSize() const override {
