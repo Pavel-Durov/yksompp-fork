@@ -868,6 +868,11 @@ __attribute__((yk_idempotent, noinline)) static uintptr_t YkFetchInvokable(
           }                                                      \
       } while (0)
 
+  // `(invokable)->Method(frame)` is a virtual call, which yk cannot inline.
+  // Here we switch on the invokable ykKind (set in the invokable
+  // constructor), cast it to its concrete type, and call the method directly,
+  // which allows yk to inline the functions instead of performing actual
+  // function calls.
   #define YK_SEND_INVOKE(invokable, Method, frame)                             \
       if (yk_is_interpreting()) {                                              \
           (invokable)->Method(frame);                                          \
