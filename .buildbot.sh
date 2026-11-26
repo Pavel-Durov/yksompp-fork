@@ -29,13 +29,6 @@ export PATH="$PWD/.cargo/bin:$PATH"
 git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/ykjit/yk
 cd yk
 echo "yk commit: $(git show -s --format=%H)"
-cat << EOF >> Cargo.toml
-[profile.release-with-asserts]
-inherits = "release"
-debug-assertions = true
-overflow-checks = true
-EOF
-
 cd ykllvm
 ykllvm_hash=$(git rev-parse HEAD)
 if [ -f /opt/ykllvm_cache/ykllvm-release-with-assertions-"${ykllvm_hash}".tgz ]; then
@@ -54,7 +47,7 @@ fi
 cd ..
 
 YKB_YKLLVM_BUILD_ARGS="define:CMAKE_C_COMPILER=/usr/bin/clang,define:CMAKE_CXX_COMPILER=/usr/bin/clang++" \
-    cargo build
+    cargo build --release
 export PATH="$PWD/bin:$PATH"
 cd ..
 
@@ -62,9 +55,9 @@ cd ..
 YK_CONFIG="$(pwd)/yk/bin/yk-config"
 mkdir yk-build
 cmake \
-    -DCMAKE_CXX_COMPILER="$($YK_CONFIG debug --cc)++" \
-    -DCMAKE_BUILD_TYPE=Debug \
-    -DYK_BUILD_TYPE=debug \
+    -DCMAKE_CXX_COMPILER="$($YK_CONFIG release --cxx)" \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DYK_BUILD_TYPE=release \
     -S . -B yk-build
 cmake --build yk-build --parallel
-yk-build/SOM++ -cp Smalltalk TestSuite/TestHarness.som
+YK_SIDETRACE_THRESHOLD=1 YKD_SERIALISE_COMPILATION=1 YK_HOT_THRESHOLD=1 yk-build/SOM++ -cp Smalltalk TestSuite/TestHarness.som
